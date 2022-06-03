@@ -6,32 +6,32 @@
 
 1. To get the lab environment details, you can select **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided at registration. You can also open the Lab Guide on separate and full window by selecting the **Split Window** from lower right corner. Also, you can start, stop and restart virtual machines from **Virtual Machines** tab.
 
-   ![](./images/cloudlabs-env-page.png "Lab Environment")
+   ![](./media/cloudlabs-env-page.png "Lab Environment")
  
     > You will see SUFFIX value on **Environment Details** tab, use it whereever you see SUFFIX or DeploymentID in lab steps.
 
 1. You can validate the each task by navigating to **Lab Validation** tab and clicking on **Validate** button. Please make sure to run the validation steps for each task after performing it. 
 
-   ![](./images/validation.png "Lab Environment")
+   ![](./media/validation.png "Lab Environment")
 
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![](./images/cloudlab-vm-guide.png "Lab Environment")
+   ![](./media/cloudlab-vm-guide.png "Lab Environment")
    
 1. On **Sign in to Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    
-     ![](./images/image7.png "Enter Email")
+     ![](./media/image7.png "Enter Email")
      
 1. Now enter the following password and click on **Sign in**.
    * Password: <inject key="AzureAdUserPassword"></inject>
    
-     ![](./images/image8.png "Enter Password")
+     ![](./media/image8.png "Enter Password")
      
    > If you are presented with **Help us protect your account** dialog box, then select **Skip for now** option.
 
-     ![](./images/MFA.png "Enter Password")
+     ![](./media/MFA.png "Enter Password")
   
 1. If you see the pop-up **Stay Signed in?**, click No
 
@@ -41,11 +41,11 @@
    
 1. Now you will see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-    ![](./images/select-rg.png "Resource groups")
+    ![](./media/select-rg.png "Resource groups")
    
 1. Confirm you have all resource group are present as shown below.
 
-    ![](./images/upimage10.png "Resource groups")
+    ![](./media/upimage10.png "Resource groups")
    
 1. Now, click on the **Next** from lower right corner to move on next page.
 

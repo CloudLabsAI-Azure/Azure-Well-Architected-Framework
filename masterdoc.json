@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "Microsoft Azure Immersion Workshops : Azure-Well-Architected-Framework",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/00-GettingStarted.md?token=GHSAT0AAAAAABP6EQH33YJRC67BD2X33PREYUZZKKQ",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/01-Exercise-1-Cost-Optimization.md?token=GHSAT0AAAAAABP6EQH2MKTSZE7YF2AKYKHOYUZZLJA",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/02-Exercise-2-Operational-Excellence.md?token=GHSAT0AAAAAABP6EQH36F7Y2L3GHRHBLHWWYUZZMRQ",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/03-Exercise-3-Performance-Efficiency.md?token=GHSAT0AAAAAABP6EQH37XVFDCDJ5EFKPLL4YUZZNDQ",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/04-Exercise-4-Reliability.md?token=GHSAT0AAAAAABP6EQH2OUP74YRS5NEG4HYMYUZZNXA",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/05-Exercise-5-Security%2Cmd?token=GHSAT0AAAAAABP6EQH2YXMTFHVNIZH6AAYAYUZZOWA",
+        "Order": 6
+      }
+    ]
+  }
+]

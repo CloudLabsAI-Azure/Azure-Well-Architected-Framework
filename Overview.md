@@ -1,12 +1,14 @@
 # **Overview**
 
-The Azure Well-Architected Framework is a set of guiding tenets that can be used to improve the quality of a workload. The framework consists of five pillars of architectural excellence:
+The Microsoft Azure Well-Architected Framework (WAF) assessment is desgined to provide clients with high-level guidance and best practices to help you maintain and improve secure, reliable, perfomant, cost optimised and operationally excellent applications in the Azure Cloud.
 
-  * Reliability
-  * Security
-  * Cost Optimization
-  * Operational Excellence
-  * Performance Efficiency
+The framework consists of five pillars of architectural excellence:
+
+1. Reliability
+2. Security
+3. Cost Optimization
+4. Operational Excellence
+5. Performance Efficiency
 
    ![](./media/waf-overview01.png)
 

@@ -1,3 +1,7 @@
+# Exercise 4: Reliability
+
+## Overview
+
 The term "reliable workload" refers to a task that is both resilient and available. The ability of a system to recover from failures and continue to function is known as resiliency. After a failure, the goal of resiliency is to restore the application to its original condition. The availability of your workload refers to whether or not your users can access it when they need it.
 
 Building for reliability includes:

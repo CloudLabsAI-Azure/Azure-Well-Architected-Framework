@@ -13,14 +13,19 @@ The **Cost Optimization** in Well-Architected Assessment is a top-down review of
 
 This will help on the most immediate and direct impact of the recommendations.
 
-Task 1: Monitor and Forecast
+**Task 1: Monitor and Forecast**
 
 In this task you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management and Billing.
 
-a. 
+**Task 2: Resize**
 
+You can lower cost by managing the size of the VMs. 
 
+1. In Azure portal navigate to resource groups.
 
+2. Open **wafprod** resource group and select a vitrual machine.
+
+3. Select **Size** present under _Settings_ pane.
 
 
 

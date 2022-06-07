@@ -12,3 +12,23 @@ The **Cost Optimization** in Well-Architected Assessment is a top-down review of
   * What will be the cost impact of your new architecture recommendations?
 
 This will help on the most immediate and direct impact of the recommendations.
+
+Task 1: Monitor and Forecast
+
+In this task you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management and Billing.
+
+a. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

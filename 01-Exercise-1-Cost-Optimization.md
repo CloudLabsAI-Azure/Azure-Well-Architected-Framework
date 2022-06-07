@@ -47,9 +47,9 @@ You can lower cost by managing the size of the VMs.
 <p> &#11088; For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in 15% savings! </p>
 
 
-**Task 3: Shutdown **
+**Task 3: Shutdown**
 
-Use the Start/stop VMs during off-hours feature of virtual machines to minimize waste. There are many configuration options to schedule start the stop times. The feature is suitable as a low-cost automation option. For information, see Start/stop VMs during off-hours solution in Azure Automation.
+Use the Start/stop VMs during off-hours feature of virtual machines to minimize waste. There are many configuration options to schedule start the stop times. The feature is suitable as a **low-cost automation** option. 
 
 
 

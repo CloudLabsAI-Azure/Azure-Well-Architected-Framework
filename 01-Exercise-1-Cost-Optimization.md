@@ -21,7 +21,7 @@ In this task you will learn how to monitor the cost of a workload with tools lik
 
 You can lower cost by managing the size of the VMs. 
 
-1. In Azure portal navigate to resource groups.
+1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
 
    ![](./media/costopt-01.png)
    
@@ -49,7 +49,48 @@ You can lower cost by managing the size of the VMs.
 
 **Task 3: Shutdown**
 
-Use the Start/stop VMs during off-hours feature of virtual machines to minimize waste. There are many configuration options to schedule start the stop times. The feature is suitable as a **low-cost automation** option. 
+Use the Start/stop VMs during off-hours feature of virtual machines to minimize waste. The feature is suitable as a **low-cost automation** option. There are many configuration options to schedule start the stop times. 
+
+Some ways to Start/stop VMs are:
+* From Azure portal, by going to each VM and start/stop it manually.
+* Using PowerShell/CLI
+* Enabling Autoshutdown for a VM
+* Using Azure Automation
+
+With respect to the workload we have, we will use Automation Accounts to perform the Start/Stop operation.
+
+1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
+
+   ![](./media/costopt-01.png)
+
+2. Open **wafprod** resource group and open the Automation account **DSC-xxxx**.
+
+   ![](./media/costopt-06.png)
+
+3. In the left pane, scroll to _Process Automation_, select **Runbooks** and click on **+Create a runbook**.
+
+   ![](./media/costopt-07.png)
+   
+4. Fill the details as following:
+ * Name: **stop-prod-vms (1)**
+ * Runbook type: Select **PowerShell (2)** from the dropdown.
+ * Runtime verion: **5.1 (3)**
+ * Description: Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
+ * Click on **Create (5)**.
+
+   ![](./media/costopt-07.png)
+   
+5. 
+
+
+
+
+
+
+
+
+
+
 
 
 

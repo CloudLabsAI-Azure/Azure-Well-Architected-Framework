@@ -70,7 +70,9 @@ With respect to the workload we have, we will use Automation Accounts to perform
 3. In the left pane, scroll to _Process Automation_, select **Runbooks** and click on **+Create a runbook**.
 
    ![](./media/costopt-07.png)
-   
+
+ > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
+
 4. Fill the details as following:
  * Name: **stop-prod-vms (1)**
  * Runbook type: Select **PowerShell (2)** from the dropdown.
@@ -78,7 +80,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
  * Description: Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
  * Click on **Create (5)**.
 
-   ![](./media/costopt-07.png)
+   ![](./media/costopt-08.png)
    
 5. 
 

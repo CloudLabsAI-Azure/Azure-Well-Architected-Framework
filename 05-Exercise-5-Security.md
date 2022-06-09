@@ -21,6 +21,8 @@ In this exercise, we will apply security principles to your architecture to prot
 
 In this task you will learn how to control access to the Azure resources that you deploy. you will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events.
 
+**Role Assignment to Resources**
+
 1. In the Azure Portal, navigate to the **Resource Group** named **wafdev**.
 
    ![](./media/wag-rg.png)
@@ -44,7 +46,9 @@ In this task you will learn how to control access to the Azure resources that yo
 6. After adding the Member, then select **Review + Assign**.
 
    ![](./media/review-assign.png)
-   
+ 
+**creating a diagnostic setting**
+ 
 7. Navigate to the **wafdev** resource group pane and click on **Activity log**. 
 
    ![](./media/activity1.png)

@@ -125,11 +125,11 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-13.png)
 
-10. On the Overview page, select **Edit**.
+11. On the Overview page, select **Edit**.
 
    ![](./media/costopt-09.png)
 
-11. Fill in the following details:
+12. Fill in the following details:
  * Line 1: **user-credentials**
  * Line 9: **INJECTSUBSID**
  * Line 11: **wafprod**, this could be any resource group in which your VMs are present. In our workload VMs are present in wafprod resource group.
@@ -137,45 +137,56 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-14.png)
 
-12. Select **Yes** when asked for Publish Runbook - Do you want to proceed.
+13. Select **Yes** when asked for Publish Runbook - Do you want to proceed.
 
    ![](./media/costopt-15.png)
 
-13. Once done, select **Link to schedule**.
+14. Once done, select **Link to schedule** on the Overview page. This is to schedule the ...
 
    ![](./media/costopt-16.png)
 
-14. 
+15. Select **Schedule** then **+ Add a schedule**.
 
    ![](./media/costopt-17.png)
 
-15. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+16. Fill in the details as following:
+ * Name: **stop-vms**
+ * Description: **stop all VMs in wafprod resource group**.
+ * Starts: **Enter start time and date**.
+ * Time zone: Select your time zone from the drop down.
+ * Recurrence: Select **Recurring**.
+ * Recur every: Enter the time period of recurrence.
+ * Set expiration: Select **Yes**.
+ * Expires: **Enter an expiry time and date for the runbook**.
+ * Click on **Create**.
+
+   ![](./media/costopt-18.png)
+   
+17. Click on **OK**.
 
    ![](./media/costopt-19.png)
 
-16. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+18. Now search for virtual machines in the Azure portal and select **Virtual Machines**.
 
    ![](./media/costopt-20.png)
 
-17. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+19. Notice that VMs from wafprod resource group are in running state.
 
    ![](./media/costopt-21.png)
 
-18. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+20. Navigate back to the **stop-prod-vms** runbook and click on **Start**.
 
    ![](./media/costopt-22.png)
 
-19. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+21. By clicking on Start button, it will take you to the Jobs page. In the **Output** section you can monitor the execution of the script. Keep on refreshing until it shows status of both the VMs as **succeeded**.
 
    ![](./media/costopt-23.png)
 
-20. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+22. Go back to **Virtual Machines** and observe the status of both the machines present in wafprod resource group. It will show up as **Stopped(deallocated)**.
 
    ![](./media/costopt-24.png)
 
-
-
-
+ > **Note:** Click on **Refresh** if the VMs don't reflect latest status.
 
 
 

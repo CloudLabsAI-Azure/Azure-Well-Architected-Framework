@@ -19,7 +19,17 @@ In this task you will learn how to monitor the cost of a workload with tools lik
 
 **a. Azure Advisor:** It helps you optimize and reduce your overall Azure spend by identifying idle and underutilized resources. You can get cost recommendations from the Cost tab on the Advisor dashboard.
 
+1. In the Azure portal, search for Advisor and select **Advisor** from the suggestions.
 
+   ![](./media/costopt-25.png)
+
+2. The Advisor dashboard will display a summary of your recommendations for all selected subscriptions. You can choose the subscriptions that you want recommendations to be displayed for using the subscription filter dropdown.
+
+   ![](./media/costopt-26.png)
+
+3. Now to get recommendations for Cost category, click on the Cost tab. You can either select it from the **dashboard(1)** or in the left pane, under _Recommendations_ you have **Cost(2)** tab.
+
+   ![](./media/costopt-27.png)
 
 **Task 2: Resize a Virtual Machine**
 

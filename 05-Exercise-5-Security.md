@@ -23,43 +23,43 @@ In this task you will learn how to control access to the Azure resources that yo
 
 1. In the Azure Portal, navigate to the **Resource Group** named **wafdev**.
 
-   ![](./media/)
+   ![](./media/wag-rg.png)
    
 2. Select **Access Control (IAM)** in the left-hand menu, select **+ Add** above `Role assignments` and select **Add role assignment**.
    
-   ![](./media/)
+   ![](./media/Iam-role.png)
    
 3. In the add role assignment form, search for **Reader** in Role and select it, Click on Next.
 
-   ![](./media/)
+   ![](./media/reader.png)
    
 4. In Members pane, for **Assign access to** select **User, group, or service principle** and for **Members** click on **+Select Members**.
    
-   ![](./media/)
+   ![](./media/select-member.png)
    
 5. A Select members pane appears, search and add the member and **select**.
   
-   ![](./media/)
+   ![](./media/select-member1.png)
    
 6. After adding the Member, then select **Review + Assign**.
 
-   ![](./media/)
+   ![](./media/review-assign.png)
    
 7. Navigate to the **wafdev** resource group pane and click on **Activity log**. 
 
-   ![](./media/)
+   ![](./media/activity1.png)
    
 8. Then from the filter menu, click on **Timespan** filter and then select **last month**. Click on **apply** to apply the filter.
    
-   ![](./media/)
+   ![](./media/activity2.png)
    
 9. Once the filter is applied and you are able to see all the operations from last month. Select **Export Activity Logs**.
 
-   ![](./media/)
+   ![](./media/export-activity.png)
    
 10. On the **Diagnostic Settings** page, make your subscription is selected and then click on **+ Add diagnostic setting**.
 
-    ![](./media/)
+    ![](./media/add-diag.png)
     
 11. Make sure you fill the **Diagnostic Settings** page with the following details and click on **Save**.
 
@@ -67,26 +67,30 @@ In this task you will learn how to control access to the Azure resources that yo
     *  **Logs**: Make sure you have selected all the categories
     *  **Destination details**: Check **Archive to a storage account** and leave all the other values to default
 
-   ![](./media/)
+   ![](./media/activity-save.png)
    
 12. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
 
-    ![](./media/)
+    ![](./media/storage-select.png)
     
 13. From the left navigation pane, under the **Data storage** section, Select **Containers**.
 
-    ![](./media/)
+    ![](./media/container.png)
     
 14. You will be able to see a container with the name **insights-activity-logs**. Click on it.
 
-    ![](./media/)
+    ![](./media/container2.png)
     
 15. Go through the folder names **resourceid=** and observe that each event is stored in the PT1H.json file with the following format that uses a common top-level schema.
 
    `{ "time": "2020-06-12T13:07:46.766Z", "resourceId": "/SUBSCRIPTIONS/00000000-0000-0000-0000-000000000000/RESOURCEGROUPS/MY-RESOURCE-GROUP/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/MV-VM-01", "correlationId": "0f0cb6b4-804b-4129-b893-70aeeb63997e", "operationName": "Microsoft.Resourcehealth/healthevent/Updated/action", "level": "Information", "resultType": "Updated", "category": "ResourceHealth", "properties": {"eventCategory":"ResourceHealth","eventProperties":{"title":"This virtual machine is starting as requested by an authorized user or process. It will be online shortly.","details":"VirtualMachineStartInitiatedByControlPlane","currentHealthStatus":"Unknown","previousHealthStatus":"Unknown","type":"Downtime","cause":"UserInitiated"}}}`
    
-   ![](./media/)
+   ![](./media/container3.png)
 
 **Task 3: App Security**
+
+
 **Task 4: Data encryption and sovereignty**
+
+
 **Task 5: Security operations**

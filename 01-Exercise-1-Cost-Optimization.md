@@ -86,7 +86,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-09.png)
    
-6. Copy the script given below and paste in runbook console and then click on **Save**.
+6. Copy the script given below and paste in runbook console and then click on **Save**. 
 
 ```
 $myCred = Get-AutomationPSCredential -Name '[Enter name of your credentials]'
@@ -107,7 +107,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 ```
    ![](./media/costopt-10.png)
     
-8. From left pane, scroll to _Shared Resources_ and select **Credentials** and then select **+Add a credential**. 
+8. Go back to the automation account **DSC-xxxx** and from left pane scroll to _Shared Resources_. Select **Credentials** and then select **+Add a credential**. 
 
    ![](./media/costopt-11.png)
    
@@ -174,7 +174,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-21.png)
 
-20. Navigate back to the **stop-prod-vms** runbook and click on **Start**.
+20. Navigate back to the **stop-prod-vms** runbook and click on **Start**. Select **Yes** when asked - _Are you sure that you want to start the runbook?_
 
    ![](./media/costopt-22.png)
 

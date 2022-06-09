@@ -17,6 +17,10 @@ This will help on the most immediate and direct impact of the recommendations.
 
 In this task you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management and Billing.
 
+**a. Azure Advisor:** It helps you optimize and reduce your overall Azure spend by identifying idle and underutilized resources. You can get cost recommendations from the Cost tab on the Advisor dashboard.
+
+
+
 **Task 2: Resize a Virtual Machine**
 
 You can lower cost by managing the size of the VMs. 

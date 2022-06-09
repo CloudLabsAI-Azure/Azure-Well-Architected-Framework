@@ -47,7 +47,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
    ![](./media/review-assign.png)
  
-**creating a diagnostic setting**
+**Creating a Diagnostic Setting**
  
 7. Navigate to the **wafdev** resource group pane and click on **Activity log**. 
 

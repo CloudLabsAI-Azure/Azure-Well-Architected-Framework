@@ -19,7 +19,7 @@ In this exercise, we will apply security principles to your architecture to prot
 
 **Task 2: Infra protection**
 
-In this task you will learn how to control access to the Azure resources that you deploy. you will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events.
+In this task you will learn how to control access to the Azure resources that you deploy. you will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events and to audit all the changes to the infrastructure.
 
 **Role Assignment to Resources**
 

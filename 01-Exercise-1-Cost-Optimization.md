@@ -82,10 +82,96 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-08.png)
    
-5. 
+5. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
 
+   ![](./media/costopt-09.png)
+   
+6. Copy the script given below and paste in runbook console and then click on **Save**.
 
+```
+$myCred = Get-AutomationPSCredential -Name '[Enter name of your credentials]'
+$userName = $myCred.UserName
+$securePassword = $myCred.Password
+$password = $myCred.GetNetworkCredential().Password
 
+$myPsCred = New-Object System.Management.Automation.PSCredential ($userName,$securePassword)
+
+Connect-AzAccount -Credential $myPsCred
+Set-AzContext -SubscriptionId "Enter your subscription id"
+
+$ResourceGroupName = “Enter the resource group name”
+Get-AzVM -ResourceGroupName $ResourceGroupName | Select Name | ForEach-Object {
+Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
+}
+
+```
+   ![](./media/costopt-10.png)
+    
+8. From left pane, scroll to _Shared Resources_ and select **Credentials** and then select **+Add a credential**. 
+
+   ![](./media/costopt-11.png)
+   
+9. Fill following details:
+ * Name: **user-credentials (1)**
+ * Description: Give a description **(2)**
+ * Username: **INJECTKEYS** **(3)**
+ * Password: **(4)**
+ * Confirm Password: **(5)**
+ * Click on **Create (6)**.
+
+   ![](./media/costopt-12.png)
+
+10. From left pane, scroll to _Process Automation_ and select **Runbooks** and then select **stop-prod-vms**. 
+
+   ![](./media/costopt-13.png)
+
+10. On the Overview page, select **Edit**.
+
+   ![](./media/costopt-09.png)
+
+11. Fill in the following details:
+ * Line 1: **user-credentials**
+ * Line 9: **INJECTSUBSID**
+ * Line 11: **wafprod**, this could be any resource group in which your VMs are present. In our workload VMs are present in wafprod resource group.
+ * Click on **Publish**.
+
+   ![](./media/costopt-14.png)
+
+12. Select **Yes** when asked for Publish Runbook - Do you want to proceed.
+
+   ![](./media/costopt-15.png)
+
+13. Once done, select **Link to schedule**.
+
+   ![](./media/costopt-16.png)
+
+14. 
+
+   ![](./media/costopt-17.png)
+
+15. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+
+   ![](./media/costopt-19.png)
+
+16. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+
+   ![](./media/costopt-20.png)
+
+17. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+
+   ![](./media/costopt-21.png)
+
+18. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+
+   ![](./media/costopt-22.png)
+
+19. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+
+   ![](./media/costopt-23.png)
+
+20. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+
+   ![](./media/costopt-24.png)
 
 
 

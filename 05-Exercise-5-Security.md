@@ -102,39 +102,39 @@ In this task you will learn how to control access to the Azure resources that yo
 
 **Task 5: Security operations**
 
-In this task, we are going to perform  integrated security monitoring for your workload using **Microsoft Defender for Cloud**.
+In this task, we are going to perform  integrated security monitoring for your workload using **Microsoft Defender for Cloud**. We will enable **Just-in-time** acccess to the Virtual machine which locks down and limits the ports of Azure virtual machine in order to overcome malicious attacks on the virtual machine, therefore only providing access to a port for a limited amount of time.
 
 
 **Exploring Secure Score**
 
-1. Navigate to Microsoft Defender for Cloud in the Azure portal.
+1. Type **Microsoft Defender** in the search box located on the top of the Azure Portal page and click on **Microsoft Defender for Cloud** to open it.
 
-   ![](./media/)
+   ![](./media/ex5-task5-01.png)
    
-2. The Microsoft Defender for Cloud Overview page provides a unified view for security professionals. This page contains detailed insights on the security posture on its dedicated dashboard and includes multiple independent cloud security pillars such as- Secure Score, Regulatory Compliance and Microsoft Defender for Cloud.
+2. The Microsoft Defender for Cloud Overview page provides a unified view for security professionals. This page contains detailed insights on the security posture on its dedicated dashboard and includes multiple independent cloud security pillars such as- **Secure Score**, **Regulatory Compliance** and **Microsoft Defender for Cloud**.
 
-   ![](./media/)
+   ![](./media/ex5-task5-03.png)
    
 3. On the **Overview** page, and look at the **Security posture** tile, you can see your current score along with the number of **Completed controls and Completed recommendations**. Clicking on this tile will redirect you to drill down view across subscriptions.
 
-   ![](./media/)
+   ![](./media/ex5-task5-04.png)
    
  > ⭐ Good to know: <br>
-    > The higher the score, the lower the identified risk level.
+ > The higher the score, the lower the identified risk level.
 
-4. The bottom section lists the subscriptions and their current secure scores. To view the recommendations behind the score, click on View recommendations.
+4. The bottom section lists the subscriptions and their current secure scores. To view the recommendations behind the score, click on **View recommendations**.
 
-   ![](./media/)
+   ![](./media/ex5-task5-05.png)
    
 **Exploring Security Controls and Recommendations**
    
-5. On the Recommendations (1) page, pay attention to the first part of the page; the summary view (2). It includes the current Secure Score, progress on the Recommendations status(both completed security controls and recommendations) and Resource health (by severity).
+5. On the Recommendations page, pay attention to the first part of the page. It includes the current Secure Score, progress on the Recommendations status(both completed security controls and recommendations) and Resource health (by severity).
 
-   ![](./media/)
+   ![](./media/ex5-task5-06.png)
    
 6. Under Recommendation, Click on **Secure management ports** and select **Management ports of virtual machines should be protected with just-in-time network access control**.
 
-   ![](./media/)
+   ![](./media/ex5-task5-02.png)
    
 7. On the top section, notice the following:
 
@@ -144,22 +144,19 @@ In this task, we are going to perform  integrated security monitoring for your w
    - Freshness interval: **24 Hours** 
    - Tactics and techniques: **Initial Access**
 
-   ![](./media/)
+   ![](./media/ex5-task5-07.png)
    
 8. The next important part is the Remediation Steps which contains the remediation logic where you can remediate the selected resource/s.
 
-9. Under Affected resources, select a resource (the single virtual machine on the Unhealthy resources) and click on Fix. This will automatically apply the remediation on the selected resource.
+9. Under Affected resources, select the virtual machine with the name **wafdevXXX** on the Unhealthy resources and click on **Fix**. This will automatically apply the remediation on the selected resource.
 
-   ![](./media/)
+   ![](./media/ex5-task5-08.png)
   
-10. This will open a new window - Fixing resources, review the implications for this remediation and click on Fix 1 resource.
+10. This will open a new window - **Just-in-time VM access configuration**, review the implications for this remediation and click on **Save**.
 
-   ![](./media/)
+   ![](./media/ex5-task5-09.png)
    
-11. Wait for a notification: ✅ **Remediation successful** - Successfully remediated the issues on the selected resources. 
+11. Wait for a notification: ✅ **Just-in-time VM access enabled** - which successfully blocks all inbound traffic at the network level to the virtual machine **wafdevXXX**. 
     
-    > **Note**: It can take several minutes after remediation completes to see the resources in the 'healthy resources' tab. You can move to next task and come back later to check on this.
-
-
-   
+    > **Note**: It can take upto 5 minutes for the VM access to get enabled. 
 

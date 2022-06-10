@@ -37,6 +37,29 @@ In this task you will learn how to monitor the cost of a workload with tools lik
 
 6. Click on the Recommended Action to implement the recommendation.
 
+**b. Cost Management:** 
+
+One can significantly improve the technical performance of your business workloads. It can also reduce your costs and the overhead required to manage organizational assets. Cost Management is a suite of tools provided by Microsoft that help you analyze, manage, and optimize the costs of your workloads. 
+
+With advanced analytics, Cost Management reveals corporate cost and use patterns. The usage-based charges incurred by Azure services and third-party Marketplace offerings are displayed in Cost Management reports.
+
+1. In the Azure portal, click on **Show portal menu (1)** and select **Cost Management + Billing (2)**.
+
+   ![](./media/costopt-28.png)
+   
+2. Now select **Cost Management**.
+
+   ![](./media/costopt-29.png)
+
+3. You will be directed to Overview page. There select **Cost analysis** present under _Cost Management_.
+
+   ![](./media/costopt-31.png)
+   
+
+
+
+
+
 **Task 2: Resize a Virtual Machine**
 
 You can lower cost by managing the size of the VMs. 

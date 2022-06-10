@@ -115,7 +115,7 @@ In this task, you will create your own encryption key to protect the data in you
    
 4. On the **Select a key** page, select **key vault** for keystore type and click on **create new key vault** option next to keyvault.
 
-   ![](./media/)
+   ![](./media/ex5-task4-03.png)
    
 5. You will be redirected to **Create a key vault** page, fill the following details and click on **Next: Access policy**.
 
@@ -124,15 +124,15 @@ In this task, you will create your own encryption key to protect the data in you
   * **Key vault name**: waf-keyvault{unique id}
   
   
-  ![](./media/)
+   ![](./media/ex5-task4-09.png)
   
 6. On the **Access policy** pane, check all the options under **Enable access to:** and click on **Review + create**.
 
-  ![](./media/)
+   ![](./media/ex5-task4-04.png)
   
 7. Once the deployment is successfully finsihed, you will be redirected to **Select a key** page, click on **create a new key** option next to key.
 
-  ![](./media/)
+   ![](./media/ex5-task4-05.png)
   
 8. On the **Create a key** page, fill the following details and click on **create**.
 
@@ -142,15 +142,15 @@ In this task, you will create your own encryption key to protect the data in you
   * **RSA key size**: 2048
   * leave all other values to default
 
-  ![](./media/)
+  ![](./media/ex5-task4-06.png)
   
 9. Once the key is generated successfully, you will be redirected to **Select a key** page, click on **Select**.
 
-   ![](./media/)
+   ![](./media/ex5-task4-07.png)
    
 10. Click on **Save** and wait until the changes to **Encryption** gets updated. Visit the encryption pane and observe the updated keys.
 
-   ![](./media/)
+   ![](./media/ex5-task4-08.png)
 
 **Task 5: Security operations**
 

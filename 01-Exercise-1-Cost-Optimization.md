@@ -53,8 +53,24 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 3. You will be directed to Overview page. There select **Cost analysis** present under _Cost Management_.
 
-   ![](./media/costopt-31.png)
+   ![](./media/costopt-32.png)
    
+4. The initial cost analysis view includes the following areas:
+
+ * **Currently selected view:** Represents the predefined cost analysis view configuration. Each view includes date range, granularity, group by, and filter settings. The default view shows accumulated costs for the current billing period, but you can change to other built-in views.
+
+ * **Cost (1):** Shows the total usage and purchase costs for the current month, as they're accrued and will show on your bill.
+
+ * **Forecast (2):** Shows the total forecasted costs for time period you choose.
+
+ * **Budget (if selected) (3):** Shows the planned spending limit for the selected scope, if available.
+
+ * **Accumulated granularity (4):** Shows the total aggregate daily costs, from the beginning of the billing period. After you create a budget for your billing account or subscription, you can quickly see your spending trend against the budget. Hover over a date to view the accumulated cost for that day.
+
+ * **Pivot (donut) charts (5):** Provide dynamic pivots, breaking down the total cost by a common set of standard properties. They show the largest to smallest costs for the current month.
+
+   ![](./media/costopt-31.png)
+
 
 
 

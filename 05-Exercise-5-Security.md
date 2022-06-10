@@ -99,6 +99,58 @@ In this task you will learn how to control access to the Azure resources that yo
 
 **Task 4: Data encryption and sovereignty**
 
+In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls.
+
+1. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
+
+    ![](./media/storage-select.png)
+   
+2. From the left navigation pane, under the **Security + Networking** section, Select **Encryption**.
+
+   ![](./media/)
+   
+3. On the **Encryption** pane, select **c`ustomer-managed keys`** for **Encryption Type** and **`Select from keyvault`** option for **Encryption key**. Click on **select a keyvault and key** option next to keyvault and key.
+
+   ![](./media/)
+   
+4. On the **Select a key** page, select **key vault** for keystore type and click on **create new keyvault** option next to keyvault.
+
+   ![](./media/)
+   
+5. You will be redirected to **Create a keyvault** page, fill the following details and click on **Next: Access policy**.
+
+  * **Subscription**: Select your subscription
+  * **Resource group**: wafdev
+  * **Key vault name**: waf-keyvault{unique id}
+  
+  
+  ![](./media/)
+  
+6. On the **Access policy** pane, check all the options under **Enable access to:** and click on **Review + create**.
+
+  ![](./media/)
+  
+7. Once the deployment is successfully finsihed, you will be redirected to **Select a key** page, click on **create a new key** option next to key.
+
+  ![](./media/)
+  
+8. On the **Create a key** page, fill the following details and click on **create**.
+
+  * **options**: Generate
+  * **Name**: waf-key
+  * **Key type**: RSA
+  * **RSA key size**: 2048
+  * leave all other values to default
+
+  ![](./media/)
+  
+9. Once the key is generated successfully, you will be redirected to **Select a key** page, click on **Select**.
+
+   ![](./media/)
+   
+10. Click on **Save** and wait until the changes to **Encryption** gets updated. Visit the encryption pane and observe the updated keys.
+
+   ![](./media/)
 
 **Task 5: Security operations**
 
@@ -156,7 +208,7 @@ In this task, we are going to perform  integrated security monitoring for your w
 
    ![](./media/ex5-task5-09.png)
    
-11. Wait for a notification: ✅ **Just-in-time VM access enabled** - which successfully blocks all inbound traffic at the network level to the virtual machine **wafdevXXX**. 
+11. Wait for a notification: ✅ **Just-in-time VM access enabled** - which successfully blocks all inbound traffic at the network level to the virtual machine **wafdevxxx**. 
     
     > **Note**: It can take upto 5 minutes for the VM access to get enabled. 
 

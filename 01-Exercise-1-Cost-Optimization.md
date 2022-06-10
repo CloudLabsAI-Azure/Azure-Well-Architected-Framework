@@ -75,7 +75,30 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 5. You can play with different filters provided here to analyze the cost, such as:
 
- * 
+ * **View:** Cost analysis has four built-in views, they are as follow:
+   1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
+   2. **Daily cost -** Have there been any increases in the costs per day for the last 30 days?
+   3. **Cost by service -**	How has my monthly usage vary over the past three invoices?
+   4. **Cost by resource -**	Which resources cost the most so far this month?
+   5. **Invoice details -**	What charges did I have on my last invoice?
+
+   ![](./media/costopt-33.png)
+   
+ * **Date Range:** Here you can select custom dates as well as time periods for a betterand deeper analysis.
+    1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
+    2. Examples include the last seven days, the last month, the current year, or a custom date range.   
+
+   ![](./media/costopt-34.png)
+
+ * **View Cost:** To have a better visibility on cost, you can use different views given below: 
+    1. **Group by:** _Group by_ common properties to break down costs and identify top contributors. From the drop down you can select group by keys such as, Tag, Resource type, Provider, etc. 
+    2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
+    3. **Graph type:** It asks for graphical representation, what kind of representation you prefer. It could be Table, Column, Line and much more.
+
+The image below shows _**Group by: Resource type, Granularity: Daily and Graph type: Column(Stacked)**_
+
+   ![](./media/costopt-35.png)
+
 
 
 **Task 2: Resize a Virtual Machine**

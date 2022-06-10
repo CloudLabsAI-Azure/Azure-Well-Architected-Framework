@@ -101,7 +101,21 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
 
 **Task 2: Cost controls**
+
+
 **Task 4: Reserve Instances**
+**READ-ONLY**
+
+* **What is Azure Reservation?**
+
+  By committing to one-year or three-year agreements for several goods, Azure Reservations can help you save money. Committing allows you to get a discount on the resources you use. When compared to pay-as-you-go charges, reservations can save you up to 72 percent on your resource costs. Reservations provide a billing discount and don't affect the runtime state of your resources.
+  
+  You can pay for a reservation in advance or on a monthly basis. The overall cost of up-front and monthly reservations is the same, and there are no additional costs if you pay monthly. Azure reservations, but not third-party items, can be paid monthly.
+
+* **Why should you opt for azure reservation?**
+
+  If you have constant resource usage that supports reservations, purchasing a reservation can help you save money. Pay-as-you-go prices apply when you frequently run instances of a service without making a reservation. When you buy a reservation, you immediately get the reservation discount. Pay-as-you-go charges are no longer applied to the resources. 
+
 
 **Task 5: Shutdown**
 

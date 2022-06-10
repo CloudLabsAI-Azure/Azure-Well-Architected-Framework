@@ -104,7 +104,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
 
 **Task 4: Reserve Instances**
-**READ-ONLY**
+**[READ-ONLY]**
 
 * **What is Azure Reservation?**
 

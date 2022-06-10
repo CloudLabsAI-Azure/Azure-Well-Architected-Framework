@@ -107,17 +107,17 @@ In this task, you will create your own encryption key to protect the data in you
    
 2. From the left navigation pane, under the **Security + Networking** section, Select **Encryption**.
 
-   ![](./media/)
+   ![](./media/ex5-task4-01.png)
    
-3. On the **Encryption** pane, select **c`ustomer-managed keys`** for **Encryption Type** and **`Select from keyvault`** option for **Encryption key**. Click on **select a keyvault and key** option next to keyvault and key.
+3. On the **Encryption** pane, select **`customer-managed keys`** for **Encryption Type** and **`Select from key vault`** option for **Encryption key**. Click on **select a key vault and key** option next to keyvault and key.
+
+   ![](./media/ex5-task4-02.png)
+   
+4. On the **Select a key** page, select **key vault** for keystore type and click on **create new key vault** option next to keyvault.
 
    ![](./media/)
    
-4. On the **Select a key** page, select **key vault** for keystore type and click on **create new keyvault** option next to keyvault.
-
-   ![](./media/)
-   
-5. You will be redirected to **Create a keyvault** page, fill the following details and click on **Next: Access policy**.
+5. You will be redirected to **Create a key vault** page, fill the following details and click on **Next: Access policy**.
 
   * **Subscription**: Select your subscription
   * **Resource group**: wafdev

@@ -57,23 +57,25 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
    
 4. The initial cost analysis view includes the following areas:
 
- * **Currently selected view:** Represents the predefined cost analysis view configuration. Each view includes date range, granularity, group by, and filter settings. The default view shows accumulated costs for the current billing period, but you can change to other built-in views.
+ * **Currently selected view:** This represents the predefined cost analysis view configuration. Each view includes date range, granularity, group by, and filter settings. The default view shows the current billing period's total combined costs, but you can switch to one of the other built-in views.
 
- * **Cost (1):** Shows the total usage and purchase costs for the current month, as they're accrued and will show on your bill.
+ * **Cost (1):** Shows the total usage and purchase costs for the current month, as they're accrued and will show on your bill. Costs are estimated until the invoice is generated and do not factor in credits. Pay-as-you-go subscriptions only include usage costs.
 
- * **Forecast (2):** Shows the total forecasted costs for time period you choose.
+ * **Forecast (2):** Shows the total forecasted costs for time period you choose. Forecast is based on usage for the selected time period and does not account for purchases. Changes in usage may take up to a week to be reflected.
 
  * **Budget (if selected) (3):** Shows the planned spending limit for the selected scope, if available.
 
- * **Accumulated granularity (4):** Shows the total aggregate daily costs, from the beginning of the billing period. After you create a budget for your billing account or subscription, you can quickly see your spending trend against the budget. Hover over a date to view the accumulated cost for that day.
+ * **Accumulated granularity (4):** Shows the total aggregate daily costs, from the beginning of the billing period. You can easily monitor your spending trend versus the budget after creating a budget for your billing account or subscription. Hover over a date to view the accumulated cost for that day.
 
- * **Pivot (donut) charts (5):** Provide dynamic pivots, breaking down the total cost by a common set of standard properties. They show the largest to smallest costs for the current month.
+ * **Pivot (donut) charts (5):** These charts provide dynamic pivots, breaking down the total cost by a common set of standard properties. They show the largest to smallest costs for the current month.
 
    ![](./media/costopt-31.png)
 
+> **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
 
+5. You can play with different filters provided here to analyze the cost, such as:
 
-
+ * 
 
 
 **Task 2: Resize a Virtual Machine**

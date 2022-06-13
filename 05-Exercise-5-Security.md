@@ -184,7 +184,7 @@ In this task, we are going to perform  integrated security monitoring for your w
 
    ![](./media/ex5-task5-06.png)
    
-6. Under Recommendation, Click on **Secure management ports** and select **Management ports of virtual machines should be protected with just-in-time network access control**.
+6. Under Recommendations, Click on **Secure management ports** and select **Management ports of virtual machines should be protected with just-in-time network access control**.
 
    ![](./media/ex5-task5-02.png)
    
@@ -196,19 +196,43 @@ In this task, we are going to perform  integrated security monitoring for your w
    - Freshness interval: **24 Hours** 
    - Tactics and techniques: **Initial Access**
 
-   ![](./media/ex5-task5-07.png)
+    ![](./media/ex5-task5-07.png)
    
-8. The next important part is the Remediation Steps which contains the remediation logic where you can remediate the selected resource/s.
+8. The next important part is the Remediation Steps which contains the remediation logic where you can remediate the selected resource/s. To simplify remediation and improve your environment's security and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.
 
-9. Under Affected resources, select the virtual machine with the name **wafdevXXX** on the Unhealthy resources and click on **Fix**. This will automatically apply the remediation on the selected resource.
+9. Under **Affected resources**, select the virtual machine with the name **wafdevXXX** on the Unhealthy resources and click on **Fix**. This will automatically apply the remediation on the selected resource.
 
-   ![](./media/ex5-task5-08.png)
+    ![](./media/ex5-task5-08.png)
   
-10. This will open a new window - **Just-in-time VM access configuration**, review the implications for this remediation and click on **Save**.
+10. This will open a new window **Just-in-time VM access configuration**, review the implications for this remediation and click on **Save**.
 
-   ![](./media/ex5-task5-09.png)
+    ![](./media/ex5-task5-09.png)
    
 11. Wait for a notification: ✅ **Just-in-time VM access enabled** - which successfully blocks all inbound traffic at the network level to the virtual machine **wafdevxxx**. 
     
     > **Note**: It can take upto 5 minutes for the VM access to get enabled. 
 
+12. Go back to **Recommendations**, click on **Apply system updates** and select **Log Analytics agent should be installed on virtual machines**.
+
+    ![](./media/ex5-task5-10.png)
+   
+13. On the top section, notice the following:
+
+   - Title of the recommendation: **Log Analytics agent should be installed on virtual machines**
+   - Top menu controls: **View policy definition** and **Open query**
+   - Severity indicator: **High**
+   - Freshness interval: **24 Hours** 
+
+    ![](./media/ex5-task5-11.png)
+   
+14. Under **Affected resources**, select the virtual machine with the name **wafproXXX** on the Unhealthy resources and click on **Fix**. 
+
+    ![](./media/ex5-task5-12.png)
+    
+15. This will open a new window **Fixing resources**, select an existing log analytics workspace for **Workspace ID** and click on **Fix 2 resources**.
+
+    ![](./media/ex5-task5-13.png)
+    
+16. Wait for a notification: ✅ **Remediation successful**. 
+
+     > **Note**: It can take upto 5 minutes for the remediation to get successful. 

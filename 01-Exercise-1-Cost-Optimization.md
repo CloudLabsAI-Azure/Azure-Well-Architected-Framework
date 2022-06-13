@@ -102,6 +102,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
 **Task 2: Cost controls**
 
+**Task 3: Azure Hybrid Benefit**
 
 **Task 4: Reserve Instances**
 **[READ-ONLY]**
@@ -118,9 +119,25 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
 * **Which Resources are Most Appropriate for Azure Reservations?**
 
-  Except for Azure Databricks, all reservations are applied hourly. Reservations should be purchased based on an examination of continuous baseline usage to guarantee they assist cut expenses.
+  Following are the resources that fall under Reservations:
   
-  Your reservation may be underutilised if you acquire more capacity than was previously utilised. Because unused reservations cannot be retained for later use, you should try to get the most out of them. Additionally, if your usage exceeds the reserved capacity, you will be charged the pay-per-use rate. 
+ * App Service
+ * Azure Cache for Redis
+ * Cosmos DB
+ * Databricks
+ * Data Explorer
+ * Disk Storage
+ * Dedicated Host
+ * Software plans
+ * Storage
+ * SQL Database
+ * Azure Database for PostgreSQL
+ * Azure Database for MySQL
+ * Azure Database for MariaDB
+ * Azure Synapse Analytics
+ * Virtual machines
+ * Log Analytics
+
 
 * **Virtual Machine size flexibility with Reserved VM Instances**
 
@@ -143,10 +160,6 @@ You buy a reserved VM instance with the size Standard_DS4_v2 where the ratio or 
 * Scenario 4: Run one Standard_DS5_v2 with a ratio of 16 and purchase an additional Standard_DS4_v2 reservation with a ratio of 8. Both reservations combine and apply the discount to entire VM.
 
 The following sections show what sizes are in the same size series group when you buy a reserved VM instance optimized for instance size flexibility.  
-  
-  
-  
-  
   
 
 **Task 5: Shutdown**
@@ -321,7 +334,7 @@ You can lower cost by managing the size of the VMs.
 <p> &#11088; For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings! </p>
 
 
-
+**Task 7: Move to PAAS**
 
 
 

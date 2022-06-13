@@ -101,6 +101,8 @@ In this task you will learn how to control access to the Azure resources that yo
 
 In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls.
 
+**Data encryption**
+
 1. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
 
     ![](./media/storage-select.png)
@@ -151,6 +153,37 @@ In this task, you will create your own encryption key to protect the data in you
 10. Click on **Save** and wait until the changes to **Encryption** gets updated. Visit the encryption pane and observe the updated keys.
 
    ![](./media/ex5-task4-08.png)
+   
+**Data sovereignty**
+
+   **Data sovereignty** is a corporate or government standard that makes your data to reside within a certain country usually within the country where your corporation resides. in this task we will be using azure policy to implement the data sovereignty.
+
+11. Type **policy** in the search box located on the top of the Azure Portal page and click on it.
+
+   ![](./media/ex5-task4-10.png)
+   
+12. From the left navigation pane, under the **Authoring** section, select **Definitions**.
+
+   ![](./media/ex5-task4-11.png)
+   
+13. On the **Policy Definition (1)** page, type **location (2)** in the **search** bar and click on **Allowed locations (3)**.
+
+   ![](./media/ex5-task4-12.png)
+   
+14. On the **Allowed locations** page, go through the policy details and click on **assign**.
+
+    ![](./media/ex5-task4-13.png)
+    
+15. Click on **...** on the **Basics** tab of **assign policy** page and select your subscription as the scope.
+
+    ![](./media/ex5-task4-14.png)
+    
+    ![](./media/ex5-task4-15.png)
+    
+16. Click on **Next** and select your choice of location in the **Allowed locations** bar. Click on **Review + create** followed by **create** to assign the policy to the subscription.
+
+    ![](./media/ex5-task4-16.png)
+    
 
 **Task 5: Security operations**
 
@@ -236,3 +269,5 @@ In this task, we are going to perform  integrated security monitoring for your w
 16. Wait for a notification: ✅ **Remediation successful**. 
 
      > **Note**: It can take upto 5 minutes for the remediation to get successful. 
+
+17. Go to the **Recommendations** page and explore through other recommendations.

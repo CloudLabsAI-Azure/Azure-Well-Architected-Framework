@@ -336,6 +336,45 @@ You can lower cost by managing the size of the VMs.
 
 **Task 7: Move to PAAS**
 
+Infrastructure as a service (IaaS) and platform as a service (PaaS) are cloud service models.
+
+* IaaS provides users with remote access to computing resources such as servers, storage, and networks. This infrastructure is hosted and managed by the IaaS provider. Customers access hardware and resources over the internet.
+
+* PaaS, on the other hand, provides a framework for creating and implementing apps. 
+
+* In the same way as IaaS hosts and maintains the platform's servers, networks, storage, and other computing resources, PaaS hosts and maintains the platform's servers, networks, storage, and other computing resources. 
+
+* However, PaaS also covers tools, services, and systems that aid in the development of web applications. The platform allows developers to create apps without having to worry about backups, security, upgrades, or other administrative responsibilities. 
+
+* The infrastructure cost is incorporated in the service pricing model with PaaS. For example, you can provision a lower SKU virtual machine as a jumpbox. Storage and managing a separate server come at an added cost. On the virtual machine, you must additionally configure a public IP address, which is not suggested. All of these expenditures are taken into account by a managed service like Azure Bastion, which provides improved protection.
+
+* Use PaaS instead of IaaS wherever possible. IaaS is similar to owning a box of spare parts. You can construct anything, but you must put it together yourself. PaaS alternatives are simpler to set up and manage. Virtual machines (VMs) and virtual networks are not required. You also won't have to deal with routine maintenance such as installing patches and updates.
+
+Here's an architecture of the workload on both IaaS and PaaS:
+
+**IaaS Architecture**
+
+   ![](./media/costopt-36.png)
+
+
+**PaaS Architecture**
+
+   ![](./media/costopt-37.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

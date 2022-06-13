@@ -116,6 +116,38 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
   If you have constant resource usage that supports reservations, purchasing a reservation can help you save money. Pay-as-you-go prices apply when you frequently run instances of a service without making a reservation. When you buy a reservation, you immediately get the reservation discount. Pay-as-you-go charges are no longer applied to the resources. 
 
+* **Which Resources are Most Appropriate for Azure Reservations?**
+
+  Except for Azure Databricks, all reservations are applied hourly. Reservations should be purchased based on an examination of continuous baseline usage to guarantee they assist cut expenses.
+  
+  Your reservation may be underutilised if you acquire more capacity than was previously utilised. Because unused reservations cannot be retained for later use, you should try to get the most out of them. Additionally, if your usage exceeds the reserved capacity, you will be charged the pay-per-use rate. 
+
+* **Virtual Machine size flexibility with Reserved VM Instances**
+
+  You can select to optimise for instance size flexibility or capacity priority when purchasing a Reserved VM Instance. The reservation you purchase is valid for all sizes of virtual machines (VMs) in the same instance size flexibility group. 
+  
+  The number of VMs that the reservation discount applies to inside the instance size flexibility group is determined by the VM size you choose when you acquire a reservation. It also relies on the size of the virtual machines (VMs) you're operating. The relative footprint for each VM size in that instance size flexibility group is compared in the ratio column. Calculate how the reservation discount applies to the VMs you have running using the ratio value.
+
+  For example, if you buy a reservation for a VM size that's listed in the DSv2 Series, like Standard_DS3_v2, the reservation discount can apply to the other sizes that are listed in that same instance size flexibility group such as, Standard_DS1_v2, Standard_DS2_v2, Standard_DS3_v2 and so on.
+  
+  But that reservation discount doesn't apply to VMs sizes that are listed in different instance size flexibility groups, like SKUs in DSv2 Series High Memory: Standard_DS11_v2, Standard_DS12_v2, and so on.
+
+
+**Example:** The following examples use the sizes and ratios in the DSv2-series table.
+
+You buy a reserved VM instance with the size Standard_DS4_v2 where the ratio or relative footprint compared to the other sizes in that series is 8.
+
+* Scenario 1: Run eight Standard_DS1_v2 sized VMs with a ratio of 1. Your reservation discount applies to all eight of those VMs.
+* Scenario 2: Run two Standard_DS2_v2 sized VMs with a ratio of 2 each. Also run a Standard_DS3_v2 sized VM with a ratio of 4. The total footprint is 2+2+4=8. So your reservation discount applies to all three of those VMs.
+* Scenario 3: Run one Standard_DS5_v2 with a ratio of 16. Your reservation discount applies to half that VM's compute cost.
+* Scenario 4: Run one Standard_DS5_v2 with a ratio of 16 and purchase an additional Standard_DS4_v2 reservation with a ratio of 8. Both reservations combine and apply the discount to entire VM.
+
+The following sections show what sizes are in the same size series group when you buy a reserved VM instance optimized for instance size flexibility.  
+  
+  
+  
+  
+  
 
 **Task 5: Shutdown**
 

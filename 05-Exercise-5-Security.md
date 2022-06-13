@@ -223,7 +223,7 @@ In this task, we are going to perform  integrated security monitoring for your w
    - Severity indicator: **High**
    - Freshness interval: **24 Hours** 
 
-    ![](./media/ex5-task5-11.png)
+     ![](./media/ex5-task5-11.png)
    
 14. Under **Affected resources**, select the virtual machine with the name **wafproXXX** on the Unhealthy resources and click on **Fix**. 
 

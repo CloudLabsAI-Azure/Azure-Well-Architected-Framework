@@ -16,6 +16,8 @@ In this exercise, we will apply security principles to your architecture to prot
 
 **Task 1: Identity and access management**
 
+User directories and other authentication functions are complex to develop and critically important to security assurances. Avoid using homegrown authentication solutions and use capabilities like Azure Active Directory (Azure AD), Azure AD B2B, Azure AD B2C, or third-party solutions to authenticate and grant permission to users, partners, customers, applications, services, and other entities. 
+
 
 **Task 2: Infra protection**
 
@@ -86,7 +88,7 @@ In this task you will learn how to control access to the Azure resources that yo
     ![](./media/container2.png)
     
     
-     > **Note:** The container might take upto 2 minutes for getting created. Click on **Refresh** button once in few seconds until you are able to see the container.
+    > **Note:** The container might take upto 2 minutes for getting created. Click on **Refresh** button once in few seconds until you are able to see the container.
     
 15. Go through the folder names **resourceid=** and observe that each event is stored in the PT1H.json file with the following format that uses a common top-level schema.
 
@@ -97,7 +99,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
 **Task 3: App Security**
    
-   
+   Inconsistent configurations for applications can create security Risks. Azure App Configuration provides a service to centrally manage application settings and feature flags, which helps mitigate this risk. Defender for Cloud continuously monitors the configuration of your virtual machines scale sets to identify potential security vulnerabilities and recommends actions to mitigate them. In this task we will be adding log analytics to the virtual machine scale set using **Micrososft Defender for cloud**.
 
 1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
 
@@ -135,11 +137,14 @@ In this task you will learn how to control access to the Azure resources that yo
 
 In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls.
 
+**Data sovereignty** is a corporate or government standard that makes your data to reside within a certain country usually within the country where your corporation resides. In this task we will be using azure policy to implement the data sovereignty.
+
+
 **Data encryption**
 
 1. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
 
-    ![](./media/storage-select.png)
+   ![](./media/storage-select.png)
    
 2. From the left navigation pane, under the **Security + Networking** section, Select **Encryption**.
 
@@ -177,7 +182,7 @@ In this task, you will create your own encryption key to protect the data in you
   * **RSA key size**: 2048
   * leave all other values to default
 
-  ![](./media/ex5-task4-06.png)
+   ![](./media/ex5-task4-06.png)
   
 9. Once the key is generated successfully, you will be redirected to **Select a key** page, click on **Select**.
 
@@ -188,8 +193,6 @@ In this task, you will create your own encryption key to protect the data in you
    ![](./media/ex5-task4-08.png)
    
 **Data sovereignty**
-
-   **Data sovereignty** is a corporate or government standard that makes your data to reside within a certain country usually within the country where your corporation resides. in this task we will be using azure policy to implement the data sovereignty.
 
 11. Type **policy** in the search box located on the top of the Azure Portal page and click on it.
 
@@ -205,17 +208,17 @@ In this task, you will create your own encryption key to protect the data in you
    
 14. On the **Allowed locations** page, go through the policy details and click on **assign**.
 
-    ![](./media/ex5-task4-13.png)
+   ![](./media/ex5-task4-13.png)
     
 15. Click on **...** on the **Basics** tab of **assign policy** page and select your subscription as the scope.
 
-    ![](./media/ex5-task4-14.png)
+   ![](./media/ex5-task4-14.png)
     
-    ![](./media/ex5-task4-15.png)
+   ![](./media/ex5-task4-15.png)
     
 16. Click on **Next** and select your choice of location in the **Allowed locations** bar. Click on **Review + create** followed by **create** to assign the policy to the subscription.
 
-    ![](./media/ex5-task4-16.png)
+   ![](./media/ex5-task4-16.png)
     
 
 **Task 5: Security operations**
@@ -227,11 +230,11 @@ In this task, we are going to perform  integrated security monitoring for your w
 
 1. Type **Microsoft Defender** in the search box located on the top of the Azure Portal page and click on **Microsoft Defender for Cloud** to open it.
 
-   ![](./media/ex5-task5-01.png)
+  ![](./media/ex5-task5-01.png)
    
 2. The Microsoft Defender for Cloud Overview page provides a unified view for security professionals. This page contains detailed insights on the security posture on its dedicated dashboard and includes multiple independent cloud security pillars such as- **Secure Score**, **Regulatory Compliance** and **Microsoft Defender for Cloud**.
 
-   ![](./media/ex5-task5-03.png)
+  ![](./media/ex5-task5-03.png)
    
 3. On the **Overview** page, and look at the **Security posture** tile, you can see your current score along with the number of **Completed controls and Completed recommendations**. Clicking on this tile will redirect you to drill down view across subscriptions.
 
@@ -268,11 +271,11 @@ In this task, we are going to perform  integrated security monitoring for your w
 
 9. Under **Affected resources**, select the virtual machine with the name **wafdevXXX** on the Unhealthy resources and click on **Fix**. This will automatically apply the remediation on the selected resource.
 
-    ![](./media/ex5-task5-08.png)
+   ![](./media/ex5-task5-08.png)
   
 10. This will open a new window **Just-in-time VM access configuration**, review the implications for this remediation and click on **Save**.
 
-    ![](./media/ex5-task5-09.png)
+   ![](./media/ex5-task5-09.png)
    
 11. Wait for a notification: ✅ **Just-in-time VM access enabled** - which successfully blocks all inbound traffic at the network level to the virtual machine **wafdevxxx**. 
     

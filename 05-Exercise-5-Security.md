@@ -94,8 +94,42 @@ In this task you will learn how to control access to the Azure resources that yo
    
    ![](./media/container3.png)
 
-**Task 3: App Security**
 
+**Task 3: App Security**
+   
+   
+
+1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
+
+   ![](./media/costopt-01.png)
+   
+2. Open **wafprod** resource group and open the Virtual machine scale set **srv**.
+
+   ![](./media/ex5-task3-01.png)
+   
+3. From the left navigation pane, under the **Settings** section, select **Micrososft Defender for Cloud**. Click on the recommendation **Log Analytics agent should be installed on the virtual machine scale sets**.
+
+   ![](./media/ex5-task3-02.png)
+   
+4. On the top section, notice the following:
+
+   - Title of the recommendation: **Log Analytics agent should be installed on the virtual machine scale sets**
+   - Top menu controls: **View policy definition** and **Open query**
+   - Severity indicator: **High**
+   - Freshness interval: **24 Hours** 
+   
+   ![](./media/ex5-task3-03.png)
+   
+5. Under **Remediation steps**, click on **Quick fix logic** and go through the **Automatic remediation script content**.  After that click on **Fix**.
+
+   ![](./media/ex5-task3-04.png)
+   
+6. This will open a new window **Fixing resources**, select an existing log analytics workspace for **Workspace ID** and click on **Fix 1 resources**.
+
+   ![](./media/ex5-task3-05.png)
+   
+7. Wait for a notification: ✅ **Remediation successful**. 
+ 
 
 **Task 4: Data encryption and sovereignty**
 
@@ -124,7 +158,6 @@ In this task, you will create your own encryption key to protect the data in you
   * **Subscription**: Select your subscription
   * **Resource group**: wafdev
   * **Key vault name**: waf-keyvault{unique id}
-  
   
    ![](./media/ex5-task4-09.png)
   

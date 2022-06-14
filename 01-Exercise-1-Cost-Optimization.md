@@ -145,8 +145,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
    ![](./media/costopt-42.png)
 
+6. After you create a budget, it's shown in cost analysis. One of the first steps in analysing your costs and spending is to compare your budget to your spending patterns.
 
-
+   ![](./media/costopt-43.png)
 
 
 

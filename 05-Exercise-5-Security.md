@@ -65,6 +65,8 @@ User directories and other authentication functions are complex to develop and c
 
 In this task you will learn how to control access to the Azure resources that you deploy. you will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events and to audit all the changes to the infrastructure.
 
+**Azure role-based access control** (Azure RBAC) is a system that provides fine-grained access management of Azure resources. Using Azure RBAC, you can segregate duties within your team and grant only the amount of access to users that they need to perform their jobs.
+
 **Role Assignment to Resources**
 
 1. In the Azure Portal, navigate to the **Resource Group** named **wafdev**.
@@ -129,7 +131,6 @@ In this task you will learn how to control access to the Azure resources that yo
 
     ![](./media/container2.png)
     
-    
     > **Note:** The container might take upto 2 minutes for getting created. Click on **Refresh** button once in few seconds until you are able to see the container.
     
 15. Go through the folder names **resourceid=** and observe that each event is stored in the PT1H.json file with the following format that uses a common top-level schema.
@@ -177,9 +178,9 @@ In this task you will learn how to control access to the Azure resources that yo
 
 ## Task 4: Data encryption and sovereignty
 
-In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls.
+In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls. 
 
-**Data sovereignty** is a corporate or government standard that makes your data to reside within a certain country usually within the country where your corporation resides. In this task we will be using azure policy to implement the data sovereignty.
+**Data encryption** is the method of translating data into another form or code so that access to the data is limited to only those with the correct decryption key (or password). **Data sovereignty** is a corporate or government standard that makes your data to reside within a certain country usually within the country where your corporation resides. In this task we will be using azure policy to implement the data sovereignty.
 
 
 **Data encryption**

@@ -102,7 +102,61 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
 **Task 2: Cost controls**
 
+In this task you will learn about Budgets and Alert in Azure that help to analyse and optimize the cost in a better way.
+
+There is an alert feature in Azure Cost Management. When consumption reaches a critical threshold, an alert is sent out. Consider the metrics that each workload resource produces. For each metric, build alerts on baseline thresholds. 
+
+This way, the admins can be alerted when the workload is using the services at capacity. Admins can then fine-tune the resources to target specific SKUs based on current demand. You can also set budget alerts at the scopes of resource groups and management groups. Both cloud services performance and budget requirements can be balanced through alerts on metrics and budgets.
+
+1. In the Azure portal, search for Subscriptions and select **Subscriptions** from the suggestions.
+
+   ![](./media/costopt-38.png)
+
+2. Select your default subscription and then select **Budgets**.
+
+   ![](./media/costopt-39.png)
+
+3. Click on **+ Add** to add a budget.
+
+   ![](./media/costopt-40.png)
+
+4. Fill in the Budget Details as following:
+
+* Scope: Make sure your subscription is selected **(1)**.
+* Name: **waf-budget (2)**
+* Reset period: The reset period determines the time window that's analyzed by the budget. Select **Quaterly (3)** from the drop down.
+* Creation date: This is the date of creation of budget and it will be selected by default **(4)**.
+* Expiration date: Add an expiry date for the bduget **(5)**.
+* Amount ($): Give your budget amount threshold **(6)**. 
+* Click on **Next (7)**.
+
+   ![](./media/costopt-41.png)
+
+5. Fill in the alert etails as following:
+
+* Scope: Make sure your subscription is selected **(1)**.
+* Type:
+* % of budget: 
+* Alert recipients (email): **INJECTKEYS USERNAME**
+* Alert recipients (email): Add **azure-noreply@microsoft.com** to your approved senders list so that emails don't go to your junk email folder.
+* Language: You can select your language from the drop down. Here we are leaving this on **Default (5)**.
+
+* Click on **Create (6)**.
+
+   ![](./media/costopt-42.png)
+
+
+
+
+
+
+
+
+
+
+
 **Task 3: Azure Hybrid Benefit**
+
 
 **Task 4: Reserve Instances**
 **[READ-ONLY]**

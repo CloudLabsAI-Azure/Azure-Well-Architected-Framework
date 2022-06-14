@@ -117,7 +117,7 @@ In this task you will learn how to control access to the Azure resources that yo
     *  **Logs**: Make sure you have selected all the categories
     *  **Destination details**: Check **Archive to a storage account** and leave all the other values to default
 
-   ![](./media/activity-save.png)
+    ![](./media/activity-save.png)
    
 12. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
 
@@ -136,6 +136,7 @@ In this task you will learn how to control access to the Azure resources that yo
 15. Go through the folder names **resourceid=** and observe that each event is stored in the PT1H.json file with the following format that uses a common top-level schema.
 
    `{ "time": "2020-06-12T13:07:46.766Z", "resourceId": "/SUBSCRIPTIONS/00000000-0000-0000-0000-000000000000/RESOURCEGROUPS/MY-RESOURCE-GROUP/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/MV-VM-01", "correlationId": "0f0cb6b4-804b-4129-b893-70aeeb63997e", "operationName": "Microsoft.Resourcehealth/healthevent/Updated/action", "level": "Information", "resultType": "Updated", "category": "ResourceHealth", "properties": {"eventCategory":"ResourceHealth","eventProperties":{"title":"This virtual machine is starting as requested by an authorized user or process. It will be online shortly.","details":"VirtualMachineStartInitiatedByControlPlane","currentHealthStatus":"Unknown","previousHealthStatus":"Unknown","type":"Downtime","cause":"UserInitiated"}}}`
+   
    
    ![](./media/container3.png)
 
@@ -163,7 +164,7 @@ In this task you will learn how to control access to the Azure resources that yo
    - Severity indicator: **High**
    - Freshness interval: **24 Hours** 
    
-   ![](./media/ex5-task3-03.png)
+    ![](./media/ex5-task3-03.png)
    
 5. Under **Remediation steps**, click on **Quick fix logic** and go through the **Automatic remediation script content**.  After that click on **Fix**.
 
@@ -207,7 +208,7 @@ In this task, you will create your own encryption key to protect the data in you
   * **Resource group**: wafdev
   * **Key vault name**: waf-keyvault{unique id}
   
-   ![](./media/ex5-task4-09.png)
+    ![](./media/ex5-task4-09.png)
   
 6. On the **Access policy** pane, check all the options under **Enable access to:** and click on **Review + create**.
 
@@ -225,7 +226,7 @@ In this task, you will create your own encryption key to protect the data in you
   * **RSA key size**: 2048
   * leave all other values to default
 
-   ![](./media/ex5-task4-06.png)
+    ![](./media/ex5-task4-06.png)
   
 9. Once the key is generated successfully, you will be redirected to **Select a key** page, click on **Select**.
 

@@ -16,8 +16,50 @@ In this exercise, we will apply security principles to your architecture to prot
 
 **Task 1: Identity and access management**
 
-User directories and other authentication functions are complex to develop and critically important to security assurances. Avoid using homegrown authentication solutions and use capabilities like Azure Active Directory (Azure AD), Azure AD B2B, Azure AD B2C, or third-party solutions to authenticate and grant permission to users, partners, customers, applications, services, and other entities. 
+User directories and other authentication functions are complex to develop and critically important to security assurances. You use capabilities like Azure Active Directory (Azure AD), Azure AD B2B, Azure AD B2C, or third-party solutions to authenticate and grant permission to users, partners, customers, applications, services, and other entities. In this task, We'll be enabling Multi-Factor authentication, Multi-factor authentication is a process where a user is prompted during the sign-in process for an additional form of identification which increases the level of security.
 
+1. In your JumpVM launch browser and visit `https://AKA.ms/proofup` and if asked to log in then log in using the following credentials:
+
+   - Username: **<inject key="AzureAdUserEmail" />**
+   - Password: **<inject key="AzureAdUserPassword" />**
+  
+2. On a prompt saying "Help us protect your account" click on **Next**.
+
+   ![](media/mfa-00.png)
+
+3. Download the **Microsoft Authenticator** app on your Mobile from App Store. After installing the app, select **Next**.
+
+   ![](media/mfa-01.png)
+   
+4. In the Microsoft Authenticator app, set up your account by adding a work or school account. After adding an account select **Next**.
+
+   ![](media/mfa-02.png)
+   
+5. To connect the Microsoft Authenticator app with your account, **Scan the QR code** and select **Next**.
+
+   ![](media/mfa-03.png)
+   
+6. A Notification to Approve will pop-up on your mobile. Approve that and select **Next**.
+
+   ![](media/mfa-04.png)
+   
+7. Enter the details required to set up MFA.
+
+   - Country Code: Select the country code of your mobile number (1)
+   - Mobile Number: Enter the number which you want to use for the MFA (2)
+   - Method: Select the preferred method of authentication (3)
+   - Click on **Next**.
+
+   ![](media/mfa-05-updated.png)
+
+8. Authenticate the login according to the authentication method you have chosen in the previous step to complete the verification.
+
+   ![](media/mfa-06.png)
+  
+9. Now after a few seconds the status will change to **Verification Success**, click on **Done** to finish the MFA registration.
+
+   ![](media/mfa-07.png)
+   
 
 **Task 2: Infra protection**
 

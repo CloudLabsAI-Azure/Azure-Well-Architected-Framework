@@ -204,9 +204,9 @@ In this task, you will create your own encryption key to protect the data in you
    
 5. You will be redirected to **Create a key vault** page, fill the following details and click on **Next: Access policy**.
 
-  * **Subscription**: Select your subscription
-  * **Resource group**: wafdev
-  * **Key vault name**: waf-keyvault{unique id}
+   - **Subscription**: Select your subscription
+   - **Resource group**: wafdev
+   - **Key vault name**: waf-keyvault{unique id}
   
     ![](./media/ex5-task4-09.png)
   
@@ -220,11 +220,11 @@ In this task, you will create your own encryption key to protect the data in you
   
 8. On the **Create a key** page, fill the following details and click on **create**.
 
-  * **options**: Generate
-  * **Name**: waf-key
-  * **Key type**: RSA
-  * **RSA key size**: 2048
-  * leave all other values to default
+   - **options**: Generate
+   - **Name**: waf-key
+   - **Key type**: RSA
+   - **RSA key size**: 2048
+   - leave all other values to default
 
     ![](./media/ex5-task4-06.png)
   
@@ -234,35 +234,35 @@ In this task, you will create your own encryption key to protect the data in you
    
 10. Click on **Save** and wait until the changes to **Encryption** gets updated. Visit the encryption pane and observe the updated keys.
 
-   ![](./media/ex5-task4-08.png)
+    ![](./media/ex5-task4-08.png)
    
 **Data sovereignty**
 
 11. Type **policy** in the search box located on the top of the Azure Portal page and click on it.
 
-   ![](./media/ex5-task4-10.png)
+    ![](./media/ex5-task4-10.png)
    
 12. From the left navigation pane, under the **Authoring** section, select **Definitions**.
 
-   ![](./media/ex5-task4-11.png)
+    ![](./media/ex5-task4-11.png)
    
 13. On the **Policy Definition (1)** page, type **location (2)** in the **search** bar and click on **Allowed locations (3)**.
 
-   ![](./media/ex5-task4-12.png)
+    ![](./media/ex5-task4-12.png)
    
 14. On the **Allowed locations** page, go through the policy details and click on **assign**.
 
-   ![](./media/ex5-task4-13.png)
+    ![](./media/ex5-task4-13.png)
     
 15. Click on **...** on the **Basics** tab of **assign policy** page and select your subscription as the scope.
 
-   ![](./media/ex5-task4-14.png)
+    ![](./media/ex5-task4-14.png)
     
-   ![](./media/ex5-task4-15.png)
+    ![](./media/ex5-task4-15.png)
     
 16. Click on **Next** and select your choice of location in the **Allowed locations** bar. Click on **Review + create** followed by **create** to assign the policy to the subscription.
 
-   ![](./media/ex5-task4-16.png)
+    ![](./media/ex5-task4-16.png)
     
 
 ## Task 5: Security operations
@@ -274,32 +274,32 @@ In this task, we are going to perform  integrated security monitoring for your w
 
 1. Type **Microsoft Defender** in the search box located on the top of the Azure Portal page and click on **Microsoft Defender for Cloud** to open it.
 
-  ![](./media/ex5-task5-01.png)
+   ![](./media/ex5-task5-01.png)
    
 2. The Microsoft Defender for Cloud Overview page provides a unified view for security professionals. This page contains detailed insights on the security posture on its dedicated dashboard and includes multiple independent cloud security pillars such as- **Secure Score**, **Regulatory Compliance** and **Microsoft Defender for Cloud**.
 
-  ![](./media/ex5-task5-03.png)
+   ![](./media/ex5-task5-03.png)
    
 3. On the **Overview** page, and look at the **Security posture** tile, you can see your current score along with the number of **Completed controls and Completed recommendations**. Clicking on this tile will redirect you to drill down view across subscriptions.
 
-   ![](./media/ex5-task5-04.png)
+    ![](./media/ex5-task5-04.png)
    
  > ⭐ Good to know: <br>
  > The higher the score, the lower the identified risk level.
 
 4. The bottom section lists the subscriptions and their current secure scores. To view the recommendations behind the score, click on **View recommendations**.
 
-   ![](./media/ex5-task5-05.png)
+    ![](./media/ex5-task5-05.png)
    
 **Exploring Security Controls and Recommendations**
    
 5. On the Recommendations page, pay attention to the first part of the page. It includes the current Secure Score, progress on the Recommendations status(both completed security controls and recommendations) and Resource health (by severity).
 
-   ![](./media/ex5-task5-06.png)
+    ![](./media/ex5-task5-06.png)
    
 6. Under Recommendations, Click on **Secure management ports** and select **Management ports of virtual machines should be protected with just-in-time network access control**.
 
-   ![](./media/ex5-task5-02.png)
+    ![](./media/ex5-task5-02.png)
    
 7. On the top section, notice the following:
 
@@ -309,7 +309,7 @@ In this task, we are going to perform  integrated security monitoring for your w
    - Freshness interval: **24 Hours** 
    - Tactics and techniques: **Initial Access**
 
-    ![](./media/ex5-task5-07.png)
+     ![](./media/ex5-task5-07.png)
    
 8. The next important part is the Remediation Steps which contains the remediation logic where you can remediate the selected resource/s. To simplify remediation and improve your environment's security and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.
 

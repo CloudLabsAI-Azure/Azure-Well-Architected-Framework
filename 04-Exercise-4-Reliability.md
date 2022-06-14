@@ -16,3 +16,60 @@ Azure has many resiliency features already built into the platform, such as:
 * Availability Zones are physically separate locations within each Azure region. Each zone is composed of one or more datacenters equipped with independent power, cooling, and networking infrastructure. With availability zones, you can design and operate applications, and databases that automatically transition between zones without interruption, which ensures resiliency if one zone is affected.
 
 
+### **Task 1: Define requirements** 
+
+### **Task 2: Test with simulations and forced failovers** 
+
+### **Task 3: Deploy consistently** 
+
+### **Task 4: Monitor health** 
+
+### **Task 5: Respond to failure and disaster** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

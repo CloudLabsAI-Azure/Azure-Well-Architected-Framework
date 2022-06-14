@@ -23,5 +23,23 @@ In this exercise, we will go through the given architecutre and know more about:
 
 **Azure Monitor** helps you maximize the availability and performance of your applications and services. It delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. This information helps you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. 
 
+1. Type **Monitor** in the search box located on the top of the Azure Portal page and click on it.
+   
+   ![](media/Ex2-t3-01.png)
+   
+2. Click on **Metrics** in the left-hand menu.
+
+   ![](media/Ex2-t3-02.png)
+   
+3. You will be prompted with **Select a scope** page, select **wafprod** and 2 virtual machines with the name **wafprodxxxx** under scope. Click on **apply**.
+
+   ![](media/Ex2-t3-04.png)
+   
+4. Once the scope is applied, slect the following in the **Metrics** page.
+
+   - **Metric**: Max Data Disk Read Operations/Sec
+   - **Aggregation**: Max
+   
+    ![](media/Ex2-t3-03.png)
 
 ### Task 4: Processes and cadence 

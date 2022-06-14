@@ -331,10 +331,10 @@ In this task, we are going to perform  integrated security monitoring for your w
    
 13. On the top section, notice the following:
 
-   - Title of the recommendation: **Log Analytics agent should be installed on virtual machines**
-   - Top menu controls: **View policy definition** and **Open query**
-   - Severity indicator: **High**
-   - Freshness interval: **24 Hours** 
+    - Title of the recommendation: **Log Analytics agent should be installed on virtual machines**
+    - Top menu controls: **View policy definition** and **Open query**
+    - Severity indicator: **High**
+    - Freshness interval: **24 Hours** 
 
      ![](./media/ex5-task5-11.png)
    

@@ -15,3 +15,13 @@ In this exercise, we will go through the given architecutre and know more about:
  * Is the architecture prepared for the unexpected and to catch mistakes?
 
 
+### Task 1: DevOps
+
+### Task 2: Deployment
+
+### Task 3: Monitor 
+
+**Azure Monitor** helps you maximize the availability and performance of your applications and services. It delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. This information helps you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. 
+
+
+### Task 4: Processes and cadence 

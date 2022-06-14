@@ -14,7 +14,7 @@ Losing these assurances can negatively affect your business operations and reven
 In this exercise, we will apply security principles to your architecture to protect against attacks on the data and systems.
 
 
-**Task 1: Identity and access management**
+## Task 1: Identity and access management
 
 User directories and other authentication functions are complex to develop and critically important to security assurances. You use capabilities like Azure Active Directory (Azure AD), Azure AD B2B, Azure AD B2C, or third-party solutions to authenticate and grant permission to users, partners, customers, applications, services, and other entities. In this task, We'll be enabling Multi-Factor authentication, Multi-factor authentication is a process where a user is prompted during the sign-in process for an additional form of identification which increases the level of security.
 
@@ -61,7 +61,7 @@ User directories and other authentication functions are complex to develop and c
    ![](media/mfa-07.png)
    
 
-**Task 2: Infra protection**
+## Task 2: Infra protection
 
 In this task you will learn how to control access to the Azure resources that you deploy. you will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events and to audit all the changes to the infrastructure.
 
@@ -139,7 +139,7 @@ In this task you will learn how to control access to the Azure resources that yo
    ![](./media/container3.png)
 
 
-**Task 3: App Security**
+## Task 3: App Security
    
    Inconsistent configurations for applications can create security Risks. Azure App Configuration provides a service to centrally manage application settings and feature flags, which helps mitigate this risk. Defender for Cloud continuously monitors the configuration of your virtual machines scale sets to identify potential security vulnerabilities and recommends actions to mitigate them. In this task we will be adding log analytics to the virtual machine scale set using **Micrososft Defender for cloud**.
 
@@ -175,7 +175,7 @@ In this task you will learn how to control access to the Azure resources that yo
 7. Wait for a notification: ✅ **Remediation successful**. 
  
 
-**Task 4: Data encryption and sovereignty**
+## Task 4: Data encryption and sovereignty
 
 In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls.
 
@@ -263,7 +263,7 @@ In this task, you will create your own encryption key to protect the data in you
    ![](./media/ex5-task4-16.png)
     
 
-**Task 5: Security operations**
+## Task 5: Security operations
 
 In this task, we are going to perform  integrated security monitoring for your workload using **Microsoft Defender for Cloud**. We will enable **Just-in-time** acccess to the Virtual machine which locks down and limits the ports of Azure virtual machine in order to overcome malicious attacks on the virtual machine, therefore only providing access to a port for a limited amount of time.
 

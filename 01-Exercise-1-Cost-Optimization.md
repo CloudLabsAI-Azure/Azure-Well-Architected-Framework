@@ -13,7 +13,7 @@ The **Cost Optimization** in Well-Architected Assessment is a top-down review of
 
 This will help on the most immediate and direct impact of the recommendations.
 
-**Task 1: Monitor and Forecast**
+### **Task 1: Monitor and Forecast**
 
 In this task you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management and Billing.
 
@@ -100,7 +100,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
    ![](./media/costopt-35.png)
 
 
-**Task 2: Cost controls**
+### **Task 2: Cost controls**
 
 In this task you will learn about Budgets and Alert in Azure that help to analyse and optimize the cost in a better way.
 
@@ -150,29 +150,76 @@ This way, the admins can be alerted when the workload is using the services at c
    ![](./media/costopt-43.png)
 
 
+## **Note: Task 3 and Task 4 are read only tasks.**
+
+### **Task 3: Azure Hybrid Benefit**
+
+In this task you will get to know about Azure Hybrid Benefit.
+
+**1. What is the Azure Hybrid Benefit?**
+
+* Customer workloads are becoming more complicated, with several apps running on various hardware platforms across on-premises, multicloud, and the edge. It's critical to succeed in managing these various workload designs, providing uncompromised security, and allowing developers to be more agile.
+
+* Azure gives you the flexibility to innovate anywhere in your hybrid environment while operating seamlessly and securely.
+
+* **The Azure Hybrid Benefit is a pricing offer that helps you maximize the value of your existing on-premises Windows Server and/or SQL Server license investment while you’re migrating to Azure.** With it, eligible customers pay a reduced rate on Azure Virtual Machines (infrastructure as a service, or IaaS) and a reduced rate on Azure SQL Database (platform as a service, or PaaS) and SQL Server on Azure Virtual Machines (IaaS).
+
+**2. Which products are eligible for the Azure Hybrid Benefit?**
+
+* Windows Server Standard Edition with Software Assurance
+* Windows Server Datacenter edition with Software Assurance
+* SQL Server Enterprise Core with Software Assurance
+* SQL Server Standard Core with Software Assurance
+* Azure SQL Database
+
+**3. What does this benefit offer for Windows Server on Azure Virtual Machines?**
+
+Azure Hybrid Benefit helps you get more value from your Windows Server licenses and save up to 40 percent* on virtual machines.
+
+Each 2-processor license or each set of 16-core licenses, Datacenter or Standard Editions, are entitled to two instances of up to 8 cores, or one instance of up to 16 cores. Datacenter Edition licenses allow for simultaneous usage both on-premises and in Azure. Standard Edition licenses must be used either on-premises or in Azure, although customers get 180 days of concurrent use rights while they are migrating their servers.
+
+**4. How many Azure virtual machines one will receive with on-premises licenses?**
+
+For every 2-processor Windows Server license or set of 16 core Windows Server licenses covered with Software Assurance, you’ll receive either of the following in Azure.
+
+* Up to 2 virtual machines with up to 8 cores
+* One virtual machine with up to 16 cores
+
+**5. What does this benefit offer for Windows Server on Azure Virtual Machines?**
+
+Azure Hybrid Benefit helps you get more value from your Windows Server licenses and save up to 40 percent* on virtual machines.
+
+Each 2-processor license or each set of 16-core licenses, Datacenter or Standard Editions, are entitled to two instances of up to 8 cores, or one instance of up to 16 cores. Datacenter Edition licenses allow for simultaneous usage both on-premises and in Azure. Standard Edition licenses must be used either on-premises or in Azure, although customers get 180 days of concurrent use rights while they are migrating their servers.
 
 
+**6. Who is eligible for this offer?**
 
+The Azure Hybrid Benefit for SQL Server is available to customers with either of the following:
 
+* SQL Server Enterprise Core with Software Assurance or qualifying subscription licenses
+* SQL Server Standard Core with Software Assurance or qualifying subscription licenses
 
+**7. What products are eligible for Azure Hybrid Benefit for SQL Server?**
 
-**Task 3: Azure Hybrid Benefit**
+This hybrid benefit is only available for use with:
 
+* vCore-based service tiers of Azure SQL Database: Managed Instance, Single Database and Elastic Pool
+* SQL Server in Azure Virtual Machines
+* SQL Server Integration Services (SSIS)
 
-**Task 4: Reserve Instances**
-**[READ-ONLY]**
+### **Task 4: Reserve Instances**
 
-* **What is Azure Reservation?**
+**1. What is Azure Reservation?**
 
   By committing to one-year or three-year agreements for several goods, Azure Reservations can help you save money. Committing allows you to get a discount on the resources you use. When compared to pay-as-you-go charges, reservations can save you up to 72 percent on your resource costs. Reservations provide a billing discount and don't affect the runtime state of your resources.
   
   You can pay for a reservation in advance or on a monthly basis. The overall cost of up-front and monthly reservations is the same, and there are no additional costs if you pay monthly. Azure reservations, but not third-party items, can be paid monthly.
 
-* **Why should you opt for azure reservation?**
+**2. Why should you opt for azure reservation?**
 
   If you have constant resource usage that supports reservations, purchasing a reservation can help you save money. Pay-as-you-go prices apply when you frequently run instances of a service without making a reservation. When you buy a reservation, you immediately get the reservation discount. Pay-as-you-go charges are no longer applied to the resources. 
 
-* **Which Resources are Most Appropriate for Azure Reservations?**
+**3. Which Resources are Most Appropriate for Azure Reservations?**
 
   Following are the resources that fall under Reservations:
   
@@ -194,7 +241,7 @@ This way, the admins can be alerted when the workload is using the services at c
  * Log Analytics
 
 
-* **Virtual Machine size flexibility with Reserved VM Instances**
+**4. Virtual Machine size flexibility with Reserved VM Instances**
 
   You can select to optimise for instance size flexibility or capacity priority when purchasing a Reserved VM Instance. The reservation you purchase is valid for all sizes of virtual machines (VMs) in the same instance size flexibility group. 
   
@@ -217,7 +264,7 @@ You buy a reserved VM instance with the size Standard_DS4_v2 where the ratio or 
 The following sections show what sizes are in the same size series group when you buy a reserved VM instance optimized for instance size flexibility.  
   
 
-**Task 5: Shutdown**
+### **Task 5: Shutdown**
 
 Use the Start/stop VMs during off-hours feature of virtual machines to minimize waste. The feature is suitable as a **low-cost automation** option. There are many configuration options to schedule start the stop times. 
 
@@ -359,7 +406,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
  > **Note:** Click on **Refresh** if the VMs don't reflect latest status.
 
 
-**Task 6: Resize a Virtual Machine**
+### **Task 6: Resize a Virtual Machine**
 
 You can lower cost by managing the size of the VMs. 
 
@@ -389,7 +436,7 @@ You can lower cost by managing the size of the VMs.
 <p> &#11088; For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings! </p>
 
 
-**Task 7: Move to PAAS**
+### **Task 7: Move to PAAS**
 
 Infrastructure as a service (IaaS) and platform as a service (PaaS) are cloud service models.
 

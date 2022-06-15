@@ -20,7 +20,7 @@ Azure has many resiliency features already built into the platform, such as:
 
 ### **Task 2: Test with simulations and forced failovers** 
 
-1.In Site Recovery in the Azure portal, click Recovery Plans > recoveryplan_name > Test Failover.
+1. In Site Recovery in the Azure portal, click Recovery Plans > recoveryplan_name > Test Failover.
 
 2. Select a Recovery Point to which to fail over. You can use one of the following options:
 

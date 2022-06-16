@@ -33,7 +33,11 @@ In this task you will learn how to monitor the cost of a workload with tools lik
 
 4. Click a recommendation that you want to review in detail.
 
+   ![](./media/costopt-44.png)
+
 5. Review the information about the recommendation and the resources that the recommendation applies to.
+
+   ![](./media/costopt-45.png)
 
 6. Click on the Recommended Action to implement the recommendation.
 

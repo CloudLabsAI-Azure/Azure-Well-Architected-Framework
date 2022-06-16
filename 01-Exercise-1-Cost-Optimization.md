@@ -248,7 +248,7 @@ b. Email/SMS message/Push/Voice: Send various notification types to specific rec
 
 25. Provide Alert recipients emails as given below:
 
-* Alert recipients (email): **INJECTKEYS USERNAME** **(1)**
+* Alert recipients (email): **<inject key="AzureAdUserEmail"></inject>** **(1)**
 * Alert recipients (email): Add **azure-noreply@microsoft.com** **(2)** to your approved senders list so that emails don't go to your junk email folder.
 * Language: You can select your language from the drop down. Here we are leaving this on **Default (3)**.
 * Click on **Create (4)**.
@@ -441,9 +441,9 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 9. Fill following details:
  * Name: **user-credentials (1)**
  * Description: Give a description **(2)**
- * Username: **INJECTKEYS** **(3)**
- * Password: **(4)**
- * Confirm Password: **(5)**
+ * Username: **<inject key="AzureAdUserEmail"></inject>** **(3)**
+ * Password: **<inject key="AzureAdUserPassword" />** **(4)**
+ * Confirm Password: **<inject key="AzureAdUserPassword" />** **(5)**
  * Click on **Create (6)**.
 
    ![](./media/costopt-12.png)

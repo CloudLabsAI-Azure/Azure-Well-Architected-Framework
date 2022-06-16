@@ -134,22 +134,128 @@ This way, the admins can be alerted when the workload is using the services at c
 * Amount ($): Give your budget amount threshold **(6)**. 
 * Click on **Next (7)**.
 
-   ![](./media/costopt-41.png)
+   ![](./media/costopt-46.png)
 
-5. Fill in the alert etails as following:
+5. Add two **Alert conditions** as given below:
 
-* Scope: Make sure your subscription is selected **(1)**.
-* Type:
-* % of budget: 
-* Alert recipients (email): **INJECTKEYS USERNAME**
-* Alert recipients (email): Add **azure-noreply@microsoft.com** to your approved senders list so that emails don't go to your junk email folder.
-* Language: You can select your language from the drop down. Here we are leaving this on **Default (5)**.
+* **(1)** Type: Select **Actual** from the drop down.
+* % of budget: Add desired percentage here. (Actual costs budget alerts are generated for the actual cost you've accrued in relation to the budget thresholds configured. As an example in the screenshot below, an email alert gets generated when 90% of the budget is reached.)
 
-* Click on **Create (6)**.
+* **(2)** Type: Select **Forecasted** from the drop down.
+* % of budget: Add desired percentage here. (Forecasted alerts provide advanced notification that your spending trends are likely to exceed your budget. As an example in the screenshot below, an email alert gets generated when 100% forecasted budget threshold is met.)
+
+* Once done, click on **Manage action group (3)** and then select **+ Create**.
+
+   ![](./media/costopt-47.png)
+
+6. Add **Project details** and **Instance details** as given below:
+
+* Subscription: Subscription will be selected by default **(1)**.
+* Resource group: Select **wafprod** from the drop down **(2)**.
+* Action group name: **waf-actiongroup (3)**
+* Display name: **waf-ag (4)**
+* Click on **Next: Notifications (5)**
+
+   ![](./media/costopt-48.png)
+
+7. Provide the following information for the notifications to be sent when an alert is triggered.
+
+* Notification type: Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
+
+a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
+b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
+
+* Add or edit an Email/SMS/Push/Voice action: Based on the selected notification type, enter an email address, phone number, or other information **(2)**.
+* Enable Common alert schema: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
+
+* Click on **OK (4)**.
+* Name: Enter a unique name for the notification **(5)**.
+
+   ![](./media/costopt-49.png)
+
+8. Now click on **Next: Actions**.
+
+   ![](./media/costopt-50.png)
+
+9. In this step to add an action we will need a webhook. Open a new tab in your browser and navigate to **```portal.azure.com```** and go to **Resource groups**.
+
+10. Open **wafprod (1)** resource group, select **DSC-xxxx (2)** automation account. In there click on **Runbooks (3)** and select **stop-prod-vm (4)**, it's the runbook we created earlier.
+
+   ![](./media/costopt-51.png)
+
+11. Select **Webhooks** from the left pane and click on **+ Add Webhook**.
+
+   ![](./media/costopt-52.png)
+
+12. Click on **Create new webhook**.
+
+   ![](./media/costopt-53.png)
+
+
+13. Provide following details:
+
+* Name: Enter a unique name for the webhook such as **waf-webhook (1)**.
+* Enabled: Leave on default.
+* Expires: Add an expiry date and time **(2)**.
+* URL: Copy the URL **(3)**. **Make sure to copy the URL and paste it ina text editor with you. Once you click on OK, it won't be retrievable.**
+* Click on **OK**.
+
+   ![](./media/costopt-54.png)
+   
+14. Click on **Create**.
+
+   ![](./media/costopt-55.png)   
+
+15. Once the webhook is created, go to the previous tab where we had **Actions** tab in the Azure portal. 
+
+16. Add the details as given below:
+
+* Action type: Select **Webhook (1)** from the drop down.
+* URI: Paste the URL here that we copied in Step 13 in thi task **(2)**.
+* Click on **OK (3)**.
+
+   ![](./media/costopt-56.png)
+
+17. Give a unique **Name (1)** for the action and click on **Review + Create**.
+
+   ![](./media/costopt-57.png)
+
+18. In the **Review + Create** tab, with all the details you will have option to test the action group. Click on **Test action group(preview) (1)**.
+
+19. Now for **Select sample type**, select **Billing alert (2)** from the drop down. Select the checkbox for both **Notification and Alert type (3)**. At last click on **Test**.
+
+   ![](./media/costopt-61.png)
+
+20. Jump to another tab in the browser where created webhook. From left pane, open **Jobs** and select the **Running** job.
+
+   ![](./media/costopt-59.png)
+
+21. Here you can review the execution of action alert we just tested. It will show up as succeeded.
+
+   ![](./media/costopt-58.png)
+
+22. Once testing is done it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)** and click on **Create**.
+
+   ![](./media/costopt-60.png)
+
+23. After the action group is created, you will be directed to Edit budget page. Click on **Refresh** till you get the **waf-actiongroup (2)** action group listed, then click on **Edit budget (3)**.
+
+   ![](./media/costopt-60.png)
+
+24. Select Action group for both alert conditions from the drop down.
+
+   ![](./media/costopt-61.png)
+
+25. Provide Alert recipients emails as given below:
+
+* Alert recipients (email): **INJECTKEYS USERNAME** **(1)**
+* Alert recipients (email): Add **azure-noreply@microsoft.com** **(2)** to your approved senders list so that emails don't go to your junk email folder.
+* Language: You can select your language from the drop down. Here we are leaving this on **Default (3)**.
+* Click on **Create (4)**.
 
    ![](./media/costopt-42.png)
 
-6. After you create a budget, it's shown in cost analysis. One of the first steps in analysing your costs and spending is to compare your budget to your spending patterns.
+26. After you create a budget, it's shown in cost analysis. One of the first steps in analysing your costs and spending is to compare your budget to your spending patterns.
 
    ![](./media/costopt-43.png)
 

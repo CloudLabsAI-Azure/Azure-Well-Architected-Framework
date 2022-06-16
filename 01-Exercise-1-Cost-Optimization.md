@@ -92,6 +92,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
     1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
     2. Examples include the last seven days, the last month, the current year, or a custom date range.   
 
+
    ![](./media/costopt-34.png)
 
  * **View Cost:** To have a better visibility on cost, you can use different views given below: 
@@ -162,7 +163,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 }
 
 ```
-   ![](./media/costopt-10.png)
+    ![](./media/costopt-10.png)
     
 8. Go back to the automation account **DSC-xxxx** and from left pane scroll to _Shared Resources_. Select **Credentials** and then select **+Add a credential**. 
 
@@ -198,7 +199,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-15.png)
 
-14. Once done, select **Link to schedule** on the Overview page. This is to schedule the ...
+14. Once done, select **Link to schedule** on the Overview page.
 
    ![](./media/costopt-16.png)
 
@@ -334,8 +335,8 @@ This way, the admins can be alerted when the workload is using the services at c
 
 * Notification type: Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
 
-a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
-b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
+  a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
+  b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
 
 * Add or edit an Email/SMS/Push/Voice action: Based on the selected notification type, enter an email address, phone number, or other information **(2)**.
 * Enable Common alert schema: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 

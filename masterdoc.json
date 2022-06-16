@@ -5,32 +5,32 @@
       "BaseURL": "https://github.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework",
       "Files": [
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/Overview.md?token=GHSAT0AAAAAABU7IIGJAEVMZ2A76XGZXEK4YVDCZUA",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/Overview.md",
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/00-GettingStarted.md?token=GHSAT0AAAAAABU7IIGIPH5ONXVP7ITPTSA6YVDC2CQ",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/00-GettingStarted.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/01-Exercise-1-Cost-Optimization.md?token=GHSAT0AAAAAABU7IIGJEEGIXJSSFC5OMRVIYVDC2NQ",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/01-Exercise-1-Cost-Optimization.md",
           "Order": 3
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/02-Exercise-2-Operational-Excellence.md?token=GHSAT0AAAAAABU7IIGJX45UBNEVXMOHI4WAYVDC22Q",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/02-Exercise-2-Operational-Excellence.md",
           "Order": 4
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/03-Exercise-3-Performance-Efficiency.md?token=GHSAT0AAAAAABU7IIGIVLT5KGCBBF3F4CKMYVDC3JQ",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/03-Exercise-3-Performance-Efficiency.md",
           "Order": 5
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/04-Exercise-4-Reliability.md?token=GHSAT0AAAAAABU7IIGJWYPLY4LT3GH7GSDGYVDC3KQ",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/04-Exercise-4-Reliability.md",
           "Order": 6
         },
         
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/05-Exercise-5-Security.md?token=GHSAT0AAAAAABU7IIGJERTRCXWWHG34FI4YYVDC3IA",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/05-Exercise-5-Security.md",
           "Order": 7 
         }
       ]

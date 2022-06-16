@@ -207,15 +207,15 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
    ![](./media/costopt-17.png)
 
 16. Fill in the details as following:
- * Name: **stop-vms**
- * Description: **stop all VMs in wafprod resource group**.
- * Starts: **Enter start time and date**.
- * Time zone: Select your time zone from the drop down.
- * Recurrence: Select **Recurring**.
- * Recur every: Enter the time period of recurrence.
- * Set expiration: Select **Yes**.
- * Expires: **Enter an expiry time and date for the runbook**.
- * Click on **Create**.
+ * Name: **stop-vms (1)**
+ * Description: **stop all VMs in wafprod resource group (2)**.
+ * Starts: **Enter start time and date (3)**.
+ * Time zone: Select your time zone from the drop down **(4)**.
+ * Recurrence: Select **Recurring (5)**.
+ * Recur every: Enter the time period of recurrence **(6)**.
+ * Set expiration: Select **Yes (7)**.
+ * Expires: **Enter an expiry time and date for the runbook (8)**.
+ * Click on **Create (9)**.
 
    ![](./media/costopt-18.png)
    
@@ -227,7 +227,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-20.png)
 
-19. Notice that VMs from wafprod resource group are in running state.
+19. Notice that VMs from wafprod resource group are in **Running** state.
 
    ![](./media/costopt-21.png)
 
@@ -370,7 +370,7 @@ b. Email/SMS message/Push/Voice: Send various notification types to specific rec
 * Enabled: Leave on default.
 * Expires: Add an expiry date and time **(2)**.
 * URL: Copy the URL **(3)**. **Make sure to copy the URL and paste it ina text editor with you. Once you click on OK, it won't be retrievable.**
-* Click on **OK**.
+* Click on **OK (4)**.
 
    ![](./media/costopt-54.png)
    
@@ -383,7 +383,7 @@ b. Email/SMS message/Push/Voice: Send various notification types to specific rec
 16. Add the details as given below:
 
 * Action type: Select **Webhook (1)** from the drop down.
-* URI: Paste the URL here that we copied in Step 13 in thi task **(2)**.
+* URI: Paste the URL here that we copied in Step 13 in this task **(2)**.
 * Click on **OK (3)**.
 
    ![](./media/costopt-56.png)
@@ -398,11 +398,11 @@ b. Email/SMS message/Push/Voice: Send various notification types to specific rec
 
    ![](./media/costopt-61.png)
 
-20. Jump to another tab in the browser where created webhook. From left pane, open **Jobs** and select the **Running** job.
+20. Jump to another tab in the browser where you created webhook. From left pane, open **Jobs** and select the **Running** job.
 
    ![](./media/costopt-59.png)
 
-21. Here you can review the execution of action alert we just tested. It will show up as succeeded.
+21. Under **Output** tab, you can review the execution of action alert we just tested. It will show up as succeeded.
 
    ![](./media/costopt-58.png)
 
@@ -410,13 +410,13 @@ b. Email/SMS message/Push/Voice: Send various notification types to specific rec
 
    ![](./media/costopt-60.png)
 
-23. After the action group is created, you will be directed to Edit budget page. Click on **Refresh** till you get the **waf-actiongroup (2)** action group listed, then click on **Edit budget (3)**.
+23. After the action group is created, you will be directed to Edit budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Edit budget (3)**.
 
-   ![](./media/costopt-60.png)
+   ![](./media/costopt-62.png)
 
 24. Select Action group for both alert conditions from the drop down.
 
-   ![](./media/costopt-61.png)
+   ![](./media/costopt-63.png)
 
 25. Provide Alert recipients emails as given below:
 

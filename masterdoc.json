@@ -2,7 +2,7 @@
     {
       "Name": "Azure Immersion Workshop: Azure Well Architected Framework",
       "Language": "English",
-      "BaseURL": "https://github.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework",
+      "BaseURL": "",
       "Files": [
         {
           "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/Overview.md",

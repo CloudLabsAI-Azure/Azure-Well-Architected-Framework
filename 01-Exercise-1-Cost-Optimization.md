@@ -75,7 +75,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
    ![](./media/costopt-31.png)
 
-> **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
+ > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
 
 5. You can play with different filters provided here to analyze the cost, such as:
 

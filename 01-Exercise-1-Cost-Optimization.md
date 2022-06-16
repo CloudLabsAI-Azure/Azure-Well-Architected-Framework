@@ -336,6 +336,7 @@ This way, the admins can be alerted when the workload is using the services at c
 * Notification type: Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
 
   a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
+  
   b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
 
 * Add or edit an Email/SMS/Push/Voice action: Based on the selected notification type, enter an email address, phone number, or other information **(2)**.

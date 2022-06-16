@@ -39,7 +39,7 @@ In this task you will learn how to monitor the cost of a workload with tools lik
 
    ![](./media/costopt-45.png)
 
-6. Click on the Recommended Action to implement the recommendation.
+6. In this example we will not proceed further to implement the recommendation as it suggests to reserve the instance.
 
 **b. Cost Management:** 
 

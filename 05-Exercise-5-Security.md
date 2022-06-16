@@ -45,10 +45,10 @@ User directories and other authentication functions are complex to develop and c
    
 7. Enter the details required to set up MFA.
 
-   - Country Code: Select the country code of your mobile number (1)
-   - Mobile Number: Enter the number which you want to use for the MFA (2)
-   - Method: Select the preferred method of authentication (3)
-   - Click on **Next**.
+   - Country Code: Select the country code of your mobile number **(1)**
+   - Mobile Number: Enter the number which you want to use for the MFA **(2)**
+   - Method: Select the preferred method of authentication **(3)**
+   - Click on **Next (4)**.
 
    ![](media/mfa-05-updated.png)
 
@@ -63,7 +63,7 @@ User directories and other authentication functions are complex to develop and c
 
 ## Task 2: Infra protection
 
-In this task you will learn how to control access to the Azure resources that you deploy. you will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events and to audit all the changes to the infrastructure.
+In this task you will learn how to control access to the Azure resources that you deploy. You will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events and to audit all the changes to the infrastructure.
 
 **Azure role-based access control** (Azure RBAC) is a system that provides fine-grained access management of Azure resources. Using Azure RBAC, you can segregate duties within your team and grant only the amount of access to users that they need to perform their jobs.
 
@@ -77,7 +77,7 @@ In this task you will learn how to control access to the Azure resources that yo
    
    ![](./media/Iam-role.png)
    
-3. In the add role assignment form, search for **Reader** in Role and select it, Click on Next.
+3. In the add role assignment form, search for **Reader** in Role and select it. Click on **Next**.
 
    ![](./media/reader.png)
    
@@ -99,23 +99,24 @@ In this task you will learn how to control access to the Azure resources that yo
 
    ![](./media/activity1.png)
    
-8. Then from the filter menu, click on **Timespan** filter and then select **last month**. Click on **apply** to apply the filter.
+8. Then from the filter menu, click on **Timespan** filter and then select **last month**. Click on **Apply** to apply the filter.
    
    ![](./media/activity2.png)
    
-9. Once the filter is applied and you are able to see all the operations from last month. Select **Export Activity Logs**.
+9. Once the filter is applied and you are able to see all the operations from last month, then select **Export Activity Logs**.
 
    ![](./media/export-activity.png)
    
-10. On the **Diagnostic Settings** page, make your subscription is selected and then click on **+ Add diagnostic setting**.
+10. On the **Diagnostic Settings** page, make sure your subscription is selected and then click on **+ Add diagnostic setting**.
 
     ![](./media/add-diag.png)
     
 11. Make sure you fill the **Diagnostic Settings** page with the following details and click on **Save**.
 
-    * **Diagnostic setting name**: `dev-log`
-    *  **Logs**: Make sure you have selected all the categories
-    *  **Destination details**: Check **Archive to a storage account** and leave all the other values to default
+    * **Diagnostic setting name**: `dev-log` **(1)**
+    *  **Logs**: Make sure you have selected all the categories **(2)**
+    *  **Destination details**: Check **Archive to a storage account (3)** and leave all the other values to default **(4)**.
+    *  Click on **Save**.
 
     ![](./media/activity-save.png)
    

@@ -7,7 +7,7 @@
 
 Losing these assurances can negatively affect your business operations and revenue, and your organization's reputation. Cloud architectures can help simplify the complex task of securing an enterprise estate through **specialization** and **shared responsibilities**:
 
- * **Specialization**: Specialist teams at cloud providers can develop advanced capabilities to operate and secure systems on behalf of organizations. This approach is preferable to numerous organizations individually developing deep expertise on managing and securing common elements.
+ * **Specialization**: Specialist teams at cloud providers can develop advanced capabilities to operate and secure systems on behalf of organizations. This approach is preferable to numerous organizations, individually developing deep expertise on managing and securing common elements.
  
  * **Shared Responsibility Model**: Organizations can reduce focus on activities that aren't core business competencies by shifting these responsibilities to a cloud service. Depending on the specific technology choices, some security protections will be built into the particular service, while addressing others will remain the customer's responsibility. To ensure that proper security controls are provided, organizations must carefully evaluate the services and technology choices.
 
@@ -16,7 +16,7 @@ In this exercise, we will apply security principles to your architecture to prot
 
 ## Task 1: Identity and access management
 
-User directories and other authentication functions are complex to develop and critically important to security assurances. You use capabilities like Azure Active Directory (Azure AD), Azure AD B2B, Azure AD B2C, or third-party solutions to authenticate and grant permission to users, partners, customers, applications, services, and other entities. In this task, We'll be enabling Multi-Factor authentication, Multi-factor authentication is a process where a user is prompted during the sign-in process for an additional form of identification which increases the level of security.
+User directories and other authentication functions are complex to develop and critically important to security assurances. You use capabilities like Azure Active Directory (Azure AD), Azure AD B2B, Azure AD B2C, or third-party solutions to authenticate and grant permission to users, partners, customers, applications, services, and other entities. In this task, we'll be enabling multi-factor authentication. Multi-factor authentication is a process where a user is prompted during the sign-in process for an additional form of identification which increases the level of security.
 
 1. In your JumpVM launch browser and visit `https://AKA.ms/proofup` and if asked to log in then log in using the following credentials:
 
@@ -63,7 +63,7 @@ User directories and other authentication functions are complex to develop and c
 
 ## Task 2: Infra protection
 
-In this task you will learn how to control access to the Azure resources that you deploy. You will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events and to audit all the changes to the infrastructure.
+In this task, you will learn how to control access to the Azure resources that you deploy. You will also create a diagnostic setting to send the Activity log to Azure **Storage account** for cheaper, long-term archiving to get an insight into subscription-level events and to audit all the changes to the infrastructure.
 
 **Azure role-based access control** (Azure RBAC) is a system that provides fine-grained access management of Azure resources. Using Azure RBAC, you can segregate duties within your team and grant only the amount of access to users that they need to perform their jobs.
 
@@ -111,7 +111,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
     ![](./media/add-diag.png)
     
-11. Make sure you fill the **Diagnostic Settings** page with the following details.
+11. Fill the **Diagnostic Settings** page with the following details:
 
     * **Diagnostic setting name**: `dev-log` **(1)**
     *  **Logs**: Make sure you have selected all the categories **(2)**
@@ -124,7 +124,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
     ![](./media/storage-select.png)
     
-13. From the left navigation pane, under the **Data storage** section, Select **Containers**.
+13. From the left navigation pane, under the **Data storage** section, select **Containers**.
 
     ![](./media/container.png)
     
@@ -132,9 +132,9 @@ In this task you will learn how to control access to the Azure resources that yo
 
     ![](./media/container2.png)
     
-    > **Note:** The container might take upto 2 minutes for getting created. Click on **Refresh** button once in few seconds until you are able to see the container.
+    > **Note:** The container might take up to 2 minutes for getting created. Click on **Refresh** button once in few seconds until you are able to see the container.
     
-15. Go through the folder names **resourceid=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below scrrenshot.
+15. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below scrrenshot.
 
    `{ "time": "2020-06-12T13:07:46.766Z", "resourceId": "/SUBSCRIPTIONS/00000000-0000-0000-0000-000000000000/RESOURCEGROUPS/MY-RESOURCE-GROUP/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/MV-VM-01", "correlationId": "0f0cb6b4-804b-4129-b893-70aeeb63997e", "operationName": "Microsoft.Resourcehealth/healthevent/Updated/action", "level": "Information", "resultType": "Updated", "category": "ResourceHealth", "properties": {"eventCategory":"ResourceHealth","eventProperties":{"title":"This virtual machine is starting as requested by an authorized user or process. It will be online shortly.","details":"VirtualMachineStartInitiatedByControlPlane","currentHealthStatus":"Unknown","previousHealthStatus":"Unknown","type":"Downtime","cause":"UserInitiated"}}}`
    
@@ -144,7 +144,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
 ## Task 3: App Security
    
-   Inconsistent configurations for applications can create security Risks. Azure App Configuration provides a service to centrally manage application settings and feature flags, which helps mitigate this risk. Defender for Cloud continuously monitors the configuration of your virtual machines scale sets to identify potential security vulnerabilities and recommends actions to mitigate them. In this task we will be adding log analytics to the virtual machine scale set using **Micrososft Defender for cloud**.
+   Inconsistent configurations for applications can create security Risks. Azure App Configuration provides a service to centrally manage application settings and feature flags, which helps mitigate this risk. Defender for Cloud, continuously monitors the configuration of your virtual machines scale sets to identify potential security vulnerabilities and recommends actions to mitigate them. In this task, we will be adding log analytics to the virtual machine scale set using **Microsoft Defender for cloud**.
 
 1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups (2)**.
 
@@ -154,7 +154,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
    ![](./media/ex5-task3-01.png)
    
-3. From the left navigation pane, under the **Settings** section, select **Micrososft Defender for Cloud**. Click on the recommendation **Log Analytics agent should be installed on the virtual machine scale sets**.
+3. From the left navigation pane, under the **Settings** section, select **Microsoft Defender for Cloud**. Click on the recommendation **Log Analytics agent should be installed on the virtual machine scale sets**.
 
    ![](./media/ex5-task3-02.png)
    
@@ -171,18 +171,18 @@ In this task you will learn how to control access to the Azure resources that yo
 
    ![](./media/ex5-task3-04.png)
    
-6. This will open a new window **Fixing resources**, select an existing log analytics workspace for **Workspace ID** and click on **Fix 1 resources**.
+6. This will open a new window **Fixing resources**. Select an existing log analytics workspace for **Workspace ID** and click on **Fix 1 resources**.
 
    ![](./media/ex5-task3-05.png)
    
-7. Wait for a notification: ✅ **Remediation successful**. 
+7. Wait for the notification: ✅ **Remediation successful**. 
  
 
 ## Task 4: Data encryption and sovereignty
 
 In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls. 
 
-**Data encryption** is the method of translating data into another form or code so that access to the data is limited to only those with the correct decryption key (or password). **Data sovereignty** is a corporate or government standard that makes your data to reside within a certain country usually within the country where your corporation resides. In this task we will be using azure policy to implement the data sovereignty.
+**Data encryption** is the method of translating data into another form or code so that access to the data is limited to only those with the correct decryption key (or password). **Data sovereignty** is a corporate or government standard that makes your data reside within a certain country, usually within the country where your corporation resides. In this task, we will be using azure policy to implement the data sovereignty.
 
 
 **Data encryption**
@@ -203,7 +203,7 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-03.png)
    
-5. You will be redirected to **Create a key vault** page, fill the following details.
+5. You will be redirected to **Create a key vault** page. Provide the following information for the key vault:
 
    - **Subscription**: Select your subscription **(1)**
    - **Resource group**: wafdev **(2)**
@@ -216,17 +216,17 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-04.png)
   
-7. Once the deployment is successfully finsihed, you will be redirected to **Select a key** page, click on **create a new key** option next to key.
+7. Once the deployment is successfully finished, you will be redirected to **Select a key** page, click on **create a new key** option next to key.
 
    ![](./media/ex5-task4-05.png)
   
-8. On the **Create a key** page, fill the following details.
+8. On the **Create a key** page, fill the following details:
 
-   - **options**: Generate **(1)**
+   - **Options**: Generate **(1)**
    - **Name**: waf-key **(2)**
    - **Key type**: RSA **(3)**
    - **RSA key size**: 2048 **(4)**
-   - leave all other values to default and click on **create (5)**
+   - Leave all other values to default and click on **Create (5)**.
 
     ![](./media/ex5-task4-06.png)
   
@@ -269,7 +269,7 @@ In this task, you will create your own encryption key to protect the data in you
 
 ## Task 5: Security operations
 
-In this task, we are going to perform  integrated security monitoring for your workload using **Microsoft Defender for Cloud**. We will enable **Just-in-time** acccess to the Virtual machine which locks down and limits the ports of Azure virtual machine in order to overcome malicious attacks on the virtual machine, therefore only providing access to a port for a limited amount of time.
+In this task, we are going to perform  integrated security monitoring for your workload using **Microsoft Defender for Cloud**. We will enable **Just-in-time** access to the Virtual machine, which locks down and limits the ports of Azure virtual machine in order to overcome malicious attacks on the virtual machine, therefore only providing access to a port for a limited amount of time.
 
 
 **Exploring Secure Score**
@@ -325,7 +325,7 @@ In this task, we are going to perform  integrated security monitoring for your w
    
 11. Wait for a notification: ✅ **Just-in-time VM access enabled** - which successfully blocks all inbound traffic at the network level to the virtual machine **wafdevxxx**. 
     
-    > **Note**: It can take upto 5 minutes for the VM access to get enabled. 
+    > **Note**: It can take up to 5 minutes for the VM access to get enabled. 
 
 12. Go back to **Recommendations (1)**, click on **Apply system updates (2)** and select **Log Analytics agent should be installed on virtual machines (3)**.
 
@@ -350,6 +350,6 @@ In this task, we are going to perform  integrated security monitoring for your w
     
 16. Wait for a notification: ✅ **Remediation successful**. 
 
-     > **Note**: It can take upto 5 minutes for the remediation to get successful. 
+     > **Note**: It can take up to 5 minutes for the remediation to get successful. 
 
 17. Go to the **Recommendations** page and explore through other recommendations.

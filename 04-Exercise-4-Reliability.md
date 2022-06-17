@@ -44,7 +44,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 6. In the search bar, search for Recovery service vaults and select **Recovery service vaults** from the suggestions.
 
-   ![](./media/reliability-05.png)
+   ![](./media/reliability-09.png)
    
 7. Observe the vaults here, select the **Site-recovery-vault-eastus** vault, that falls under **site-recovery-vault-rg** resource group.
 

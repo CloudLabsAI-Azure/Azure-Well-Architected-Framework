@@ -4,7 +4,7 @@
 
 Cost Optimization is the process of managing costs to maximize the value delivered. The **Cost Optimization** pillar provides principles for balancing business goals with budget justification to create a cost-effective workload while avoiding capital-intensive solutions. Cost optimization is about looking at ways to reduce unnecessary expenses and improve operational efficiencies.
 
-The **Cost Optimization** in Well-Architected Assessment is a top-down review of your workload to identify what could be improved in your architecture. In this exercise, we will begin by looking at the costs of the workload as well as the most prevalent pain points and how to address them, such as:
+The **Cost Optimization** in a Well-Architected Assessment, is a top-down review of your workload to identify what could be improved in your architecture. In this exercise, we will begin by looking at the costs of the workload as well as the most prevalent pain points and how to address them, such as:
 
   * Are there any hidden costs in the current architecture? How can you identify them?
   * Can the current IaaS architecture be more cost-effective? How?
@@ -17,17 +17,17 @@ This will help on the most immediate and direct impact of the recommendations.
 
 In this task you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management and Billing.
 
-**a. Azure Advisor:** It helps you optimize and reduce your overall Azure spend by identifying idle and underutilized resources. You can get cost recommendations from the Cost tab on the Advisor dashboard.
+**a. Azure Advisor:** It helps you optimize and reduce your overall Azure spending by identifying idle and underutilized resources. You can get cost recommendations from the Cost tab on the Advisor dashboard.
 
 1. In the Azure portal, search for Advisor and select **Advisor** from the suggestions.
 
    ![](./media/costopt-25.png)
 
-2. The Advisor dashboard will display a summary of your recommendations for all selected subscriptions. You can choose the subscriptions that you want recommendations to be displayed for using the subscription filter dropdown.
+2. The Advisor dashboard will display a summary of your recommendations for all selected subscriptions. You can choose the subscriptions for which you want the recommendations to be displayed for using the subscription filter dropdown.
 
    ![](./media/costopt-26.png)
 
-3. Now to get recommendations for Cost category, click on the Cost tab. You can either select it from the **dashboard(1)** or in the left pane, under _Recommendations_ you have **Cost(2)** tab.
+3. Now to get recommendations for Cost category, click on the Cost tab. You can either select it from the **Dashboard (1)** or in the left pane, under _Recommendations_ you have **Cost (2)** tab.
 
    ![](./media/costopt-27.png)
 
@@ -55,7 +55,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
    ![](./media/costopt-29.png)
 
-3. You will be directed to Overview page. There select **Cost analysis** present under _Cost Management_.
+3. You will be directed to the Overview page. There select **Cost analysis** present under _Cost Management_.
 
    ![](./media/costopt-32.png)
    
@@ -75,20 +75,20 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
    ![](./media/costopt-31.png)
 
- > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
+ > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when the forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
 
 5. You can play with different filters provided here to analyze the cost, such as:
 
- * **View:** Cost analysis has four built-in views, they are as follow:
+ * **View:** Cost analysis has four built-in views; they are as follow:
    1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
    2. **Daily cost -** Have there been any increases in the costs per day for the last 30 days?
-   3. **Cost by service -**	How has my monthly usage vary over the past three invoices?
+   3. **Cost by service -**	How has my monthly usage varied over the past three invoices?
    4. **Cost by resource -**	Which resources cost the most so far this month?
    5. **Invoice details -**	What charges did I have on my last invoice?
 
    ![](./media/costopt-33.png)
    
- * **Date Range:** Here you can select custom dates as well as time periods for a betterand deeper analysis.
+ * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
     1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
     2. Examples include the last seven days, the last month, the current year, or a custom date range.   
 
@@ -96,7 +96,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
    ![](./media/costopt-34.png)
 
  * **View Cost:** To have a better visibility on cost, you can use different views given below: 
-    1. **Group by:** _Group by_ common properties to break down costs and identify top contributors. From the drop down you can select group by keys such as, Tag, Resource type, Provider, etc. 
+    1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop down you can select group by keys such as, Tag, Resource type, Provider, etc. 
     2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
     3. **Graph type:** It asks for graphical representation, what kind of representation you prefer. It could be Table, Column, Line and much more.
 
@@ -107,7 +107,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
 ### **Task 2: Shutdown**
 
-Use the Start/stop VMs during off-hours feature of virtual machines to minimize waste. The feature is suitable as a **low-cost automation** option. There are many configuration options to schedule start the stop times. 
+Use the Start/stop VMs during off-hours feature of virtual machines to minimize waste. The feature is suitable as a **low-cost automation** option. There are many configuration options to schedule the start and stop times. 
 
 Some ways to Start/stop VMs are:
 * From Azure portal, by going to each VM and start/stop it manually.
@@ -131,10 +131,10 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
  > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
 
-4. Fill the details as following:
+4. Fill in the details as following:
  * Name: **stop-prod-vms (1)**
  * Runbook type: Select **PowerShell (2)** from the dropdown.
- * Runtime verion: **5.1 (3)**
+ * Runtime version: **5.1 (3)**
  * Description: Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
  * Click on **Create (5)**.
 
@@ -144,7 +144,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-09.png)
    
-6. Copy the script given below and paste in runbook console and then click on **Save**. 
+6. Copy the script given below and paste in the runbook console and then click on **Save**. 
 
 ```
 $myCred = Get-AutomationPSCredential -Name '[Enter name of your credentials]'
@@ -179,7 +179,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-12.png)
 
-10. From left pane, scroll to _Process Automation_ and select **Runbooks** and then select **stop-prod-vms**. 
+10. From the left pane, scroll to _Process Automation_ and select **Runbooks** and then select **stop-prod-vms**. 
 
    ![](./media/costopt-13.png)
 
@@ -189,13 +189,13 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
 12. Fill in the following details:
  * Line 1: **user-credentials**
- * Line 9: **INJECTSUBSID**
- * Line 11: **wafprod**, this could be any resource group in which your VMs are present. In our workload VMs are present in wafprod resource group.
+ * Line 9: Enter your **subscription id**.
+ * Line 11: **wafprod**, this could be any resource group in which your VMs are present. In our workload, VMs are present in wafprod resource group.
  * Click on **Publish**.
 
    ![](./media/costopt-14.png)
 
-13. Select **Yes** when asked for Publish Runbook - Do you want to proceed.
+13. Select **Yes** when asked to Publish Runbook - _'Do you want to proceed?'_.
 
    ![](./media/costopt-15.png)
 
@@ -236,7 +236,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-22.png)
 
-21. By clicking on Start button, it will take you to the Jobs page. In the **Output** section you can monitor the execution of the script. Keep on refreshing until it shows status of both the VMs as **succeeded**.
+21. By clicking on Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows status of both the VMs as **succeeded**.
 
    ![](./media/costopt-23.png)
 
@@ -244,7 +244,7 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
 
    ![](./media/costopt-24.png)
 
- > **Note:** Click on **Refresh** if the VMs don't reflect latest status.
+ > **Note:** Click on **Refresh** if the VMs don't reflect the latest status.
 
 
 ### **Task 3: Resize a Virtual Machine**
@@ -255,7 +255,7 @@ You can lower cost by managing the size of the VMs.
 
    ![](./media/costopt-01.png)
    
-2. Open **wafprod** resource group and select a vitrual machine.
+2. Open **wafprod** resource group and select a virtual machine.
 
    ![](./media/costopt-02.png)
    
@@ -267,7 +267,7 @@ You can lower cost by managing the size of the VMs.
 
    ![](./media/costopt-04.png)
 
- > **Note:** B-series burstable VMs are ideal for workloads that do not need the full performance of the CPU continuously, like web servers, small databases and development and test environments. TThe B-Series provides these customers the ability to purchase a VM size with a _**price conscious baseline performance**_ that allows the VM instance to build up credits when the VM is utilizing less than its base performance. When the VM has accumulated credit, the VM can burst above the VM’s baseline using up to 100% of the CPU when your application requires the higher CPU performance.
+ > **Note:** B-series burstable VMs are ideal for workloads that do not need the full performance of the CPU continuously, like web servers, small databases and development and test environments. The B-Series provides these customers the ability to purchase a VM size with a _**price conscious baseline performance**_ that allows the VM instance to build up credits when the VM is utilizing less than its base performance. When the VM has accumulated credit, the VM can burst above the VM’s baseline using up to 100% of the CPU when your application requires the higher CPU performance.
 
 5. Go back to **Overview** page and verify the VM size. 
 
@@ -279,7 +279,7 @@ You can lower cost by managing the size of the VMs.
 
 ### **Task 4: Cost controls**
 
-In this task you will learn about Budgets and Alert in Azure that help to analyse and optimize the cost in a better way.
+In this task, you will learn about Budgets and Alert in Azure that help to analyse and optimize the cost in a better way.
 
 There is an alert feature in Azure Cost Management. When consumption reaches a critical threshold, an alert is sent out. Consider the metrics that each workload resource produces. For each metric, build alerts on baseline thresholds. 
 
@@ -301,9 +301,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
 * Scope: Make sure your subscription is selected **(1)**.
 * Name: **waf-budget (2)**
-* Reset period: The reset period determines the time window that's analyzed by the budget. Select **Quaterly (3)** from the drop down.
+* Reset period: The reset period determines the time window that's analyzed by the budget. Select **Quarterly (3)** from the drop down.
 * Creation date: This is the date of creation of budget and it will be selected by default **(4)**.
-* Expiration date: Add an expiry date for the bduget **(5)**.
+* Expiration date: Add an expiry date for the budget **(5)**.
 * Amount ($): Give your budget amount threshold **(6)**. 
 * Click on **Next (7)**.
 
@@ -351,9 +351,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
    ![](./media/costopt-50.png)
 
-9. In this step to add an action we will need a webhook. Open a new tab in your browser and navigate to **```portal.azure.com```** and go to **Resource groups**.
+9. In this step, to add an action we will need a webhook. Open a new tab in your browser and navigate to **```portal.azure.com```** and go to **Resource groups**.
 
-10. Open **wafprod (1)** resource group, select **DSC-xxxx (2)** automation account. In there click on **Runbooks (3)** and select **stop-prod-vm (4)**, it's the runbook we created earlier.
+10. Open **wafprod (1)** resource group, select **DSC-xxxx (2)** automation account. In there, click on **Runbooks (3)** and select **stop-prod-vm (4)**, it's the runbook we created earlier.
 
    ![](./media/costopt-51.png)
 
@@ -371,7 +371,7 @@ This way, the admins can be alerted when the workload is using the services at c
 * Name: Enter a unique name for the webhook such as **waf-webhook (1)**.
 * Enabled: Leave on default.
 * Expires: Add an expiry date and time **(2)**.
-* URL: Copy the URL **(3)**. **Make sure to copy the URL and paste it ina text editor with you. Once you click on OK, it won't be retrievable.**
+* URL: Copy the URL **(3)**. **Make sure to copy the URL and paste it in a text editor with you. Once you click on OK, it won't be retrievable.**
 * Click on **OK (4)**.
 
    ![](./media/costopt-54.png)
@@ -390,13 +390,13 @@ This way, the admins can be alerted when the workload is using the services at c
 
    ![](./media/costopt-56.png)
 
-17. Give a unique **Name (1)** for the action and click on **Review + Create**.
+17. Give a unique **Name (1)** for the action and click on **Review + Create (2)**.
 
    ![](./media/costopt-57.png)
 
-18. In the **Review + Create** tab, with all the details you will have option to test the action group. Click on **Test action group(preview) (1)**.
+18. In the **Review + Create** tab, with all the details, you will have the option to test the action group. Click on **Test action group(preview) (1)**.
 
-19. Now for **Select sample type**, select **Billing alert (2)** from the drop down. Select the checkbox for both **Notification and Alert type (3)**. At last click on **Test**.
+19. Now for **Select sample type**, select **Billing alert (2)** from the drop down. Select the checkbox for both **Notification and Alert type (3)**. At last, click on **Test**.
 
    ![](./media/costopt-61.png)
 
@@ -404,11 +404,11 @@ This way, the admins can be alerted when the workload is using the services at c
 
    ![](./media/costopt-59.png)
 
-21. Under **Output** tab, you can review the execution of action alert we just tested. It will show up as succeeded.
+21. Under **Output** tab, you can review the execution of the action alert we just tested. It will show up as succeeded.
 
    ![](./media/costopt-58.png)
 
-22. Once testing is done it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)** and click on **Create**.
+22. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)** and click on **Create (3)**.
 
    ![](./media/costopt-60.png)
 
@@ -462,14 +462,14 @@ Azure Hybrid Benefit helps you get more value from your Windows Server licenses 
 
 Each 2-processor license or each set of 16-core licenses, Datacenter or Standard Editions, are entitled to two instances of up to 8 cores, or one instance of up to 16 cores. Datacenter Edition licenses allow for simultaneous usage both on-premises and in Azure. Standard Edition licenses must be used either on-premises or in Azure, although customers get 180 days of concurrent use rights while they are migrating their servers.
 
-**4. How many Azure virtual machines one will receive with on-premises licenses?**
+**4. How many Azure virtual machines will one receive with on-premises licenses?**
 
 For every 2-processor Windows Server license or set of 16 core Windows Server licenses covered with Software Assurance, you’ll receive either of the following in Azure.
 
 * Up to 2 virtual machines with up to 8 cores
 * One virtual machine with up to 16 cores
 
-**5. What does this benefit offer for Windows Server on Azure Virtual Machines?**
+**5. What benefit does this offer for Windows Server on Azure Virtual Machines?**
 
 Azure Hybrid Benefit helps you get more value from your Windows Server licenses and save up to 40 percent* on virtual machines.
 
@@ -541,7 +541,7 @@ This hybrid benefit is only available for use with:
 You buy a reserved VM instance with the size Standard_DS4_v2 where the ratio or relative footprint compared to the other sizes in that series is 8.
 
 * Scenario 1: Run eight Standard_DS1_v2 sized VMs with a ratio of 1. Your reservation discount applies to all eight of those VMs.
-* Scenario 2: Run two Standard_DS2_v2 sized VMs with a ratio of 2 each. Also run a Standard_DS3_v2 sized VM with a ratio of 4. The total footprint is 2+2+4=8. So your reservation discount applies to all three of those VMs.
+* Scenario 2: Run two Standard_DS2_v2 sized VMs with a ratio of 2 each. Also run a Standard_DS3_v2 sized VM with a ratio of 4. The total footprint is 2+2+4=8. So, your reservation discount applies to all three of those VMs.
 * Scenario 3: Run one Standard_DS5_v2 with a ratio of 16. Your reservation discount applies to half that VM's compute cost.
 * Scenario 4: Run one Standard_DS5_v2 with a ratio of 16 and purchase an additional Standard_DS4_v2 reservation with a ratio of 8. Both reservations combine and apply the discount to entire VM.
 

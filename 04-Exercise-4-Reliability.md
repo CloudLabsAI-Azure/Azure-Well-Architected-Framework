@@ -20,56 +20,7 @@ Azure has many resiliency features already built into the platform, such as:
 
 ### **Task 2: Test with simulations and forced failovers** 
 
-In this task, you will learn how to enable replication for virtual machines, run a test failover to validate your replication and disaster recovery strategy, without any data loss or downtime.
-
-### **a. Replicate a Virtual machine**
-
-1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
-
-   ![](./media/costopt-01.png)
-
-2. Open **wafprod** resource group and select a virtual machine.
-
-   ![](./media/costopt-02.png)
-   
-3. From the left pane, select **Disaster recovery (1)** present under _Operations_. Then select a **Target region (2)** from the drop down and click on **Review + Start Replication (3)**.
-
-   ![](./media/reliability-01.png)
-
-4. Review the details and click on **Start replication**.
-
-   ![](./media/reliability-02.png)
-
-5. Once the deployment starts, a new resource group will get created in which a recovery service vault will get deployed.
-
-6. In the search bar, search for Recovery service vaults and select **Recovery service vaults** from the suggestions.
-
-   ![](./media/reliability-09.png)
-   
-7. Observe the vaults here, select the **Site-recovery-vault-eastus** vault, that falls under **site-recovery-vault-rg** resource group.
-
-   ![](./media/reliability-06.png)   
-
-8. From the left pane, select **Site Recovery jobs** present under _Monitoring_. You will see all the jobs here with there status.
-
-   ![](./media/reliability-03.png)
-
-9. Now from the left pane, select **Replicated items** present under _Protected items_. You will have the the VM here that you just replicated, select that virtual machine **wafproxxxxxx**.
-
-   ![](./media/reliability-04.png)
-
-
-### **b. Run a test failover to Azure**
-
-1. On the Overview page of the replicated virtual machine, you will have details such as _Health and status, Failover readiness, Errors_ and so on.
-
-   ![](./media/reliability-07.png)
-
-2. Now select **Test Failover**.
-
-   ![](./media/reliability-08.png)
-
-
+1. In Site Recovery in the Azure portal, click Recovery Plans > recoveryplan_name > Test Failover.
 
 2. Select a Recovery Point to which to fail over. You can use one of the following options:
 
@@ -111,15 +62,58 @@ Track failover progress on the Jobs tab. You should be able to see the test repl
 
 ### **Task 5: Respond to failure and disaster** 
 
+**Site Recovery** helps you keep your applications up and running in the event of planned or unplanned zonal/regional outages. Enabling Site Recovery on your machines at scale through the Azure portal can be challenging. **Azure Policy** can help you enable replication at scale without resorting to any scripting.
 
+In this task, we are going to create a policy assignment for the built-in Azure Site Recovery policy that enables replication for all the VMs in a subscription or resource group.
 
+1. Type **Policy** in the search box located on the top of the Azure Portal page and click on **Policy** to open it.
 
+   ![](./media/ex4-task5-01.png)
+   
+2. Click on **Assignments** from the left natigation pane under **Authoring**.
 
+   ![](./media/ex4-task5-02.png)
+   
+3. Select **Assign policy** from the top of the **Policy - Assignments** page.
 
+    ![](./media/ex4-task5-03.png)
+    
+4. On the **Assign policy**, provide the following details on the **Basic** tab:
 
+   * **Scope**: Select your default subscription.
+   * **Exclusions**: Click on ellipses and select **wafprod** resource group. 
+   * **Policy definition**: Click on ellipses and search for **Configure disaster recovery on virtual machines by enabling replication via Azure Site Recovery**. Select it.
+   * Leave all the other values to default and click **Next**.
 
+    ![](./media/ex4-task5-04.png)
 
+5. On the **parameters** tab of **Assign policy** page, provide the following details:
 
+   * Check only show parameters that need input or review
+   * **Source Region**: Central US
+   * **Target Region**: East US
+   * **Vault Resource Group**: wafprod
+   * Leave all the other values to default and select **Next**.
+
+   ![](./media/ex4-task5-05.png)
+   
+6. On the **Remediation** tab in the **Assign policy** workflow, select the **Create a Remediation Task** checkbox and click on **Next**.
+
+   ![](./media/ex4-task5-06.png)
+   
+7. Click on **Review and create** to review the selected options, and then select **Create** at the bottom of the page.
+
+   ![](./media/ex4-task5-07.png)
+   
+   > **Note:** After you assign the policy, wait for up to 1 hour for replication to be enabled.
+
+8. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
+
+   ![](./media/costopt-01.png)
+   
+9. Open **wafprod** resource group and select the Recovery services vault with the name **wafprodxxxxbackup**.
+
+    ![](./media/ex4-task5-08.png)
 
 
 

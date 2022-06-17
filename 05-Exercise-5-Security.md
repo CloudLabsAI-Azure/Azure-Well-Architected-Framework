@@ -37,7 +37,7 @@ User directories and other authentication functions are complex to develop and c
    
 5. To connect the Microsoft Authenticator app with your account, **Scan the QR code (1)** and select **Next (2)**.
 
-   ![](media/mfa-03 -new.png)
+   ![](media/mfa-03-new.png)
    
 6. A Notification to Approve will pop-up on your mobile. Approve that and select **Next**.
 

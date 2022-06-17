@@ -9,10 +9,6 @@
    ![](./media/getting-started2.png "Lab Environment")
  
 
-1. You can validate the each task by navigating to **Lab Validation** tab and clicking on **Validate** button. Please make sure to run the validation steps for each task after performing it. 
-
-   ![](./media/validation.png "Lab Environment")
-
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 

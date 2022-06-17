@@ -273,8 +273,8 @@ You can lower cost by managing the size of the VMs.
 
    ![](./media/costopt-05.png)
 
-
-<p> &#11088; For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings! </p>
+ > ⭐ Good to know: <br>
+ > For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings!
 
 
 ### **Task 4: Cost controls**

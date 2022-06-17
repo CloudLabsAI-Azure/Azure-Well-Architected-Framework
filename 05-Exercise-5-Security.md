@@ -35,9 +35,9 @@ User directories and other authentication functions are complex to develop and c
 
    ![](media/mfa-02.png)
    
-5. To connect the Microsoft Authenticator app with your account, **Scan the QR code** and select **Next**.
+5. To connect the Microsoft Authenticator app with your account, **Scan the QR code (1)** and select **Next (2)**.
 
-   ![](media/mfa-03.png)
+   ![](media/mfa-03 -new.png)
    
 6. A Notification to Approve will pop-up on your mobile. Approve that and select **Next**.
 
@@ -73,7 +73,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
    ![](./media/wag-rg.png)
    
-2. Select **Access Control (IAM)** in the left-hand menu, select **+ Add** above `Role assignments` and select **Add role assignment**.
+2. Select **Access Control (IAM)** in the left-hand menu, select **+ Add (1)** above `Role assignments` and select **Add role assignment (2)**.
    
    ![](./media/Iam-role.png)
    
@@ -99,7 +99,7 @@ In this task you will learn how to control access to the Azure resources that yo
 
    ![](./media/activity1.png)
    
-8. Then from the filter menu, click on **Timespan** filter and then select **last month**. Click on **Apply** to apply the filter.
+8. Then from the filter menu, click on **Timespan (1)** filter and then select **last month (2)**. Click on **Apply (3)** to apply the filter.
    
    ![](./media/activity2.png)
    
@@ -111,12 +111,12 @@ In this task you will learn how to control access to the Azure resources that yo
 
     ![](./media/add-diag.png)
     
-11. Make sure you fill the **Diagnostic Settings** page with the following details and click on **Save**.
+11. Make sure you fill the **Diagnostic Settings** page with the following details.
 
     * **Diagnostic setting name**: `dev-log` **(1)**
     *  **Logs**: Make sure you have selected all the categories **(2)**
     *  **Destination details**: Check **Archive to a storage account (3)** and leave all the other values to default **(4)**.
-    *  Click on **Save**.
+    *  Click on **Save (5)**.
 
     ![](./media/activity-save.png)
    
@@ -134,19 +134,19 @@ In this task you will learn how to control access to the Azure resources that yo
     
     > **Note:** The container might take upto 2 minutes for getting created. Click on **Refresh** button once in few seconds until you are able to see the container.
     
-15. Go through the folder names **resourceid=** and observe that each event is stored in the PT1H.json file with the following format that uses a common top-level schema.
+15. Go through the folder names **resourceid=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below scrrenshot.
 
    `{ "time": "2020-06-12T13:07:46.766Z", "resourceId": "/SUBSCRIPTIONS/00000000-0000-0000-0000-000000000000/RESOURCEGROUPS/MY-RESOURCE-GROUP/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/MV-VM-01", "correlationId": "0f0cb6b4-804b-4129-b893-70aeeb63997e", "operationName": "Microsoft.Resourcehealth/healthevent/Updated/action", "level": "Information", "resultType": "Updated", "category": "ResourceHealth", "properties": {"eventCategory":"ResourceHealth","eventProperties":{"title":"This virtual machine is starting as requested by an authorized user or process. It will be online shortly.","details":"VirtualMachineStartInitiatedByControlPlane","currentHealthStatus":"Unknown","previousHealthStatus":"Unknown","type":"Downtime","cause":"UserInitiated"}}}`
    
    
-   ![](./media/container3.png)
+   ![](./media/container4.png)
 
 
 ## Task 3: App Security
    
    Inconsistent configurations for applications can create security Risks. Azure App Configuration provides a service to centrally manage application settings and feature flags, which helps mitigate this risk. Defender for Cloud continuously monitors the configuration of your virtual machines scale sets to identify potential security vulnerabilities and recommends actions to mitigate them. In this task we will be adding log analytics to the virtual machine scale set using **Micrososft Defender for cloud**.
 
-1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
+1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups (2)**.
 
    ![](./media/costopt-01.png)
    
@@ -195,7 +195,7 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-01.png)
    
-3. On the **Encryption** pane, select **`customer-managed keys`** for **Encryption Type** and **`Select from key vault`** option for **Encryption key**. Click on **select a key vault and key** option next to keyvault and key.
+3. On the **Encryption** pane, select **`customer-managed keys`** for **Encryption Type (1)** and **`Select from key vault`** option for **Encryption key (2)**. Click on **select a key vault and key (3)** option next to keyvault and key.
 
    ![](./media/ex5-task4-02.png)
    
@@ -203,11 +203,12 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-03.png)
    
-5. You will be redirected to **Create a key vault** page, fill the following details and click on **Next: Access policy**.
+5. You will be redirected to **Create a key vault** page, fill the following details.
 
-   - **Subscription**: Select your subscription
-   - **Resource group**: wafdev
-   - **Key vault name**: waf-keyvault{unique id}
+   - **Subscription**: Select your subscription **(1)**
+   - **Resource group**: wafdev **(2)**
+   - **Key vault name**: waf-keyvault{unique id} **(3)**
+   - click on **Next: Access policy (4)**
   
     ![](./media/ex5-task4-09.png)
   
@@ -219,13 +220,13 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-05.png)
   
-8. On the **Create a key** page, fill the following details and click on **create**.
+8. On the **Create a key** page, fill the following details.
 
-   - **options**: Generate
-   - **Name**: waf-key
-   - **Key type**: RSA
-   - **RSA key size**: 2048
-   - leave all other values to default
+   - **options**: Generate **(1)**
+   - **Name**: waf-key **(2)**
+   - **Key type**: RSA **(3)**
+   - **RSA key size**: 2048 **(4)**
+   - leave all other values to default and click on **create (5)**
 
     ![](./media/ex5-task4-06.png)
   
@@ -326,7 +327,7 @@ In this task, we are going to perform  integrated security monitoring for your w
     
     > **Note**: It can take upto 5 minutes for the VM access to get enabled. 
 
-12. Go back to **Recommendations**, click on **Apply system updates** and select **Log Analytics agent should be installed on virtual machines**.
+12. Go back to **Recommendations (1)**, click on **Apply system updates (2)** and select **Log Analytics agent should be installed on virtual machines (3)**.
 
     ![](./media/ex5-task5-10.png)
    

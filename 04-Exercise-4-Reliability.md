@@ -22,7 +22,7 @@ Azure has many resiliency features already built into the platform, such as:
 
 In this task, you will learn how to enable replication for virtual machines, run a test failover to validate your replication and disaster recovery strategy, without any data loss or downtime.
 
-**### a. Replicate a Virtual machine**
+### **a. Replicate a Virtual machine**
 
 1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
 
@@ -59,7 +59,7 @@ In this task, you will learn how to enable replication for virtual machines, run
    ![](./media/reliability-04.png)
 
 
-**### b. Run a test failover to Azure**
+### **b. Run a test failover to Azure**
 
 1. On the Overview page of the replicated virtual machine, you will have details such as _Health and status, Failover readiness, Errors_ and so on.
 

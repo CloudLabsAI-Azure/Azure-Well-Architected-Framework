@@ -99,34 +99,41 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-15.png)
 
-3. d
-* Choose a Recovery Point: Select **Latest processed (low RTO)** from the drop down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
+3. Provide following details for the failover:
 
+* Choose a Recovery Point: Select **Latest processed (low RTO) (1)** from the drop down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
+* Azure virtual network: Select an Azure virtual network **(2)** from the drop down, in which test virtual machine will be created.
+* Click on **OK (3)**.
 
-3. Select an Azure virtual network in which test VMs will be created.
+   ![](./media/reliability-16.png)
 
-* Site Recovery attempts to create test VMs in a subnet with the same name and same IP address as that provided in the Compute and Network settings of the VM.
-* If a subnet with the same name isn't available in the Azure virtual network used for test failover, then the test VM is created in the first subnet alphabetically.
-* If same IP address isn't available in the subnet, then the VM receives another available IP address in the subnet. Learn more.
-Track failover progress on the Jobs tab. You should be able to see the test replica machine in the Azure portal.
+4. Go to **Site Recovery Jobs** present under _Monitoring_. Here you can track the failover progress. Click on the failover to view the process.
 
-4. To initiate an RDP connection to the Azure VM, you need to add a public IP address on the network interface of the failed over VM. If you don't want to add a public IP address to the virtual machine, check the recommended alternatives here.
+   ![](./media/reliability-17.png)
 
-5. When everything is working as expected, click Cleanup test failover. This deletes the VMs that were created during test failover.
-
-6. In Notes, record and save any observations associated with the test failover.
-
-7. When a test failover is triggered, the following occurs:
+5. When a test failover is triggered, the following occurs:
 
 * Prerequisites: A prerequisites check runs to make sure that all conditions required for failover are met.
 * Failover: The failover processes and prepared the data, so that an Azure VM can be created from it.
 * Latest: If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
 * Start: This step creates an Azure virtual machine using the data processed in the previous step.
 
+   ![](./media/reliability-18.png)
 
+6. When everything is working as expected, click Cleanup test failover. This deletes the VMs that were created during test failover.
 
+7. Return to the Recovery plan you created and click on **Cleanup test failover**.
 
+   ![](./media/reliability-19.png)
 
+8. Add a note for cleanup and check the _'Testing is complete. Delete test failover virtual machine(s)'_ checkbox and click on **OK**.
+
+   ![](./media/reliability-20.png)
+
+9. You can track the cleanup progress in **Site Recovery Jobs** present under _Monitoring_.
+
+   ![](./media/reliability-21.png)
+   
 
 ### **Task 3: Deploy consistently** 
 

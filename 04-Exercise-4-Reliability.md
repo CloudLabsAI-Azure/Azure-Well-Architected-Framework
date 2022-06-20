@@ -160,23 +160,33 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
    ![](./media/ex4-task4-01.png)
    
-2. Click on **Health alerts** from the left natigation pane under **Alerts**.
+2. From the left navigation pane, click on **Service issues**. You will be prompted with the active issues if there are any.
+
+   ![](./media/ex4-task4-08.png)
+
+3. Click on **health history** from left navigation pane and select the time range as **Last 3 months**. you will be able to see the inactive events such as service issues, upcoming planned maintenance and health advisories.
+
+   ![](./media/ex4-task4-09.png)
+   
+   > **Note:** Feel free to click on the events and check on the details.
+   
+4. Click on **Health alerts** from the left natigation pane under **Alerts**.
 
    ![](./media/ex4-task4-02.png)
    
-3. On the **Health alerts** page, click on **Add service health alert**.
+5. On the **Health alerts** page, click on **Add service health alert**.
 
    ![](./media/ex4-task4-07.png)
    
-4. On the create an alert rule page, go to actions and click on **select action group**.
+6. On the create an alert rule page, go to **Actions** and click on **select action group**.
 
    ![](./media/ex4-task4-03.png)
    
-5. You will be prompted to select action group page, in this page make sure your subscription is selected and select the action group with the name **waf-actiongroup** which you created in exercise 1, task 4. Click on **Select**.
+7. You will be prompted to **select action group** page, in this page make sure your subscription is selected and select the action group with the name **waf-actiongroup** which you created in exercise 1, task 4. Click on **Select**.
 
    ![](./media/ex4-task4-04.png)
 
-6. Under **Alert rule details**, Provide the following details:
+8. Under **Alert rule details**, Provide the following details:
 
    * **Alert rule name**: waf-alert
    * **Resource Group**: waf-prod
@@ -184,7 +194,7 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
    ![](./media/ex4-task4-05.png)
    
-7. Once the alert rule is created, go to **Health alerts** page and observe all the details of the alert.
+9. Once the alert rule is created, go to **Health alerts** page and observe all the details of the alert.
 
    ![](./media/ex4-task4-06.png)
 

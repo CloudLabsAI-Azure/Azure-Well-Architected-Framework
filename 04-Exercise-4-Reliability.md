@@ -139,6 +139,53 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 ### **Task 4: Monitor health** 
 
+**Service Health** provides a personalized view of the health of the Azure services and regions you're using. This is the best place to look for service impacting communications about outages, planned maintenance activities, and other health advisories because the authenticated Service Health experience knows which services and resources you currently use. 
+
+Service Health tracks four types of health events that may impact your resources:
+
+ - Service issues - Problems in the Azure services that affect you right now.
+ 
+ - Planned maintenance - Upcoming maintenance that can affect the availability of your services in the future.
+ 
+ - Health advisories - Changes in Azure services that require your attention. Examples include deprecation of Azure features or upgrade requirements (e.g upgrade to a supported PHP framework).
+ 
+ - Security advisories - Security related notifications or violations that may affect the availability of your Azure services.
+ 
+ - Health history - Service Health provides you with a customizable dashboard which tracks the health of your Azure services in the regions where you use them. In this dashboard, you can track active events like ongoing service issues, upcoming planned maintenance, or relevant health advisories. When events become inactive, they get placed in your health history for up to 90 days.
+
+In this task you will set up **Service Health alerts** to notify you via your preferred communication channels when service issues, planned maintenance, or other changes may affect the Azure services and regions you use.
+
+
+1. Type **service** in the search box located on the top of the Azure Portal page and click on **Service Health** to open it.
+
+   ![](./media/)
+   
+2. Click on **Health alerts** from the left natigation pane under **Alerts**.
+
+   ![](./media/)
+   
+3. On the **Health alerts** page, click on **Add service health alert**.
+
+   ![](./media/)
+   
+4. On the create an alert rule page, go to actions and click on **select action group**.
+
+   ![](./media/)
+   
+5. You will be prompted to select action group page, in this page make sure your subscription is selected and select the action group with the name **waf-actiongroup** which you created in exercise 1, task 4. Click on **Select**.
+
+   ![](./media/)
+
+6. Under **Alert rule details**, Provide the following details:
+
+   - Alert rule name: waf-alert
+   - Resource Group: waf-prod
+   - Check Enable alert rule upon creation
+
+   ![](./media/)
+
+
+
 ### **Task 5: Respond to failure and disaster** 
 
 **Site Recovery** helps you keep your applications up and running in the event of planned or unplanned zonal/regional outages. Enabling Site Recovery on your machines at scale through the Azure portal can be challenging. **Azure Policy** can help you enable replication at scale without resorting to any scripting.

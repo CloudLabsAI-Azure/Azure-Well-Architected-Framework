@@ -20,6 +20,59 @@ Azure has many resiliency features already built into the platform, such as:
 
 ### **Task 2: Test with simulations and forced failovers** 
 
+In this task, you will learn how to enable replication for virtual machines, run a test failover to validate your replication and disaster recovery strategy, without any data loss or downtime.
+
+### **a. Replicate a Virtual machine**
+
+1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
+
+   ![](./media/costopt-01.png)
+
+2. Open **wafprod** resource group and select a virtual machine.
+
+   ![](./media/costopt-02.png)
+
+3. From the left pane, select **Disaster recovery (1)** present under _Operations_. Then select a **Target region (2)** from the drop down and click on **Review + Start Replication (3)**.
+
+   ![](./media/reliability-01.png)
+
+4. Review the details and click on **Start replication**.
+
+   ![](./media/reliability-02.png)
+
+5. Once the deployment starts, a new resource group will get created in which a recovery service vault will get deployed.
+
+6. In the search bar, search for Recovery service vaults and select **Recovery service vaults** from the suggestions.
+
+   ![](./media/reliability-09.png)
+
+7. Observe the vaults here, select the **Site-recovery-vault-eastus** vault, that falls under **site-recovery-vault-rg** resource group.
+
+   ![](./media/reliability-06.png)   
+
+8. From the left pane, select **Site Recovery jobs** present under _Monitoring_. You will see all the jobs here with there status.
+
+   ![](./media/reliability-03.png)
+
+9. Now from the left pane, select **Replicated items** present under _Protected items_. You will have the the VM here that you just replicated, select that virtual machine **wafproxxxxxx**.
+
+   ![](./media/reliability-04.png)
+
+
+### **b. Run a test failover to Azure**
+
+1. On the Overview page of the replicated virtual machine, you will have details such as _Health and status, Failover readiness, Errors_ and so on.
+
+   ![](./media/reliability-07.png)
+
+2. Now select **Test Failover**.
+
+   ![](./media/reliability-08.png)
+
+
+
+
+
 1. In Site Recovery in the Azure portal, click Recovery Plans > recoveryplan_name > Test Failover.
 
 2. Select a Recovery Point to which to fail over. You can use one of the following options:

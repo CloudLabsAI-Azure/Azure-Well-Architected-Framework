@@ -132,10 +132,10 @@ With respect to the workload we have, we will use Automation Accounts to perform
  > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
 
 4. Fill in the details as following:
- * Name: **stop-prod-vms (1)**
- * Runbook type: Select **PowerShell (2)** from the dropdown.
- * Runtime version: **5.1 (3)**
- * Description: Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
+ * **Name:** Enter **stop-prod-vms (1)** in the name block.
+ * **Runbook type:** Select **PowerShell (2)** from the dropdown.
+ * **Runtime version:** Select **5.1 (3)** from the dropdown.
+ * **Description:** Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
  * Click on **Create (5)**.
 
    ![](./media/costopt-08.png)
@@ -170,11 +170,11 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
    ![](./media/costopt-11.png)
    
 9. Fill following details:
- * Name: **user-credentials (1)**
- * Description: Give a description **(2)**
- * Username: **<inject key="AzureAdUserEmail"></inject>** **(3)**
- * Password: **<inject key="AzureAdUserPassword" />** **(4)**
- * Confirm Password: **<inject key="AzureAdUserPassword" />** **(5)**
+ * **Name:** Enter a name such as **user-credentials (1)**
+ * **Description:** Give a description **(2)**
+ * **Username:** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(3)**
+ * **Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(4)**
+ * **Confirm Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(5)**
  * Click on **Create (6)**.
 
    ![](./media/costopt-12.png)
@@ -188,9 +188,9 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
    ![](./media/costopt-09.png)
 
 12. Fill in the following details:
- * Line 1: **user-credentials**
- * Line 9: Enter your **subscription id**.
- * Line 11: **wafprod**, this could be any resource group in which your VMs are present. In our workload, VMs are present in wafprod resource group.
+ * **Line 1:** Replace `[Enter name of your credentials]` with **user-credentials**.
+ * **Line 9:** Enter your **subscription id**.
+ * **Line 11:** Enter **wafprod**, this could be any resource group in which your VMs are present. In our workload, VMs are present in wafprod resource group.
  * Click on **Publish**.
 
    ![](./media/costopt-14.png)
@@ -208,14 +208,14 @@ Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
    ![](./media/costopt-17.png)
 
 16. Fill in the details as following:
- * Name: **stop-vms (1)**
- * Description: **stop all VMs in wafprod resource group (2)**.
- * Starts: **Enter start time and date (3)**.
- * Time zone: Select your time zone from the drop down **(4)**.
- * Recurrence: Select **Recurring (5)**.
- * Recur every: Enter the time period of recurrence **(6)**.
- * Set expiration: Select **Yes (7)**.
- * Expires: **Enter an expiry time and date for the runbook (8)**.
+ * **Name:** Enter **stop-vms (1)** in the name block.
+ * **Description:** Give a description such as **stop all VMs in wafprod resource group (2)**.
+ * **Starts:** Enter start time and date **(3)**.
+ * **Time zone:** Select your time zone from the drop down **(4)**.
+ * **Recurrence:** Select **Recurring (5)**.
+ * **Recur every:** Enter the time period of recurrence **(6)**.
+ * **Set expiration:** Select **Yes (7)**.
+ * **Expires:** Enter an expiry time and date for the runbook **(8)**.
  * Click on **Create (9)**.
 
    ![](./media/costopt-18.png)
@@ -299,12 +299,12 @@ This way, the admins can be alerted when the workload is using the services at c
 
 4. Fill in the Budget Details as following:
 
-* Scope: Make sure your subscription is selected **(1)**.
-* Name: **waf-budget (2)**
-* Reset period: The reset period determines the time window that's analyzed by the budget. Select **Quarterly (3)** from the drop down.
-* Creation date: This is the date of creation of budget and it will be selected by default **(4)**.
-* Expiration date: Add an expiry date for the budget **(5)**.
-* Amount ($): Give your budget amount threshold **(6)**. 
+* **Scope:** Make sure your subscription is selected **(1)**.
+* **Name:** Enter **waf-budget (2)** in the name block.
+* **Reset period:** The reset period determines the time window that's analyzed by the budget. Select **Quarterly (3)** from the drop down.
+* **Creation date:** This is the date of creation of budget and it will be selected by default **(4)**.
+* **Expiration date:** Add an expiry date for the budget **(5)**.
+* **Amount ($):** Give your budget amount threshold **(6)**. 
 * Click on **Next (7)**.
 
    ![](./media/costopt-46.png)
@@ -323,27 +323,27 @@ This way, the admins can be alerted when the workload is using the services at c
 
 6. Add **Project details** and **Instance details** as given below:
 
-* Subscription: Subscription will be selected by default **(1)**.
-* Resource group: Select **wafprod** from the drop down **(2)**.
-* Action group name: **waf-actiongroup (3)**
-* Display name: **waf-ag (4)**
+* **Subscription:** Subscription will be selected by default **(1)**.
+* **Resource group:** Select **wafprod** from the drop down **(2)**.
+* **Action group name:** Give a name for the action group, such as **waf-actiongroup (3)**
+* **Display name:** Enter a display name for the action group**(4)**.
 * Click on **Next: Notifications (5)**
 
    ![](./media/costopt-48.png)
 
 7. Provide the following information for the notifications to be sent when an alert is triggered.
 
-* Notification type: Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
+* **Notification type:** Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
 
   a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
   
   b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
 
-* Add or edit an Email/SMS/Push/Voice action: Based on the selected notification type, enter an email address, phone number, or other information **(2)**.
-* Enable Common alert schema: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
+* **Add or edit an Email/SMS/Push/Voice action:** Based on the selected notification type, enter an email address, phone number, or other information **(2)**.
+* **Enable Common alert schema:** You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
 
 * Click on **OK (4)**.
-* Name: Enter a unique name for the notification **(5)**.
+* **Name:** Enter a unique name for the notification **(5)**.
 
    ![](./media/costopt-49.png)
 
@@ -368,10 +368,10 @@ This way, the admins can be alerted when the workload is using the services at c
 
 13. Provide following details:
 
-* Name: Enter a unique name for the webhook such as **waf-webhook (1)**.
-* Enabled: Leave on default.
-* Expires: Add an expiry date and time **(2)**.
-* URL: Copy the URL **(3)**. **Make sure to copy the URL and paste it in a text editor with you. Once you click on OK, it won't be retrievable.**
+* **Name:** Enter a unique name for the webhook such as **waf-webhook (1)**.
+* **Enabled:** Leave on default.
+* **Expires:** Add an expiry date and time **(2)**.
+* **URL:** Copy the URL **(3)**. **Make sure to copy the URL and paste it in a text editor with you. Once you click on OK, it won't be retrievable.**
 * Click on **OK (4)**.
 
    ![](./media/costopt-54.png)
@@ -384,8 +384,8 @@ This way, the admins can be alerted when the workload is using the services at c
 
 16. Add the details as given below:
 
-* Action type: Select **Webhook (1)** from the drop down.
-* URI: Paste the URL here that we copied in Step 13 in this task **(2)**.
+* **Action type:** Select **Webhook (1)** from the drop down.
+* **URI:** Paste the URL here that we copied in Step 13 in this task **(2)**.
 * Click on **OK (3)**.
 
    ![](./media/costopt-56.png)
@@ -422,9 +422,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
 25. Provide Alert recipients emails as given below:
 
-* Alert recipients (email): **<inject key="AzureAdUserEmail"></inject>** **(1)**
-* Alert recipients (email): Add **azure-noreply@microsoft.com** **(2)** to your approved senders list so that emails don't go to your junk email folder.
-* Language: You can select your language from the drop down. Here we are leaving this on **Default (3)**.
+* **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
+* **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders list so that emails don't go to your junk email folder.
+* **Language:** You can select your language from the drop down. Here we are leaving this on **Default (3)**.
 * Click on **Create (4)**.
 
    ![](./media/costopt-42.png)

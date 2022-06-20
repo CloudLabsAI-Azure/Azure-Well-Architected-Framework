@@ -143,15 +143,15 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 Service Health tracks four types of health events that may impact your resources:
 
- - Service issues - Problems in the Azure services that affect you right now.
+ - **Service issues** - Problems in the Azure services that affect you right now.
  
- - Planned maintenance - Upcoming maintenance that can affect the availability of your services in the future.
+ - **Planned maintenance** - Upcoming maintenance that can affect the availability of your services in the future.
  
- - Health advisories - Changes in Azure services that require your attention. Examples include deprecation of Azure features or upgrade requirements (e.g upgrade to a supported PHP framework).
+ - **Health advisories** - Changes in Azure services that require your attention. Examples include deprecation of Azure features or upgrade requirements (e.g upgrade to a supported PHP framework).
  
- - Security advisories - Security related notifications or violations that may affect the availability of your Azure services.
+ - **Security advisories** - Security related notifications or violations that may affect the availability of your Azure services.
  
- - Health history - Service Health provides you with a customizable dashboard which tracks the health of your Azure services in the regions where you use them. In this dashboard, you can track active events like ongoing service issues, upcoming planned maintenance, or relevant health advisories. When events become inactive, they get placed in your health history for up to 90 days.
+ - **Health history** - Service Health provides you with a customizable dashboard which tracks the health of your Azure services in the regions where you use them. In this dashboard, you can track active events like ongoing service issues, upcoming planned maintenance, or relevant health advisories. When events become inactive, they get placed in your health history for up to 90 days.
 
 In this task you will set up **Service Health alerts** to notify you via your preferred communication channels when service issues, planned maintenance, or other changes may affect the Azure services and regions you use.
 

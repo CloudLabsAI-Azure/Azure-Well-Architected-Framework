@@ -42,7 +42,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 5. Once the deployment starts, a new resource group will get created in which a recovery service vault will get deployed.
 
-6. In the search bar, search for Recovery service vaults and select **Recovery service vaults** from the suggestions.
+6. In the search bar, search for Recovery service vaults and select **Recovery services vaults** from the suggestions.
 
    ![](./media/reliability-09.png)
 
@@ -58,24 +58,48 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-04.png)
 
-
-### **b. Run a test failover to Azure**
-
-1. On the Overview page of the replicated virtual machine, you will have details such as _Health and status, Failover readiness, Errors_ and so on.
+10. On the Overview page of the replicated virtual machine, you will have details such as _Health and status, Failover readiness, Errors_ and so on.
 
    ![](./media/reliability-07.png)
 
+### **b. Create a Recovery plan**
+
+1. In the Recovery Services vault, select **Recovery Plans (Site Recovery)** present under _Manage_ and click on **+ Recovery plan**.
+
+   ![](./media/reliability-10.png)
+
+2. Provide following details for the recovery plan:
+
+* Name: Specify a name for the plan **(1)**.
+* Source: Choose a source location from the drop down. The source location must have machines that are enabled for failover and recovery. Here we are using **WestUS (2)** as it's the same location where we have our virtual machine.
+* Target: Choose a target location from the drop down **(3)**.
+* Allow items with deployment model: Select **Resource Manager (4)** from the drop down.
+* Click on **Select items**.
+
+   ![](./media/reliability-11.png)
+
+3. In Select items, select the machine that you want to add to the plan and then click on **OK**.
+
+   ![](./media/reliability-12.png)
+
+   > **Note:** You can only select machines are in the source and target locations that you specified.
+   
+4. At last, click on **Create**. Once the plan is created successfully, move to next task.
+
+   ![](./media/reliability-13.png)
+
+
+### **c. Run a test failover to Azure**
+
+1. In the recovery services vault, select **Recovery Plans (Site Recovery)** and click on **failover-recovery-plan**. This is the Recovery plan that you just created.
+
+   ![](./media/reliability-14.png)
+
 2. Now select **Test Failover**.
 
-   ![](./media/reliability-08.png)
+   ![](./media/reliability-15.png)
 
-
-
-
-
-1. In Site Recovery in the Azure portal, click Recovery Plans > recoveryplan_name > Test Failover.
-
-2. Select a Recovery Point to which to fail over. You can use one of the following options:
+3. Select a Recovery Point to which to fail over. You can use one of the following options:
 
 * Latest processed: This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. To see the latest recovery point for a specific VM, check Latest Recovery Points in the VM settings. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
 * Latest app-consistent: This option fails over all the VMs in the plan to the latest application-consistent recovery point processed by Site Recovery. To see the latest recovery point for a specific VM, check Latest Recovery Points in the VM settings.

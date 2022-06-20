@@ -158,35 +158,94 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
 1. Type **service** in the search box located on the top of the Azure Portal page and click on **Service Health** to open it.
 
-   ![](./media/)
+   ![](./media/ex4-task4-01.png)
    
 2. Click on **Health alerts** from the left natigation pane under **Alerts**.
 
-   ![](./media/)
+   ![](./media/ex4-task4-02.png)
    
 3. On the **Health alerts** page, click on **Add service health alert**.
 
-   ![](./media/)
+   ![](./media/ex4-task4-07.png)
    
 4. On the create an alert rule page, go to actions and click on **select action group**.
 
-   ![](./media/)
+   ![](./media/ex4-task4-03.png)
    
 5. You will be prompted to select action group page, in this page make sure your subscription is selected and select the action group with the name **waf-actiongroup** which you created in exercise 1, task 4. Click on **Select**.
 
-   ![](./media/)
+   ![](./media/ex4-task4-04.png)
 
 6. Under **Alert rule details**, Provide the following details:
 
-   - Alert rule name: waf-alert
-   - Resource Group: waf-prod
-   - Check Enable alert rule upon creation
+   * **Alert rule name**: waf-alert
+   * **Resource Group**: waf-prod
+   * Check **Enable alert rule upon creation**
 
-   ![](./media/)
+   ![](./media/ex4-task4-05.png)
+   
+7. Once the alert rule is created, go to **Health alerts** page and observe all the details of the alert.
 
+   ![](./media/ex4-task4-06.png)
 
 
 ### **Task 5: Respond to failure and disaster** 
+
+**Site Recovery** helps you keep your applications up and running in the event of planned or unplanned zonal/regional outages. Enabling Site Recovery on your machines at scale through the Azure portal can be challenging. **Azure Policy** can help you enable replication at scale without resorting to any scripting.
+
+In this task, we are going to create a policy assignment for the built-in Azure Site Recovery policy that enables replication for all the VMs in a subscription or resource group.
+
+1. Type **Policy** in the search box located on the top of the Azure Portal page and click on **Policy** to open it.
+
+   ![](./media/ex4-task5-01.png)
+   
+2. Click on **Assignments** from the left natigation pane under **Authoring**.
+
+   ![](./media/ex4-task5-02.png)
+   
+3. Select **Assign policy** from the top of the **Policy - Assignments** page.
+
+    ![](./media/ex4-task5-03.png)
+    
+4. On the **Assign policy**, provide the following details on the **Basic** tab:
+
+   * **Scope**: Select your default subscription.
+   * **Exclusions**: Click on ellipses and select **wafprod** resource group. 
+   * **Policy definition**: Click on ellipses and search for **Configure disaster recovery on virtual machines by enabling replication via Azure Site Recovery**. Select it.
+   * Leave all the other values to default and click **Next**.
+
+    ![](./media/ex4-task5-04.png)
+
+5. On the **parameters** tab of **Assign policy** page, provide the following details:
+
+   * Check only show parameters that need input or review
+   * **Source Region**: Central US
+   * **Target Region**: East US
+   * **Vault Resource Group**: wafprod
+   * Leave all the other values to default and select **Next**.
+
+   ![](./media/ex4-task5-05.png)
+   
+6. On the **Remediation** tab in the **Assign policy** workflow, select the **Create a Remediation Task** checkbox and click on **Next**.
+
+   ![](./media/ex4-task5-06.png)
+   
+7. Click on **Review and create** to review the selected options, and then select **Create** at the bottom of the page.
+
+   ![](./media/ex4-task5-07.png)
+   
+   > **Note:** After you assign the policy, wait for up to 1 hour for replication to be enabled.
+
+8. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
+
+   ![](./media/costopt-01.png)
+   
+9. Open **wafprod** resource group and select the Recovery services vault with the name **wafprodxxxxbackup**.
+
+    ![](./media/ex4-task5-08.png)
+
+
+
 
 
 

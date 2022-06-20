@@ -70,21 +70,21 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 2. Provide following details for the recovery plan:
 
-* Name: Specify a name for the plan **(1)**.
-* Source: Choose a source location from the drop down. The source location must have machines that are enabled for failover and recovery. Here we are using **WestUS (2)** as it's the same location where we have our virtual machine.
-* Target: Choose a target location from the drop down **(3)**.
-* Allow items with deployment model: Select **Resource Manager (4)** from the drop down.
-* Click on **Select items**.
+* **Name:** Specify a name for the plan **(1)**.
+* **Source:** Choose a source location from the drop down. The source location must have machines that are enabled for failover and recovery. Here we are using **WestUS (2)** as it's the same location where we have our virtual machine.
+* **Target:** Choose a target location from the drop down **(3)**.
+* **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
+* Click on **Select items (5)**.
 
    ![](./media/reliability-11.png)
 
 3. In Select items, select the machine that you want to add to the plan and then click on **OK**.
 
-   ![](./media/reliability-12.png)
+   ![](./media/reliability-22.png)
 
    > **Note:** You can only select machines are in the source and target locations that you specified.
    
-4. At last, click on **Create**. Once the plan is created successfully, move to next task.
+4. At last, click on **Create**. Once the plan is created successfully, move to the next task.
 
    ![](./media/reliability-13.png)
 
@@ -101,8 +101,8 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 3. Provide following details for the failover:
 
-* Choose a Recovery Point: Select **Latest processed (low RTO) (1)** from the drop down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
-* Azure virtual network: Select an Azure virtual network **(2)** from the drop down, in which test virtual machine will be created.
+* **Choose a Recovery Point:** Select **Latest processed (low RTO) (1)** from the drop down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
+* **Azure virtual network:** Select an Azure virtual network **(2)** from the drop down, in which test virtual machine will be created.
 * Click on **OK (3)**.
 
    ![](./media/reliability-16.png)
@@ -113,10 +113,10 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 5. When a test failover is triggered, the following occurs:
 
-* Prerequisites: A prerequisites check runs to make sure that all conditions required for failover are met.
-* Failover: The failover processes and prepared the data, so that an Azure VM can be created from it.
-* Latest: If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
-* Start: This step creates an Azure virtual machine using the data processed in the previous step.
+* **Prerequisites:** A prerequisites check runs to make sure that all conditions required for failover are met.
+* **Failover:** The failover processes and prepared the data, so that an Azure VM can be created from it.
+* **Latest:** If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
+* **Start:** This step creates an Azure virtual machine using the data processed in the previous step.
 
    ![](./media/reliability-18.png)
 

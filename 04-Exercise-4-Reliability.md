@@ -201,67 +201,39 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
 ### **Task 5: Respond to failure and disaster** 
 
-**Site Recovery** helps you keep your applications up and running in the event of planned or unplanned zonal/regional outages. Enabling Site Recovery on your machines at scale through the Azure portal can be challenging. **Azure Policy** can help you enable replication at scale without resorting to any scripting.
+Azure services are always available, thanks to Microsoft's efforts. Unexpected service disruptions, on the other hand, are possible. If you need resiliency for your application, Microsoft advises employing geo-redundant storage, which replicates your data to a second location. Customers should also have a plan in place for dealing with a regional outage. An important part of a disaster recovery plan is preparing to fail over to the secondary endpoint in the event that the primary endpoint becomes unavailable.
 
-In this task, we are going to create a policy assignment for the built-in Azure Site Recovery policy that enables replication for all the VMs in a subscription or resource group.
+In this task, you will learn how to initiate an account failover for your storage account.
 
-1. Type **Policy** in the search box located on the top of the Azure Portal page and click on **Policy** to open it.
+1. In Azure portal, search for storage accounts and select **Storage accounts** from the suggestions.
 
-   ![](./media/ex4-task5-01.png)
+   ![](./media/reliability-23.png)
+
+2. Select the storage account **wafdevxxxxx**.
+
+   ![](./media/reliability-24.png)
+
+   > **Note:** The storage account should be configured for geo-replication. Geo-replication is available for Geo-redundant (GRS) and Read access geo-redundant (RA-GRS) storage accounts. The storage account present in wafdevxxxx resource group is already configured with GRS so we are using it here.
+   > 
+   > You can also update the replication type of a storage account under Configuration to use this setting. **We will not perform this as on updating the configuration, failover will not be available. Initial data synchronization from the primary to secondary region will be in progress and can take up to an hour. Failover will be available when synchronization is complete.**
+   > 
+   > ![](./media/reliability-28.png)
+
+3. Now select **Geo-replication** present under _Data management_ and click on **Prepare for failover**.
+
+   ![](./media/reliability-25.png)
    
-2. Click on **Assignments** from the left natigation pane under **Authoring**.
+4. Enter **YES** for _'Confirm Failover'_ and click on **Failover**. The Last Sync Time property here, indicates how far the secondary is behind from the primary. Last Sync Time provides an estimate of the extent of data loss that you will experience after the failover is completed.
 
-   ![](./media/ex4-task5-02.png)
-   
-3. Select **Assign policy** from the top of the **Policy - Assignments** page.
+   ![](./media/reliability-26.png)
 
-    ![](./media/ex4-task5-03.png)
-    
-4. On the **Assign policy**, provide the following details on the **Basic** tab:
+5. Once the failover begins, you will see a notification saying _Failover in progress_. This will take up to an hour to succeed.
 
-   * **Scope**: Select your default subscription.
-   * **Exclusions**: Click on ellipses and select **wafprod** resource group. 
-   * **Policy definition**: Click on ellipses and search for **Configure disaster recovery on virtual machines by enabling replication via Azure Site Recovery**. Select it.
-   * Leave all the other values to default and click **Next**.
+   ![](./media/reliability-27.png)
 
-    ![](./media/ex4-task5-04.png)
+6. After the failover is performed, go to **Geo-replication** present under _Data management_. You will see that Central US is updated as primary endpoint.
 
-5. On the **parameters** tab of **Assign policy** page, provide the following details:
-
-   * Check only show parameters that need input or review
-   * **Source Region**: Central US
-   * **Target Region**: East US
-   * **Vault Resource Group**: wafprod
-   * Leave all the other values to default and select **Next**.
-
-   ![](./media/ex4-task5-05.png)
-   
-6. On the **Remediation** tab in the **Assign policy** workflow, select the **Create a Remediation Task** checkbox and click on **Next**.
-
-   ![](./media/ex4-task5-06.png)
-   
-7. Click on **Review and create** to review the selected options, and then select **Create** at the bottom of the page.
-
-   ![](./media/ex4-task5-07.png)
-   
-   > **Note:** After you assign the policy, wait for up to 1 hour for replication to be enabled.
-
-8. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
-
-   ![](./media/costopt-01.png)
-   
-9. Open **wafprod** resource group and select the Recovery services vault with the name **wafprodxxxxbackup**.
-
-    ![](./media/ex4-task5-08.png)
-
-
-
-
-
-
-
-
-
+   ![](./media/reliability-29.png)
 
 
 

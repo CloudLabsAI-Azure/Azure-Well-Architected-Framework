@@ -235,7 +235,9 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-29.png)
 
+7. Once the failover is complete, clients can begin writing to the new primary endpoint.
 
+8. After the failover, your storage account type is automatically converted to locally redundant storage (LRS) in the new primary region. 
 
 
 

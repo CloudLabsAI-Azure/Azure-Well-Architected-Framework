@@ -188,62 +188,6 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
 ### **Task 5: Respond to failure and disaster** 
 
-**Site Recovery** helps you keep your applications up and running in the event of planned or unplanned zonal/regional outages. Enabling Site Recovery on your machines at scale through the Azure portal can be challenging. **Azure Policy** can help you enable replication at scale without resorting to any scripting.
-
-In this task, we are going to create a policy assignment for the built-in Azure Site Recovery policy that enables replication for all the VMs in a subscription or resource group.
-
-1. Type **Policy** in the search box located on the top of the Azure Portal page and click on **Policy** to open it.
-
-   ![](./media/ex4-task5-01.png)
-   
-2. Click on **Assignments** from the left natigation pane under **Authoring**.
-
-   ![](./media/ex4-task5-02.png)
-   
-3. Select **Assign policy** from the top of the **Policy - Assignments** page.
-
-    ![](./media/ex4-task5-03.png)
-    
-4. On the **Assign policy**, provide the following details on the **Basic** tab:
-
-   * **Scope**: Select your default subscription.
-   * **Exclusions**: Click on ellipses and select **wafprod** resource group. 
-   * **Policy definition**: Click on ellipses and search for **Configure disaster recovery on virtual machines by enabling replication via Azure Site Recovery**. Select it.
-   * Leave all the other values to default and click **Next**.
-
-    ![](./media/ex4-task5-04.png)
-
-5. On the **parameters** tab of **Assign policy** page, provide the following details:
-
-   * Check only show parameters that need input or review
-   * **Source Region**: Central US
-   * **Target Region**: East US
-   * **Vault Resource Group**: wafprod
-   * Leave all the other values to default and select **Next**.
-
-   ![](./media/ex4-task5-05.png)
-   
-6. On the **Remediation** tab in the **Assign policy** workflow, select the **Create a Remediation Task** checkbox and click on **Next**.
-
-   ![](./media/ex4-task5-06.png)
-   
-7. Click on **Review and create** to review the selected options, and then select **Create** at the bottom of the page.
-
-   ![](./media/ex4-task5-07.png)
-   
-   > **Note:** After you assign the policy, wait for up to 1 hour for replication to be enabled.
-
-8. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
-
-   ![](./media/costopt-01.png)
-   
-9. Open **wafprod** resource group and select the Recovery services vault with the name **wafprodxxxxbackup**.
-
-    ![](./media/ex4-task5-08.png)
-
-
-
-
 
 
 

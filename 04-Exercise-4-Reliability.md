@@ -99,14 +99,9 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-15.png)
 
-3. Select a Recovery Point to which to fail over. You can use one of the following options:
+3. d
+* Choose a Recovery Point: Select **Latest processed (low RTO)** from the drop down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
 
-* Latest processed: This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. To see the latest recovery point for a specific VM, check Latest Recovery Points in the VM settings. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
-* Latest app-consistent: This option fails over all the VMs in the plan to the latest application-consistent recovery point processed by Site Recovery. To see the latest recovery point for a specific VM, check Latest Recovery Points in the VM settings.
-* Latest: This option first processes all the data that has been sent to Site Recovery service, to create a recovery point for each VM before failing over to it. This option provides the lowest RPO (Recovery Point Objective), because the VM created after failover will have all the data replicated to Site Recovery when the failover was triggered.
-* Latest multi-VM processed: This option is available for recovery plans with one or more VMs that have multi-VM consistency enabled. VMs with the setting enabled fail over to the latest common multi-VM consistent recovery point. Other VMs fail over to the latest processed recovery point.
-* Latest multi-VM app-consistent: This option is available for recovery plans with one or more VMs that have multi-VM consistency enabled. VMs that are part of a replication group fail over to the latest common multi-VM application-consistent recovery point. Other VMs fail over to their latest application-consistent recovery point.
-* Custom: Use this option to fail over a specific VM to a particular recovery point.
 
 3. Select an Azure virtual network in which test VMs will be created.
 

@@ -18,6 +18,49 @@ Azure has many resiliency features already built into the platform, such as:
 
 ### **Task 1: Define requirements** 
 
+Building **resiliency** (recovering from failures) and **availability** (running in a healthy state without significant downtime) into your applications begins with gathering requirements. For example, how much downtime is acceptable? How much does potential downtime cost your business? What are your customer's availability requirements? How much do you invest in making your application highly available? What is the risk versus the cost?
+
+The following are few of the requirements you should consider to improve reliability requirements and meet business expectations in Azure.
+
+ #### 1. Availability targets
+ 
+  - A **Service Level Agreement (SLA)**, is an availability target that represents a commitment around performance and availability of the application.
+  
+  - Understanding the SLA of individual components within the system is essential in order to define reliability targets. Knowing the SLA of dependencies will also provide a justification for additional spend when making the dependencies highly available and with proper support contracts.
+  
+  - Monitoring and measuring application availability is vital to qualifying overall application health and progress towards defined targets.
+ 
+ #### 2. Recovery targets
+ 
+ - **Recovery targets** identify how long the workload can be unavailable and how much data is acceptable to lose during a disaster. 
+ 
+ - Recovery targets are nonfunctional requirements of a system and should be dictated by business requirements. They should be defined in accordance to the required Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for the workloads.
+
+ - **Recovery Time Objective (RTO)** is the maximum acceptable time an application is unavailable after a disaster, and **Recovery Point Objective (RPO)** is the maximum duration of data loss that is acceptable during a disaster.
+
+
+ #### 3. Meet application platform requirements
+ 
+  - Azure application platform services offer resiliency features to support application reliability, they will only be applicable at a certain SKU and configuration/deployment.
+
+   * **Multiple and paired regions**: The ability to respond to disaster scenarios for overall compute platform availability and application resiliency depends on the use of multiple regions or other deployment locations.
+   
+   * **Availability Zones and sets**: An Availability Set (AS) is a logical construct to inform Azure that it should distribute contained virtual machine instances across multiple fault and update domains within an Azure region. Availability Zones (AZ) elevate the fault level for virtual machines to a physical datacenter by allowing replica instances to be deployed across multiple datacenters within an Azure region. 
+   
+ #### 4. Meet data platform requirements
+ 
+  - Data and storage services should be running in a highly available configuration/SKU. Azure data platform services offer resiliency features to support application reliability.
+ 
+   
+#### 5. Replication and Redundancy
+   
+   - To maintain data availability and durability, Azure Storage creates and stores copies of data across multiple locations. This process is called storage replication. The goal is to provide redundancy to protect data against hardware failures, power or network outages.
+
+   - Replicating data across zones or paired regions supports application availability objectives to limit the impact of failure scenarios. 
+
+   - The ability to restore data from a backup is essential when recovering from data corruption situations as well as failure scenarios. To ensure sufficient redundancy and availability for zonal and regional failure scenarios, backups should be stored across zones and/or regions.
+
+
 ### **Task 2: Test with simulations and forced failovers** 
 
 In this task, you will learn how to enable replication for virtual machines, run a test failover to validate your replication and disaster recovery strategy, without any data loss or downtime.
@@ -135,24 +178,7 @@ In this task, you will learn how to enable replication for virtual machines, run
    ![](./media/reliability-21.png)
    
 
-### **Task 3: Deploy consistently [Read Only]** 
-
-* To design and deploy a successful workload in any environment, it can be challenging. This is especially true as agile development and DevOps/SRE methods continue to move security, operations, and cost management responsibility away from centralized teams and onto workload owners. 
-
-* This transformation allows workload owners to innovate at a far faster rate than they could in a traditional data centre, but it also exposes them to a wider range of subjects that they must comprehend in order to provide a secure, dependable, performant, and cost-effective solution.
-
-* Deployment and testing should not be limited to the delivery of scheduled application updates; rather, they should serve as the framework for all application and infrastructure operations to assure consistent outcomes for mission-critical workloads.
-
-* Prioritize an infrastructure-level approach to attain zero-downtime deployments and provide a single, consistent deployment process for all types of updates (application- and infrastructure-level).
-
-* Infrastructure-as-Code (IaC) considers infrastructure definitions to be source code that may be versioned together with other application artifacts. IaC provides code consistency across environments, reduces the chance of human mistake during automated deployments, and allows for traceability and rollback. 
-
-* IaC, with completely automated and consistent infrastructure deployments, is the recommended approach for infrastructure-level deploymentz. All testings of both the infrastructure and application components should be fully automated to ensure consistency.
-
-
-
-
-
+### **Task 3: Deploy consistently** 
 
 
 ### **Task 4: Monitor health** 

@@ -18,9 +18,11 @@ Azure has many resiliency features already built into the platform, such as:
 
 ### **Task 1: Define requirements** 
 
-Building **resiliency** (recovering from failures) and **availability** (running in a healthy state without significant downtime) into your applications begins with gathering requirements. For example, how much downtime is acceptable? How much does potential downtime cost your business? What are your customer's availability requirements? How much do you invest in making your application highly available? What is the risk versus the cost?
+Gathering requirements is the first step in incorporating resiliency (recovering from failures) and availability (operating in a healthy condition without significant downtime) into your applications. 
 
-The following are few of the requirements you should consider to improve reliability requirements and meet business expectations in Azure.
+For example, how much downtime is acceptable? What is the cost of potential downtime to your company? What are the requirements for your customer's availability? How much money do you put into making your app widely available? What is the expense versus the risk?
+
+The following are some of the considerations you should make in Azure to improve reliability and satisfy business goals.
 
  #### 1. Availability targets
  

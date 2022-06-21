@@ -53,8 +53,11 @@ The following are few of the requirements you should consider to improve reliabi
   
    - Replicating data across zones or paired regions supports application availability objectives to limit the impact of failure scenarios. 
    
-   - The ability to restore data from a backup is essential when recovering from data corruption situations as well as failure scenarios. To ensure sufficient redundancy and availability for zonal and regional failure scenarios, backups should be stored across zones and/or regions.
+#### 5. Replication and Redundancy
+   
+   - To maintain data availability and durability, Azure Storage creates and stores copies of data across multiple locations. This process is called storage replication. The goal is to provide redundancy to protect data against hardware failures, power or network outages.
 
+   - The ability to restore data from a backup is essential when recovering from data corruption situations as well as failure scenarios. To ensure sufficient redundancy and availability for zonal and regional failure scenarios, backups should be stored across zones and/or regions.
 
 
 ### **Task 2: Test with simulations and forced failovers** 

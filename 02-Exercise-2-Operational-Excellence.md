@@ -41,5 +41,23 @@ In this exercise, we will go through the given architecutre and know more about:
    - **Aggregation**: Max
    
     ![](media/Ex2-t3-03.png)
+    
+5. Click on **Workbooks** in the left-hand menu.
+
+    ![](media/Ex2-t3-05.png)
+    
+6. On the workbooks page, click on **Key Metrics** under Virtual Machines which lists all the saved workbooks and templates for your workspace.
+
+   ![](media/Ex2-t3-06.png)
+   
+7. On the overview page of the workbook, you will be able to see the CPU utilization of virtual machines across subscription. Each cell represents a virtual machine and the color/label represents its average CPU utilization. 
+     
+    ![](media/Ex2-t3-07.png)
+    
+8. Click on **Key metrics** and observe the CPU utilization in the Grid view.
+
+    ![](media/Ex2-t3-08.png)
+   
+
 
 ### Task 4: Processes and cadence 

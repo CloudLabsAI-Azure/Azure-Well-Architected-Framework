@@ -12,4 +12,49 @@ In this exercise, we will go through the given architecutre and know more about:
 * Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
 
 
+Task1: Design for scaling 
+
+Task 2: Monitor performance 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

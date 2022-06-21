@@ -12,9 +12,22 @@ In this exercise, we will go through the given architecutre and know more about:
 * Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
 
 
-Task1: Design for scaling 
+### **Task1: Design for scaling** 
 
-Task 2: Monitor performance 
+A system's scalability refers to its ability to manage increased load. Azure Autoscale-enabled services can scale automatically to meet demand and accommodate workload. These systems automatically scale out to maintain capacity during workload peaks and then return to normal once the peak has passed.
+
+Vertical scaling and horizontal scaling are the two basic ways an application can scale. Vertical scaling (scaling up) enhances a resource's capacity, for example, by using a larger virtual machine (VM) size. Horizontal scaling (scaling out) refers to the addition of new instances of a resource, such as virtual machines or database replicas.
+
+
+
+
+
+
+
+
+
+
+### **Task 2: Monitor performance **
 
 
 

@@ -18,6 +18,45 @@ Azure has many resiliency features already built into the platform, such as:
 
 ### **Task 1: Define requirements** 
 
+Building **resiliency** (recovering from failures) and **availability** (running in a healthy state without significant downtime) into your applications begins with gathering requirements. For example, how much downtime is acceptable? How much does potential downtime cost your business? What are your customer's availability requirements? How much do you invest in making your application highly available? What is the risk versus the cost?
+
+The following are few of the requirements you should consider to improve reliability requirements and meet business expectations in Azure.
+
+ #### 1. Availability targets
+ 
+  - A **Service Level Agreement (SLA)**, is an availability target that represents a commitment around performance and availability of the application.
+  
+  - Understanding the SLA of individual components within the system is essential in order to define reliability targets. Knowing the SLA of dependencies will also provide a justification for additional spend when making the dependencies highly available and with proper support contracts.
+  
+  - Monitoring and measuring application availability is vital to qualifying overall application health and progress towards defined targets.
+ 
+ #### 2. Recovery targets
+ 
+ - **Recovery targets** identify how long the workload can be unavailable and how much data is acceptable to lose during a disaster. 
+ 
+ - Recovery targets are nonfunctional requirements of a system and should be dictated by business requirements. They should be defined in accordance to the required Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for the workloads.
+
+ - **Recovery Time Objective (RTO)** is the maximum acceptable time an application is unavailable after a disaster, and **Recovery Point Objective (RPO)** is the maximum duration of data loss that is acceptable during a disaster.
+
+
+ #### 3. Meet application platform requirements
+ 
+  - Azure application platform services offer resiliency features to support application reliability, they will only be applicable at a certain SKU and configuration/deployment.
+
+   * **Multiple and paired regions**: The ability to respond to disaster scenarios for overall compute platform availability and application resiliency depends on the use of multiple regions or other deployment locations.
+   
+   * **Availability Zones and sets**: An Availability Set (AS) is a logical construct to inform Azure that it should distribute contained virtual machine instances across multiple fault and update domains within an Azure region. Availability Zones (AZ) elevate the fault level for virtual machines to a physical datacenter by allowing replica instances to be deployed across multiple datacenters within an Azure region. 
+   
+ #### 4. Meet data platform requirements
+ 
+  - Data and storage services should be running in a highly available configuration/SKU. Azure data platform services offer resiliency features to support application reliability.
+  
+   - Replicating data across zones or paired regions supports application availability objectives to limit the impact of failure scenarios. 
+   
+   - The ability to restore data from a backup is essential when recovering from data corruption situations as well as failure scenarios. To ensure sufficient redundancy and availability for zonal and regional failure scenarios, backups should be stored across zones and/or regions.
+
+
+
 ### **Task 2: Test with simulations and forced failovers** 
 
 In this task, you will learn how to enable replication for virtual machines, run a test failover to validate your replication and disaster recovery strategy, without any data loss or downtime.
@@ -136,6 +175,7 @@ In this task, you will learn how to enable replication for virtual machines, run
    
 
 ### **Task 3: Deploy consistently** 
+
 
 ### **Task 4: Monitor health** 
 

@@ -8,14 +8,54 @@ It covers the operations and processes that keep an application running in produ
 
 In this exercise, we will go through the given architecutre and know more about:
 
- * How would you optimize App time to market?
- * What would you automate? Does PaaS improve the operations?
- * Would you change anything in the current monitoring set up? Why?
- * What changes would you introduce in the deployment?.
- * Is the architecture prepared for the unexpected and to catch mistakes?
+  * How would you optimize App time to market?
+  * What would you automate? Does PaaS improve the operations?
+  * Would you change anything in the current monitoring set up? Why?
+  * What changes would you introduce in the deployment?.
+  * Is the architecture prepared for the unexpected and to catch mistakes?
 
 
 ### Task 1: DevOps
+
+ To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates.Complex issue may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
+
+ Automation leads to more innovative solutions, and in general provides more value to the business. This in turn raises morale and job satisfaction.
+
+ Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
+
+Thre differenet types of automation includes:
+
+#### 1. Infrastructure deployment:
+
+As businesses move to the cloud, they need to repeatedly deploy their solutions and know that their infrastructure is in a reliable state. To meet these challenges, you can automate deployments using a practice referred to as infrastructure as code. In code, you define the infrastructure that needs to be deployed.
+
+-There are many deployment technologies you can use with Azure. Here are three examples that uses declarative approach:
+
+ * Azure Resource Manager (ARM) templates
+ * Azure Bicep
+ * Terraform
+
+#### 2. Infrastructure configuration
+
+If you don't manage configuration carefully, your business could encounter disruptions such as systems outages and security issues. Optimal configuration can enable you to quickly detect and correct configurations that could interrupt or slow performance.
+
+- When creating new resources on Azure, you may take advantage of configuration as code to bootstrap the deployment.
+
+- Configuration tools can also be used to configure and manage the ongoing state of deployed resources.
+
+#### 3. Operational tasks
+
+As the demand for speed in performing operational tasks increases over time, you are expected to deliver things faster and faster. Manually performing operational tasks will fail to scale as demand increases. This is where automation can help. 
+
+To meet on-demand delivery using an automation platform, you need to develop automation components (such as runbooks and configurations), create integrations to systems that are already in place efficiently, and operate and troubleshoot.
+
+Advantages of automating operational tasks include:
+
+ * Optimize and extend existing processes.
+ * Deliver flexible and reliable services.
+ * Lower costs.
+ * Improve predictability.
+
 
 ### Task 2: Deployment
 

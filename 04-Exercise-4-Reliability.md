@@ -244,6 +244,25 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
    ![](./media/ex4-task4-06.png)
 
+10. In the Azure portal, search for Advisor and select **Advisor** from the suggestions.
+
+    ![](./media/costopt-25.png)
+
+11. Click on **All recommendations** from the left natigation pane under **Recommendations**.
+
+    ![](./media/ex4-task4-11.png)
+    
+12. On the **All recommendations** page, click on the recommendation **Enable Cross Region Restore for your recovery Service Vault**.
+
+    ![](./media/ex4-task4-10.png)
+    
+13. Click on **Enable CRR** on the **Enable Cross Region Restore for your recovery Service Vault** page to enable cross region restore.
+
+    ![](./media/ex4-task4-12.png)
+    
+14. On the **Backup configuration** page, select **Enable** on the cross Region Restrore option and click on **Save**.
+
+    ![](./media/ex4-task4-13.png)
 
 ### **Task 5: Respond to failure and disaster** 
 

@@ -84,18 +84,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-### **Task 2: Monitor performance **
+### **Task 2: Monitor performance**
 
 
 

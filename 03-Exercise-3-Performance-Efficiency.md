@@ -34,13 +34,29 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
    ![](./media/pe-04.png)
 
-5. Add the rule.....
+5. Add the rule by providing following details:
+
+* **Metric Source:** Select **Current resource (srv) (1)** from the drop down
+* **Time aggregation:** Select **Average (2)**
+* **Metric namespace:** Select **Virtual Machines Host (3)**
+* **Metric name:** Select **Percentage CPU (4)**
+* **Operator:** Select **Greather than (5)**
+* **Metric threshold to trigger scale action:** Enter **70 (6)** %
+* **Duration (minutes):** Enter **10 (7)**
+* **Time graine statistic:** Select **Average (8)**
+* **Operation:** Select **Increase count by (9)**
+* **Cool down (minutes):** Enter **5 (10)**
+* **Instance count:** Enter **1 (11)**
+* At last, click on **Add (12)**
 
    ![](./media/pe-05.png)
 
-6. Click on **Add a rule** again and fill in the following details:
+6. Click on **Add a rule** again. Leave all to default and modify the following details:
 
--------
+* **Operator:** Select **Less than (1)**
+* **Metric threshold to trigger scale action:** Enter **30 (2)** %
+* **Operation:** Select **Decrease percentage by (3)**
+* Click on **Add (4)**
 
    ![](./media/pe-06.png)
 

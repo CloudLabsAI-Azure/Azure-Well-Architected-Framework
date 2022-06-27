@@ -100,13 +100,53 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-18.png)
 
-9. Return to the Virtual Machines tab from the menu in the left and observe the status of all three VMs. It should show up as **This workpsace** under _Log Analytics Connection_.
+9. Return to the **Virtual Machines** tab from the menu in the left and observe the status of all three VMs. It should show up as **This workpsace** under _Log Analytics Connection_.
 
    ![](./media/pe-19.png)
 
    > **Note:** In case the status is not updated, click on **Refresh** button to get the latest status.
 
-10. 
+10. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+11. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+12. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+13. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+14. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+15. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+16. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+17. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+18. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+19. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+
+   ![](./media/pe-08.png)
+
+20. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
 
    ![](./media/pe-08.png)
 

@@ -110,47 +110,46 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-08.png)
 
-11. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+11. From the left pane, select **Virtual Machines** present under _Insights_ and then click on **Configure Insights**.
 
-   ![](./media/pe-08.png)
+   ![](./media/pe-09.png)
 
-12. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+12. You will see your subscription and all the resource groups in it, listed here. Expand **wafprod** resource group and enable VM insights for all three VMs. Click on **Enable**.
 
-   ![](./media/pe-08.png)
+   ![](./media/pe-10.png)
 
-13. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will iniate the deployment of VM isnights. Follow the same process for other two VMs.
 
-   ![](./media/pe-08.png)
+   ![](./media/pe-11.png)
 
-14. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+14. Return to the **Virtual Machines** tab from the menu in the left. Click on the **Refresh (1)** button and then observe the status of all three VMs. It should show up as **Enabling (2)** under _Monitor Coverage_.
 
-   ![](./media/pe-08.png)
+   ![](./media/pe-20.png)
 
-15. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+   > **Note:** It will take up to 10 minutes for the data to reflect in Insights. To see the details, you can click on **Why?** and see the detailed message. Once done click on **Close (3)**.
 
-   ![](./media/pe-08.png)
+15. VM insights includes a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open to the **Virtual Machines** tab present in the left pane and click on **Performance**.
 
-16. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+   ![](./media/pe-21.png)
 
-   ![](./media/pe-08.png)
+16. In this section, you can play with filters such _Resource Group_ and _Time Range_. You will have graphical presentations for the following:
 
-17. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+* **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
+* **Available Memory -** shows the top five machines with the lowest average amount of available memory.
+* **Logical Disk Space Used % -** shows the top five machines with the highest average disk space used % across all disk volumes.
+* **Bytes Sent Rate -** shows the top five machines with highest average of bytes sent.
+* **Bytes Receive Rate -** shows the top five machines with highest average of bytes received.
 
-   ![](./media/pe-08.png)
+   ![](./media/pe-24.png)
 
-18. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+17. Hover your cursor over the **CPU Utilization %** graph and you will be able to see CPU utilization for all three VMs that we enabled monitoring.
 
-   ![](./media/pe-08.png)
-
-19. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
-
-   ![](./media/pe-08.png)
-
-20. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
-
-   ![](./media/pe-08.png)
+   ![](./media/pe-23.gif)
 
 
+The graphs display resource use over time so you can spot bottlenecks and anomalies. You may also switch to a perspective displaying each machine to see resource utilisation according to the measure you've chosen. Although there are many factors to think about when it comes to performance, VM insights monitors important operating system performance indicators relating to processor, memory, network adapter, and disk utilization.
+
+Performance works hand in hand with the health monitoring capability to reveal problems that could point to a system component failure, support tuning and optimization to increase efficiency, or support capacity planning.
 
 
 

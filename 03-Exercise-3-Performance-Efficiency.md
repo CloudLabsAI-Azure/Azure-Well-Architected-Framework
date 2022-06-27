@@ -78,7 +78,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 * **Resource group:** Select a resource group from the drop down. Here we have selected **wafdev (2)**.
 * **Name:** Give a name for the workspace **(3)**.
 * **Region:** Select a region near to you, for example **EastUS (4)**.
-* Click on **Review + Create**.
+* Click on **Review + Create (5)**.
 
    ![](./media/pe-14.png)
 
@@ -106,7 +106,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    > **Note:** In case the status is not updated, click on **Refresh** button to get the latest status.
 
-10. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor**.
+10. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor (2)**.
 
    ![](./media/pe-08.png)
 
@@ -132,7 +132,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-21.png)
 
-16. In this section, you can play with filters such _Resource Group_ and _Time Range_. You will have graphical presentations for the following:
+16. In this section, you can play with filters such **_Resource Group_** and **_Time Range_**. You will have graphical presentations for the following:
 
 * **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
 * **Available Memory -** shows the top five machines with the lowest average amount of available memory.
@@ -144,7 +144,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
 17. Hover your cursor over the **CPU Utilization %** graph and you will be able to see CPU utilization for all three VMs that we enabled monitoring.
 
-   ![](./media/pe-23.gif)
+   ![](media/pe-23.gif?raw=true)
 
 
 The graphs display resource use over time so you can spot bottlenecks and anomalies. You may also switch to a perspective displaying each machine to see resource utilisation according to the measure you've chosen. Although there are many factors to think about when it comes to performance, VM insights monitors important operating system performance indicators relating to processor, memory, network adapter, and disk utilization.

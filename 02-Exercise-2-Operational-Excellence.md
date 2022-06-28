@@ -59,6 +59,80 @@ Advantages of automating operational tasks include:
 
 ### Task 2: Deployment
 
+In this task you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app.
+
+The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
+
+1. In the Azure search box, enter **logic apps**, and select **Logic apps**.
+
+   ![](media/Ex2-t2-01.png)
+   
+2. On the **Logic apps** page, select **Add**.
+
+   ![](media/Ex2-t2-02.png)
+   
+3. On the **Create Logic App** pane, on the Basics tab, provide the following basic information about your logic app:
+
+   * **Subscription**: Select your default susbcription
+   * **Resource Group**: waf-prod
+   * **Logic App name**: waf-logic-app
+   * **Plan type**: Consumption
+   * **Enable log analytics**: No
+   * **Zone redundancy**: disbaled
+   * Leave all the other values as default and click on **Review + Create** followed by **Create**.
+    
+   ![](media/Ex2-t2-03.png)
+   
+4. After Azure successfully deploys your app, select **Go to resource**.
+
+   ![](media/Ex2-t2-04.png)
+   
+5. In the Logic App Designer, scroll through the page until you locate the **templates** section. Click on **Blank Logic App**.
+
+   ![](media/Ex2-t2-05.png)
+   
+6. In the designer search box, select **All** and enter **rss**. From the Triggers list, select the RSS trigger, **When a feed item is published**.
+ 
+   ![](media/Ex2-t2-06.png)
+   
+7. Provide the following information in the trigger details page and click on **New step**,
+
+    * **The RSS feed URL**: https://feeds.a.dj.com/rss/RSSMarketsMain.xml
+    * **Chosen property will be used to determine**: PublishDate
+    * **Interval**: 1
+    * **Frequency**: Minute
+
+   ![](media/Ex2-t2-07.png)
+   
+8. Enter `Send an email (V2)` in the filter box, then select the **Send an email (V2)** action for Office 365 Outlook.
+
+   ![](media/Ex2-t2-8.png)
+   
+9. Select **Sign in** and sign in to your Office 365 Outlook account.
+
+   ![](media/Ex2-t2-09.png)
+   
+10. In the Send an email form, provide the following values:
+
+    * Enter your email address in the **To** box.
+    * **Subject**: Enter **New RSS item:** and from the Add dynamic content list, under When a feed item is published, select **Feed title**.
+    * **Body**: Enter **Date published:** and from the Add dynamic content list, under When a feed item is published, select **Feed published on**.
+
+    ![](media/Ex2-t2-10.png)
+
+11. On the designer toolbar, select **Save** to save your logic app. .
+
+    ![](media/Ex2-t2-11.png)
+    
+12. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
+
+   ![](media/Ex2-t2-12.png)
+   
+13. The following screenshot shows a sample email that's sent by the workflow.
+
+    ![](media/Ex2-t2-13.png)
+
+
 ### Task 3: Monitor 
 
 **Azure Monitor** helps you maximize the availability and performance of your applications and services. It delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. This information helps you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. 

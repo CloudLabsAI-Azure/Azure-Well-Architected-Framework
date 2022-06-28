@@ -127,7 +127,7 @@ The RSS connector has a trigger that checks an RSS feed, based on a schedule. Th
     
 12. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
 
-   ![](media/Ex2-t2-12.png)
+     ![](media/Ex2-t2-12.png)
    
 13. The following screenshot shows a sample email that's sent by the workflow.
 

@@ -63,7 +63,7 @@ In this task you will be creating an automated workflow that integrates two serv
 
 The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
 
-1. In the Azure search box, enter **logic apps**, and select **Logic apps**.
+1. In the Azure search box, enter **logic apps (1)**, and select **Logic apps (2)**.
 
    ![](media/Ex2-t2-01.png)
    
@@ -73,13 +73,13 @@ The RSS connector has a trigger that checks an RSS feed, based on a schedule. Th
    
 3. On the **Create Logic App** pane, on the Basics tab, provide the following basic information about your logic app:
 
-   * **Subscription**: Select your default susbcription
-   * **Resource Group**: waf-prod
-   * **Logic App name**: waf-logic-app
-   * **Plan type**: Consumption
-   * **Enable log analytics**: No
-   * **Zone redundancy**: disbaled
-   * Leave all the other values as default and click on **Review + Create** followed by **Create**.
+   * **Subscription**: Select your default susbcription (1)
+   * **Resource Group**: waf-prod (2)
+   * **Logic App name**: waf-logic-app (3)
+   * **Plan type**: Consumption (4)
+   * **Enable log analytics**: No (5)
+   * **Zone redundancy**: disbaled (6)
+   * Leave all the other values as default and click on **Review + Create (7)** followed by **Create**.
     
    ![](media/Ex2-t2-03.png)
    
@@ -95,12 +95,13 @@ The RSS connector has a trigger that checks an RSS feed, based on a schedule. Th
  
    ![](media/Ex2-t2-06.png)
    
-7. Provide the following information in the trigger details page and click on **New step**,
+7. Provide the following information in the trigger details page:
 
-    * **The RSS feed URL**: https://feeds.a.dj.com/rss/RSSMarketsMain.xml
-    * **Chosen property will be used to determine**: PublishDate
-    * **Interval**: 1
-    * **Frequency**: Minute
+    * **The RSS feed URL**: `https://feeds.a.dj.com/rss/RSSMarketsMain.xml` (1)
+    * **Chosen property will be used to determine**: PublishDate (2)
+    * **Interval**: 1 (3)
+    * **Frequency**: Minute (4)
+    * click on **New step (5)**
 
    ![](media/Ex2-t2-07.png)
    

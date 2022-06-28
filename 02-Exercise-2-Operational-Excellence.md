@@ -136,43 +136,43 @@ The RSS connector has a trigger that checks an RSS feed, based on a schedule. Th
 
 ### Task 3: Monitor 
 
-**Azure Monitor** helps you maximize the availability and performance of your applications and services. It delivers a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. This information helps you understand how your applications are performing and proactively identify issues affecting them and the resources they depend on. 
 
-1. Type **Monitor** in the search box located on the top of the Azure Portal page and click on it.
-   
-   ![](media/Ex2-t3-01.png)
-   
-2. Click on **Metrics** in the left-hand menu.
+1. In the Azure search box, enter **logic apps (1)**, and select **Logic apps (2)**.
 
-   ![](media/Ex2-t3-02.png)
+   ![](media/Ex2-t2-01.png)
    
-3. You will be prompted with **Select a scope** page, select **wafprod** and 2 virtual machines with the name **wafprodxxxx** under scope. Click on **apply**.
+2. Select your logic app with the name **waf-logic-app**. 
 
-   ![](media/Ex2-t3-04.png)
+   ![](media/Ex3-task1-01.png)
    
-4. Once the scope is applied, slect the following in the **Metrics** page.
+3. On your logic app's menu, select **Overview** and select **Trigger history**. Under **Trigger history**, all trigger attempts appear. Each time the trigger successfully fires, Azure Logic Apps creates an individual workflow instance and runs that instance.
 
-   - **Metric**: Max Data Disk Read Operations/Sec
-   - **Aggregation**: Max
+   ![](media/Ex3-task1-02.png)
    
-    ![](media/Ex2-t3-03.png)
-    
-5. Click on **Workbooks** in the left-hand menu.
+4. To view information about a specific trigger attempt, select that trigger event.
+  
+5. You can now review information about the selected trigger event.
 
-    ![](media/Ex2-t3-05.png)
-    
-6. On the workbooks page, click on **Key Metrics** under Virtual Machines which lists all the saved workbooks and templates for your workspace.
-
-   ![](media/Ex2-t3-06.png)
+   ![](media/Ex3-task1-03.png)
    
-7. On the overview page of the workbook, you will be able to see the CPU utilization of virtual machines across subscription. Each cell represents a virtual machine and the color/label represents its average CPU utilization. 
+6. Go back to the logic app **Overview** pane and select **Runs history**. Under **Runs history**, you can see all the past, current, and any waiting runs appear.
+
+   ![](media/Ex3-task1-04.png)
+   
+7. To view information about a specific run, select that run. The **Logic app run** pane shows each step in the selected run, each step's run status, and the time taken for each step to run,
+
+     ![](media/Ex3-task1-05.png)
      
-    ![](media/Ex2-t3-07.png)
-    
-8. Click on **Key metrics** and observe the CPU utilization in the Grid view.
+8. Click on **Run Details** and you will be able to view the run information in list form.
 
-    ![](media/Ex2-t3-08.png)
+   ![](media/Ex3-task1-06.png)
    
+   ![](media/Ex3-task1-07.png)
+   
+9. Go back to your logic app menu, under **Monitoring**, select **Alerts**.
 
+   ![](media/)
+   
+   
 
 ### Task 4: Processes and cadence 

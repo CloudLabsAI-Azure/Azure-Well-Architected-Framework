@@ -59,9 +59,9 @@ Advantages of automating operational tasks include:
 
 ### Task 2: Deployment
 
-In this task you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app.The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
+In this task, you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app. The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
 
-1. In the Azure search box, enter **logic apps (1)**, and select **Logic apps (2)**.
+1. In the Azure search box, enter **logic apps (1)** and select **Logic apps (2)**.
 
    ![](media/Ex2-t2-01.png)
    

@@ -36,7 +36,7 @@ The following are some of the considerations you should make in Azure to improve
  
  - **Recovery targets** identify how long the workload can be unavailable and how much data is acceptable to lose during a disaster. 
  
- - Recovery targets are nonfunctional requirements of a system and should be dictated by business requirements. They should be defined in accordance to the required Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for the workloads.
+ - Recovery targets are non-functional requirements of a system and should be dictated by business requirements. They should be defined in accordance to the required Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for the workloads.
 
  - **Recovery Time Objective (RTO)** is the maximum acceptable time an application is unavailable after a disaster, and **Recovery Point Objective (RPO)** is the maximum duration of data loss that is acceptable during a disaster.
 
@@ -95,11 +95,11 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-06.png)   
 
-8. From the left pane, select **Site Recovery jobs** present under _Monitoring_. You will see all the jobs here with there status.
+8. From the left pane, select **Site Recovery jobs** present under _Monitoring_. You will see all the jobs here with their status.
 
    ![](./media/reliability-03.png)
 
-9. Now from the left pane, select **Replicated items** present under _Protected items_. You will have the the VM here that you just replicated, select that virtual machine **wafproxxxxxx**.
+9. Now from the left pane, select **Replicated items** present under _Protected items_. You will have the VM here that you just replicated, select that virtual machine **wafproxxxxxx**.
 
    ![](./media/reliability-04.png)
 
@@ -116,7 +116,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 2. Provide following details for the recovery plan:
 
 * **Name:** Specify a name for the plan **(1)**.
-* **Source:** Choose a source location from the drop down. The source location must have machines that are enabled for failover and recovery. Here we are using **WestUS (2)** as it's the same location where we have our virtual machine.
+* **Source:** Choose a source location from the drop down. The source location must have machines that are enabled for failover and recovery. Here we are using **West US (2)** as it's the same location where we have our virtual machine.
 * **Target:** Choose a target location from the drop down **(3)**.
 * **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
 * Click on **Select items (5)**.
@@ -210,13 +210,13 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
    ![](./media/ex4-task4-08.png)
 
-3. Click on **health history** from left navigation pane and select the time range as **Last 3 months**. you will be able to see the inactive events such as service issues, upcoming planned maintenance and health advisories.
+3. Click on **health history** from left navigation pane and select the time range as **Last 3 months**. You will be able to see the inactive events such as service issues, upcoming planned maintenance and health advisories.
 
    ![](./media/ex4-task4-09.png)
    
    > **Note:** Feel free to click on the events and check on the details.
    
-4. Click on **Health alerts** from the left natigation pane under **Alerts**.
+4. Click on **Health alerts** from the left navigation pane under **Alerts**.
 
    ![](./media/ex4-task4-02.png)
    
@@ -248,7 +248,7 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
     ![](./media/costopt-25.png)
 
-11. Click on **All recommendations** from the left natigation pane under **Recommendations**.
+11. Click on **All recommendations** from the left navigation pane under **Recommendations**.
 
     ![](./media/ex4-task4-11.png)
     
@@ -260,7 +260,7 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
     ![](./media/ex4-task4-12.png)
     
-14. On the **Backup configuration** page, select **Enable** on the cross Region Restrore option and click on **Save**.
+14. On the **Backup configuration** page, select **Enable** on the Cross Region Restore option and click on **Save**.
 
     ![](./media/ex4-task4-13.png)
 

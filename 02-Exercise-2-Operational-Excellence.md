@@ -59,9 +59,7 @@ Advantages of automating operational tasks include:
 
 ### Task 2: Deployment
 
-In this task you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app.
-
-The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
+In this task you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app.The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
 
 1. In the Azure search box, enter **logic apps (1)**, and select **Logic apps (2)**.
 
@@ -136,6 +134,8 @@ The RSS connector has a trigger that checks an RSS feed, based on a schedule. Th
 
 ### Task 3: Monitor 
 
+After you create and run a Consumption logic app workflow, you can check that workflow's run status, trigger history, runs history, and performance. To get notifications about failures or other possible problems, set up alerts. In this task we will perform all the operations such as creating alerts, checking on the run status and trigger history.
+
 
 1. In the Azure search box, enter **logic apps (1)**, and select **Logic apps (2)**.
 
@@ -171,8 +171,46 @@ The RSS connector has a trigger that checks an RSS feed, based on a schedule. Th
    
 9. Go back to your logic app menu, under **Monitoring**, select **Alerts**.
 
-   ![](media/)
+   ![](media/Ex3-task1-08.png)
    
+10. On the alerts toolbar, click on **Create (1)** and select **Alert rule (2)**.
+
+    ![](media/Ex3-task1-09.png)
+    
+11. On the **Select a signal** pane, in the **Signal name** column, find and select the **Triggers Failed** signal.
+
+    ![](media/Ex3-task1-10.png)
+    
+12. On the **Configure signal logic** pane, under **Alert logic**, set up your condition with the following details:
+
+    * **Operator**: Greater than or equal to
+    * **Aggregation type**: Count
+    * **Threshold value**: 1
+    * **Unit**: Count
+    * **Aggregation granularity (Period)**: 1 minute
+    * **Frequency of evaluation**: Every 1 Minute
+    * Click on **done**.
+
+    ![](media/Ex3-task1-11.png)
    
+13. The **Create an alert rule** page now shows the condition that you created and the cost for running that alert. Click on **Next**.
+
+    ![](media/Ex3-task1-12.png)
+    
+14. On the **details** page, provide the below details:
+
+    * **Subscription**: Select your default susbcription (1)
+    * **Resource Group**: waf-prod (2)
+    * **Severity**: 3 - Informal (3)
+    * **Alert rule name**: waf-alert (4)
+    * Click on **Review + create** (5)
+
+   
+     ![](media/Ex3-task1-13.png)
+   
+15. On the review page, go through all the details and click on **Create** to create the alert rule.
+
+     ![](media/Ex3-task1-14.png)
+    
 
 ### Task 4: Processes and cadence 

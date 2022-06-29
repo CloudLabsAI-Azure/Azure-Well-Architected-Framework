@@ -11,11 +11,11 @@ The **Cost Optimization** in a Well-Architected Assessment, is a top-down review
   * How would you keep track of cloud expenditure?
   * What will be the cost impact of your new architecture recommendations?
 
-This will help on the most immediate and direct impact of the recommendations.
+This will help with the most immediate and direct impact of the recommendations.
 
 ### **Task 1: Monitor and Forecast**
 
-In this task you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management and Billing.
+In this task, you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management and Billing.
 
 **a. Azure Advisor:** It helps you optimize and reduce your overall Azure spending by identifying idle and underutilized resources. You can get cost recommendations from the Cost tab on the Advisor dashboard.
 
@@ -79,7 +79,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 5. You can play with different filters provided here to analyze the cost, such as:
 
- * **View:** Cost analysis has four built-in views; they are as follow:
+ * **View:** Cost analysis has four built-in views; they are as follows:
    1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
    2. **Daily cost -** Have there been any increases in the costs per day for the last 30 days?
    3. **Cost by service -**	How has my monthly usage varied over the past three invoices?
@@ -96,7 +96,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
    ![](./media/costopt-34.png)
 
  * **View Cost:** To have a better visibility on cost, you can use different views given below: 
-    1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop down you can select group by keys such as, Tag, Resource type, Provider, etc. 
+    1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop down, you can select group by keys such as, Tag, Resource type, Provider, etc. 
     2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
     3. **Graph type:** It asks for graphical representation, what kind of representation you prefer. It could be Table, Column, Line and much more.
 
@@ -117,7 +117,7 @@ Some ways to Start/stop VMs are:
 
 With respect to the workload we have, we will use Automation Accounts to perform the Start/Stop operation.
 
-1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
+1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups (2)**.
 
    ![](./media/costopt-01.png)
 
@@ -312,10 +312,10 @@ This way, the admins can be alerted when the workload is using the services at c
 5. Add two **Alert conditions** as given below:
 
 * **(1)** Type: Select **Actual** from the drop down.
-* % of budget: Add desired percentage here. (Actual costs budget alerts are generated for the actual cost you've accrued in relation to the budget thresholds configured. As an example in the screenshot below, an email alert gets generated when 90% of the budget is reached.)
+* % of budget: Add desired percentage here. (Actual costs budget alerts are generated for the actual cost you've accrued in relation to the budget thresholds configured. As an example, in the screenshot below, an email alert gets generated when 90% of the budget is reached.)
 
 * **(2)** Type: Select **Forecasted** from the drop down.
-* % of budget: Add desired percentage here. (Forecasted alerts provide advanced notification that your spending trends are likely to exceed your budget. As an example in the screenshot below, an email alert gets generated when 100% forecasted budget threshold is met.)
+* % of budget: Add desired percentage here. (Forecasted alerts provide advanced notification that your spending trends are likely to exceed your budget. As an example, in the screenshot below, an email alert gets generated when 100% forecasted budget threshold is met.)
 
 * Once done, click on **Manage action group (3)** and then select **+ Create**.
 
@@ -326,7 +326,7 @@ This way, the admins can be alerted when the workload is using the services at c
 * **Subscription:** Subscription will be selected by default **(1)**.
 * **Resource group:** Select **wafprod** from the drop down **(2)**.
 * **Action group name:** Give a name for the action group, such as **waf-actiongroup (3)**
-* **Display name:** Enter a display name for the action group**(4)**.
+* **Display name:** Enter a display name for the action group **(4)**.
 * Click on **Next: Notifications (5)**
 
    ![](./media/costopt-48.png)
@@ -396,7 +396,7 @@ This way, the admins can be alerted when the workload is using the services at c
 
 18. In the **Review + Create** tab, with all the details, you will have the option to test the action group. Click on **Test action group(preview) (1)**.
 
-19. Now for **Select sample type**, select **Billing alert (2)** from the drop down. Select the checkbox for both **Notification and Alert type (3)**. At last, click on **Test**.
+19. Now for **Select sample type**, select **Billing alert (2)** from the drop down. Select the checkbox for both **Notification and Alert type (3)**. At last, click on **Test (4)**.
 
    ![](./media/costopt-61.png)
 
@@ -438,7 +438,7 @@ This way, the admins can be alerted when the workload is using the services at c
 
 ### **Task 5: Azure Hybrid Benefit**
 
-In this task you will get to know about Azure Hybrid Benefit.
+In this task, you will get to know about Azure Hybrid Benefit.
 
 **1. What is the Azure Hybrid Benefit?**
 
@@ -527,7 +527,7 @@ This hybrid benefit is only available for use with:
 
 **4. Virtual Machine size flexibility with Reserved VM Instances**
 
-  You can select to optimise for instance size flexibility or capacity priority when purchasing a Reserved VM Instance. The reservation you purchase is valid for all sizes of virtual machines (VMs) in the same instance size flexibility group. 
+  You can select to optimise, for instance size flexibility or capacity priority when purchasing a Reserved VM Instance. The reservation you purchase is valid for all sizes of virtual machines (VMs) in the same instance size flexibility group. 
   
   The number of VMs that the reservation discount applies to inside the instance size flexibility group is determined by the VM size you choose when you acquire a reservation. It also relies on the size of the virtual machines (VMs) you're operating. The relative footprint for each VM size in that instance size flexibility group is compared in the ratio column. Calculate how the reservation discount applies to the VMs you have running using the ratio value.
 
@@ -556,7 +556,7 @@ Infrastructure as a service (IaaS) and platform as a service (PaaS) are cloud se
 
 * PaaS, on the other hand, provides a framework for creating and implementing apps. 
 
-* In the same way as IaaS hosts and maintains the platform's servers, networks, storage, and other computing resources, PaaS hosts and maintains the platform's servers, networks, storage, and other computing resources. 
+* In the same way, as IaaS hosts and maintains the platform's servers, networks, storage, and other computing resources, PaaS hosts and maintains the platform's servers, networks, storage, and other computing resources. 
 
 * However, PaaS also covers tools, services, and systems that aid in the development of web applications. The platform allows developers to create apps without having to worry about backups, security, upgrades, or other administrative responsibilities. 
 

@@ -207,3 +207,43 @@ After you create and run a Consumption logic app workflow, you can check that wo
     
 
 ### Task 4: Processes and cadence 
+
+Anytime you create a project, you must choose a process or process template based on the process model selected for your organization or collection. The work tracking objects contained within the default processes and process templates are Basic, Agile, CMMI, and Scrum.
+
+Basic is the most lightweight and is in a selective Preview. Scrum is the next most lightweight. Agile supports many Agile method terms, and CMMI, which stands for Capability Maturity Model Integration, provides the most support for formal processes and change management.
+
+You can always choose the process that provides the best fit for your team.
+
+#### Basic:
+
+- Choose **Basic** when your team wants the simplest model that uses Issues, Tasks, and Epics to track work.
+
+  ![](media/basic-process-epics-issues-tasks-2.png)
+
+#### Agile:
+
+- Choose Agile when your team uses Agile planning methods, including Scrum, and tracks development and test activities separately.
+
+- This process works great if you want to track user stories and (optionally) bugs on the Kanban board, or track bugs and tasks on the taskboard.
+
+
+   ![](media/alm_pt_agile_wit_artifacts.png)
+
+#### Scrum:
+
+- Choose Scrum when your team practices Scrum. This process works great if you want to track product backlog items (PBIs) and bugs on the Kanban board, or break down PBIs and bugs into tasks on the taskboard.
+
+   ![](media/alm_pt_scrum_wit_artifacts.png)
+
+
+#### CMMI:
+
+- Choose CMMI when your team follows more formal project methods that require a framework for process improvement and an auditable record of decisions. With this process, you can track requirements, change requests, risks, and reviews.
+
+- This process supports formal change management activities. Tasks support tracking Original Estimate, Remaining Work, and Completed Work.
+
+    ![](media/alm_pt_cmmi_wit_artifacts.png)
+
+
+
+

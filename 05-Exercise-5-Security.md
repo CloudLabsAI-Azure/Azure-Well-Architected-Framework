@@ -18,7 +18,7 @@ In this exercise, we will apply security principles to your architecture to prot
 
 User directories and other authentication functions are complex to develop and critically important to security assurances. You use capabilities like Azure Active Directory (Azure AD), Azure AD B2B, Azure AD B2C, or third-party solutions to authenticate and grant permission to users, partners, customers, applications, services, and other entities. In this task, we'll be enabling multi-factor authentication. Multi-factor authentication is a process where a user is prompted during the sign-in process for an additional form of identification which increases the level of security.
 
-1. In your JumpVM launch browser and visit `https://AKA.ms/proofup` and if asked to log in then log in using the following credentials:
+1. In your JumpVM launch browser, visit `https://AKA.ms/proofup` and if asked to log in then log in using the following credentials:
 
    - Username: **<inject key="AzureAdUserEmail" />**
    - Password: **<inject key="AzureAdUserPassword" />**
@@ -132,9 +132,9 @@ In this task, you will learn how to control access to the Azure resources that y
 
     ![](./media/container2.png)
     
-    > **Note:** The container might take up to 2 minutes for getting created. Click on **Refresh** button once in few seconds until you are able to see the container.
+    > **Note:** The container might take up to 2 minutes to get created. Click on **Refresh** button once in few seconds until you are able to see the container.
     
-15. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below scrrenshot.
+15. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below screenshot.
 
    `{ "time": "2020-06-12T13:07:46.766Z", "resourceId": "/SUBSCRIPTIONS/00000000-0000-0000-0000-000000000000/RESOURCEGROUPS/MY-RESOURCE-GROUP/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/MV-VM-01", "correlationId": "0f0cb6b4-804b-4129-b893-70aeeb63997e", "operationName": "Microsoft.Resourcehealth/healthevent/Updated/action", "level": "Information", "resultType": "Updated", "category": "ResourceHealth", "properties": {"eventCategory":"ResourceHealth","eventProperties":{"title":"This virtual machine is starting as requested by an authorized user or process. It will be online shortly.","details":"VirtualMachineStartInitiatedByControlPlane","currentHealthStatus":"Unknown","previousHealthStatus":"Unknown","type":"Downtime","cause":"UserInitiated"}}}`
    
@@ -195,11 +195,11 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-01.png)
    
-3. On the **Encryption** pane, select **`customer-managed keys`** for **Encryption Type (1)** and **`Select from key vault`** option for **Encryption key (2)**. Click on **select a key vault and key (3)** option next to keyvault and key.
+3. On the **Encryption** pane, select **`customer-managed keys`** for **Encryption Type (1)** and **`Select from key vault`** option for **Encryption key (2)**. Click on **select a key vault and key (3)** option next to key vault and key.
 
    ![](./media/ex5-task4-02.png)
    
-4. On the **Select a key** page, select **key vault** for keystore type and click on **create new key vault** option next to keyvault.
+4. On the **Select a key** page, select **key vault** for keystore type and click on **create new key vault** option next to key vault.
 
    ![](./media/ex5-task4-03.png)
    

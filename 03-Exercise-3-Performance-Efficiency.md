@@ -4,7 +4,7 @@
 
 Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. Scaling correctly and using PaaS products with scaling built in are two of the most effective strategies to achieve performance efficiency.
 
-In this exercise, we will go through the given architecutre and know more about:
+In this exercise, we will go through the given architecture and know more about:
 
 * Can you provide a solution that scales to meet the public demand? How would this solution change in an PaaS architecture?
 * How can you improve the performance visibility and alerting? Are all the tiers covered?
@@ -26,11 +26,11 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
    ![](./media/pe-02.png)
 
-3. Choose **Scaling** from the menu on the left-hand side and then select the button to Custom autoscale.
+3. Choose **Scaling**, from the menu on the left-hand side and then select the button to Custom autoscale.
 
    ![](./media/pe-03.png)
 
-4. Select the option to **Add a rule**.
+4. Select the option to **+ Add a rule**.
 
    ![](./media/pe-04.png)
 
@@ -40,7 +40,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 * **Time aggregation:** Select **Average (2)**
 * **Metric namespace:** Select **Virtual Machines Host (3)**
 * **Metric name:** Select **Percentage CPU (4)**
-* **Operator:** Select **Greather than (5)**
+* **Operator:** Select **Greater than (5)**
 * **Metric threshold to trigger scale action:** Enter **70 (6)** %
 * **Duration (minutes):** Enter **10 (7)**
 * **Time graine statistic:** Select **Average (8)**
@@ -93,7 +93,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 * **Subscription:** Make sure your subscription is selected **by default (1)**.
 * **Resource group:** Select a resource group from the drop down. Here we have selected **wafdev (2)**.
 * **Name:** Give a name for the workspace **(3)**.
-* **Region:** Select a region near to you, for example **EastUS (4)**.
+* **Region:** Select a region near to you, for example **East US (4)**.
 * Click on **Review + Create (5)**.
 
    ![](./media/pe-14.png)
@@ -106,17 +106,17 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-16.png)
 
-6. From the left pane, select **Virtual machines (1)** present under _Workspace Data Sources_. Here you can see all the virtual machines and their status in respect to connectivity with the workpsace.
+6. From the left pane, select **Virtual machines (1)** present under _Workspace Data Sources_. Here you can see all the virtual machines and their status in respect to connectivity with the workspace.
 
    ![](./media/pe-17.png)
 
-7. Now we will connect the VMs with the log analytics workspace. Here we will be working with the VMs that belong to **wafprod** resource group.
+7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to **wafprod** resource group.
 
 8. Click on **wafproxxxxx** virtual machine to open it and click on **Connect**. Follow the same process for other VMs from _wafprod_ resource group.
 
    ![](./media/pe-18.png)
 
-9. Return to the **Virtual Machines** tab from the menu in the left and observe the status of all three VMs. It should show up as **This workpsace** under _Log Analytics Connection_.
+9. Return to the **Virtual Machines** tab from the menu in the left and observe the status of all three VMs. It should show up as **This workspace** under _Log Analytics Connection_.
 
    ![](./media/pe-19.png)
 
@@ -134,7 +134,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-10.png)
 
-13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will iniate the deployment of VM isnights. Follow the same process for other two VMs.
+13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will initiate the deployment of VM insights. Follow the same process for other two VMs.
 
    ![](./media/pe-11.png)
 
@@ -163,7 +163,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
    ![](media/pe-23.gif?raw=true)
 
 
-The graphs display resource use over time so you can spot bottlenecks and anomalies. You may also switch to a perspective displaying each machine to see resource utilisation according to the measure you've chosen. Although there are many factors to think about when it comes to performance, VM insights monitors important operating system performance indicators relating to processor, memory, network adapter, and disk utilization.
+The graphs display resource use over time, so you can spot bottlenecks and anomalies. You may also switch to a perspective displaying each machine to see resource utilisation according to the measure you've chosen. Although there are many factors to think about when it comes to performance, VM insights monitors important operating system performance indicators relating to processor, memory, network adapter, and disk utilization.
 
 Performance works hand in hand with the health monitoring capability to reveal problems that could point to a system component failure, support tuning and optimization to increase efficiency, or support capacity planning.
 

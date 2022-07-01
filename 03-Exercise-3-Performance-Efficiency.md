@@ -2,11 +2,11 @@
 
 ## Overview
 
-Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. Scaling correctly and using PaaS products with scaling built in are two of the most effective strategies to achieve performance efficiency.
+Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. Scaling correctly and using PaaS products with scaling built-in are two of the most effective strategies to achieve performance efficiency.
 
 In this exercise, we will go through the given architecture and know more about:
 
-* Can you provide a solution that scales to meet the public demand? How would this solution change in an PaaS architecture?
+* Can you provide a solution that scales to meet the public demand? How would this solution change in a PaaS architecture?
 * How can you improve the performance visibility and alerting? Are all the tiers covered?
 * Is there a more proactive approach?
 * Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
@@ -14,9 +14,9 @@ In this exercise, we will go through the given architecture and know more about:
 
 ### **Task1: Design for scaling** 
 
-A system's scalability refers to its ability to manage increased load. Azure Autoscale-enabled services can scale automatically to meet demand and accommodate workload. These systems automatically scale out to maintain capacity during workload peaks and then return to normal once the peak has passed.
+A system's scalability refers to its ability to manage the increased load. Azure Autoscale-enabled services can scale automatically to meet demand and accommodate the workload. These systems automatically scale out to maintain capacity during workload peaks and then return to normal once the peak has passed.
 
-Vertical scaling and horizontal scaling are the two basic ways an application can scale. Vertical scaling (scaling up) enhances a resource's capacity, for example, by using a larger virtual machine (VM) size. Horizontal scaling (scaling out) refers to the addition of new instances of a resource, such as virtual machines or database replicas.
+Vertical scaling and horizontal scaling are the two basic ways an application can scale. Vertical scaling (scaling-up) enhances a resource's capacity, for example, by using a larger virtual machine (VM) size. Horizontal scaling (scaling out) refers to the addition of new instances of a resource, such as virtual machines or database replicas.
 
 1. In the Azure portal, search for virtual machine scale sets and select **Virtual machine scale sets** from the suggestions.
 
@@ -91,9 +91,9 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 3. Provide the project and instance details as follow:
 
 * **Subscription:** Make sure your subscription is selected **by default (1)**.
-* **Resource group:** Select a resource group from the drop down. Here we have selected **wafdev (2)**.
+* **Resource group:** Select a resource group from the drop-down. Here we have selected **wafdev (2)**.
 * **Name:** Give a name for the workspace **(3)**.
-* **Region:** Select a region near to you, for example **East US (4)**.
+* **Region:** Select a region near to you, for example, **East US (4)**.
 * Click on **Review + Create (5)**.
 
    ![](./media/pe-14.png)
@@ -106,11 +106,11 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-16.png)
 
-6. From the left pane, select **Virtual machines (1)** present under _Workspace Data Sources_. Here you can see all the virtual machines and their status in respect to connectivity with the workspace.
+6. From the left pane, select **Virtual machines (1)** present under _Workspace Data Sources_. Here you can see all the virtual machines and their status with respect to connectivity with the workspace.
 
    ![](./media/pe-17.png)
 
-7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to **wafprod** resource group.
+7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group.
 
 8. Click on **wafproxxxxx** virtual machine to open it and click on **Connect**. Follow the same process for other VMs from _wafprod_ resource group.
 
@@ -120,7 +120,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-19.png)
 
-   > **Note:** In case the status is not updated, click on **Refresh** button to get the latest status.
+   > **Note:** In case the status is not updated, click on the **Refresh** button to get the latest status.
 
 10. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor (2)**.
 
@@ -134,17 +134,17 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-10.png)
 
-13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will initiate the deployment of VM insights. Follow the same process for other two VMs.
+13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will initiate the deployment of VM insights. Follow the same process for the other two VMs.
 
    ![](./media/pe-11.png)
 
-14. Return to the **Virtual Machines** tab from the menu in the left. Click on the **Refresh (1)** button and then observe the status of all three VMs. It should show up as **Enabling (2)** under _Monitor Coverage_.
+14. Return to the **Virtual Machines** tab from the menu on the left. Click on the **Refresh (1)** button and then observe the status of all three VMs. It should show up as **Enabling (2)** under _Monitor Coverage_.
 
    ![](./media/pe-20.png)
 
    > **Note:** It will take up to 10 minutes for the data to reflect in Insights. To see the details, you can click on **Why?** and see the detailed message. Once done click on **Close (3)**.
 
-15. VM insights includes a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open to the **Virtual Machines** tab present in the left pane and click on **Performance**.
+15. VM insights include a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open the **Virtual Machines** tab present in the left pane and click on **Performance**.
 
    ![](./media/pe-21.png)
 
@@ -153,8 +153,8 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 * **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
 * **Available Memory -** shows the top five machines with the lowest average amount of available memory.
 * **Logical Disk Space Used % -** shows the top five machines with the highest average disk space used % across all disk volumes.
-* **Bytes Sent Rate -** shows the top five machines with highest average of bytes sent.
-* **Bytes Receive Rate -** shows the top five machines with highest average of bytes received.
+* **Bytes Sent Rate -** shows the top five machines with the highest average of bytes sent.
+* **Bytes Receive Rate -** shows the top five machines with the highest average of bytes received.
 
    ![](./media/pe-24.png)
 
@@ -163,9 +163,9 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
    ![](media/pe-23.gif?raw=true)
 
 
-The graphs display resource use over time, so you can spot bottlenecks and anomalies. You may also switch to a perspective displaying each machine to see resource utilisation according to the measure you've chosen. Although there are many factors to think about when it comes to performance, VM insights monitors important operating system performance indicators relating to processor, memory, network adapter, and disk utilization.
+The graphs display resource use over time, so you can spot bottlenecks and anomalies. You may also switch to a perspective displaying each machine to see resource utilization according to the measure you've chosen. Although there are many factors to think about when it comes to performance, VM insights monitor important operating system performance indicators relating to the processor, memory, network adapter, and disk utilization.
 
-Performance works hand in hand with the health monitoring capability to reveal problems that could point to a system component failure, support tuning and optimization to increase efficiency, or support capacity planning.
+Performance works hand in hand with the health monitoring capability to reveal problems that could point to a system component failure, support tuning, and optimization to increase efficiency or support capacity planning.
 
 
 

@@ -13,7 +13,7 @@ Azure has many resiliency features already built into the platform, such as:
 * Azure Storage, SQL Database, and Cosmos DB all provide built-in data replication across availability zones and regions.
 * Azure managed disks are automatically placed in different storage scale units to limit the effects of hardware failures.
 * Virtual machines (VMs) in an availability set are spread across several fault domains. This limits the impact of physical hardware failures, network outages, or power interruptions.
-* Availability Zones are physically separate locations within each Azure region. Each zone is composed of one or more datacenters equipped with independent power, cooling, and networking infrastructure. With availability zones, you can design and operate applications, and databases that automatically transition between zones without interruption, which ensures resiliency if one zone is affected.
+* Availability Zones are physically separate locations within each Azure region. Each zone is composed of one or more data centers equipped with independent power, cooling, and networking infrastructure. With availability zones, you can design and operate applications, and databases that automatically transition between zones without interruption, which ensures resiliency if one zone is affected.
 
 
 ### **Task 1: Define requirements** 
@@ -26,9 +26,9 @@ The following are some of the considerations you should make in Azure to improve
 
  #### 1. Availability targets
  
-  - A **Service Level Agreement (SLA)**, is an availability target that represents a commitment around performance and availability of the application.
+  - A **Service Level Agreement (SLA)**, is an availability target that represents a commitment to the performance and availability of the application.
   
-  - Understanding the SLA of individual components within the system is essential in order to define reliability targets. Knowing the SLA of dependencies will also provide a justification for additional spend when making the dependencies highly available and with proper support contracts.
+  - Understanding the SLA of individual components within the system is essential to define reliability targets. Knowing the SLA of dependencies will also provide a justification for additional spend when making the dependencies highly available and with proper support contracts.
   
   - Monitoring and measuring application availability is vital to qualifying overall application health and progress towards defined targets.
  
@@ -36,7 +36,7 @@ The following are some of the considerations you should make in Azure to improve
  
  - **Recovery targets** identify how long the workload can be unavailable and how much data is acceptable to lose during a disaster. 
  
- - Recovery targets are non-functional requirements of a system and should be dictated by business requirements. They should be defined in accordance to the required Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for the workloads.
+ - Recovery targets are non-functional requirements of a system and should be dictated by business requirements. They should be defined in accordance with the required Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for the workloads.
 
  - **Recovery Time Objective (RTO)** is the maximum acceptable time an application is unavailable after a disaster, and **Recovery Point Objective (RPO)** is the maximum duration of data loss that is acceptable during a disaster.
 
@@ -47,7 +47,7 @@ The following are some of the considerations you should make in Azure to improve
 
    * **Multiple and paired regions**: The ability to respond to disaster scenarios for overall compute platform availability and application resiliency depends on the use of multiple regions or other deployment locations.
    
-   * **Availability Zones and sets**: An Availability Set (AS) is a logical construct to inform Azure that it should distribute contained virtual machine instances across multiple fault and update domains within an Azure region. Availability Zones (AZ) elevate the fault level for virtual machines to a physical datacenter by allowing replica instances to be deployed across multiple datacenters within an Azure region. 
+   * **Availability Zones and sets**: An Availability Set (AS) is a logical construct to inform Azure that it should distribute contained virtual machine instances across multiple faults and update domains within an Azure region. Availability Zones (AZ) elevate the fault level for virtual machines to a physical datacenter by allowing replica instances to be deployed across multiple data centers within an Azure region. 
    
  #### 4. Meet data platform requirements
  
@@ -56,7 +56,7 @@ The following are some of the considerations you should make in Azure to improve
    
 #### 5. Replication and Redundancy
    
-   - To maintain data availability and durability, Azure Storage creates and stores copies of data across multiple locations. This process is called storage replication. The goal is to provide redundancy to protect data against hardware failures, power or network outages.
+   - To maintain data availability and durability, Azure Storage creates and stores copies of data across multiple locations. This process is called storage replication. The goal is to provide redundancy to protect data against hardware failures, and power or network outages.
 
    - Replicating data across zones or paired regions supports application availability objectives to limit the impact of failure scenarios. 
 
@@ -77,7 +77,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/costopt-02.png)
 
-3. From the left pane, select **Disaster recovery (1)** present under _Operations_. Then select a **Target region (2)** from the drop down and click on **Review + Start Replication (3)**.
+3. From the left pane, select **Disaster recovery (1)** present under _Operations_. Then select a **Target region (2)** from the drop-down and click on **Review + Start Replication (3)**.
 
    ![](./media/reliability-01.png)
 
@@ -113,11 +113,11 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-10.png)
 
-2. Provide following details for the recovery plan:
+2. Provide the following details for the recovery plan:
 
 * **Name:** Specify a name for the plan **(1)**.
-* **Source:** Choose a source location from the drop down. The source location must have machines that are enabled for failover and recovery. Here we are using **West US (2)** as it's the same location where we have our virtual machine.
-* **Target:** Choose a target location from the drop down **(3)**.
+* **Source:** Choose a source location from the drop-down. The source location must have machines that are enabled for failover and recovery. Here we are using **West US (2)** as it's the same location where we have our virtual machine.
+* **Target:** Choose a target location from the drop-down **(3)**.
 * **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
 * Click on **Select items (5)**.
 
@@ -127,7 +127,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-22.png)
 
-   > **Note:** You can only select machines are in the source and target locations that you specified.
+   > **Note:** You can only select machines that are in the source and target locations that you specified.
    
 4. At last, click on **Create**. Once the plan is created successfully, move to the next task.
 
@@ -144,10 +144,10 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-15.png)
 
-3. Provide following details for the failover:
+3. Provide the following details for the failover:
 
-* **Choose a Recovery Point:** Select **Latest processed (low RTO) (1)** from the drop down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
-* **Azure virtual network:** Select an Azure virtual network **(2)** from the drop down, in which test virtual machine will be created.
+* **Choose a Recovery Point:** Select **Latest processed (low RTO) (1)** from the drop-down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
+* **Azure virtual network:** Select an Azure virtual network **(2)** from the drop-down, in which a test virtual machine will be created.
 * Click on **OK (3)**.
 
    ![](./media/reliability-16.png)
@@ -197,9 +197,9 @@ Service Health tracks four types of health events that may impact your resources
  
  - **Security advisories** - Security related notifications or violations that may affect the availability of your Azure services.
  
- - **Health history** - Service Health provides you with a customizable dashboard which tracks the health of your Azure services in the regions where you use them. In this dashboard, you can track active events like ongoing service issues, upcoming planned maintenance, or relevant health advisories. When events become inactive, they get placed in your health history for up to 90 days.
+ - **Health history** - Service Health provides you with a customizable dashboard that tracks the health of your Azure services in the regions where you use them. In this dashboard, you can track active events like ongoing service issues, upcoming planned maintenance, or relevant health advisories. When events become inactive, they get placed in your health history for up to 90 days.
 
-In this task you will set up **Service Health alerts** to notify you via your preferred communication channels when service issues, planned maintenance, or other changes may affect the Azure services and regions you use.
+In this task, you will set up **Service Health alerts** to notify you via your preferred communication channels when service issues, planned maintenance, or other changes may affect the Azure services and regions you use.
 
 
 1. Type **service** in the search box located on the top of the Azure Portal page and click on **Service Health** to open it.
@@ -210,7 +210,7 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
    ![](./media/ex4-task4-08.png)
 
-3. Click on **health history** from left navigation pane and select the time range as **Last 3 months**. You will be able to see the inactive events such as service issues, upcoming planned maintenance and health advisories.
+3. Click on **health history** from the left navigation pane and select the time range as **Last 3 months**. You will be able to see the inactive events such as service issues, upcoming planned maintenance, and health advisories.
 
    ![](./media/ex4-task4-09.png)
    
@@ -240,7 +240,7 @@ In this task you will set up **Service Health alerts** to notify you via your pr
 
    ![](./media/ex4-task4-05.png)
    
-9. Once the alert rule is created, go to **Health alerts** page and observe all the details of the alert.
+9. Once the alert rule is created, go to the **Health alerts** page and observe all the details of the alert.
 
    ![](./media/ex4-task4-06.png)
 
@@ -270,7 +270,7 @@ Azure services are always available, thanks to Microsoft's efforts. Unexpected s
 
 In this task, you will learn how to initiate an account failover for your storage account.
 
-1. In Azure portal, search for storage accounts and select **Storage accounts** from the suggestions.
+1. In the Azure Portal, search for storage accounts and select **Storage accounts** from the suggestions.
 
    ![](./media/reliability-23.png)
 
@@ -296,7 +296,7 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-27.png)
 
-6. After the failover is performed, go to **Geo-replication** present under _Data management_. You will see that Central US is updated as primary endpoint.
+6. After the failover is performed, go to **Geo-replication** present under _Data management_. You will see that Central US is updated the as primary endpoint.
 
    ![](./media/reliability-29.png)
 

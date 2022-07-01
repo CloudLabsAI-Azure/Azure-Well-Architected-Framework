@@ -7,7 +7,7 @@
 
 Losing these assurances can negatively affect your business operations and revenue, and your organization's reputation. Cloud architectures can help simplify the complex task of securing an enterprise estate through **specialization** and **shared responsibilities**:
 
- * **Specialization**: Specialist teams at cloud providers can develop advanced capabilities to operate and secure systems on behalf of organizations. This approach is preferable to numerous organizations, individually developing deep expertise on managing and securing common elements.
+ * **Specialization**: Specialist teams at cloud providers can develop advanced capabilities to operate and secure systems on behalf of organizations. This approach is preferable to numerous organizations, individually developing deep expertise in managing and securing common elements.
  
  * **Shared Responsibility Model**: Organizations can reduce focus on activities that aren't core business competencies by shifting these responsibilities to a cloud service. Depending on the specific technology choices, some security protections will be built into the particular service, while addressing others will remain the customer's responsibility. To ensure that proper security controls are provided, organizations must carefully evaluate the services and technology choices.
 
@@ -81,7 +81,7 @@ In this task, you will learn how to control access to the Azure resources that y
 
    ![](./media/reader.png)
    
-4. In Members pane, for **Assign access to** select **User, group, or service principle** and for **Members** click on **+Select Members**.
+4. In the Members pane, for **Assign access to** select **User, group, or service principle** and for **Members** click on **+Select Members**.
    
    ![](./media/select-member.png)
    
@@ -132,7 +132,7 @@ In this task, you will learn how to control access to the Azure resources that y
 
     ![](./media/container2.png)
     
-    > **Note:** The container might take up to 2 minutes to get created. Click on **Refresh** button once in few seconds until you are able to see the container.
+    > **Note:** The container might take up to 2 minutes to get created. Click on the **Refresh** button once in a few seconds until you are able to see the container.
     
 15. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below screenshot.
 
@@ -182,7 +182,7 @@ In this task, you will learn how to control access to the Azure resources that y
 
 In this task, you will create your own encryption key to protect the data in your storage account using a **customer-managed key**. When you specify a customer-managed key, that key is used to protect and control access to the key that encrypts your data. Customer-managed keys offer greater flexibility to manage access controls. 
 
-**Data encryption** is the method of translating data into another form or code so that access to the data is limited to only those with the correct decryption key (or password). **Data sovereignty** is a corporate or government standard that makes your data reside within a certain country, usually within the country where your corporation resides. In this task, we will be using azure policy to implement the data sovereignty.
+**Data encryption** is the method of translating data into another form or code so that access to the data is limited to only those with the correct decryption key (or password). **Data sovereignty** is a corporate or government standard that makes your data reside within a certain country, usually within the country where your corporation resides. In this task, we will be using the Azure policy to implement data sovereignty.
 
 
 **Data encryption**
@@ -195,11 +195,11 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-01.png)
    
-3. On the **Encryption** pane, select **`customer-managed keys`** for **Encryption Type (1)** and **`Select from key vault`** option for **Encryption key (2)**. Click on **select a key vault and key (3)** option next to key vault and key.
+3. On the **Encryption** pane, select **`customer-managed keys`** for **Encryption Type (1)** and **`Select from key vault`** option for **Encryption key (2)**. Click on the **select a key vault and key (3)** option next to the key vault and key.
 
    ![](./media/ex5-task4-02.png)
    
-4. On the **Select a key** page, select **key vault** for keystore type and click on **create new key vault** option next to key vault.
+4. On the **Select a key** page, select **key vault** for keystore type and click on the **create new key vault** option next to the key vault.
 
    ![](./media/ex5-task4-03.png)
    
@@ -216,7 +216,7 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-04.png)
   
-7. Once the deployment is successfully finished, you will be redirected to **Select a key** page, click on **create a new key** option next to key.
+7. Once the deployment is successfully finished, you will be redirected to **Select a key** page, and click on the **create a new key** option next to the key.
 
    ![](./media/ex5-task4-05.png)
   
@@ -230,7 +230,7 @@ In this task, you will create your own encryption key to protect the data in you
 
     ![](./media/ex5-task4-06.png)
   
-9. Once the key is generated successfully, you will be redirected to **Select a key** page, click on **Select**.
+9. Once the key is generated successfully, you will be redirected to **Select a key** page, and click on **Select**.
 
    ![](./media/ex5-task4-07.png)
    
@@ -269,7 +269,7 @@ In this task, you will create your own encryption key to protect the data in you
 
 ## Task 5: Security operations
 
-In this task, we are going to perform  integrated security monitoring for your workload using **Microsoft Defender for Cloud**. We will enable **Just-in-time** access to the Virtual machine, which locks down and limits the ports of Azure virtual machine in order to overcome malicious attacks on the virtual machine, therefore only providing access to a port for a limited amount of time.
+In this task, we are going to perform integrated security monitoring for your workload using **Microsoft Defender for Cloud**. We will enable **Just-in-time** access to the Virtual machine, which locks down and limits the ports of the Azure virtual machine in order to overcome malicious attacks on the virtual machine, therefore only providing access to a port for a limited amount of time.
 
 
 **Exploring Secure Score**
@@ -295,7 +295,7 @@ In this task, we are going to perform  integrated security monitoring for your w
    
 **Exploring Security Controls and Recommendations**
    
-5. On the Recommendations page, pay attention to the first part of the page. It includes the current Secure Score, progress on the Recommendations status(both completed security controls and recommendations) and Resource health (by severity).
+5. On the Recommendations page, pay attention to the first part of the page. It includes the current Secure Score, progress on the Recommendations status(both completed security controls and recommendations), and Resource health (by severity).
 
     ![](./media/ex5-task5-06.png)
    
@@ -315,11 +315,11 @@ In this task, we are going to perform  integrated security monitoring for your w
    
 8. The next important part is the Remediation Steps which contains the remediation logic where you can remediate the selected resource/s. To simplify remediation and improve your environment's security and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.
 
-9. Under **Affected resources**, select the virtual machine with the name **wafdevXXX** on the Unhealthy resources and click on **Fix**. This will automatically apply the remediation on the selected resource.
+9. Under **Affected resources**, select the virtual machine with the name **wafdevXXX** on the Unhealthy resources and click on **Fix**. This will automatically apply the remediation to the selected resource.
 
    ![](./media/ex5-task5-08.png)
   
-10. This will open a new window **Just-in-time VM access configuration**, review the implications for this remediation and click on **Save**.
+10. This will open a new window **Just-in-time VM access configuration**, review the implications for this remediation, and click on **Save**.
 
    ![](./media/ex5-task5-09.png)
    
@@ -327,7 +327,7 @@ In this task, we are going to perform  integrated security monitoring for your w
     
     > **Note**: It can take up to 5 minutes for the VM access to get enabled. 
 
-12. Go back to **Recommendations (1)**, click on **Apply system updates (2)** and select **Log Analytics agent should be installed on virtual machines (3)**.
+12. Go back to **Recommendations (1)**, click on **Apply system updates (2)**, and select **Log Analytics agent should be installed on virtual machines (3)**.
 
     ![](./media/ex5-task5-10.png)
    
@@ -344,7 +344,7 @@ In this task, we are going to perform  integrated security monitoring for your w
 
     ![](./media/ex5-task5-12.png)
     
-15. This will open a new window **Fixing resources**, select an existing log analytics workspace for **Workspace ID** and click on **Fix 2 resources**.
+15. This will open a new window **Fixing resources**, select an existing log analytics workspace for **Workspace ID**, and click on **Fix 2 resources**.
 
     ![](./media/ex5-task5-13.png)
     

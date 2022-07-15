@@ -10,11 +10,9 @@ It covers the operations and processes that keep an application running in produ
 
 ### Task 1: DevOps
 
- To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates.Complex issue may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
-
- Automation leads to more innovative solutions, and in general provides more value to the business. This in turn raises morale and job satisfaction.
-
- Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
+To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates.Complex issue may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
+ 
+Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
 
 Thre differenet types of automation includes:
 
@@ -27,6 +25,10 @@ As businesses move to the cloud, they need to repeatedly deploy their solutions 
  * Azure Resource Manager (ARM) templates
  * Azure Bicep
  * Terraform
+
+-You can automate ARM Template deployment from Azure DevOps. Without going deeper, let's see what is the basic workflow.
+
+
 
 #### 2. Infrastructure configuration
 

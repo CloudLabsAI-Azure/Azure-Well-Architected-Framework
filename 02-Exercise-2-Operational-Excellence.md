@@ -54,39 +54,57 @@ Advantages of automating operational tasks include:
 
 In this task, you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app. The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
 
-1. In the Azure search box, enter **logic apps (1)** and select **Logic apps (2)**.
+1. In the Azure search box, enter **Deploy a custom template** and select it.
 
-   ![](media/Ex2-t2-01.png)
+   ![](media/op-01.png)
    
-2. On the **Logic apps** page, select **Add**.
+2. On the Custom deployment page, click on **Build your own template in the editor**.
 
-   ![](media/Ex2-t2-02.png)
+   ![](media/op-02.png)
    
-3. On the **Create Logic App** pane, on the Basics tab, provide the following basic information about your logic app:
+3. In a new tab, browse to the below given URL. This template creates a Consumption logic app workflow that uses the built-in Recurrence trigger, which is set to run every hour, and a built-in HTTP action, which calls a URL that returns the status for Azure. Built-in operations run natively on Azure Logic Apps platform.
 
-   * **Subscription**: Select your default susbcription (1)
-   * **Resource Group**: waf-prod (2)
-   * **Logic App name**: waf-logic-app (3)
-   * **Plan type**: Consumption (4)
-   * **Enable log analytics**: No (5)
-   * **Zone redundancy**: disbaled (6)
-   * Leave all the other values as default and click on **Review + Create (7)** followed by **Create**.
+```https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/logicapp.json```
+
+   ![](media/op-06.png)
+
+4. Copy the whole ARM Template and paste in the Edit template console, and click on **Save**.
+
+   ![](media/op-03.png)
+
+
+5. On the **Custom deployment** page, on the Basics tab, provide the following details for your logic app:
+
+   * **Subscription**: Subscription will be selected by default.
+   * **Resource Group**: Select **waf-prod (1)** from the drop down
+   * **Logic App name**: Enter **waf-logic-app (2)**. You can give a name of your choice too.
+   * Leave all the other values as default and click on **Review + Create (3)**.
     
-   ![](media/Ex2-t2-03.png)
+   ![](media/op-04.png)
    
-4. After Azure successfully deploys your app, select **Go to resource**.
+6. At last, click on **Create**.
 
-   ![](media/Ex2-t2-04.png)
-   
-5. In the Logic App Designer, scroll through the page until you locate the **templates** section. Click on **Blank Logic App**.
+   ![](media/op-05.png)
 
-   ![](media/Ex2-t2-05.png)
+7. After Azure successfully deploys your app, select **Go to resource**.
+
+   ![](media/op-07.png)
    
-6. In the designer search box, select **All** and enter **rss**. From the Triggers list, select the RSS trigger, **When a feed item is published**.
+8. Select Logic App Designer from the left pane and click on **Templates**. 
+
+   ![](media/op-08.png)
+ 
+  > **Note:** Click on **OK** when asked for **Discard changes**.
+  
+9. Scroll down to Templates section and select **Blank Logic App**.
+
+   ![](media/op-09.png)
+
+10. In the designer search box, select **All** and enter **rss**. From the Triggers list, select the RSS trigger, **When a feed item is published**.
  
    ![](media/Ex2-t2-06.png)
    
-7. Provide the following information in the trigger details page:
+11. Provide the following information in the trigger details page:
 
     * **The RSS feed URL**: `https://feeds.a.dj.com/rss/RSSMarketsMain.xml` (1)
     * **Chosen property will be used to determine**: PublishDate (2)
@@ -96,15 +114,15 @@ In this task, you will be creating an automated workflow that integrates two ser
 
    ![](media/Ex2-t2-07.png)
    
-8. Enter `Send an email (V2)` in the filter box, then select the **Send an email (V2)** action for Office 365 Outlook.
+12. Enter `Send an email (V2)` in the filter box, then select the **Send an email (V2)** action for Office 365 Outlook.
 
    ![](media/Ex2-t2-8.png)
    
-9. Select **Sign in** and sign in to your Office 365 Outlook account.
+13. Select **Sign in** and sign in to your Office 365 Outlook account.
 
    ![](media/Ex2-t2-09.png)
    
-10. In the Send an email form, provide the following values:
+14. In the Send an email form, provide the following values:
 
     * Enter your email address in the **To** box.
     * **Subject**: Enter **New RSS item:** and from the Add dynamic content list, under When a feed item is published, select **Feed title**.
@@ -112,15 +130,15 @@ In this task, you will be creating an automated workflow that integrates two ser
 
     ![](media/Ex2-t2-10.png)
 
-11. On the designer toolbar, select **Save** to save your logic app. .
+15. On the designer toolbar, select **Save** to save your logic app. .
 
     ![](media/Ex2-t2-11.png)
     
-12. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
+16. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
 
      ![](media/Ex2-t2-12.png)
    
-13. The following screenshot shows a sample email that's sent by the workflow.
+17. The following screenshot shows a sample email that's sent by the workflow.
 
     ![](media/Ex2-t2-13.png)
 

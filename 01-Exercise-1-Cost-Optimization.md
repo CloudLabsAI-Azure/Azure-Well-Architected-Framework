@@ -168,82 +168,85 @@ With respect to the workload we have, we will use Automation Accounts to perform
     
 8. Go back to the automation account **DSC-xxxx** and from the left pane scroll to _Shared Resources_. Select **Credentials** and then select **+Add a credential**. 
 
-   ![](./media/costopt-11.png)
+    ![](./media/costopt-11.png)
    
 9. Fill following details:
- * **Name:** Enter a name such as **user-credentials (1)**
- * **Description:** Give a description **(2)**
- * **Username:** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(3)**
- * **Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(4)**
- * **Confirm Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(5)**
- * Click on **Create (6)**.
+   
+   * **Name:** Enter a name such as **user-credentials (1)**
+   * **Description:** Give a description **(2)**
+   * **Username:** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(3)**
+   * **Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(4)**
+   * **Confirm Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(5)**
+   * Click on **Create (6)**.
 
-   ![](./media/costopt-12.png)
+    ![](./media/costopt-12.png)
 
 10. From the left pane, scroll to _Process Automation_ and select **Runbooks** and then select **stop-prod-vms**. 
 
-   ![](./media/costopt-13.png)
+    ![](./media/costopt-13.png)
 
 11. On the Overview page, select **Edit**.
 
-   ![](./media/costopt-09.png)
+    ![](./media/costopt-09.png)
 
 12. Fill in the following details:
- * **Line 1:** Replace `[Enter name of your credentials]` with **user-credentials**.
- * **Line 9:** Enter your **subscription id**.
- * **Line 11:** Enter **wafprod**, this could be any resource group in which your VMs are present. In our workload, VMs are present in the wafprod resource group.
- * Click on **Publish**.
+ 
+    * **Line 1:** Replace `[Enter name of your credentials]` with **user-credentials**.
+    * **Line 9:** Enter your **subscription id**.
+    * **Line 11:** Enter **wafprod**, this could be any resource group in which your VMs are present. In our workload, VMs are present in the wafprod resource group.
+    * Click on **Publish**.
 
-   ![](./media/costopt-14.png)
+     ![](./media/costopt-14.png)
 
 13. Select **Yes** when asked to Publish Runbook - _'Do you want to proceed?'_.
 
-   ![](./media/costopt-15.png)
+     ![](./media/costopt-15.png)
 
 14. Once done, select **Link to schedule** on the Overview page.
 
-   ![](./media/costopt-16.png)
+     ![](./media/costopt-16.png)
 
 15. Select **Schedule** then **+ Add a schedule**.
 
-   ![](./media/costopt-17.png)
+     ![](./media/costopt-17.png)
 
 16. Fill in the details as following:
- * **Name:** Enter **stop-vms (1)** in the name block.
- * **Description:** Give a description such as **stop all VMs in wafprod resource group (2)**.
- * **Starts:** Enter start time and date **(3)**.
- * **Time zone:** Select your time zone from the drop down **(4)**.
- * **Recurrence:** Select **Recurring (5)**.
- * **Recur every:** Enter the time period of recurrence **(6)**.
- * **Set expiration:** Select **Yes (7)**.
- * **Expires:** Enter an expiry time and date for the runbook **(8)**.
- * Click on **Create (9)**.
+ 
+    * **Name:** Enter **stop-vms (1)** in the name block.
+    * **Description:** Give a description such as **stop all VMs in wafprod resource group (2)**.
+    * **Starts:** Enter start time and date **(3)**.
+    * **Time zone:** Select your time zone from the drop down **(4)**.
+    * **Recurrence:** Select **Recurring (5)**.
+    * **Recur every:** Enter the time period of recurrence **(6)**.
+    * **Set expiration:** Select **Yes (7)**.
+    * **Expires:** Enter an expiry time and date for the runbook **(8)**.
+    * Click on **Create (9)**.
 
-   ![](./media/costopt-18.png)
+    ![](./media/costopt-18.png)
    
 17. Click on **OK**.
 
-   ![](./media/costopt-19.png)
+    ![](./media/costopt-19.png)
 
 18. Now search for virtual machines in the Azure portal and select **Virtual Machines**.
 
-   ![](./media/costopt-20.png)
+    ![](./media/costopt-20.png)
 
 19. Notice that VMs from the wafprod resource group are in **Running** state.
 
-   ![](./media/costopt-21.png)
+    ![](./media/costopt-21.png)
 
 20. Navigate back to the **stop-prod-vms** runbook and click on **Start**. Select **Yes** when asked - _Are you sure that you want to start the runbook?_
 
-   ![](./media/costopt-22.png)
+    ![](./media/costopt-22.png)
 
 21. By clicking on the Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows the status of both the VMs as **succeeded**.
 
-   ![](./media/costopt-23.png)
+    ![](./media/costopt-23.png)
 
 22. Go back to **Virtual Machines** and observe the status of both the machines present in wafprod resource group. It will show up as **Stopped(deallocated)**.
 
-   ![](./media/costopt-24.png)
+    ![](./media/costopt-24.png)
 
  > **Note:** Click on **Refresh** if the VMs don't reflect the latest status.
 

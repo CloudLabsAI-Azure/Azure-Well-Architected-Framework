@@ -161,7 +161,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     $ResourceGroupName = “Enter the resource group name”
     Get-AzVM -ResourceGroupName $ResourceGroupName | Select Name | ForEach-Object {
-    Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name
+    Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name -Force
     }
 
     ```

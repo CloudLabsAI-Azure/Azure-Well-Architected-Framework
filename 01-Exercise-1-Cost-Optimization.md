@@ -87,14 +87,14 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
    5. **Invoice details -**	What charges did I have on my last invoice?
 
 
-    ![](./media/costopt-33.png)
+   ![](./media/costopt-33.png)
    
  * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
     1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
     2. Examples include the last seven days, the last month, the current year, or a custom date range.   
 
 
-     ![](./media/costopt-34.png)
+   ![](./media/costopt-34.png)
 
  * **View Cost:** To have better visibility on cost, you can use different views given below: 
     1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop-down, you can select a group by keys such as Tag, Resource type, Provider, etc. 
@@ -134,11 +134,11 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
 4. Fill in the details as following:
  
- * **Name:** Enter **stop-prod-vms (1)** in the name block.
- * **Runbook type:** Select **PowerShell (2)** from the dropdown.
- * **Runtime version:** Select **5.1 (3)** from the dropdown.
- * **Description:** Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
- * Click on **Create (5)**.
+  * **Name:** Enter **stop-prod-vms (1)** in the name block.
+  * **Runbook type:** Select **PowerShell (2)** from the dropdown.
+  * **Runtime version:** Select **5.1 (3)** from the dropdown.
+  * **Description:** Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
+  * Click on **Create (5)**.
 
    ![](./media/costopt-08.png)
    

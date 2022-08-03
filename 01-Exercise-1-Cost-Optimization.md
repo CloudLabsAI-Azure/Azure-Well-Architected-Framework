@@ -462,34 +462,28 @@ In this task, you will get to know about Azure Hybrid Benefit.
 * SQL Server Standard Core with Software Assurance
 * Azure SQL Database
 
-**3. What does this benefit offer for Windows Server on Azure Virtual Machines?**
-
-Azure Hybrid Benefit helps you get more value from your Windows Server licenses and save up to 40 percent* on virtual machines.
-
-Each 2-processor license or each set of 16-core licenses, Datacenter or Standard Editions, are entitled to two instances of up to 8 cores, or one instance of up to 16 cores. Datacenter Edition licenses allow for simultaneous usage both on-premises and in Azure. Standard Edition licenses must be used either on-premises or in Azure, although customers get 180 days of concurrent use rights while they are migrating their servers.
-
-**4. How many Azure virtual machines will one receive with on-premises licenses?**
+**3. How many Azure virtual machines will one receive with on-premises licenses?**
 
 For every 2-processor Windows Server license or set of 16 core Windows Server licenses covered with Software Assurance, you’ll receive either of the following in Azure.
 
 * Up to 2 virtual machines with up to 8 cores
 * One virtual machine with up to 16 cores
 
-**5. What benefit does this offer for Windows Server on Azure Virtual Machines?**
+**4. What benefit does this offer for Windows Server on Azure Virtual Machines?**
 
 Azure Hybrid Benefit helps you get more value from your Windows Server licenses and save up to 40 percent* on virtual machines.
 
 Each 2-processor license or each set of 16-core licenses, Datacenter or Standard Editions, are entitled to two instances of up to 8 cores, or one instance of up to 16 cores. Datacenter Edition licenses allow for simultaneous usage both on-premises and in Azure. Standard Edition licenses must be used either on-premises or in Azure, although customers get 180 days of concurrent use rights while they are migrating their servers.
 
 
-**6. Who is eligible for this offer?**
+**5. Who is eligible for this offer?**
 
 The Azure Hybrid Benefit for SQL Server is available to customers with either of the following:
 
 * SQL Server Enterprise Core with Software Assurance or qualifying subscription licenses
 * SQL Server Standard Core with Software Assurance or qualifying subscription licenses
 
-**7. What products are eligible for Azure Hybrid Benefit for SQL Server?**
+**6. What products are eligible for Azure Hybrid Benefit for SQL Server?**
 
 This hybrid benefit is only available for use with:
 

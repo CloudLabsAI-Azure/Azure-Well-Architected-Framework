@@ -568,12 +568,12 @@ Here's an architecture of the workload on both IaaS and PaaS:
 
 **IaaS Architecture**
 
-   ![](./media/costopt-36.png)
+   ![](./media/costopt-37.png)
 
 
 **PaaS Architecture**
 
-   ![](./media/costopt-37.png)
+   ![](./media/costopt-36.png)
 
 
 

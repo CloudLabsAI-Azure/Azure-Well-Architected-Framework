@@ -14,7 +14,7 @@ To activate resources on demand, deploy solutions rapidly, minimize human error,
  
 Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
 
-Thre differenet types of automation includes:
+Thre different types of automation includes:
 
 #### 1. Infrastructure deployment:
 

@@ -85,7 +85,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-02.png)
 
-5. Once the deployment starts, a new resource group will get created in which a recovery service vault will get deployed.
+5. Once the deployment starts, it will create a new resource group and a recovery service vault in it. The recovery service vault will take up to 5 minutes to reflect in the resource group.
 
 6. In the search bar, search for Recovery service vaults and select **Recovery services vaults** from the suggestions.
 
@@ -94,6 +94,8 @@ In this task, you will learn how to enable replication for virtual machines, run
 7. Observe the vaults here, select the **Site-recovery-vault-eastus** vault, that falls under **site-recovery-vault-rg** resource group.
 
    ![](./media/reliability-06.png)   
+
+ > **Note:** Use **Refresh** button in case the recovery service vault is not reflecting.
 
 8. From the left pane, select **Site Recovery jobs** present under _Monitoring_. You will see all the jobs here with their status.
 

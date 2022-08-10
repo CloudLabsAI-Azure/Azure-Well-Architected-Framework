@@ -166,7 +166,9 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/.png)
 
-10. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. 
+10. 
+
+11. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. 
 
 ```
 $subscriptionID = <inject key="SubscriptionID" enableCopy="false"/>
@@ -175,7 +177,7 @@ $automationAccount = "DSC-96c11"
 
 ```
 
-11. 
+12. To enable the system-assigned managed identity, copy and paste the command given below, .
 
 
 

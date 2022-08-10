@@ -219,73 +219,47 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
 16. From the left pane, scroll to _Process Automation_, select **Runbooks** and open **stop-prod-vms**.
 
-17. Copy the script given below and paste into the runbook console and then click on **Save**. 
+   ![](./media/.png)
 
-    ```
-    $myCred = Get-AutomationPSCredential -Name '[Enter name of your credentials]'
-    $userName = $myCred.UserName
-    $securePassword = $myCred.Password
-    $password = $myCred.GetNetworkCredential().Password
-
-    $myPsCred = New-Object System.Management.Automation.PSCredential ($userName,$securePassword)
-
-    Connect-AzAccount -Credential $myPsCred
-    Set-AzContext -SubscriptionId "Enter your subscription id"
-
-    $ResourceGroupName = “Enter the resource group name”
-    Get-AzVM -ResourceGroupName $ResourceGroupName | Select Name | ForEach-Object {
-    Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name -Force
-    }
-
-    ```
-    
-    ![](./media/.png)
-    
-8. Go back to the automation account **DSC-xxxx** and from the left pane scroll to _Shared Resources_. Select **Credentials** and then select **+Add a credential**. 
-
-    ![](./media/costopt-11.png)
-   
-9. Fill following details:
-   
-   * **Name:** Enter a name such as **user-credentials (1)**
-   * **Description:** Give a description **(2)**
-   * **Username:** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(3)**
-   * **Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(4)**
-   * **Confirm Password:** Enter your password **<inject key="AzureAdUserPassword" />** **(5)**
-   * Click on **Create (6)**.
-
-    ![](./media/costopt-12.png)
-
-10. From the left pane, scroll to _Process Automation_ and select **Runbooks** and then select **stop-prod-vms**. 
-
-    ![](./media/costopt-13.png)
-
-11. On the Overview page, select **Edit**.
+17. Click on edit to add PowerShell code to the runbook. The code is to stop the virtual machines present in wafprod resource group.
 
     ![](./media/costopt-09.png)
 
-12. Fill in the following details:
- 
-    * **Line 1:** Replace `[Enter name of your credentials]` with **user-credentials**.
-    * **Line 9:** Enter your **subscription id**.
-    * **Line 11:** Enter **wafprod**, this could be any resource group in which your VMs are present. In our workload, VMs are present in the wafprod resource group.
-    * Click on **Publish**.
+18. Copy the script given below and paste into the runbook console and then click on **Publish**. Select **Yes** when asked to Publish Runbook - _'Do you want to proceed?'_. 
 
-     ![](./media/costopt-14.png)
+    ```
+    # Ensures you do not inherit an AzContext in your runbook
+    Disable-AzContextAutosave -Scope Process
 
-13. Select **Yes** when asked to Publish Runbook - _'Do you want to proceed?'_.
+    # Connect to Azure with system-assigned managed identity
+    $AzureContext = (Connect-AzAccount -Identity).context
 
-     ![](./media/costopt-15.png)
+    # Set and store context
+    $AzureContext = Set-AzContext -SubscriptionName $AzureContext.Subscription
+    $AzureContext
 
-14. Once done, select **Link to schedule** on the Overview page.
+    # Set Resource Group name as per your requirement
+    $ResourceGroupName = “wafprod”
+
+    # Get all VM names from the subscription
+    Get-AzVM -ResourceGroupName $ResourceGroupName | Select Name | ForEach-Object {
+    Stop-AzVM -ResourceGroupName $ResourceGroupName -Name $_.Name -Force
+    }
+    ```
+
+    ![](./media/.png)
+
+> **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of wafprod resource group.
+
+19. Once the runbook is published, select **Link to schedule** on the Overview page.
 
      ![](./media/costopt-16.png)
 
-15. Select **Schedule** then **+ Add a schedule**.
+20. Select **Schedule** then **+ Add a schedule**.
 
      ![](./media/costopt-17.png)
 
-16. Fill in the details as following:
+21. Fill in the details as following:
  
     * **Name:** Enter **stop-vms (1)** in the name block.
     * **Description:** Give a description such as **stop all VMs in wafprod resource group (2)**.
@@ -299,27 +273,27 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
     ![](./media/costopt-18.png)
    
-17. Click on **OK**.
+22. Click on **OK**.
 
     ![](./media/costopt-19.png)
 
-18. Now search for virtual machines in the Azure portal and select **Virtual Machines**.
+23. Now search for virtual machines in the Azure portal and select **Virtual Machines**.
 
     ![](./media/costopt-20.png)
 
-19. Notice that VMs from the wafprod resource group are in **Running** state.
+24. Notice that VMs from the wafprod resource group are in **Running** state.
 
     ![](./media/costopt-21.png)
 
-20. Navigate back to the **stop-prod-vms** runbook and click on **Start**. Select **Yes** when asked - _Are you sure that you want to start the runbook?_
+25. Navigate back to the **stop-prod-vms** runbook and click on **Start**. Select **Yes** when asked - _Are you sure that you want to start the runbook?_
 
     ![](./media/costopt-22.png)
 
-21. By clicking on the Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows the status of both the VMs as **succeeded**.
+26. By clicking on the Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows the status of both the VMs as **succeeded**.
 
-    ![](./media/costopt-23.png)
+    ![](./media/.png)
 
-22. Go back to **Virtual Machines** and observe the status of both the machines present in wafprod resource group. It will show up as **Stopped(deallocated)**.
+27. Go back to **Virtual Machines** and observe the status of both the machines present in wafprod resource group. It will show up as **Stopped(deallocated)**.
 
     ![](./media/costopt-24.png)
 

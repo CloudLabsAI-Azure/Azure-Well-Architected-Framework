@@ -166,9 +166,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/.png)
 
-10. 
-
-11. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. 
+10. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. 
 
 ```
 $subscriptionID = <inject key="SubscriptionID" enableCopy="false"/>
@@ -177,12 +175,51 @@ $automationAccount = "DSC-96c11"
 
 ```
 
-12. To enable the system-assigned managed identity, copy and paste the command given below, .
+   ![](./media/.png)
+   
+11. To enable the system-assigned managed identity, copy and paste the command given below and hit enter after each command.
 
+```
 
+$output = Set-AzAutomationAccount -ResourceGroupName $resourceGroup -Name $automationAccount -AssignSystemIdentity
 
+$output
 
-6. Copy the script given below and paste into the runbook console and then click on **Save**. 
+```
+
+   ![](./media/.png)
+
+12. The output should look similar to the following:
+
+   ![](./media/.png)
+
+13. In the Azure portal, navigate to the automation account **DSC-xxxx**. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Copy this **Object ID** in a text editor.
+
+   ![](./media/.png)
+
+14. Now assign role to the managed identity you just created. It will allow the automation account to access the Azure resources.
+
+15. Copy the following command in a text editor and replace the **ObjectID** with the value you copied in Step 12, same task.
+
+```
+
+New-AzRoleAssignment -ObjectId "[ObjectID]" -Scope "/subscriptions/$subscriptionID/resourceGroups/$resourceGroup" -RoleDefinitionName "Contributor"
+
+```
+
+The final command should look like the one given below:
+
+```
+
+New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/subscriptions/$subscriptionID/resourceGroups/$resourceGroup" -RoleDefinitionName "Contributor"
+
+```
+
+   ![](./media/.png)
+
+16. From the left pane, scroll to _Process Automation_, select **Runbooks** and open **stop-prod-vms**.
+
+17. Copy the script given below and paste into the runbook console and then click on **Save**. 
 
     ```
     $myCred = Get-AutomationPSCredential -Name '[Enter name of your credentials]'
@@ -202,7 +239,7 @@ $automationAccount = "DSC-96c11"
 
     ```
     
-    ![](./media/costopt-10.png)
+    ![](./media/.png)
     
 8. Go back to the automation account **DSC-xxxx** and from the left pane scroll to _Shared Resources_. Select **Credentials** and then select **+Add a credential**. 
 

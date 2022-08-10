@@ -142,10 +142,35 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-08.png)
    
-5. Once the runbook is created, it will look similar to the screenshot below. Now select **Edit** to add PowerShell script in the runbook.
+5. Once the runbook is created, it will look similar to the screenshot below.
 
    ![](./media/costopt-09.png)
    
+6. In the Azure portal, select the Azure **Cloud Shell** icon from the top menu.
+
+   ![](./media/.png)
+
+7. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
+
+   ![](./media/.png)
+
+8. Click on **Show advanced settings**. Select Create new under Storage account and provide values as below: 
+  
+      - **Resource Group**: Select **Use existing** then <inject key="Resource Group Name" enableCopy="false"/>
+      - **Storage account** : **storage<inject key="Suffix" enableCopy="false"/>**
+      - **File Share** : **blob**
+
+   ![](./media/.png)
+
+9. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
+
+   ![](./media/.png)
+
+
+
+
+
+
 6. Copy the script given below and paste into the runbook console and then click on **Save**. 
 
     ```

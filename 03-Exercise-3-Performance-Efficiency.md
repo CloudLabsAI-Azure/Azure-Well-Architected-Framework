@@ -12,7 +12,7 @@ In this exercise, we will go through the given architecture and know more about:
 * Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
 
 
-### **Task1: Design for scaling** 
+### **Task 1: Design for scaling** 
 
 A system's scalability refers to its ability to manage the increased load. Azure Autoscale-enabled services can scale automatically to meet demand and accommodate the workload. These systems automatically scale out to maintain capacity during workload peaks and then return to normal once the peak has passed.
 

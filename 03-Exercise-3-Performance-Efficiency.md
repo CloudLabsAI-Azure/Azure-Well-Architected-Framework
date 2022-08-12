@@ -168,38 +168,63 @@ The graphs display resource use over time, so you can spot bottlenecks and anoma
 Performance works hand in hand with the health monitoring capability to reveal problems that could point to a system component failure, support tuning, and optimization to increase efficiency or support capacity planning.
 
 
+### **Task 3: Performance Testing**
 
+Azure Load Testing Preview is a fully managed load-testing service that enables you to generate high-scale load. Regardless of where your applications are hosted, the service simulates traffic for them. It can be used by programmers, testers, and quality assurance (QA) engineers to enhance the speed, scalability, or capacity of applications.
 
+Azure Load Testing is currently in preview because of which we have limited options available to it at the moment.
 
+In this task, we will see how to load test a web application with Azure Load Testing Preview from the Azure portal without prior knowledge about load testing tools.
 
+1. Firstly, you will create an Azure Load Testing resource. In the Azure portal, in the top left corner, click on **Show portal menu (1)** bar and select **+Create a resource (2)**.
 
+   ![](./media/pe-25.png)
 
+2. Search for Azure Load Testing in the search box and select **Azure Load Testing (Preview)** from the suggestions.
+ 
+   ![](./media/pe-26.png)
 
+3. Select **Create** on the Azure Load Testing pane.
+ 
+    ![](./media/pe-27.png)
 
+4. Provide the following information to configure the Load test:
 
+ - **Subscription:** Make sure **your subscription (1)** is selected by default.
+ - **Resource group:** Select **wafprod (2)** from the drop-down
+ - **Name:** Give a name for the load test resource **(3)**.
+ - **Location:** Select same as of the resource group **(4)**.
+ - Click on **Review + create (5)**
+ 
+    ![](./media/pe-28.png)
+    
+5. Once the validation passes, click on **Create**.
 
+    ![](./media/pe-29.png)
 
+6. Now you will have the load test resource deployed successfully. Click on **Go to resource** to view the resource.
 
+    ![](./media/pe-30.png)
 
+7. Here, you will create a load test by using a sample web application URL.
 
+8. On the **Overview** page, select **Quick test** given under _Load test your application and infrastructure_.
 
+    ![](./media/pe-31.png)
 
+9. On the Quick test page, provide following details:
 
+ - **Test URL:** As an example, enter **``` https://azure.microsoft.com ``` (1)**
+ - Rest of the details are optional. Default values are already updated for all the asks.
+ -  Click on **Run test (2)**. This will create and start the load test.
 
+    ![](./media/pe-33.png)
 
+10. Once the load test begins, you will be directed to the test run dashboard. Azure Load Testing records both client-side and server-side metrics while the load test is underway. 
 
+11. In the dashboard, you will see the client-side metrics in real-time while the test is running. The data refreshes every five seconds by default.
 
-
-
-
-
-
-
-
-
-
-
-
+    ![](./media/pe-32.png)
 
 
 

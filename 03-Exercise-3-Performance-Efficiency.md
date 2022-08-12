@@ -176,7 +176,7 @@ Azure Load Testing is currently in preview because of which we have limited opti
 
 In this task, we will see how to load test a web application with Azure Load Testing Preview from the Azure portal without prior knowledge about load testing tools.
 
-1. Firstly, you will create an Azure Load Testing resource. In the Azure portal, click on **Show portal menu (1)** bar and select **+Create a resource (2)**.
+1. Firstly, you will create an Azure Load Testing resource. In the Azure portal, click on **Show portal menu (1)** and select **+Create a resource (2)**.
 
    ![](./media/pe-25.png)
 

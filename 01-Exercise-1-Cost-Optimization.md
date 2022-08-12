@@ -172,11 +172,11 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
 11. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. 
 
-```
+`
 $subscriptionID = <inject key="susbscription ID" enableCopy="false"/>
 $resourceGroup = "wafprod"
 $automationAccount = "DSC-96c11"
-```
+`
 
    ![](./media/costupd-06.png)
    

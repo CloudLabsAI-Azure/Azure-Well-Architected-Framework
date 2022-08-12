@@ -160,8 +160,8 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
 9. Provide the following details: 
   
-      - **Resource Group**: Click on **Use existing** and then select **<inject key="Resource Group Name" enableCopy="false"/> (1)** from the drop down
-      - **Storage account** : Click on **Create new** and then select **storage<inject key="Suffix" enableCopy="false"/> (2)**
+      - **Resource Group**: Click on **Use existing** and then select **<inject key="ProdRG" enableCopy="false"/> (1)** from the drop down
+      - **Storage account** : Click on **Create new** and then select **storage<inject key="DeploymentID" enableCopy="false"/> (2)**
       - **File Share** : Click on **Create new** and then enter **blob (3)** 
 
    ![](./media/costupd-03.png)
@@ -173,7 +173,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 11. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. 
 
 ```
-$subscriptionID = <inject key="SubscriptionID" enableCopy="false"/>
+$subscriptionID = <inject key="susbscription ID" enableCopy="false"/>
 $resourceGroup = "wafprod"
 $automationAccount = "DSC-96c11"
 ```

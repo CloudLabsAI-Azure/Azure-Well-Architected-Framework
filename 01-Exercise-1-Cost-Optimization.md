@@ -170,7 +170,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costupd-04.png)
 
-11. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. Replace <Sub-id> with <inject key="DeploymentID" enableCopy="True"/>
+11. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. Replace <Sub-id> with <inject key="susbscription ID" enableCopy="True"/>
 
 ```
 $subscriptionID = <Sub-id>

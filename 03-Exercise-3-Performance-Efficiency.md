@@ -198,7 +198,7 @@ In this task, we will see how to load test a web application with Azure Load Tes
  
     ![](./media/pe-28.png)
     
-5. Once the validation passes, click on **Create**.
+5. Post the validation passes, click on **Create**.
 
     ![](./media/pe-29.png)
 

@@ -182,7 +182,7 @@ In this task, you will learn how to enable replication for virtual machines, run
    ![](./media/reliability-21.png)
    
 
-### **Task 3: Deploy consistently** 
+### **Task 3: Deploy consistently**
 
 
 ### **Task 4: Monitor health** 

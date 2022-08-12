@@ -202,7 +202,7 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
     ![](./media/pe-29.png)
 
-6. Now you will have the load test resource deployed successfully. Click on **Go to resource** to view the resource.
+6. Click on **Go to resource** to view the resource upon successful deployment.
 
     ![](./media/pe-30.png)
 

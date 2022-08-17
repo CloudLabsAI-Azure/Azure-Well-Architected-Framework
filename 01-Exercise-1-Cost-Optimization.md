@@ -305,6 +305,8 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 SubTask 2: Storage Account 
 SubTask 3: Networking**
 
+ #SubTask 1: Virtual machine
+ 
 You can lower the cost by managing the size of the VMs. 
 
 1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
@@ -331,6 +333,32 @@ You can lower the cost by managing the size of the VMs.
 
  > ⭐ Good to know: <br>
  > For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings!
+ 
+ # SubTask 2: Storage Account 
+ 
+ **Cost optimization**
+
+1. In the Azure portal, type **Storage account** in the search box and then select it from the suggestions.
+
+   ![](media/storage01.png)
+   
+2. Select the storage account with the name **wafdevxxxstorage**, that falls under **wafdev** resource group.
+
+   ![](media/storage02.png)
+ 
+3. On the **Overview** page of the storage account, observe the configuration of the storage account.
+
+    ![](media/storage03.png)
+
+> **Note:** observe that the storage account is in GRS replication which saves the data synchronously three times at the primary physical location (LRS) and asynchronously three times in a secondary physical region. We will be converting this to LRS replication which stores data synchronously three times at one physical location to optimize the cost.
+
+4. Scroll down on the left navigation pane and select **Configuration** under settings.
+
+    ![](media/storage04.png)
+
+5. Select **Locally-redundant storage (LRS)** under **Replication** and click on **Save** to save the changes.
+
+  ![](media/storage05.png)
 
 
 ### **Task 4: Cost controls**

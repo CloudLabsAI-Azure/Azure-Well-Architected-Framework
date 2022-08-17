@@ -356,6 +356,7 @@ You can always choose the process that provides the best fit for your team.
    Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
    ```
    
-     ![](media/policy18.png)
+   
+   ![](media/policy18.png)
 
    

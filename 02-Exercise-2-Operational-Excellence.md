@@ -268,4 +268,94 @@ You can always choose the process that provides the best fit for your team.
 ### Task 2: Deployment [Replacement-Add Tag Policy]
 
 
+**Policy Remediation**
 
+1. In the Azure search box, enter **Deploy a custom template** and select it.
+
+     ![](media/policy01.png)
+
+2. On the Custom deployment page, click on **Build your own template** in the editor.
+
+     ![](media/policy02.png)
+     
+3. Click on **Load file (1)** option on the edit template page. From the **C;\LabFiles (2)** directory, select **azpolicy-addtag.json (3)** file and click on **Open (4)**.
+
+     ![](media/policy03.png)
+
+4. Go through the whole ARM Template in the Edit template console, and click on **Save**.
+
+     ![](media/policy04.png)
+
+5. On the Custom deployment page, on the Basics tab,  provide the following details.
+
+   * **Subscription**: Subscription will be selected by default.
+   * **Resource Group**: Select **waf-prod (2)** from the drop down.
+   * **Tag Name**:  Enter **environment (3)**. You can give a name of your choice too.
+   * **Tag Value**:  Enter **production (4)**. You can give a name of your choice too.
+   * Leave all the other values as default and click on **Review + Create (5)**.
+
+
+   ![](media/policy05.png)
+
+6. At last, click on **Create**.
+
+   ![](media/policy06.png)
+   
+7. In the Azure search box, enter **Resource groups** and select it.
+   
+    ![](media/policy07.png)
+
+8. From the left navigation pane, select **policies** under settings.
+
+    ![](media/policy08.png)
+
+9. On the **Policy** pane, click on **Assignments** section and observe that the policy with name **Add a tag to resources** is assigned to the wafprod resource group.
+
+    ![](media/policy09.png)
+    
+10. Click on **Add a tag to resources** policy and observe the **tagName** and **tagValue** in the parameters section of the policy.
+
+    ![](media/policy10.png)
+    
+11. On the **Policy** page, click on **compliance** and select the tag **Add a tag to resources**.
+
+    ![](media/policy11.png)
+
+12. On the add a tag to resources page, click on **edit assignment**.
+
+    ![](media/policy12.png)
+
+
+13. Check the button with **Create a remediation task** option under **Remediation**. Select **Review + Save** followed by **Save**.
+
+    ![](media/policy13.png)
+
+14. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
+
+   ![](media/policy14.png)
+
+
+> **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
+    
+15. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
+
+    ![](media/policy15.png)
+
+
+16. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
+
+    ![](media/policy16.png)
+
+17. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
+
+    ![](media/policy17.png)
+    
+18. At the prompt, enter the following powershell command to retrieve all the resouces with the specified tags. Observe the tagname and tagvalue under each resource in output section.
+
+   ```
+   Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
+   ```
+   
+   ![](media/policy18.png)
+
+   

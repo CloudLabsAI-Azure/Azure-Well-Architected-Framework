@@ -265,7 +265,7 @@ You can always choose the process that provides the best fit for your team.
     ![](media/alm_pt_cmmi_wit_artifacts.png)
 
 
-### Task 2: Deployment [Replacement]
+### Task 2: Deployment [Replacement-Add Tag Policy]
 
 
 

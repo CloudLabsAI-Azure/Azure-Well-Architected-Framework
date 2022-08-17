@@ -332,23 +332,23 @@ You can always choose the process that provides the best fit for your team.
 
 14. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
 
-   ![](media/policy14.png)
+      ![](media/policy14.png)
 
 
 > **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
     
 15. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
 
-    ![](media/policy15.png)
+     ![](media/policy15.png)
 
 
 16. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
 
-    ![](media/policy16.png)
+      ![](media/policy16.png)
 
 17. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
-    ![](media/policy17.png)
+      ![](media/policy17.png)
     
 18. At the prompt, enter the following powershell command to retrieve all the resouces with the specified tags. Observe the tagname and tagvalue under each resource in output section.
 
@@ -356,6 +356,6 @@ You can always choose the process that provides the best fit for your team.
    Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
    ```
    
-   ![](media/policy18.png)
+     ![](media/policy18.png)
 
    

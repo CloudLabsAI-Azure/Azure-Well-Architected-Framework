@@ -300,6 +300,10 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
 
 ### **Task 3: Resize a Virtual Machine**
+ 
+**SubTask 1: VM
+SubTask 2: Storage Account 
+SubTask 3: Networking**
 
 You can lower the cost by managing the size of the VMs. 
 

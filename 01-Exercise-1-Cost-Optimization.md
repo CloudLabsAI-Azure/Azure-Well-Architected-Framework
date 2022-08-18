@@ -359,6 +359,21 @@ You can lower the cost by managing the size of the VMs.
 5. Select **Locally-redundant storage (LRS)** under **Replication** and click on **Save** to save the changes.
 
   ![](media/storage05.png)
+ 
+ 
+ # SubTask 3: Networking
+ 
+ * VPN gateway is recommended for development/test cases or small-scale production workloads where throughput is less than 100 Mbps. Use ExpressRoute for enterprise and mission-critical workloads that access most Azure services. You can choose bandwidth from 50 Mbps to 10 Gbps.
+
+* Another consideration is security. Unlike VPN Gateway traffic, ExpressRoute connections don't go over the public internet. VPN Gateway traffic is secured by industry standard IPsec.
+
+* For both services, inbound transfers are free and outbound transfers are billed per the billing zone.
+ 
+* Azure front door and express route are expensive, whereas vpn gateway is cheaper.
+ 
+* By using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), you can calculate the cost of VPN gateway and observe how the cost varies by changing the type of outbound data transfer.
+ 
+   ![](media/VPN01.png)
 
 
 ### **Task 4: Cost controls**

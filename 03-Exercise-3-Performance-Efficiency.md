@@ -4,12 +4,7 @@
 
 Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. Scaling correctly and using PaaS products with scaling built-in are two of the most effective strategies to achieve performance efficiency.
 
-In this exercise, we will go through the given architecture and know more about:
-
-* Can you provide a solution that scales to meet the public demand? How would this solution change in a PaaS architecture?
-* How can you improve the performance visibility and alerting? Are all the tiers covered?
-* Is there a more proactive approach?
-* Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
+In this exercise, we will go through the given architecture and know more about the pillars of performance efficiencly that help you effectively scale your workload.
 
 
 ### **Task 1: Design for scaling** 

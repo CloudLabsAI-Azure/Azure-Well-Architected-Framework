@@ -660,6 +660,32 @@ You buy a reserved VM instance with the size Standard_DS4_v2 where the ratio or 
 
 The following sections show what sizes are in the same size series group when you buy a reserved VM instance optimized for instance size flexibility.  
   
+**5. Analysis:**
+ 
+ All reservations except Azure Databricks are applied hourly. To ensure reservations help reduce costs, you should purchase them based on an analysis of consistent baseline usage.
+ 
+ If you purchase more capacity than was previously used, your reservation may be underutilized. You should try to get the most out of reservations, because unused reservations cannot be saved for later use. Additionally, if your usage exceeds the reserved capacity, you will be charged the pay-per-use rate. 
+ 
+Azure provides automated reservation recommendations. These are calculated by analyzing your hourly usage data over the past 7, 30, and 60 days. Azure calculates the cost of the reservation and compares it to the actual pay-as-you-go cost incurred during the period. Then, Azure recommends the quantity that can maximize savings.
+ 
+ For example, if workload uses 100 VMs regularly, but occasionally demand spikes to 150, Azure will calculate potential savings for a reservation of 100 VMs as well as 150. If the demand spikes are infrequent, the calculation may determine that you can save by purchasing 100 reserved VMs. However, if demand spikes are very common, it may recommend reserving more than 100 VMs to save costs. 
+
+There are a few things to keep in mind regarding automated reservation recommendations:
+
+* The reservation recommendation is calculated using the pay-as-you-go rates relevant to your use case.
+* Recommendations are based on individual VM sizes, and do not apply to the entire size family.
+* After you commit to a reservation, on the same day of the purchase, the recommended quantity for the scope is reduced. In other words, the reserved VMs are no longer considered as part of the resources eligible for reservation.
+
+ 
+**6. Scope:**
+ 
+ Note that only Enterprise Agreements, Pay-As-You-Go Subscriptions and Microsoft Customer Agreement Subscriptions support reservations.
+ 
+ **Reservation Scope Options:**
+ 
+* Single resource group scope— this means the reservation discount is only applied to matching resources in a specific Azure resource group.
+* Single subscription scope— this means reservation discount is applied to matching resources in an entire Azure subscription.
+* Shared scope— lets you apply reservation discounts to matching resources used by multiple eligible subscriptions connected to the same billing scope, which can include more than one Azure subscriptions.
 
 ### **Task 7: Move to PAAS**
 

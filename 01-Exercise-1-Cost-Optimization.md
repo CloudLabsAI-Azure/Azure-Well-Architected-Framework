@@ -105,6 +105,21 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costopt-35.png)
 
+5. You can export cost data to CSV file to do a cost analysis.
+
+6. In the **Cost Analysis (1)** section, click on **Cost by resource (2)** drop down and select **Resource groups(preview) (3)**.
+
+   ![](./media/costupd-16.png)
+
+7. Once the view changes to resource groups, click on **Download** to download the data.
+
+   ![](./media/costupd-17.png)
+
+8. On the Download page, select **Excel (1)**, check the **Include nested data (2)** checkbox to get data for all the resources falling under the respective resource groups. At last, click on **Download (3)**.
+
+   ![](./media/costupd-18.png)
+
+9. A CSV file will get downloaded. Open it and you can review that data.
 
 ### **Task 2: Shutdown**
 

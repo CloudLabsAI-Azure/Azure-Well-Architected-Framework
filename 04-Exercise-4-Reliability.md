@@ -182,10 +182,8 @@ In this task, you will learn how to enable replication for virtual machines, run
    ![](./media/reliability-21.png)
    
 
-### **Task 3: Deploy consistently**
 
-
-### **Task 4: Monitor health** 
+### **Task 3: Monitor health** 
 
 **Service Health** provides a personalized view of the health of the Azure services and regions you're using. This is the best place to look for service impacting communications about outages, planned maintenance activities, and other health advisories because the authenticated Service Health experience knows which services and resources you currently use. 
 

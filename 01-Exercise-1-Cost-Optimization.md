@@ -370,7 +370,6 @@ VM Insights show the following utilization charts shown on the **Performance** p
  
  #### **SubTask 2: Storage Account** 
  
- **Cost optimization**
 
 1. In the Azure portal, type **Storage account** in the search box and then select it from the suggestions.
 

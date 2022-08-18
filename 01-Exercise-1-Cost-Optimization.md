@@ -303,27 +303,50 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
 # SubTask 1: Virtual machine
  
-You can lower the cost by managing the size of the VMs. 
+You can lower the cost by managing the size of the VMs. VM insights monitors the performance and health of your virtual machines including their running processes and dependencies on other resources. It can help deliver predictable performance and availability of vital applications by identifying performance bottlenecks and network issues. 
+ 
+VM Insights show the following utilization charts shown on the **Performance** page:
 
-1. In the Azure portal, click on **Show portal menu (1)** and select **Resource groups(2)**.
-
-   ![](./media/costopt-01.png)
+* CPU Utilization % - shows the processor utilization of virtual machine. 
+* Available Memory - shows the amount of available memory in the virtual machines. 
+* Logical Disk Space Used % - shows the disk space used % across all disk volumes in virtual machine.
+* Bytes Sent Rate - shows the highest average of bytes sent though virtual machine.
+* Bytes Receive Rate - shows the highest average of bytes recieved though virtual machine.
+ 
+1. Search for virtual machines in the Azure portal and select **Virtual Machines**.
    
-2. Open **wafprod** resource group and select a virtual machine.
+   ![](./media/insights01.png)
 
-   ![](./media/costopt-02.png)
-   
-3. Select **Size** present under _Settings_ pane.
+2. Select the virtual machine with the name **wafproxxxdc** from the wafprod resource group.
+
+   ![](./media/insights02.png)
+
+3. Click on **Insights** under minitoring and select **Enable**.
+
+   ![](./media/insights03.png)
+
+4. On the **Monitoring configuration** page, leave all the value to default and click on **Configure**.
+
+   ![](./media/insights04.png)
+
+5. On the **Insights** page observe the disk performanace under **performance** section.
+
+   ![](./media/insights05.png)
+  
+  > **Note:** It can take between 5-10 minutes to configure the virtual machine and the monitoring data to appear.
+
+ 
+6. Select **Size** present under _Settings_ pane.
 
    ![](./media/costopt-03.png)
    
-4. From the list of available sizes, click on **B1s** size to select it and then click on **Resize** button.
+7. From the list of available sizes, click on **B1s** size to select it and then click on **Resize** button.
 
    ![](./media/costopt-04.png)
 
  > **Note:** B-series burstable VMs are ideal for workloads that do not need the full performance of the CPU continuously, like web servers, small databases & development, and test environments. The B-Series provides these customers the ability to purchase a VM size with a _**price conscious baseline performance**_ that allows the VM instance to build up credits when the VM is utilizing less than its base performance. When the VM has accumulated credit, the VM can burst above the VM’s baseline using up to 100% of the CPU when your application requires higher CPU performance.
 
-5. Go back to the **Overview** page and verify the VM size. 
+8. Go back to the **Overview** page and verify the VM size. 
 
    ![](./media/costopt-05.png)
 
@@ -370,6 +393,7 @@ You can lower the cost by managing the size of the VMs.
 * By using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), you can calculate the cost of VPN gateway and observe how the cost varies by changing the type and size of outbound data transfer.
  
    ![](media/VPN01.png)
+
 
 
 ### **Task 4: Cost controls**

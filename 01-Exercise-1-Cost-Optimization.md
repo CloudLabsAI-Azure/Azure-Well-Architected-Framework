@@ -111,7 +111,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costupd-16.png)
 
-7. Once the view changes to resource groups, click on **Download** to download the data.
+7. Once the view changes to resource groups, click on **Download** to download the data. 
 
    ![](./media/costupd-17.png)
 
@@ -119,7 +119,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costupd-18.png)
 
-9. A CSV file will get downloaded. Open it and you can review that data.
+9. A CSV file will get downloaded. Open it and you can review that data. Exported data is in CSV format and it contains all the information that's collected by Cost Management. You can then use the exported data and combine it with your own custom data. Also, you can use the exported data in an external system like a dashboard or other financial system.
 
 ### **Task 2: Shutdown**
 

@@ -301,7 +301,7 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
 ### **Task 3: Resize a Virtual Machine**
 
-# SubTask 1: Virtual machine
+#### **SubTask 1: Virtual machine**
  
 You can lower the cost by managing the size of the VMs. VM insights monitors the performance and health of your virtual machines including their running processes and dependencies on other resources. It can help deliver predictable performance and availability of vital applications by identifying performance bottlenecks and network issues. 
  
@@ -353,7 +353,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
  > ⭐ Good to know: <br>
  > For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings!
  
- # SubTask 2: Storage Account 
+ #### **SubTask 2: Storage Account** 
  
  **Cost optimization**
 
@@ -380,7 +380,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
   ![](media/storage05.png)
  
  
- # SubTask 3: Networking
+ #### **SubTask 3: Networking**
  
  * VPN gateway is recommended for development/test cases or small-scale production workloads where throughput is less than 100 Mbps. Use ExpressRoute for enterprise and mission-critical workloads that access most Azure services. You can choose bandwidth from 50 Mbps to 10 Gbps.
 

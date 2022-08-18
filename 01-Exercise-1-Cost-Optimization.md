@@ -300,12 +300,8 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
 
 ### **Task 3: Resize a Virtual Machine**
- 
-**SubTask 1: VM
-SubTask 2: Storage Account 
-SubTask 3: Networking**
 
- #SubTask 1: Virtual machine
+# SubTask 1: Virtual machine
  
 You can lower the cost by managing the size of the VMs. 
 
@@ -371,7 +367,7 @@ You can lower the cost by managing the size of the VMs.
  
 * Azure front door and express route are expensive, whereas vpn gateway is cheaper.
  
-* By using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), you can calculate the cost of VPN gateway and observe how the cost varies by changing the type of outbound data transfer.
+* By using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), you can calculate the cost of VPN gateway and observe how the cost varies by changing the type and size of outbound data transfer.
  
    ![](media/VPN01.png)
 

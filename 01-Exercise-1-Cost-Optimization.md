@@ -534,11 +534,47 @@ This way, the admins can be alerted when the workload is using the services at c
 
    ![](./media/costopt-57.png)
 
-18. In the **Review + Create** tab, with all the details, you will have the option to test the action group. Click on **Test action group(preview) (1)**.
+18. In the **Review + Create** tab, click on **Create**. 
 
-19. Now for **Select sample type**, select **Billing alert (2)** from the drop-down. Select the checkbox for both **Notification and Alert type (3)**. At last, click on **Test (4)**.
+    ![](./media/action_group1.png)
+    
+19. After the action group is created, you will be directed to the Edit budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Edit budget (3)**.
 
-   ![](./media/costopt-61.png)
+   ![](./media/costopt-62.png)
+
+20. Select the Action group for both alert conditions from the drop-down.
+
+   ![](./media/costopt-63.png)
+
+21. Provide Alert recipients emails as given below:
+
+* **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
+* **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders' list so that emails don't go to your junk email folder.
+* **Language:** You can select your language from the drop-down. Here we are leaving this on **Default (3)**.
+* Click on **Create (4)**.
+
+   ![](./media/costopt-42.png)
+
+22. After you create a budget, it's shown in cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
+
+   ![](./media/costopt-43.png)
+
+
+23. you will have the option to test the action group. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor (2)**.
+
+   ![](./media/pe-08.png)
+   
+24. From the left navigation pane, select **Alerts (1)** and click on **Action groups (2)**.
+
+   ![](./media/action_group2.png)
+   
+25. On the **Action group** pane, select **waf-actiongroup (1)** and click on **Test action group(preview) (2)**.
+
+    ![](./media/action_group3.png)
+
+26. Now for **Select sample type**, select **Billing alert (1)** from the drop-down. Select the checkbox for both **Notification and Alert type (2)**. At last, click on **Test (3)**.
+
+   ![](./media/action_group4.png)
 
 20. Jump to another tab in the browser where you created the webhook. From the left pane, open **Jobs** and select the **Running** job.
 
@@ -548,30 +584,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
    ![](./media/costopt-58.png)
 
-22. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)** and click on **Create (3)**.
+22. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)**.
 
-   ![](./media/costopt-60.png)
-
-23. After the action group is created, you will be directed to the Edit budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Edit budget (3)**.
-
-   ![](./media/costopt-62.png)
-
-24. Select the Action group for both alert conditions from the drop-down.
-
-   ![](./media/costopt-63.png)
-
-25. Provide Alert recipients emails as given below:
-
-* **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
-* **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders' list so that emails don't go to your junk email folder.
-* **Language:** You can select your language from the drop-down. Here we are leaving this on **Default (3)**.
-* Click on **Create (4)**.
-
-   ![](./media/costopt-42.png)
-
-26. After you create a budget, it's shown in cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
-
-   ![](./media/costopt-43.png)
+   ![](./media/action_group5.png)
 
 
 ## **Note: Task 5, Task 6, and Task 7 are read-only tasks.**

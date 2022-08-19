@@ -72,8 +72,6 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
 
 
-
-
 ### **Task 2: Monitor performance**
 
 In this task, we will use VM insights and monitor the performance and health of your virtual machines including their running processes and dependencies on other resources. By locating performance bottlenecks and network problems, it can assist in ensuring the availability of critical applications and delivering predictable performance. It can also assist in determining whether a problem is connected to other dependencies.
@@ -149,6 +147,8 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 15. VM insights include a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open the **Virtual Machines** tab present in the left pane and click on **Performance**.
 
    ![](./media/pe-21.png)
+
+> **Note:** Insights may take up to 30 minutes to reflect in the dashboard. You can continue the lab and come back to view the insights.
 
 16. In this section, you can play with filters such **_Resource Group_** and **_Time Range_**. You will have graphical presentations for the following:
 

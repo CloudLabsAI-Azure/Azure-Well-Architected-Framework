@@ -439,10 +439,10 @@ This way, the admins can be alerted when the workload is using the services at c
 * **Reset period:** The reset period determines the time window that's analyzed by the budget. Select **Quarterly (3)** from the drop-down.
 * **Creation date:** This is the date of creation of the budget and it will be selected by default **(4)**.
 * **Expiration date:** Add an expiry date for the budget **(5)**.
-* **Amount ($):** Give your budget amount threshold **(6)**. 
+* **Amount ($):** Enter the **Suggested budget (6)** given just below the Amount field.
 * Click on **Next (7)**.
 
-   ![](./media/costopt-46.png)
+   ![](./media/costupd-19.png)
 
 5. Add two **Alert conditions** as given below:
 

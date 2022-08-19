@@ -110,7 +110,9 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-17.png)
 
-7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group.
+7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group. 
+
+> **Note:** Before performing the next step, **make sure that all the VMs are in running state**, in the respective resource group.
 
 8. Click on **wafproxxxxx** virtual machine to open it and click on **Connect**. Follow the same process for other VMs from _wafprod_ resource group.
 

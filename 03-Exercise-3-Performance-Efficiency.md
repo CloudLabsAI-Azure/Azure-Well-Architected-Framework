@@ -253,5 +253,20 @@ Application Insights is an application performance management service for web ap
 
 ### **Task 5: SQL Insights**
 
+SQL Insights is a remote, agent-based monitoring solution, which the Azure SQL and Azure Monitor teams at Microsoft developed in collaboration. The agent uses an open-source agent called Telegraf and supports SQL Server running on a Virtual Machine (VM), Azure SQL Database, and Azure SQL Managed Instances.
+
+The agent runs on dedicated monitoring virtual machines to remotely collect data for SQL PaaS and SQL IaaS deployments. Furthermore, SQL Insights stores its data in Azure Monitor Logs (Workspace), allowing users to do aggregations, filtering, and data analysis. 
+
+With SQL Insights, Azure customers will benefit from capabilities such as:
+
+* Options to choose which data to collect 
+* Control the retention policy for the data 
+* Visualize data using Azure Monitor Workbooks
+* Create separate Data Collection Rules for every environment 
+* Integrate with open-source monitoring solutions (Telegraf) 
+* Surface over two hundred new metrics
+
+Azure customers will not incur costs for using SQL Insights directly. They will get charged for its activity in the Log Analytics workspace (data ingested from agents and stored in the workspace) and any alerts and notifications configured on the log data. The service is currently in preview for SQL Databases from version 2012 and up, SQL Managed Instance, and SQL Server on Azure Virtual Machines.
+
 
 

@@ -185,7 +185,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costupd-04.png)
 
-11. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" enableCopy="True"/> and replace **[Your automation account Name]** with the name of the automation account you are using.
+11. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" enableCopy="True"/> and replace **[Your automation account Name]** with the name of the automation account you are using .
 
 ```
 $subscriptionID = "[Your SubscriptionID]"
@@ -194,12 +194,6 @@ $automationAccount = "[Your automation account Name]"
 ```
  
 12. In the PowerShell console, copy and paste the commands from text editor, to declare the variables and hit Enter. 
-
-```
-$subscriptionID = <Sub-id>
-$resourceGroup = "wafprod"
-$automationAccount = "DSC-xxxxx" 
-```
 
    ![](./media/costupd-06.png)
    

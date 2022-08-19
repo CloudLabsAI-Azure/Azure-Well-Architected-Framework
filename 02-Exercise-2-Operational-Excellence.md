@@ -78,7 +78,7 @@ In this task, you will be creating an automated workflow that integrates two ser
 5. On the **Custom deployment** page, on the Basics tab, provide the following details for your logic app:
 
    * **Subscription**: Subscription will be selected by default.
-   * **Resource Group**: Select **waf-prod (1)** from the drop down
+   * **Resource Group**: Select **wafprod (1)** from the drop down
    * **Logic App name**: Enter **waf-logic-app (2)**. You can give a name of your choice too.
    * Leave all the other values as default and click on **Review + Create (3)**.
     

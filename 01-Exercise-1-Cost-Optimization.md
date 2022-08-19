@@ -452,19 +452,24 @@ This way, the admins can be alerted when the workload is using the services at c
 * **(2)** Type: Select **Forecasted** from the drop-down.
 * % of budget: Add the desired percentage here. (Forecasted alerts provide advanced notification that your spending trends are likely to exceed your budget. As an example, in the screenshot below, an email alert gets generated when the 100% forecasted budget threshold is met.)
 
-* Once done, click on **Manage action group (3)** and then select **+ Create**.
+* Once done, click on **Manage action group (3)**. and then select **+ Create**.
 
    ![](./media/costopt-47.png)
 
-6. Add **Project details** and **Instance details** as given below:
+6. Click on **+ Create**.
+
+   ![](./media/costupd-22.png)
+
+7. Add **Project details** and **Instance details** as given below:
 
 * **Subscription:** Subscription will be selected by default **(1)**.
 * **Resource group:** Select **wafprod** from the drop down **(2)**.
-* **Action group name:** Give a name for the action group, such as **waf-actiongroup (3)**
-* **Display name:** Enter a display name for the action group **(4)**.
-* Click on **Next: Notifications (5)**
+* **Region:** Leave on **Global (3)**
+* **Action group name:** Give a name for the action group, such as **waf-actiongroup (4)**
+* **Display name:** Enter a display name for the action group **(5)**.
+* Click on **Next: Notifications (6)**
 
-   ![](./media/costopt-48.png)
+   ![](./media/costupd-21.png)
 
 7. Provide the following information for the notifications to be sent when an alert is triggered.
 
@@ -474,13 +479,13 @@ This way, the admins can be alerted when the workload is using the services at c
   
   b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
 
-* **Add or edit an Email/SMS/Push/Voice action:** Based on the selected notification type, enter an email address, phone number, or other information **(2)**.
-* **Enable Common alert schema:** You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
+* **Add or edit an Email/SMS/Push/Voice action:** Based on the selected notification type, select **Email** and enter your email address **(2)**.
+* **Enable Common alert schema:** Leave to **No**. You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
 
 * Click on **OK (4)**.
 * **Name:** Enter a unique name for the notification **(5)**.
 
-   ![](./media/costopt-49.png)
+   ![](./media/costupd-20.png)
 
 8. Now click on **Next: Actions**.
 

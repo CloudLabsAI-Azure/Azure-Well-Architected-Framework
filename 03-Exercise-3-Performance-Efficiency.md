@@ -4,7 +4,12 @@
 
 Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. Scaling correctly and using PaaS products with scaling built-in are two of the most effective strategies to achieve performance efficiency.
 
-In this exercise, we will go through the given architecture and know more about the pillars of performance efficiencly that help you effectively scale your workload.
+In this exercise, we will go through the given architecture and know more about:
+
+* Can you provide a solution that scales to meet the public demand? How would this solution change in a PaaS architecture?
+* How can you improve the performance visibility and alerting? Are all the tiers covered?
+* Is there a more proactive approach?
+* Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
 
 
 ### **Task 1: Design for scaling** 
@@ -220,6 +225,33 @@ In this task, we will see how to load test a web application with Azure Load Tes
 11. In the dashboard, you will see the client-side metrics in real-time while the test is running. The data refreshes every five seconds by default.
 
     ![](./media/pe-32.png)
+
+# Read-only tasks
+
+### **Task 4: Application Insights**
+
+Azure application insights is a part of  Azure monitor service. It is one of the powerful tools which can help to diagnose, monitor and analyze your application. It can help in identifying anomalies and monitoring the performances of applications deployed anywhere irrespective of their technology.  Azure application insights can monitor the application deployed on Azure as well as it can monitor the application which is deployed on on-premises.
+
+For integrating the Azure Application Insights you need to install instrumentation package SDK (Standard development Kit) in your application. You can also integrate application insights just by enabling application insights agents if supported for your type of application.
+
+Application Insights monitors:
+
+* Request rates, response times, and failure rates.
+* Dependency rates, response times, and failure rates, to show whether external services are slowing down performance.
+* Analyze the aggregated statistics, or pick specific instances and drill into the stack trace and related requests. Application Insights reports both server and browser exceptions.
+* Page views and load performance reported by users' browsers.
+* User and session counts.
+* Performance counters from Windows or Linux server machines, such as CPU, memory, and network usage
+* Host diagnostics from Docker or Azure
+* Diagnostic trace logs from apps, so you can correlate trace events with requests
+* Custom events and metrics in client or server code that track business events, like items sold
+
+
+Application Insights is an incredibly useful tool for anyone who has an application or website and wants to track and manage all the info that’s put out there – who’s viewing what, what’s the most popular, etc.
+
+Application Insights is an application performance management service for web applications that enables you to do all the monitoring of your website performance in Azure. It’s designed to ensure you’re getting optimal performance and the best in class user experience from your website. It also has a powerful analytic tool that helps you diagnose issues and gain an understanding of how people are using your web application.
+
+### **Task 5: SQL Insights**
 
 
 

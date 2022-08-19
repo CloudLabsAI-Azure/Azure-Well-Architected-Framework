@@ -576,15 +576,15 @@ This way, the admins can be alerted when the workload is using the services at c
 
    ![](./media/action_group4.png)
 
-20. Jump to another tab in the browser where you created the webhook. From the left pane, open **Jobs** and select the **Running** job.
+27. Jump to another tab in the browser where you created the webhook. From the left pane, open **Jobs** and select the **Running** job.
 
    ![](./media/costopt-59.png)
 
-21. Under the **Output** tab, you can review the execution of the action alert we just tested. It will show up as succeeded.
+28. Under the **Output** tab, you can review the execution of the action alert we just tested. It will show up as succeeded.
 
    ![](./media/costopt-58.png)
 
-22. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)**.
+29. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)**.
 
    ![](./media/action_group5.png)
 

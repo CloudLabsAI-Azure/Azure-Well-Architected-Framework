@@ -185,17 +185,25 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costupd-04.png)
 
-11. In the PowerShell console, copy and paste the following to commands to declare the variables and hit Enter. Replace <Sub-id> with <inject key="susbscription ID" enableCopy="True"/>
+11. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" enableCopy="True"/> and replace **[Your automation account Name]** with the name of the automation account you are using.
+
+```
+$subscriptionID = "[Your SubscriptionID]"
+$resourceGroup = "wafprod"
+$automationAccount = "[Your automation account Name]" 
+```
+ 
+12. In the PowerShell console, copy and paste the commands from text editor, to declare the variables and hit Enter. 
 
 ```
 $subscriptionID = <Sub-id>
 $resourceGroup = "wafprod"
-$automationAccount = "DSC-96c11"
+$automationAccount = "DSC-xxxxx" 
 ```
 
    ![](./media/costupd-06.png)
    
-12. To enable the system-assigned managed identity, copy and paste the command given below and hit enter after each command.
+13. To enable the system-assigned managed identity, copy and paste the command given below and hit enter after each command.
 
 ```
 $output = Set-AzAutomationAccount -ResourceGroupName $resourceGroup -Name $automationAccount -AssignSystemIdentity
@@ -205,17 +213,17 @@ $output
 
    ![](./media/costupd-07.png)
 
-13. The output should look similar to the following:
+14. The output should look similar to the following:
 
    ![](./media/costupd-05.png)
 
-14. In the Azure portal, navigate to the automation account **DSC-xxxx**. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Click on the copy button to copy this **Object ID** and paste it in a text editor.
+15. In the Azure portal, navigate to the automation account **DSC-xxxx**. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Click on the copy button to copy this **Object ID** and paste it in a text editor.
 
    ![](./media/costupd-14.png)
 
-15. Now assign role to the managed identity you just created. It will allow the automation account to access the Azure resources.
+16. Now assign role to the managed identity you just created. It will allow the automation account to access the Azure resources.
 
-16. Copy the following command in a text editor and replace the **ObjectID** with the value you copied in Step 12, same task.
+17. Copy the following command in a text editor and replace the **ObjectID** with the value you copied in Step 12, same task.
 
 ```
 New-AzRoleAssignment -ObjectId "[ObjectID]" -Scope "/subscriptions/$subscriptionID/resourceGroups/$resourceGroup" -RoleDefinitionName "Contributor"
@@ -229,15 +237,15 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
    ![](./media/costupd-09.png)
 
-17. From the left pane, scroll to _Process Automation_, select **Runbooks** and open **stop-prod-vms**.
+18. From the left pane, scroll to _Process Automation_, select **Runbooks** and open **stop-prod-vms**.
 
    ![](./media/costupd-10.png)
 
-18. Click on **Edit** to add PowerShell code to the runbook. The code is to stop the virtual machines present in wafprod resource group.
+19. Click on **Edit** to add PowerShell code to the runbook. The code is to stop the virtual machines present in wafprod resource group.
 
     ![](./media/costopt-09.png)
 
-19. Copy the script given below and paste into the runbook console and then click on **Publish**. Select **Yes** when asked to Publish Runbook - _'Do you want to proceed?'_. 
+20. Copy the script given below and paste into the runbook console and then click on **Publish**. Select **Yes** when asked to Publish Runbook - _'Do you want to proceed?'_. 
 
     ```
     # Ensures you do not inherit an AzContext in your runbook
@@ -263,15 +271,15 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
     
 > **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of wafprod resource group.
 
-20. Once the runbook is published, select **Link to schedule** on the Overview page.
+21. Once the runbook is published, select **Link to schedule** on the Overview page.
 
      ![](./media/costopt-16.png)
 
-21. Select **Schedule** then **+ Add a schedule**.
+22. Select **Schedule** then **+ Add a schedule**.
 
      ![](./media/costopt-17.png)
 
-22. Fill in the details as following:
+23. Fill in the details as following:
  
     * **Name:** Enter **stop-vms (1)** in the name block.
     * **Description:** Give a description such as **stop all VMs in wafprod resource group (2)**.
@@ -285,29 +293,29 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
 
     ![](./media/costopt-18.png)
    
-23. Click on **OK**.
+24. Click on **OK**.
 
     ![](./media/costopt-19.png)
 
-24. Now search for virtual machines in the Azure portal and select **Virtual Machines**.
+25. Now search for virtual machines in the Azure portal and select **Virtual Machines**.
 
     ![](./media/costopt-20.png)
 
-25. Notice that VMs from the wafprod resource group are in **Running** state.
+26. Notice that VMs from the wafprod resource group are in **Running** state.
 
     ![](./media/costopt-21.png)
 
-26. Navigate back to the **stop-prod-vms** runbook and click on **Start**. Select **Yes** when asked - _Are you sure that you want to start the runbook?_
+27. Navigate back to the **stop-prod-vms** runbook and click on **Start**. Select **Yes** when asked - _Are you sure that you want to start the runbook?_
 
     ![](./media/costopt-22.png)
 
-27. By clicking on the Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows the status of both the VMs as **succeeded**.
+28. By clicking on the Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows the status of both the VMs as **succeeded**.
 
     ![](./media/costupd-11.png)
 
  > **Note:** Click on **Refresh** to latest outputs.
 
-28. Go back to **Virtual Machines** and observe the status of both the machines present in wafprod resource group. It will show up as **Stopped(deallocated)**.
+29. Go back to **Virtual Machines** and observe the status of both the machines present in wafprod resource group. It will show up as **Stopped(deallocated)**.
 
     ![](./media/costopt-24.png)
 

@@ -266,6 +266,8 @@ In this task, you will create your own encryption key to protect the data in you
 
     ![](./media/ex5-task4-16.png)
     
+    ![](./media/createex05.png)
+    
 
 ## Task 5: Security operations
 

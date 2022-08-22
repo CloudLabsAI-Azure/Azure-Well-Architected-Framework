@@ -485,7 +485,7 @@ This way, the admins can be alerted when the workload is using the services at c
 * Click on **OK (4)**.
 * **Name:** Enter a unique name for the notification **(5)**.
 
-   ![](./media/costupd-20.png)
+   ![](./media/costupd-23.png)
 
 8. Now click on **Next: Actions**.
 
@@ -528,7 +528,7 @@ This way, the admins can be alerted when the workload is using the services at c
 * **URI:** Paste the URL here that we copied in Step 13 in this task **(2)**.
 * Click on **OK (3)**.
 
-   ![](./media/costopt-56.png)
+   ![](./media/costupd-25.png)
 
 17. Give a unique **Name (1)** for the action and click on **Review + Create (2)**.
 
@@ -536,11 +536,11 @@ This way, the admins can be alerted when the workload is using the services at c
 
 18. In the **Review + Create** tab, click on **Create**. 
 
-    ![](./media/action_group1.png)
+    ![](./media/costupd-26.png)
     
-19. After the action group is created, you will be directed to the Edit budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Edit budget (3)**.
+19. After the action group is created, you will be directed to the Create budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Create budget (3)**.
 
-   ![](./media/costopt-62.png)
+   ![](./media/costupd-27.png)
 
 20. Select the Action group for both alert conditions from the drop-down.
 

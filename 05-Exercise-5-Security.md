@@ -267,10 +267,9 @@ In this task, you will create your own encryption key to protect the data in you
     ![](./media/ex5-task4-16.png)
  
  17. At last, click on **create** to assign the policy to the subscription.
- 
-    ![](./media/createex05.png)
     
-
+   ![](./media/createex05.png)
+   
 ## Task 5: Security operations
 
 In this task, we are going to perform integrated security monitoring for your workload using **Microsoft Defender for Cloud**. We will enable **Just-in-time** access to the Virtual machine, which locks down and limits the ports of the Azure virtual machine in order to overcome malicious attacks on the virtual machine, therefore only providing access to a port for a limited amount of time.

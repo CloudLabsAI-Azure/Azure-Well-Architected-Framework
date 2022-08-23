@@ -262,10 +262,12 @@ In this task, you will create your own encryption key to protect the data in you
     
     ![](./media/ex5-task4-15.png)
     
-16. Click on **Next** and select your choice of location in the **Allowed locations** bar. Click on **Review + create** followed by **create** to assign the policy to the subscription.
+16. Click on **Next**, select your choice of location in the **Allowed locations** bar and click on **Review + create**.  
 
     ![](./media/ex5-task4-16.png)
-    
+ 
+ 17. At last, click on **create** to assign the policy to the subscription.
+ 
     ![](./media/createex05.png)
     
 

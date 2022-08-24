@@ -4,46 +4,16 @@
 
 Cost Optimization is the process of managing costs to maximize the value delivered. The **Cost Optimization** pillar provides principles for balancing business goals with budget justification to create a cost-effective workload while avoiding capital-intensive solutions. Cost optimization is about looking at ways to reduce unnecessary expenses and improve operational efficiencies.
 
-The **Cost Optimization** in a Well-Architected Assessment, is a top-down review of your workload to identify what could be improved in your architecture. In this exercise, we will begin by looking at the costs of the workload as well as the most prevalent pain points and how to address them, such as:
-
-  * Are there any hidden costs in the current architecture? How can you identify them?
-  * Can the current IaaS architecture be more cost-effective? How?
-  * How would you keep track of cloud expenditure?
-  * What will be the cost impact of your new architecture recommendations?
+The **Cost Optimization** in a Well-Architected Assessment, is a top-down review of your workload to identify what could be improved in your architecture. In this exercise, we will begin by looking at the costs of the workload as well as the most prevalent pain points and how to address them.
 
 This will help with the most immediate and direct impact of the recommendations.
 
 ### **Task 1: Monitor and Forecast**
 
-In this task, you will learn how to monitor the cost of a workload with tools like Azure Advisor, Azure Cost Management, and Billing.
+In this task, you will learn how to monitor the cost of a workload with Azure Cost Management and Billing.
 
-**a. Azure Advisor:** It helps you optimize and reduce your overall Azure spending by identifying idle and underutilized resources. You can get cost recommendations from the Cost tab on the Advisor dashboard.
 
-1. In the Azure portal, type **Advisor** in the search box and then select it from the suggestions.
-
-   ![](./media/costopt-25.png)
-
-2. The Advisor dashboard will display a summary of your recommendations for all selected subscriptions. You can choose the subscriptions for which you want the recommendations to be displayed, using the subscription filter dropdown.
-
-   ![](./media/costopt-26.png)
-
-3. Now to get recommendations for the Cost category, select it from the **Dashboard (1)** or click on **Cost (2)** in the left pane, under _Recommendations_.
-
-   ![](./media/costopt-27.png)
-
-4. Click a recommendation that you want to review in detail.
-
-   ![](./media/costopt-44.png)
-
-5. Review the information about the recommendation and the resources that apply to it.
-
-   ![](./media/costopt-45.png)
-
-6. In this example we will not proceed further to implement the recommendation as it suggests reserving the instance.
-
-**b. Cost Management:** 
-
-This can significantly improve the technical performance of your business workloads. It can also reduce your costs and the overhead required to manage organizational assets. Cost Management is a suite of tools provided by Microsoft that help you analyze, manage, and optimize the costs of your workloads. 
+**Cost Management and Billing** significantly improve the technical performance of your business workloads. It can also reduce your costs and the overhead required to manage organizational assets. Cost Management is a suite of tools provided by Microsoft that help you analyze, manage, and optimize the costs of your workloads. 
 
 With advanced analytics, Cost Management reveals corporate cost and use patterns. The usage-based charges incurred by Azure services and third-party Marketplace offerings are displayed in Cost Management reports.
 

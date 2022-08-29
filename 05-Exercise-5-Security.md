@@ -115,7 +115,9 @@ In this task, you will learn how to control access to the Azure resources that y
 
     * **Diagnostic setting name**: `dev-log` **(1)**
     *  **Logs**: Make sure you have selected all the categories **(2)**
-    *  **Destination details**: Check **Archive to a storage account (3)** and leave all the other values to default **(4)**.
+    *  **Destination details**: Check **Archive to a storage account (3)** 
+    *  **Subscription:** Leave to default **(4)**
+    *  **Storage account:** Select **wafdevxxxxxx** storage account.
     *  Click on **Save (5)**.
 
     ![](./media/activity-save.png)

@@ -356,3 +356,7 @@ In this task, we are going to perform integrated security monitoring for your wo
      > **Note**: It can take up to 5 minutes for the remediation to get successful. 
 
 17. Go to the **Recommendations** page and explore through other recommendations.
+
+18. Now, click on the **Next** from lower right corner to move on next page.
+
+

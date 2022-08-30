@@ -417,7 +417,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
    ![](./media/op-upd-13.png)
 
-
+11. Now, click on the **Next** from lower right corner to move on next page.
 
 
 

@@ -13,7 +13,7 @@ This will help with the most immediate and direct impact of the recommendations.
 In this task, you will learn how to monitor the cost of a workload with Azure Cost Management and Billing.
 
 
-**Cost Management and Billing** significantly improve the technical performance of your business workloads. It can also reduce your costs and the overhead required to manage organizational assets. Cost Management is a suite of tools provided by Microsoft that help you analyze, manage, and optimize the costs of your workloads. 
+**Cost Management and Billing** significantly improve the technical performance of your business workloads. It can also reduce your costs and the overhead required to manage organizational assets. Cost Management is a suite of tools provided by Microsoft that helps you analyze, manage, and optimize the costs of your workloads. 
 
 With advanced analytics, Cost Management reveals corporate cost and use patterns. The usage-based charges incurred by Azure services and third-party Marketplace offerings are displayed in Cost Management reports.
 
@@ -33,13 +33,13 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
  * **Currently selected view:** This represents the predefined cost analysis view configuration. Each view includes date range, granularity, group by, and filter settings. The default view shows the current billing period's total combined costs, but you can switch to one of the other built-in views.
 
- * **Cost (1):** Shows the total usage and purchase costs for the current month, as they're accrued and will show on your bill. Costs are estimated until the invoice is generated and do not factor in credits. Pay-as-you-go subscriptions only include usage costs.
+ * **Cost (1):** Shows the total usage and purchase costs for the current month, as they're accrued and will appear on your bill. Costs are estimated until the invoice is generated and do not factor in credits. Pay-as-you-go subscriptions only include usage costs.
 
- * **Forecast (2):** Shows the total forecasted costs for time period you choose. The Forecast is based on usage for the selected time period and does not account for purchases. Changes in usage may take up to a week to be reflected.
+ * **Forecast (2):** Shows the total forecasted costs for the time period you choose. The Forecast is based on usage for the selected time period and does not account for purchases. Changes in usage may take up to a week to be reflected.
 
  * **Budget (if selected) (3):** Shows the planned spending limit for the selected scope, if available.
 
- * **Accumulated granularity (4):** Shows the total aggregate daily costs, from the beginning of the billing period. You can easily monitor your spending trend versus the budget after creating a budget for your billing account or subscription. Hover over a date to view the accumulated cost for that day.
+ * **Accumulated granularity (4):** Shows the total aggregate daily costs from the beginning of the billing period. You can easily monitor your spending trend versus the budget after creating a budget for your billing account or subscription. Hover over a date to view the accumulated cost for that day.
 
  * **Pivot (donut) charts (5):** These charts provide dynamic pivots, breaking down the total cost by a common set of standard properties. They show the largest to smallest costs for the current month.
 
@@ -47,11 +47,11 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
  > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when the forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
 
-5. You can play with different filters provided here to analyze the cost, such as:
+5. You can play with the different filters provided here to analyze the cost, such as:
 
  * **View:** Cost analysis has four built-in views; they are as follows:
    1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
-   2. **Daily cost -** Have there been any increases in the costs per day for the last 30 days?
+   2. **Daily cost -** Have there been any increases in the cost per day for the last 30 days?
    3. **Cost by service -**	How has my monthly usage varied over the past three invoices?
    4. **Cost by resource -**	Which resources cost the most so far this month?
    5. **Invoice details -**	What charges did I have on my last invoice?
@@ -75,7 +75,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costopt-35.png)
 
-5. You can export cost data to CSV file to do a cost analysis.
+5. You can export cost data to a CSV file to do a cost analysis.
 
 6. In the **Cost Analysis (1)** section, click on **Cost by resource (2)** drop down and select **Resource groups(preview) (3)**.
 
@@ -85,7 +85,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costupd-17.png)
 
-8. On the Download page, select **Excel (1)**, check the **Include nested data (2)** checkbox to get data for all the resources falling under the respective resource groups. At last, click on **Download (3)**.
+8. On the Download page, select **Excel (1)**, check the **Include nested data (2)** checkbox to get data for all the resources falling under the respective resource groups. Finally, click on **Download (3)**.
 
    ![](./media/costupd-18.png)
 
@@ -99,10 +99,10 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    - Username: **<inject key="AzureAdUserEmail"></inject>**
    - Password: **<inject key="AzureAdUserPassword"></inject>**
-   - If you are presented with **Help us protect your account** dialog box, then select **Skip for now** option.
+   - If you are presented with the **Help us protect your account** dialog box, then select the **Skip for now** option.
    - If you see the pop-up **Stay Signed in?**, click **Yes**
 
-12. You will be directed to Excel homepage. Select **New blank workbook** here.
+12. You will be directed to the Excel homepage. Select **New blank workbook** here.
 
    ![](./media/costupd-29.png)
 
@@ -112,7 +112,7 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costupd-31.png)
 
-14. You will be taken to OneDrive, where you will upload the excel file that we just downloaded and then you will be able to view it. 
+14. You will be taken to OneDrive, where you will upload the excel file that we just downloaded, and then you will be able to view it. 
 
    ![](./media/costupd-32.png)
 
@@ -124,11 +124,11 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costupd-34.png)
    
-17. The data file get uploaded as shown in the image below.
+17. The data file gets uploaded as shown in the image below.
 
    ![](./media/costupd-35.png)
 
-18. Now click on the data file. It will load in a new tab and here you can view the cost data.
+18. Now click on the data file. It will load in a new tab, and here you can view the cost data.
 
    ![](./media/costupd-36.png)
 
@@ -138,8 +138,8 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
 Use the Start/Stop VMs during off-hours feature of virtual machines to minimize waste. The feature is suitable as a **low-cost automation** option. There are many configuration options to schedule the start and stop times. 
 
-Some ways to Start/stop VMs are:
-* From Azure portal, by going to each VM and start/stop it manually.
+Some ways to Start and Stop VMs are:
+* From the Azure portal, by going to each VM and start/stop it manually.
 * Using PowerShell/CLI
 * Enabling Autoshutdown for a VM
 * Using Azure Automation
@@ -150,7 +150,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-01.png)
 
-2. Open **wafprod** resource group and open the Automation account **DSC-xxxx**.
+2. Open the **wafprod** resource group and open the Automation account **DSC-xxxx**.
 
    ![](./media/costopt-06.png)
 
@@ -160,7 +160,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
  > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
 
-4. Fill in the details as following:
+4. Fill in the details as follows:
  
   * **Name:** Enter **stop-prod-vms (1)** in the name block.
   * **Runbook type:** Select **PowerShell (2)** from the dropdown.
@@ -198,7 +198,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costupd-04.png)
 
-11. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" enableCopy="True"/> and replace **[Your automation account Name]** with the name of the automation account you are using .
+11. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" enableCopy="True"/> and **[Your automation account Name]** with the name of the automation account you are using .
 
 ```
 $subscriptionID = "[Your SubscriptionID]"

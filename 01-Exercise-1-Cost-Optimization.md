@@ -115,7 +115,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-07.png)
 
- > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
+ > ⭐ **Good to know:**  Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
 
 4. Fill in the details as following:
  

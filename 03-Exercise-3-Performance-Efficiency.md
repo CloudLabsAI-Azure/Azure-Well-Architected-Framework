@@ -271,4 +271,6 @@ With SQL Insights, Azure customers will benefit from capabilities such as:
 Azure customers will not incur costs for using SQL Insights directly. They will get charged for its activity in the Log Analytics workspace (data ingested from agents and stored in the workspace) and any alerts and notifications configured on the log data. The service is currently in preview for SQL Databases from version 2012 and up, SQL Managed Instance, and SQL Server on Azure Virtual Machines.
 
 
+Now, click on the **Next** from lower right corner to move on next page.
+
 

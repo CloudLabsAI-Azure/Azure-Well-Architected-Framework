@@ -10,11 +10,11 @@ It covers the operations and processes that keep an application running in produ
 
 ### Task 1: DevOps
 
-To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates.Complex issue may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
+To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates. Complex issues may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
  
 Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
 
-Thre different types of automation includes:
+The different types of automation includes:
 
 #### 1. Infrastructure deployment:
 
@@ -26,13 +26,10 @@ As businesses move to the cloud, they need to repeatedly deploy their solutions 
  * Azure Bicep
  * Terraform
 
--You can automate ARM Template deployment from Azure DevOps. Without going deeper, let's see what is the basic workflow.
-
-
 
 #### 2. Infrastructure configuration
 
-If you don't manage configuration carefully, your business could encounter disruptions such as systems outages and security issues. Optimal configuration can enable you to quickly detect and correct configurations that could interrupt or slow performance.
+If you don't manage configuration carefully, your business could encounter disruptions such as system outages and security issues. Optimal configuration can enable you to quickly detect and correct configurations that could interrupt or slow performance.
 
 - When creating new resources on Azure, you may take advantage of configuration as code to bootstrap the deployment.
 
@@ -44,7 +41,7 @@ As the demand for speed in performing operational tasks increases over time, you
 
 To meet on-demand delivery using an automation platform, you need to develop automation components (such as runbooks and configurations), create integrations to systems that are already in place efficiently, and operate and troubleshoot.
 
-Advantages of automating operational tasks include:
+The advantages of automating operational tasks include:
 
  * Optimize and extend existing processes.
  * Deliver flexible and reliable services.
@@ -64,13 +61,13 @@ In this task, you will be creating an automated workflow that integrates two ser
 
    ![](media/op-02.png)
    
-3. In a new tab, browse to the below given URL. This template creates a Consumption logic app workflow that uses the built-in Recurrence trigger, which is set to run every hour, and a built-in HTTP action, which calls a URL that returns the status for Azure. Built-in operations run natively on Azure Logic Apps platform.
+3. In a new tab, browse to the below given URL. This template creates a Consumption logic app workflow that uses the built-in Recurrence trigger, which is set to run every hour, and a built-in HTTP action, which calls a URL that returns the status for Azure. Built-in operations run natively on the Azure Logic Apps platform.
 
 ```https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/logicapp.json```
 
    ![](media/op-06.png)
 
-4. Copy the whole ARM Template and paste in the Edit template console, and click on **Save**.
+4. Copy the whole ARM Template and paste it in the Edit template console, then click on **Save**.
 
    ![](media/op-03.png)
 
@@ -98,7 +95,7 @@ In this task, you will be creating an automated workflow that integrates two ser
  
   > **Note:** Click on **OK** when asked for **Discard changes**.
   
-9. Scroll down to Templates section and select **Blank Logic App**.
+9. Scroll down to the Templates section and select **Blank Logic App**.
 
    ![](media/op-09.png)
 
@@ -132,7 +129,7 @@ In this task, you will be creating an automated workflow that integrates two ser
 
     ![](media/Ex2-t2-10.png)
 
-15. On the designer toolbar, select **Save** to save your logic app. .
+15. On the designer toolbar, select **Save** to save your logic app.
 
     ![](media/Ex2-t2-11.png)
     
@@ -147,7 +144,7 @@ In this task, you will be creating an automated workflow that integrates two ser
 
 ### Task 3: Monitor 
 
-After you create and run a Consumption logic app workflow, you can check that workflow's run status, trigger history, runs history, and performance. To get notifications about failures or other possible problems, set up alerts. In this task we will perform all the operations such as creating alerts, checking on the run status and trigger history.
+After you create and run a Consumption logic app workflow, you can check that workflow's run status, trigger history, runs history, and performance. To get notifications about failures or other possible problems, set up alerts. In this task we will perform all the operations such as creating alerts, checking on the run status, and trigger history.
 
 
 1. In the Azure search box, enter **logic apps (1)**, and select **Logic apps (2)**.
@@ -168,7 +165,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    ![](media/Ex3-task1-03.png)
    
-6. Go back to the logic app **Overview** pane and select **Runs history**. Under **Runs history**, you can see all the past, current, and any waiting runs appear.
+6. Go back to the logic app's **Overview** pane and select **Runs history**. Under **Runs history**, you can see all the past, current, and any waiting runs appear.
 
    ![](media/Ex3-task1-04.png)
    
@@ -190,7 +187,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
     ![](media/Ex3-task1-09.png)
     
-11. On the **Select a signal** pane, in the **Signal name** column, find and select the **Triggers Failed** signal.
+11. In the **Select a signal** pane, in the **Signal name** column, find and select the **Triggers Failed** signal.
 
     ![](media/Ex3-task1-10.png)
     
@@ -226,7 +223,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
      ![](media/Ex3-task1-14.png)
     
 
-### Task 4: Processes and cadence 
+### Task 4: Processes and Cadence 
 
 Anytime you create a project, you must choose a process or process template based on the process model selected for your organization or collection. The work tracking objects contained within the default processes and process templates are Basic, Agile, CMMI, and Scrum.
 
@@ -277,7 +274,7 @@ You can always choose the process that provides the best fit for your team.
 
      ![](media/policy02.png)
      
-3. Click on **Load file (1)** option on the edit template page. From the **C;\LabFiles (2)** directory, select **azpolicy-addtag.json (3)** file and click on **Open (4)**.
+3. Click on **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **azpolicy-addtag.json (3)** file and click on **Open (4)**.
 
      ![](media/policy03.png)
 
@@ -296,7 +293,7 @@ You can always choose the process that provides the best fit for your team.
 
    ![](media/policy05.png)
 
-6. At last, click on **Create**.
+6. Finally, click on **Create**.
 
    ![](media/policy06.png)
    
@@ -325,7 +322,7 @@ You can always choose the process that provides the best fit for your team.
     ![](media/policy12.png)
 
 
-13. Check the button with **Create a remediation task** option under **Remediation**. Select **Review + Save** followed by **Save**.
+13. Check the button with **Create a remediation task** option under **Remediation**. Select **Review + Save**, followed by **Save**.
 
     ![](media/policy13.png)
 
@@ -349,7 +346,7 @@ You can always choose the process that provides the best fit for your team.
 
       ![](media/policy17.png)
     
-18. At the prompt, enter the following powershell command to retrieve all the resouces with the specified tags. Observe the tagname and tagvalue under each resource in output section.
+18. At the prompt, enter the following PowerShell command to retrieve all the resources with the specified tags. Observe the tagname and tagvalue under each resource in the output section.
 
    ```
    Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
@@ -382,20 +379,20 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
    ![](./media/costupd-04.png)
 
-4. Copy the following command in a text editor, to enable automatic VM guest patching for your Azure virtual machines. Here we will work with **wafproxxxx** virtual machine from **wafprod** resource group.
+4. Copy the following command into a text editor to enable automatic VM guest patching for your Azure virtual machines. Here we will work with the **wafproxxxx** virtual machine from the **wafprod** resource group.
 
  ```
  az vm update --resource-group [resource group name] --name [virtual amchine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
  ```
 
-5. Replace **[resource group name]** and **[virtual amchine name]** with **wafprod** and **wafproxxxx** virtual machine name, respectively. The command will look similar to the below.
+5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxx** virtual machine name, respectively. The command will look similar to the below.
 
  ```
  az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
  ```
 > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
-6. Paste the command and hit enter. You will see the output once the command is executed succesfully.
+6. Paste the command and hit enter. You will see the output once the command is executed successfully.
 
    ![](./media/op-upd-11.png)
 
@@ -413,11 +410,11 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
    ![](./media/op-upd-12.png)
 
-10. Scroll down to view patch setting in windows configuration. It shows that automatic updates are enabled now.
+10. Scroll down to view patch settings in windows configuration. It shows that automatic updates are enabled now.
 
    ![](./media/op-upd-13.png)
 
-11. Now, click on the **Next** from lower right corner to move on next page.
+11. Now, click on the **Next** button from lower right corner to move to the next page.
 
 
 

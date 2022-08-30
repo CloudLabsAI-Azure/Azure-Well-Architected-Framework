@@ -320,6 +320,8 @@ In this task, you will learn how to initiate an account failover for your storag
 
 11. After the failover, your storage account type is automatically converted to locally redundant storage (LRS) in the new primary region. 
 
+12. Now, click on the **Next** from lower right corner to move on next page.
+
 
 
 

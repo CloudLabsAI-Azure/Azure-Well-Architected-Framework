@@ -89,7 +89,50 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costupd-18.png)
 
-9. A CSV file will get downloaded. Open it and you can review that data. Exported data is in CSV format and it contains all the information that's collected by Cost Management. You can then use the exported data and combine it with your own custom data. Also, you can use the exported data in an external system like a dashboard or other financial system.
+9. A CSV file will get downloaded.
+
+   ![](./media/costupd-28.png)
+
+10. Now to view the CSV file, browse to ``` https://www.office.com/launch/excel?ui=en-US&rs=US&auth=2 ```
+
+11. Sign in by providing the following:
+
+   - Username: **<inject key="AzureAdUserEmail"></inject>**
+   - Password: **<inject key="AzureAdUserPassword"></inject>**
+   - If you are presented with **Help us protect your account** dialog box, then select **Skip for now** option.
+   - If you see the pop-up **Stay Signed in?**, click **Yes**
+
+12. You will be directed to Excel homepage. Select **New blank workbook** here.
+
+   ![](./media/costupd-29.png)
+
+13. Click on **File (1)** in the top left corner, click on **Open (2)** and select **View more files (3)**.
+
+   ![](./media/costupd-30.png)
+
+   ![](./media/costupd-31.png)
+
+14. You will be taken to OneDrive, where you will upload the excel file that we just downloaded and then you will be able to view it. 
+
+   ![](./media/costupd-32.png)
+
+15. Click on **Upload** and select **Files**.
+
+   ![](./media/costupd-33.png)
+
+16. Select the cost data file you downloaded and click on **Open**.
+
+   ![](./media/costupd-34.png)
+   
+17. The data file get uploaded as shown in the image below.
+
+   ![](./media/costupd-35.png)
+
+18. Now click on the data file. It will load in a new tab and here you can view the cost data.
+
+   ![](./media/costupd-36.png)
+
+ > ⭐ Tip: You can then use the exported data and combine it with your own custom data. Also, you can use the exported data in an external system like a dashboard or other financial system.
 
 ### **Task 2: Shutdown**
 
@@ -115,7 +158,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-07.png)
 
- > ⭐ **Good to know:**  Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
+ > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
 
 4. Fill in the details as following:
  

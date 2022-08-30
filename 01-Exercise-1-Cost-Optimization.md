@@ -764,7 +764,7 @@ Here's an architecture of the workload on both IaaS and PaaS:
    ![](./media/costopt-36.png)
 
 
-
+Now, click on the **Next** from lower right corner to move on next page.
 
 
 

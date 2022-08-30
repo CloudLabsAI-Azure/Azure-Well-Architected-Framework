@@ -607,7 +607,7 @@ This way, the admins can be alerted when the workload is using the services at c
 
 <br/>
 
-## **Note: Task 5, Task 6, and Task 7 are read-only tasks.**
+## **Note:** Task 5, Task 6, and Task 7 are read-only tasks.
 
 ### **Task 5: Azure Hybrid Benefit**
 

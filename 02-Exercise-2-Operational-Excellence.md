@@ -267,7 +267,6 @@ You can always choose the process that provides the best fit for your team.
 
 ### Task 2: Deployment [Replacement-Add Tag Policy]
 
-
 **Policy Remediation**
 
 1. In the Azure search box, enter **Deploy a custom template** and select it.
@@ -356,7 +355,74 @@ You can always choose the process that provides the best fit for your team.
    Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
    ```
    
-   
    ![](media/policy18.png)
 
    
+### Task 4: [Replacement] Configure Azure Automatic VM guest OS patching 
+
+Enabling automatic VM guest patching for your Azure VMs helps ease update management by safely and automatically patching virtual machines to maintain security compliance.
+
+ - Patches categorised as Critical or Security are downloaded and installed on the VM automatically.
+ - Azure oversees patch orchestration, and availability-first principles are used to apply patches.
+ - Patches are installed during off-peak times in the time zone of the VM.
+ - Patching failures are tracked by monitoring virtual machine health, as defined by platform health signals.
+ - Ideal for all VM sizes.
+
+In this task, you will learn how to enable Azure Automatic VM guest OS patching.
+
+1. In the Azure portal, select the Azure **Cloud Shell** icon from the top menu.
+
+   ![](./media/costupd-12.png)
+
+2. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
+
+   ![](./media/costupd-13.png)
+
+3. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
+
+   ![](./media/costupd-04.png)
+
+4. Copy the following command in a text editor, to enable automatic VM guest patching for your Azure virtual machines. Here we will work with **wafproxxxx** virtual machine from **wafprod** resource group.
+
+ ```
+ az vm update --resource-group [resource group name] --name [virtual amchine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
+ ```
+
+5. Replace **[resource group name]** and **[virtual amchine name]** with **wafprod** and **wafproxxxx** virtual machine name, respectively. The command will look similar to the below.
+
+ ```
+ az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
+ ```
+> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+
+6. Paste the command and hit enter. You will see the output once the command is executed succesfully.
+
+   ![](./media/op-upd-11.png)
+
+7. To verify whether automatic VM guest patching has completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
+
+  ``` az vm get-instance-view --resource-group test-autopatch-rg --name [virtual amchine name] ```
+
+8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the below.
+
+  ``` az vm get-instance-view --resource-group test-autopatch-rg --name wafprok4syndc ```
+
+> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+
+9. Paste the command and hit enter. You will see the output once the command is executed succesfully.
+
+   ![](./media/op-upd-12.png)
+
+10. Scroll down to view patch setting in windows configuration. It shows that automatic updates are enabled now.
+
+   ![](./media/op-upd-13.png)
+
+
+
+
+
+
+
+
+
+

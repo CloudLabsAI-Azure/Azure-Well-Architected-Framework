@@ -182,10 +182,8 @@ In this task, you will learn how to enable replication for virtual machines, run
    ![](./media/reliability-21.png)
    
 
-### **Task 3: Deploy consistently**
 
-
-### **Task 4: Monitor health** 
+### **Task 3: Monitor health** 
 
 **Service Health** provides a personalized view of the health of the Azure services and regions you're using. This is the best place to look for service impacting communications about outages, planned maintenance activities, and other health advisories because the authenticated Service Health experience knows which services and resources you currently use. 
 
@@ -266,7 +264,7 @@ In this task, you will set up **Service Health alerts** to notify you via your p
 
     ![](./media/ex4-task4-13.png)
 
-### **Task 5: Respond to failure and disaster** 
+### **Task 4: Respond to failure and disaster** 
 
 Azure services are always available, thanks to Microsoft's efforts. Unexpected service disruptions, on the other hand, are possible. If you need resiliency for your application, Microsoft advises employing geo-redundant storage, which replicates your data to a second location. Customers should also have a plan in place for dealing with a regional outage. An important part of a disaster recovery plan is preparing to fail over to the secondary endpoint in the event that the primary endpoint becomes unavailable.
 

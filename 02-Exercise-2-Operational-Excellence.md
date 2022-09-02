@@ -377,9 +377,6 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
    ![](./media/op-upd-13.png)
 
-11. Now, click on the **Next** button from lower right corner to move to the next page.
-
-
 ### Task 5: Processes and Cadence (Read-only task)
 
 Anytime you create a project, you must choose a process or process template based on the process model selected for your organization or collection. The work tracking objects contained within the default processes and process templates are Basic, Agile, CMMI, and Scrum.
@@ -419,6 +416,7 @@ You can always choose the process that provides the best fit for your team.
     ![](media/alm_pt_cmmi_wit_artifacts.png)
 
 
+Now, click on the **Next** button from lower right corner to move to the next page.
 
 
 

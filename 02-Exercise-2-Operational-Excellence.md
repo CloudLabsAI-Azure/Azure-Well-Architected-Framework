@@ -318,7 +318,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
      ![](media/Ex3-task1-14.png)
     
 
-### Task 4: [Replacement] Configure Azure Automatic VM guest OS patching 
+### Task 4: Configure Azure Automatic VM guest OS patching 
 
 Enabling automatic VM guest patching for your Azure VMs helps ease update management by safely and automatically patching virtual machines to maintain security compliance.
 

@@ -170,13 +170,13 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-08.png)
    
-5. Once the runbook is created, it will look similar to the screenshot below.
+5. Once the runbook is created, you will be directed to the **Edit PowerShell Runbook** page.
 
-   ![](./media/costupd-02.png)
+   ![](./media/costupd-38.png)
    
-6. In the Azure portal, select the Azure **Cloud Shell** icon from the top menu.
+6. Now leave the Edit PowerShell Runbook page open for later use, and select the Azure **Cloud Shell** icon from the top menu in the Azure portal..
 
-   ![](./media/costupd-12.png)
+   ![](./media/costupd-39.png)
 
 7. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
 

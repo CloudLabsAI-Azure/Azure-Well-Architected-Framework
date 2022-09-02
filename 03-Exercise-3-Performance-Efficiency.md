@@ -4,11 +4,10 @@
 
 Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. Scaling correctly and using PaaS products with scaling built-in are two of the most effective strategies to achieve performance efficiency.
 
-In this exercise, we will go through the given architecture and know more about:
+In this exercise, we will go through the given architecture and learn more about:
 
 * Can you provide a solution that scales to meet the public demand? How would this solution change in a PaaS architecture?
 * How can you improve the performance visibility and alerting? Are all the tiers covered?
-* Is there a more proactive approach?
 * Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
 
 
@@ -34,7 +33,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
    ![](./media/pe-04.png)
 
-5. Add the rule by providing following details:
+5. Add the rule by providing the following details:
 
 * **Metric Source:** Select **Current resource (srv) (1)** from the drop down
 * **Time aggregation:** Select **Average (2)**
@@ -72,13 +71,11 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
 
 
-
-
 ### **Task 2: Monitor performance**
 
-In this task, we will use VM insights and monitor the performance and health of your virtual machines including their running processes and dependencies on other resources. By locating performance bottlenecks and network problems, it can assist in ensuring the availability of critical applications and delivering predictable performance. It can also assist in determining whether a problem is connected to other dependencies.
+In this task, we will use VM insights to monitor the performance and health of your virtual machines, including their running processes and dependencies on other resources. By locating performance bottlenecks and network problems, it can assist in ensuring the availability of critical applications and delivering predictable performance. It can also assist in determining whether a problem is connected to other dependencies.
 
-The fact that VM insights keeps its data in Azure Monitor Logs enables it to provide powerful aggregation and filtering as well as to track data trends over time. Let's begin the process by creating a log analytics workspace.
+The fact that VM Insights keeps its data in Azure Monitor Logs enables it to provide powerful aggregation and filtering as well as track data trends over time. Let's begin the process by creating a log analytics workspace.
 
 1. In the Azure portal, search for log analytics workspaces and select **Log analytics workspaces** from the suggestions.
 
@@ -88,7 +85,7 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-13.png)
 
-3. Provide the project and instance details as follow:
+3. Provide the project and instance details as follows:
 
 * **Subscription:** Make sure your subscription is selected **by default (1)**.
 * **Resource group:** Select a resource group from the drop-down. Here we have selected **wafdev (2)**.
@@ -110,9 +107,11 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-17.png)
 
-7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group.
+7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group. 
 
-8. Click on **wafproxxxxx** virtual machine to open it and click on **Connect**. Follow the same process for other VMs from _wafprod_ resource group.
+> **Note:** Before performing the next step, **make sure that all the VMs are in running state**, in the respective resource group.
+
+8. Click on **wafproxxxxx** virtual machine to open it and click on **Connect**. Follow the same process for other VMs from the _wafprod_ resource group.
 
    ![](./media/pe-18.png)
 
@@ -148,7 +147,9 @@ The fact that VM insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-21.png)
 
-16. In this section, you can play with filters such **_Resource Group_** and **_Time Range_**. You will have graphical presentations for the following:
+> **Note:** Insights may take up to 30 minutes to reflect in the dashboard. You can continue the lab and come back to view the insights.
+
+16. In this section, you can play with filters such as **_Resource Group_** and **_Time Range_**. You will have graphical presentations for the following:
 
 * **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
 * **Available Memory -** shows the top five machines with the lowest average amount of available memory.
@@ -226,5 +227,49 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
     ![](./media/pe-32.png)
 
+# Read-only tasks
+
+### **Task 4: Application Insights**
+
+Azure application insights is a part of  Azure monitor service. It is one of the powerful tools which can help to diagnose, monitor and analyze your application. It can help in identifying anomalies and monitoring the performances of applications deployed anywhere irrespective of their technology.  Azure application insights can monitor the application deployed on Azure as well as it can monitor the application which is deployed on on-premises.
+
+For integrating the Azure Application Insights you need to install instrumentation package SDK (Standard development Kit) in your application. You can also integrate application insights just by enabling application insights agents if supported for your type of application.
+
+Application Insights monitors:
+
+* Request rates, response times, and failure rates.
+* Dependency rates, response times, and failure rates, to show whether external services are slowing down performance.
+* Analyze the aggregated statistics, or pick specific instances and drill into the stack trace and related requests. Application Insights reports both server and browser exceptions.
+* Page views and load performance reported by users' browsers.
+* User and session counts.
+* Performance counters from Windows or Linux server machines, such as CPU, memory, and network usage
+* Host diagnostics from Docker or Azure
+* Diagnostic trace logs from apps, so you can correlate trace events with requests
+* Custom events and metrics in client or server code that track business events, like items sold
+
+
+Application Insights is an incredibly useful tool for anyone who has an application or website and wants to track and manage all the info that’s put out there – who’s viewing what, what’s the most popular, etc.
+
+Application Insights is an application performance management service for web applications that enables you to do all the monitoring of your website performance in Azure. It’s designed to ensure you’re getting optimal performance and the best in class user experience from your website. It also has a powerful analytic tool that helps you diagnose issues and gain an understanding of how people are using your web application.
+
+### **Task 5: SQL Insights**
+
+SQL Insights is a remote, agent-based monitoring solution, which the Azure SQL and Azure Monitor teams at Microsoft developed in collaboration. The agent uses an open-source agent called Telegraf and supports SQL Server running on a Virtual Machine (VM), Azure SQL Database, and Azure SQL Managed Instances.
+
+The agent runs on dedicated monitoring virtual machines to remotely collect data for SQL PaaS and SQL IaaS deployments. Furthermore, SQL Insights stores its data in Azure Monitor Logs (Workspace), allowing users to do aggregations, filtering, and data analysis. 
+
+With SQL Insights, Azure customers will benefit from capabilities such as:
+
+* Options to choose which data to collect 
+* Control the retention policy for the data 
+* Visualize data using Azure Monitor Workbooks
+* Create separate Data Collection Rules for every environment 
+* Integrate with open-source monitoring solutions (Telegraf) 
+* Surface over two hundred new metrics
+
+Azure customers will not incur costs for using SQL Insights directly. They will get charged for its activity in the Log Analytics workspace (data ingested from agents and stored in the workspace) and any alerts and notifications configured on the log data. The service is currently in preview for SQL Databases from version 2012 and up, SQL Managed Instance, and SQL Server on Azure Virtual Machines.
+
+
+Now, click on the **Next** from lower right corner to move on next page.
 
 

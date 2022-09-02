@@ -274,35 +274,53 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-23.png)
 
-2. Select the storage account **wafdevxxxxx**.
+2. Click on **+ Create**.
 
-   ![](./media/reliability-24.png)
+   ![](./media/reliability-30.png)
 
-   > **Note:** The storage account should be configured for geo-replication. Geo-replication is available for Geo-redundant (GRS) and Read access geo-redundant (RA-GRS) storage accounts. The storage account present in wafdevxxxx resource group is already configured with GRS so we are using it here.
-   > 
-   > You can also update the replication type of a storage account under Configuration to use this setting. **We will not perform this as on updating the configuration, failover will not be available. Initial data synchronization from the primary to secondary region will be in progress and can take up to an hour. Failover will be available when synchronization is complete.**
-   > 
-   > ![](./media/reliability-28.png)
+3. Provide following details to create the storage account:
 
-3. Now select **Geo-replication** present under _Data management_ and click on **Prepare for failover**.
+ - **Subscription:** Make sure your sunbscription is selected **by default (1)**
+ - **Resource group:** Select **wafdev (2)** from the drop down
+ - **Storage account name:** Give a unique name for the storage account **(3)**
+ - **Region:** Leave to default **(4)**
+ - **Performance:** Select **Standard (5)**
+ - **Redundancy:** Select **Geo-redundant storage(GRS) (6)** from the drop down
+ - At last, click on **Review (7)**
 
-   ![](./media/reliability-25.png)
+ > **Note:** The storage account should be configured with Geo-redundant storage, as Geo-replication is available for Geo-redundant (GRS) and Read access geo-redundant (RA-GRS) storage accounts.
+ 
+   ![](./media/reliability-31.png)
+
+4. Once the validation passes, click on **Create**.
+
+   ![](./media/reliability-32.png)
+
+5. After successful deployment of the storage account, click on **Go to resource**.
+
+   ![](./media/reliability-35.png)
+
+6. Now select **Geo-replication** present under _Data management_ and click on **Prepare for failover**.
+
+   ![](./media/reliability-33.png)
    
-4. Enter **YES** for _'Confirm Failover'_ and click on **Failover**. The Last Sync Time property here, indicates how far the secondary is behind from the primary. Last Sync Time provides an estimate of the extent of data loss that you will experience after the failover is completed.
+7. Enter **YES** for _'Confirm Failover'_ and click on **Failover**. The Last Sync Time property here, indicates how far the secondary is behind from the primary. Last Sync Time provides an estimate of the extent of data loss that you will experience after the failover is completed.
 
    ![](./media/reliability-26.png)
 
-5. Once the failover begins, you will see a notification saying _Failover in progress_. This will take up to an hour to succeed.
+8. Once the failover begins, you will see a notification saying _Failover in progress_. This will take up to an hour to succeed.
 
    ![](./media/reliability-27.png)
 
-6. After the failover is performed, go to **Geo-replication** present under _Data management_. You will see that Central US is updated the as primary endpoint.
+9. After the failover is performed, go to **Geo-replication** present under _Data management_. You will see that Central US is updated the as primary endpoint.
 
-   ![](./media/reliability-29.png)
+   ![](./media/reliability-34.png)
 
-7. Once the failover is complete, clients can begin writing to the new primary endpoint.
+10. Once the failover is complete, clients can begin writing to the new primary endpoint.
 
-8. After the failover, your storage account type is automatically converted to locally redundant storage (LRS) in the new primary region. 
+11. After the failover, your storage account type is automatically converted to locally redundant storage (LRS) in the new primary region. 
+
+12. Now, click on the **Next** from lower right corner to move on next page.
 
 
 

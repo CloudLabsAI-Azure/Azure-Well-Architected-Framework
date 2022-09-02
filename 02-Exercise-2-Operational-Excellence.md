@@ -10,11 +10,11 @@ It covers the operations and processes that keep an application running in produ
 
 ### Task 1: DevOps
 
-To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates.Complex issue may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
+To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates. Complex issues may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
  
 Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
 
-Thre different types of automation includes:
+The different types of automation includes:
 
 #### 1. Infrastructure deployment:
 
@@ -26,13 +26,10 @@ As businesses move to the cloud, they need to repeatedly deploy their solutions 
  * Azure Bicep
  * Terraform
 
--You can automate ARM Template deployment from Azure DevOps. Without going deeper, let's see what is the basic workflow.
-
-
 
 #### 2. Infrastructure configuration
 
-If you don't manage configuration carefully, your business could encounter disruptions such as systems outages and security issues. Optimal configuration can enable you to quickly detect and correct configurations that could interrupt or slow performance.
+If you don't manage configuration carefully, your business could encounter disruptions such as system outages and security issues. Optimal configuration can enable you to quickly detect and correct configurations that could interrupt or slow performance.
 
 - When creating new resources on Azure, you may take advantage of configuration as code to bootstrap the deployment.
 
@@ -44,7 +41,7 @@ As the demand for speed in performing operational tasks increases over time, you
 
 To meet on-demand delivery using an automation platform, you need to develop automation components (such as runbooks and configurations), create integrations to systems that are already in place efficiently, and operate and troubleshoot.
 
-Advantages of automating operational tasks include:
+The advantages of automating operational tasks include:
 
  * Optimize and extend existing processes.
  * Deliver flexible and reliable services.
@@ -54,7 +51,106 @@ Advantages of automating operational tasks include:
 
 ### Task 2: Deployment
 
+In this task, you will learn to deploy and implement Azure Policy using ARM Template. Here, you will be working with "Add a tag to resources" policy. You can add tags to your Azure resources as metadata items. They are key-value pairs that help you in finding resources based on conditions that matter to your organization. 
+
+Add a tag to resources policy puts tags on resources that are newly created under your subscription/resource group. For existing resources, you can remediate those by triggering a remediation task. In addition, you will see how to run remediation tasks for existing resources in your workload.
+
+1. In the Azure search box, enter **Deploy a custom template** and select it.
+
+     ![](media/policy01.png)
+
+2. On the Custom deployment page, click on **Build your own template** in the editor.
+
+     ![](media/policy02.png)
+     
+3. Click on **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **azpolicy-addtag.json (3)** file and click on **Open (4)**.
+
+     ![](media/policy03.png)
+
+4. Go through the whole ARM Template in the Edit template console, and click on **Save**.
+
+     ![](media/policy04.png)
+
+5. On the Custom deployment page, on the Basics tab,  provide the following details.
+
+   * **Subscription**: Subscription will be selected by default.
+   * **Resource Group**: Select **waf-prod (2)** from the drop down.
+   * **Tag Name**:  Enter **environment (3)**. You can give a name of your choice too.
+   * **Tag Value**:  Enter **production (4)**. You can give a name of your choice too.
+   * Leave all the other values as default and click on **Review + Create (5)**.
+
+
+   ![](media/policy05.png)
+
+6. Finally, click on **Create**.
+
+   ![](media/policy06.png)
+   
+7. In the Azure search box, enter **Resource groups** and select it.
+   
+    ![](media/policy07.png)
+
+8. From the left navigation pane, select **policies** under settings.
+
+    ![](media/policy08.png)
+
+9. On the **Policy** pane, click on **Assignments** section and observe that the policy with name **Add a tag to resources** is assigned to the wafprod resource group.
+
+    ![](media/policy09.png)
+    
+10. Click on **Add a tag to resources** policy and observe the **tagName** and **tagValue** in the parameters section of the policy.
+
+    ![](media/policy10.png)
+    
+11. On the **Policy** page, click on **compliance** and select the tag **Add a tag to resources**.
+
+    ![](media/policy11.png)
+
+12. On the add a tag to resources page, click on **edit assignment**.
+
+    ![](media/policy12.png)
+
+
+13. Check the button with **Create a remediation task** option under **Remediation**. Select **Review + Save**, followed by **Save**.
+
+    ![](media/policy13.png)
+
+14. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
+
+      ![](media/policy14.png)
+
+
+> **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
+    
+15. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
+
+     ![](media/policy15.png)
+
+
+16. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
+
+      ![](media/policy16.png)
+
+17. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
+
+      ![](media/policy17.png)
+    
+18. At the prompt, enter the following PowerShell command to retrieve all the resources with the specified tags. Observe the tagname and tagvalue under each resource in the output section.
+
+   ```
+   Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
+   ```
+   
+   ![](media/policy18.png)
+
+
+### Task 3: Monitor 
+
 In this task, you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app. The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
+
+After you create and run a Consumption logic app workflow, you can check that workflow's run status, trigger history, runs history, and performance. To get notifications about failures or other possible problems, set up alerts. In this task we will perform all the operations such as creating alerts, checking on the run status, and trigger history.
+
+#### **A. Create a Logic App**
 
 1. In the Azure search box, enter **Deploy a custom template** and select it.
 
@@ -63,50 +159,49 @@ In this task, you will be creating an automated workflow that integrates two ser
 2. On the Custom deployment page, click on **Build your own template in the editor**.
 
    ![](media/op-02.png)
-   
-3. In a new tab, browse to the below given URL. This template creates a Consumption logic app workflow that uses the built-in Recurrence trigger, which is set to run every hour, and a built-in HTTP action, which calls a URL that returns the status for Azure. Built-in operations run natively on Azure Logic Apps platform.
 
-```https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Azure-Well-Architected-Framework/main/logicapp.json```
+3. Click on the **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **logicapp.json (3)** file and click on **Open (4)**.
 
-   ![](media/op-06.png)
+   ![](media/op-upd-15.png)
 
-4. Copy the whole ARM Template and paste in the Edit template console, and click on **Save**.
+4. You can go through the whole ARM Template in the Edit template console. This template creates a Consumption logic app workflow that uses the built-in Recurrence trigger, which is set to run every hour, and a built-in HTTP action, which calls a URL that returns the status for Azure. Built-in operations run natively on the Azure Logic Apps platform. 
 
-   ![](media/op-03.png)
+5. After reviewing the template, click on **Save**.
 
+   ![](media/op-upd-16.png)
 
-5. On the **Custom deployment** page, on the Basics tab, provide the following details for your logic app:
+6. On the **Custom deployment** page, on the Basics tab, provide the following details for your logic app:
 
-   * **Subscription**: Subscription will be selected by default.
-   * **Resource Group**: Select **waf-prod (1)** from the drop down
-   * **Logic App name**: Enter **waf-logic-app (2)**. You can give a name of your choice too.
-   * Leave all the other values as default and click on **Review + Create (3)**.
+   * **Subscription**: Make sure the subscription is selected by default **(1)**.
+   * **Resource Group**: Select **wafprod (2)** from the drop down 
+   * **Logic App name**: Enter **waf-logic-app (3)**. You can give a name of your choice too.
+   * Leave all the other values as default and click on **Review + Create (4)**.
     
-   ![](media/op-04.png)
+   ![](media/op-upd-17.png)
    
-6. At last, click on **Create**.
+7. At last, click on **Create**.
 
    ![](media/op-05.png)
 
-7. After Azure successfully deploys your app, select **Go to resource**.
+8. After Azure successfully deploys your app, select **Go to resource**.
 
    ![](media/op-07.png)
    
-8. Select Logic App Designer from the left pane and click on **Templates**. 
+9. Select Logic App Designer from the left pane and click on **Templates**. 
 
    ![](media/op-08.png)
  
   > **Note:** Click on **OK** when asked for **Discard changes**.
   
-9. Scroll down to Templates section and select **Blank Logic App**.
+10. Scroll down to the Templates section and select **Blank Logic App**.
 
    ![](media/op-09.png)
 
-10. In the designer search box, select **All** and enter **rss**. From the Triggers list, select the RSS trigger, **When a feed item is published**.
+11. In the designer search box, select **All** and enter **rss**. From the Triggers list, select the RSS trigger, **When a feed item is published**.
  
    ![](media/Ex2-t2-06.png)
    
-11. Provide the following information in the trigger details page:
+12. Provide the following information in the trigger details page:
 
     * **The RSS feed URL**: `https://feeds.a.dj.com/rss/RSSMarketsMain.xml` (1)
     * **Chosen property will be used to determine**: PublishDate (2)
@@ -116,15 +211,15 @@ In this task, you will be creating an automated workflow that integrates two ser
 
    ![](media/Ex2-t2-07.png)
    
-12. Enter `Send an email (V2)` in the filter box, then select the **Send an email (V2)** action for Office 365 Outlook.
+13. Enter `Send an email (V2)` in the filter box, then select the **Send an email (V2)** action for Office 365 Outlook.
 
    ![](media/Ex2-t2-8.png)
    
-13. Select **Sign in** and sign in to your Office 365 Outlook account.
+14. Select **Sign in** and sign in to your Office 365 Outlook account.
 
    ![](media/Ex2-t2-09.png)
    
-14. In the Send an email form, provide the following values:
+15. In the Send an email form, provide the following values:
 
     * Enter your email address in the **To** box.
     * **Subject**: Enter **New RSS item:** and from the Add dynamic content list, under When a feed item is published, select **Feed title**.
@@ -132,23 +227,20 @@ In this task, you will be creating an automated workflow that integrates two ser
 
     ![](media/Ex2-t2-10.png)
 
-15. On the designer toolbar, select **Save** to save your logic app. .
+16. On the designer toolbar, select **Save** to save your logic app.
 
     ![](media/Ex2-t2-11.png)
     
-16. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
+17. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
 
      ![](media/Ex2-t2-12.png)
    
-17. The following screenshot shows a sample email that's sent by the workflow.
+18. The following screenshot shows a sample email that's sent by the workflow.
 
     ![](media/Ex2-t2-13.png)
 
 
-### Task 3: Monitor 
-
-After you create and run a Consumption logic app workflow, you can check that workflow's run status, trigger history, runs history, and performance. To get notifications about failures or other possible problems, set up alerts. In this task we will perform all the operations such as creating alerts, checking on the run status and trigger history.
-
+#### **B. Monitor the Workflow of the Logic App**
 
 1. In the Azure search box, enter **logic apps (1)**, and select **Logic apps (2)**.
 
@@ -168,7 +260,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    ![](media/Ex3-task1-03.png)
    
-6. Go back to the logic app **Overview** pane and select **Runs history**. Under **Runs history**, you can see all the past, current, and any waiting runs appear.
+6. Go back to the logic app's **Overview** pane and select **Runs history**. Under **Runs history**, you can see all the past, current, and any waiting runs appear.
 
    ![](media/Ex3-task1-04.png)
    
@@ -190,7 +282,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
     ![](media/Ex3-task1-09.png)
     
-11. On the **Select a signal** pane, in the **Signal name** column, find and select the **Triggers Failed** signal.
+11. In the **Select a signal** pane, in the **Signal name** column, find and select the **Triggers Failed** signal.
 
     ![](media/Ex3-task1-10.png)
     
@@ -226,7 +318,66 @@ After you create and run a Consumption logic app workflow, you can check that wo
      ![](media/Ex3-task1-14.png)
     
 
-### Task 4: Processes and cadence 
+### Task 4: Configure Azure Automatic VM guest OS patching 
+
+Enabling automatic VM guest patching for your Azure VMs helps ease update management by safely and automatically patching virtual machines to maintain security compliance.
+
+ - Patches categorised as Critical or Security are downloaded and installed on the VM automatically.
+ - Azure oversees patch orchestration, and availability-first principles are used to apply patches.
+ - Patches are installed during off-peak times in the time zone of the VM.
+ - Patching failures are tracked by monitoring virtual machine health, as defined by platform health signals.
+ - Ideal for all VM sizes.
+
+In this task, you will learn how to enable Azure Automatic VM guest OS patching.
+
+1. In the Azure portal, select the Azure **Cloud Shell** icon from the top menu.
+
+   ![](./media/costupd-12.png)
+
+2. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
+
+   ![](./media/costupd-13.png)
+
+3. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
+
+   ![](./media/costupd-04.png)
+
+4. Copy the following command into a text editor to enable automatic VM guest patching for your Azure virtual machines. Here we will work with the **wafproxxxx** virtual machine from the **wafprod** resource group.
+
+ ```
+ az vm update --resource-group [resource group name] --name [virtual amchine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
+ ```
+
+5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxx** virtual machine name, respectively. The command will look similar to the below.
+
+ ```
+ az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
+ ```
+> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+
+6. Paste the command and hit enter. You will see the output once the command is executed successfully.
+
+   ![](./media/op-upd-11.png)
+
+7. To verify whether automatic VM guest patching has completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
+
+  ``` az vm get-instance-view --resource-group test-autopatch-rg --name [virtual amchine name] ```
+
+8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the below.
+
+  ``` az vm get-instance-view --resource-group test-autopatch-rg --name wafprok4syndc ```
+
+> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+
+9. Paste the command and hit enter. You will see the output once the command is executed succesfully.
+
+   ![](./media/op-upd-12.png)
+
+10. Scroll down to view patch settings in windows configuration. It shows that automatic updates are enabled now.
+
+   ![](./media/op-upd-13.png)
+
+### Task 5: Processes and Cadence (Read-only task)
 
 Anytime you create a project, you must choose a process or process template based on the process model selected for your organization or collection. The work tracking objects contained within the default processes and process templates are Basic, Agile, CMMI, and Scrum.
 
@@ -263,6 +414,11 @@ You can always choose the process that provides the best fit for your team.
 - This process supports formal change management activities. Tasks support tracking Original Estimate, Remaining Work, and Completed Work.
 
     ![](media/alm_pt_cmmi_wit_artifacts.png)
+
+
+Now, click on the **Next** button from lower right corner to move to the next page.
+
+
 
 
 

@@ -384,7 +384,9 @@ VM Insights show the following utilization charts shown on the **Performance** p
  > ⭐ Good to know: <br>
  > For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings!
  
- 
+> You can follow the same process to resize all the virtual machines in your workload, to optimize the cost.
+
+
  #### **Subtask 2: Storage Account** 
  
 

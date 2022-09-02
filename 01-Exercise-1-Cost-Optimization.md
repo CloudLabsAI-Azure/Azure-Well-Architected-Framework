@@ -333,7 +333,7 @@ New-AzRoleAssignment -ObjectId "5478b50d-2da8-43f6-8672-6fe6da87d8d7" -Scope "/s
  > **Note:** Click on **Refresh** if the VMs don't reflect the latest status.
 
 
-### **Task 3: Resize a Virtual Machine**
+### **Task 3: Resize the Azure resources**
 
 
 #### **Subtask 1: Virtual machine**

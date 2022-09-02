@@ -366,7 +366,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
 5. On the **Insights** page observe the performance under **performance** section.
 
-   ![](./media/insight.gif)
+   ![](./media/insights1.gif)
   
   > **Note:** It can take between 5-10 minutes to configure the virtual machine and the monitoring data to appear.
 

@@ -234,7 +234,7 @@ $output
 
 17. Now assign role to the managed identity you just created. It will allow the automation account to access the Azure resources.
 
-18. Copy and paste the following command in a text editor and replace the **ObjectID** with the value you copied in Step 12, same task.
+18. Copy and paste the following command in a text editor and replace the **ObjectID** with the value you copied in Step 16, same task.
 
 ```
 New-AzRoleAssignment -ObjectId "[ObjectID]" -Scope "/subscriptions/$subscriptionID/resourceGroups/$resourceGroup" -RoleDefinitionName "Contributor"

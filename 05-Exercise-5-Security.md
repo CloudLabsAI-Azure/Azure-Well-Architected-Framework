@@ -103,7 +103,7 @@ In this task, you will learn how to control access to the Azure resources that y
    
    ![](./media/activity2.png)
    
-9. Once the filter is applied and you are able to see all the operations from last month, then select **Export Activity Logs**.
+9. Once the filter is applied and you can see all the operations from last month, then select **Export Activity Logs**.
 
    ![](./media/export-activity.png)
    
@@ -208,7 +208,7 @@ In this task, you will create your own encryption key to protect the data in you
    - **Subscription**: Select your subscription **(1)**
    - **Resource group**: wafdev **(2)**
    - **Key vault name**: waf-keyvault{unique id} **(3)**
-   - click on **Next: Access policy (4)**
+   - Click on **Next: Access policy (4)**
   
     ![](./media/ex5-task4-09.png)
   
@@ -220,7 +220,7 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-05.png)
   
-8. On the **Create a key** page, fill the following details:
+8. On the **Create a key** page, fill in the following details:
 
    - **Options**: Generate **(1)**
    - **Name**: waf-key **(2)**
@@ -234,13 +234,13 @@ In this task, you will create your own encryption key to protect the data in you
 
    ![](./media/ex5-task4-07.png)
    
-10. Click on **Save** and wait until the changes to **Encryption** gets updated. Visit the encryption pane and observe the updated keys.
+10. Click on **Save** and wait until the changes to **Encryption** get updated. Visit the encryption pane and observe the updated keys.
 
     ![](./media/ex5-task4-08.png)
    
 **Data sovereignty**
 
-11. Type **policy** in the search box located on the top of the Azure Portal page and click on it.
+11. Type **policy** in the search box located at the top of the Azure Portal page and click on it.
 
     ![](./media/ex5-task4-10.png)
    
@@ -256,13 +256,13 @@ In this task, you will create your own encryption key to protect the data in you
 
     ![](./media/ex5-task4-13.png)
     
-15. Click on **...** on the **Basics** tab of **assign policy** page and select your subscription as the scope.
+15. Click on **...** on the **Basics** tab of the **assign policy** page and select your subscription as the scope.
 
     ![](./media/ex5-task4-14.png)
     
     ![](./media/ex5-task4-15.png)
     
-16. Click on **Next**, select your choice of location in the **Allowed locations** bar and click on **Review + create**.  
+16. Click on **Next**, select your choice of location in the **Allowed locations** bar, and click on **Review + create**.  
 
     ![](./media/ex5-task4-16.png)
  
@@ -277,7 +277,7 @@ In this task, we are going to perform integrated security monitoring for your wo
 
 **Exploring Secure Score**
 
-1. Type **Microsoft Defender** in the search box located on the top of the Azure Portal page and click on **Microsoft Defender for Cloud** to open it.
+1. Type **Microsoft Defender** in the search box located at the top of the Azure Portal page and click on **Microsoft Defender for Cloud** to open it.
 
    ![](./media/ex5-task5-01.png)
    
@@ -316,7 +316,7 @@ In this task, we are going to perform integrated security monitoring for your wo
 
      ![](./media/ex5-task5-07.png)
    
-8. The next important part is the Remediation Steps which contains the remediation logic where you can remediate the selected resource/s. To simplify remediation and improve your environment's security and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.
+8. The next important part is the Remediation Steps which contain the remediation logic where you can remediate the selected resource/s. To simplify remediation and improve your environment's security and increase your secure score, many recommendations include a Fix option. Fix helps you quickly remediate a recommendation on multiple resources.
 
 9. Under **Affected resources**, select the virtual machine with the name **wafdevXXX** on the Unhealthy resources and click on **Fix**. This will automatically apply the remediation to the selected resource.
 
@@ -355,8 +355,8 @@ In this task, we are going to perform integrated security monitoring for your wo
 
      > **Note**: It can take up to 5 minutes for the remediation to get successful. 
 
-17. Go to the **Recommendations** page and explore through other recommendations.
+17. Go to the **Recommendations** page and explore other recommendations.
 
-18. Now, click on the **Next** from lower right corner to move on next page.
+18. Now, click on the **Next** from the lower right corner to move on to the next page.
 
 

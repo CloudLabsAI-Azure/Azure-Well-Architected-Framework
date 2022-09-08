@@ -345,7 +345,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 4. Copy the following command into a text editor to enable automatic VM guest patching for your Azure virtual machines. Here we will work with the **wafproxxxx** virtual machine from the **wafprod** resource group.
 
  ```
- az vm update --resource-group [resource group name] --name [virtual amchine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
+ az vm update --resource-group [resource group name] --name [virtual machine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
  ```
 
 5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxx** virtual machine name, respectively. The command will look similar to the below.

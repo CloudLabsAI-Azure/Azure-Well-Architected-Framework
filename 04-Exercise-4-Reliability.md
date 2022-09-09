@@ -28,7 +28,7 @@ The following are some of the considerations you should make in Azure to improve
  
   - A **Service Level Agreement (SLA)**, is an availability target that represents a commitment to the performance and availability of the application.
   
-  - Understanding the SLA of individual components within the system is essential to define reliability targets. Knowing the SLA of dependencies will also provide a justification for additional spend when making the dependencies highly available and with proper support contracts.
+  - Understanding the SLA of individual components within the system is essential to define reliability targets. Knowing the SLA of dependencies will also provide a justification for additional spending when making the dependencies highly available and with proper support contracts.
   
   - Monitoring and measuring application availability is vital to qualifying overall application health and progress towards defined targets.
  
@@ -65,7 +65,7 @@ The following are some of the considerations you should make in Azure to improve
 
 ### **Task 2: Test with simulations and forced failovers** 
 
-In this task, you will learn how to enable replication for virtual machines, run a test failover to validate your replication and disaster recovery strategy, without any data loss or downtime.
+In this task, you will learn how to enable replication for virtual machines, run a test failover to validate your replication, and disaster recovery strategy, without any data loss or downtime.
 
 ### **a. Replicate a Virtual machine**
 
@@ -95,7 +95,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-06.png)   
 
- > **Note:** Use **Refresh** button in case the recovery service vault is not reflecting.
+ > **Note:** Use the **Refresh** button in case the recovery service vault is not reflecting.
 
 8. From the left pane, select **Site Recovery jobs** present under _Monitoring_. You will see all the jobs here with their status.
 
@@ -202,7 +202,7 @@ Service Health tracks four types of health events that may impact your resources
 In this task, you will set up **Service Health alerts** to notify you via your preferred communication channels when service issues, planned maintenance, or other changes may affect the Azure services and regions you use.
 
 
-1. Type **service** in the search box located on the top of the Azure Portal page and click on **Service Health** to open it.
+1. Type **service** in the search box located at the top of the Azure Portal page and click on **Service Health** to open it.
 
    ![](./media/ex4-task4-01.png)
    
@@ -210,7 +210,7 @@ In this task, you will set up **Service Health alerts** to notify you via your p
 
    ![](./media/ex4-task4-08.png)
 
-3. Click on **health history** from the left navigation pane and select the time range as **Last 3 months**. You will be able to see the inactive events such as service issues, upcoming planned maintenance, and health advisories.
+3. Click on **health history** from the left navigation pane and select the time range as **Last 3 months**. You will be able to see inactive events such as service issues, upcoming planned maintenance, and health advisories.
 
    ![](./media/ex4-task4-09.png)
    
@@ -278,9 +278,9 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-30.png)
 
-3. Provide following details to create the storage account:
+3. Provide the following details to create the storage account:
 
- - **Subscription:** Make sure your sunbscription is selected **by default (1)**
+ - **Subscription:** Make sure your subscription is selected **by default (1)**
  - **Resource group:** Select **wafdev (2)** from the drop down
  - **Storage account name:** Give a unique name for the storage account **(3)**
  - **Region:** Leave to default **(4)**
@@ -296,7 +296,7 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-32.png)
 
-5. After successful deployment of the storage account, click on **Go to resource**.
+5. After the successful deployment of the storage account, click on **Go to resource**.
 
    ![](./media/reliability-35.png)
 
@@ -320,7 +320,7 @@ In this task, you will learn how to initiate an account failover for your storag
 
 11. After the failover, your storage account type is automatically converted to locally redundant storage (LRS) in the new primary region. 
 
-12. Now, click on the **Next** from lower right corner to move on next page.
+12. Now, click on the **Next** button from the lower right corner to move on to the next page.
 
 
 

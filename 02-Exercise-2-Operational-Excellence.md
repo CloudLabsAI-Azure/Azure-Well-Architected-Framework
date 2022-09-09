@@ -10,17 +10,17 @@ It covers the operations and processes that keep an application running in produ
 
 ### Task 1: DevOps
 
-To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates. Complex issues may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
+To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates. Complex issues may not always be able to be identified on time. However, with good automation, detection of these issues should occur quickly.
  
 Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
 
-The different types of automation includes:
+The different types of automation include:
 
 #### 1. Infrastructure deployment:
 
 As businesses move to the cloud, they need to repeatedly deploy their solutions and know that their infrastructure is in a reliable state. To meet these challenges, you can automate deployments using a practice referred to as infrastructure as code. In code, you define the infrastructure that needs to be deployed.
 
--There are many deployment technologies you can use with Azure. Here are three examples that uses declarative approach:
+-There are many deployment technologies you can use with Azure. Here are three examples that use the declarative approach:
 
  * Azure Resource Manager (ARM) templates
  * Azure Bicep
@@ -51,7 +51,7 @@ The advantages of automating operational tasks include:
 
 ### Task 2: Deployment
 
-In this task, you will learn to deploy and implement Azure Policy using ARM Template. Here, you will be working with "Add a tag to resources" policy. You can add tags to your Azure resources as metadata items. They are key-value pairs that help you in finding resources based on conditions that matter to your organization. 
+In this task, you will learn to deploy and implement Azure Policy using ARM Template. Here, you will be working with the "Add a tag to resources" policy. You can add tags to your Azure resources as metadata items. They are key-value pairs that help you in finding resources based on conditions that matter to your organization. 
 
 Add a tag to resources policy puts tags on resources that are newly created under your subscription/resource group. For existing resources, you can remediate those by triggering a remediation task. In addition, you will see how to run remediation tasks for existing resources in your workload.
 
@@ -63,7 +63,7 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
      ![](media/policy02.png)
      
-3. Click on **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **azpolicy-addtag.json (3)** file and click on **Open (4)**.
+3. Click on the **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **azpolicy-addtag.json (3)** file and click on **Open (4)**.
 
      ![](media/policy03.png)
 
@@ -94,11 +94,11 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
     ![](media/policy08.png)
 
-9. On the **Policy** pane, click on **Assignments** section and observe that the policy with name **Add a tag to resources** is assigned to the wafprod resource group.
+9. On the **Policy** pane, click on the **Assignments** section and observe that the policy with the name **Add a tag to resources** is assigned to the wafprod resource group.
 
     ![](media/policy09.png)
     
-10. Click on **Add a tag to resources** policy and observe the **tagName** and **tagValue** in the parameters section of the policy.
+10. Click on the **Add a tag to resources** policy and observe the **tagName** and **tagValue** in the parameters section of the policy.
 
     ![](media/policy10.png)
     
@@ -111,16 +111,16 @@ Add a tag to resources policy puts tags on resources that are newly created unde
     ![](media/policy12.png)
 
 
-13. Check the button with **Create a remediation task** option under **Remediation**. Select **Review + Save**, followed by **Save**.
+13. Check the button with the **Create a remediation task** option under **Remediation**. Select **Review + Save**, followed by **Save**.
 
     ![](media/policy13.png)
 
-14. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
+14. Go back to the **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
 
       ![](media/policy14.png)
 
 
-> **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
+> **Note:** Wait until the **Remediation State** is successful. It can take up to 10 minutes for it to get completed.
     
 15. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
 
@@ -146,7 +146,7 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
 ### Task 3: Monitor 
 
-In this task, you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app. The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
+In this task, you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using the logic app. The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
 
 After you create and run a Consumption logic app workflow, you can check that workflow's run status, trigger history, runs history, and performance. To get notifications about failures or other possible problems, set up alerts. In this task we will perform all the operations such as creating alerts, checking on the run status, and trigger history.
 
@@ -156,7 +156,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    ![](media/op-01.png)
    
-2. On the Custom deployment page, click on **Build your own template in the editor**.
+2. On the **Custom deployment page**, click on **Build your own template in the editor**.
 
    ![](media/op-02.png)
 
@@ -201,7 +201,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
  
    ![](media/Ex2-t2-06.png)
    
-12. Provide the following information in the trigger details page:
+12. Provide the following information on the trigger details page:
 
     * **The RSS feed URL**: `https://feeds.a.dj.com/rss/RSSMarketsMain.xml` (1)
     * **Chosen property will be used to determine**: PublishDate (2)
@@ -260,7 +260,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    ![](media/Ex3-task1-03.png)
    
-6. Go back to the logic app's **Overview** pane and select **Runs history**. Under **Runs history**, you can see all the past, current, and any waiting runs appear.
+6. Go back to the logic app's **Overview** pane and select **Runs history**. Under **Runs history**, you can see all the past, current, and any waiting runs that appear.
 
    ![](media/Ex3-task1-04.png)
    
@@ -274,7 +274,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
    
    ![](media/Ex3-task1-07.png)
    
-9. Go back to your logic app menu, under **Monitoring**, select **Alerts**.
+9. Go back to your logic app menu, under **Monitoring**, and select **Alerts**.
 
    ![](media/Ex3-task1-08.png)
    
@@ -304,7 +304,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
     
 14. On the **details** page, provide the below details:
 
-    * **Subscription**: Select your default susbcription (1)
+    * **Subscription**: Select your default subscription (1)
     * **Resource Group**: waf-prod (2)
     * **Severity**: 3 - Informal (3)
     * **Alert rule name**: waf-alert (4)
@@ -322,7 +322,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
 Enabling automatic VM guest patching for your Azure VMs helps ease update management by safely and automatically patching virtual machines to maintain security compliance.
 
- - Patches categorised as Critical or Security are downloaded and installed on the VM automatically.
+ - Patches categorized as Critical or Security are downloaded and installed on the VM automatically.
  - Azure oversees patch orchestration, and availability-first principles are used to apply patches.
  - Patches are installed during off-peak times in the time zone of the VM.
  - Patching failures are tracked by monitoring virtual machine health, as defined by platform health signals.
@@ -348,7 +348,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
  az vm update --resource-group [resource group name] --name [virtual amchine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
  ```
 
-5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxx** virtual machine name, respectively. The command will look similar to the below.
+5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxx** virtual machine name, respectively. The command will look similar to the one below.
 
  ```
  az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
@@ -359,17 +359,17 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
    ![](./media/op-upd-11.png)
 
-7. To verify whether automatic VM guest patching has completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
+7. To verify whether automatic VM guest patching has been completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
 
   ``` az vm get-instance-view --resource-group test-autopatch-rg --name [virtual amchine name] ```
 
-8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the below.
+8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the one below.
 
   ``` az vm get-instance-view --resource-group test-autopatch-rg --name wafprok4syndc ```
 
 > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
-9. Paste the command and hit enter. You will see the output once the command is executed succesfully.
+9. Paste the command and hit enter. You will see the output once the command is executed successfully.
 
    ![](./media/op-upd-12.png)
 
@@ -416,7 +416,7 @@ You can always choose the process that provides the best fit for your team.
     ![](media/alm_pt_cmmi_wit_artifacts.png)
 
 
-Now, click on the **Next** button from lower right corner to move to the next page.
+Now, click on the **Next** button from the lower right corner to move to the next page.
 
 
 

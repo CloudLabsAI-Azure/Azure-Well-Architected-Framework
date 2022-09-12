@@ -306,7 +306,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
     * **Subscription**: Select your default susbcription (1)
     * **Resource Group**: waf-prod (2)
-    * **Severity**: 3 - Informal (3)
+    * **Severity**: 3 - Informational (3)
     * **Alert rule name**: waf-alert (4)
     * Click on **Review + create** (5)
 

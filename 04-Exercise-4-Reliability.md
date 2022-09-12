@@ -101,6 +101,9 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-03.png)
 
+> **Note:** It will take upto 15 minutes for all jobs to succeed.
+
+
 9. Now from the left pane, select **Replicated items** present under _Protected items_. You will have the VM here that you just replicated, select that virtual machine **wafproxxxxxx**.
 
    ![](./media/reliability-04.png)

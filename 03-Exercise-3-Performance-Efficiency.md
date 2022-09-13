@@ -194,9 +194,10 @@ In this task, we will see how to load test a web application with Azure Load Tes
  - **Subscription:** Make sure **your subscription (1)** is selected by default.
  - **Resource group:** Select **wafprod (2)** from the drop-down
  - **Name:** Give a name for the load test resource **(3)**.
- - **Location:** Select same as of the resource group **(4)**.
+ - **Location:** Leave to default **(4)**.
  - Click on **Review + create (5)**
  
+    
     ![](./media/pe-28.png)
     
 5. Post the validation passes, click on **Create**.

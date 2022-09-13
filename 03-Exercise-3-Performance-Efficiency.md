@@ -88,7 +88,7 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 3. Provide the project and instance details as follows:
 
 * **Subscription:** Make sure your subscription is selected **by default (1)**.
-* **Resource group:** Select a resource group from the drop-down. Here we have selected **wafdev (2)**.
+* **Resource group:** Select a resource group from the drop-down. Here we have selected **wafprod (2)**.
 * **Name:** Give a name for the workspace **(3)**.
 * **Region:** Select a region near to you, for example, **East US (4)**.
 * Click on **Review + Create (5)**.
@@ -115,7 +115,7 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-18.png)
 
-9. Return to the **Virtual Machines** tab from the menu in the left and observe the status of all three VMs. It should show up as **This workspace** under _Log Analytics Connection_.
+9. Return to the **Virtual Machines** tab from the menu in the left and observe the status of the VMs the _wafprod_ resource group. It should show up as **This workspace** under _Log Analytics Connection_.
 
    ![](./media/pe-19.png)
 

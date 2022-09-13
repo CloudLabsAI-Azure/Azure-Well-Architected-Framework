@@ -323,13 +323,15 @@ After you create and run a Consumption logic app workflow, you can check that wo
     * **Alert rule name**: waf-alert (4)
     * Click on **Review + create** (5)
 
-   
      ![](media/Ex3-task1-13.png)
    
 15. On the review page, go through all the details and click on **Create** to create the alert rule.
 
      ![](media/Ex3-task1-14.png)
     
+16. Once the alert is created, it will look similar to the image shown below. 
+
+    ![](media/op-upd-24.png)
 
 ### Task 4: Configure Azure Automatic VM guest OS patching 
 

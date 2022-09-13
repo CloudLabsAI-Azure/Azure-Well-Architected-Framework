@@ -376,11 +376,15 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
 7. To verify whether automatic VM guest patching has completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
 
-  ``` az vm get-instance-view --resource-group [resource group name] --name [virtual machine name] ```
+  ``` 
+  az vm get-instance-view --resource-group [resource group name] --name [virtual machine name]
+  ```
 
 8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the below.
 
-  ``` az vm get-instance-view --resource-group wafprod --name wafprok4syndc ```
+  ```
+  az vm get-instance-view --resource-group wafprod --name wafprok4syndc
+  ```
 
 > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 

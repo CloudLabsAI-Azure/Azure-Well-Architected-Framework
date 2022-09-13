@@ -224,6 +224,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
    * Password: **<inject key="AzureAdUserPassword"></inject>**
+   * If you are presented with **Help us protect your account** dialog box, then select **Skip** for now option.
 
    ![](media/Ex2-t2-09.png)
    

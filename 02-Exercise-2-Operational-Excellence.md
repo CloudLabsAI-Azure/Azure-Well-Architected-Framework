@@ -220,7 +220,10 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    ![](media/Ex2-t2-8.png)
    
-14. Select **Sign in** and sign in to your Office 365 Outlook account.
+14. Select **Sign in** and sign in to your Office 365 Outlook account. Use the login credentials given below:
+
+   * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
+   * Password: **<inject key="AzureAdUserPassword"></inject>**
 
    ![](media/Ex2-t2-09.png)
    

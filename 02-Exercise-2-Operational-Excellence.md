@@ -311,7 +311,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
     ![](media/op-upd-22.png)
    
-13. The **Create an alert rule** page now shows the condition that you created and the cost for running that alert. Click on **Next: Actions**.
+13. The **Create an alert rule (1)** page now shows the condition that you created and the cost for running that alert. Click on **Details (2)** tab.
 
     ![](media/Ex3-task1-12.png)
     

@@ -110,32 +110,37 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
     ![](media/policy12.png)
 
+13. Leave all configurations to default and click on **Remediation** tab.
 
-13. Check the button with **Create a remediation task** option under **Remediation**. Select **Review + Save**, followed by **Save**.
+    ![](media/op-upd-18.png)
 
-    ![](media/policy13.png)
+14. Check the button with **Create a remediation task (1)** option under **Remediation**. Select **Review + Save (2)**, followed by **Save (3)**.
 
-14. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
+    ![](media/op-upd-20.png)
+    
+    ![](media/op-upd-19.png)
+
+15. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
 
       ![](media/policy14.png)
 
 
 > **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
     
-15. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
+16. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
 
      ![](media/policy15.png)
 
 
-16. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
+17. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
 
       ![](media/policy16.png)
 
-17. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
+18. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
       ![](media/policy17.png)
     
-18. At the prompt, enter the following PowerShell command to retrieve all the resources with the specified tags. Observe the tagname and tagvalue under each resource in the output section.
+19. At the prompt, enter the following PowerShell command to retrieve all the resources with the specified tags. Observe the tagname and tagvalue under each resource in the output section.
 
    ```
    Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"

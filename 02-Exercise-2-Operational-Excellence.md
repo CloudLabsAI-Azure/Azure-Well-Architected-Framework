@@ -236,6 +236,10 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
     ![](media/Ex2-t2-10.png)
 
+> **Note:** In case if dynamic content is not listed, click on **See more** to view the list.
+
+   ![](media/op-upd-21.png)
+
 16. On the designer toolbar, select **Save** to save your logic app.
 
     ![](media/Ex2-t2-11.png)

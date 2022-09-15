@@ -12,12 +12,12 @@
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![](./media/getting-started4.png "Lab Environment")
+   ![](./media/getting-started4.1.png "Lab Environment")
    
 1. On **Sign in to Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
    * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
    
-     ![](./media/image7.png "Enter Email")
+     ![](./media/image7.1.png "Enter Email")
      
 1. Now enter the following password and click on **Sign in**.
    * Password: **<inject key="AzureAdUserPassword"></inject>**

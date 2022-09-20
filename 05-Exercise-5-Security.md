@@ -115,7 +115,7 @@ In this task, you will learn how to control access to the Azure resources that y
 
     ![](./media/add-diag.png)
     
-11. Fill the **Diagnostic Settings** page with the following details:
+12. Fill the **Diagnostic Settings** page with the following details:
 
     * **Diagnostic setting name**: `dev-log` **(1)**
     *  **Logs**: Make sure you have selected all the categories **(2)**
@@ -126,21 +126,21 @@ In this task, you will learn how to control access to the Azure resources that y
 
     ![](./media/activity-save.png)
    
-12. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
+13. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
 
     ![](./media/storage-select.png)
     
-13. From the left navigation pane, under the **Data storage** section, select **Containers**.
+14. From the left navigation pane, under the **Data storage** section, select **Containers**.
 
     ![](./media/container.png)
     
-14. You will be able to see a container with the name **insights-activity-logs**. Click on it.
+15. You will be able to see a container with the name **insights-activity-logs**. Click on it.
 
     ![](./media/container2.png)
     
     > **Note:** The container might take up to 2 minutes to get created. Click on the **Refresh** button once in a few seconds until you are able to see the container.
     
-15. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below screenshot.
+16. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below screenshot.
 
    `{ "time": "2020-06-12T13:07:46.766Z", "resourceId": "/SUBSCRIPTIONS/00000000-0000-0000-0000-000000000000/RESOURCEGROUPS/MY-RESOURCE-GROUP/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/MV-VM-01", "correlationId": "0f0cb6b4-804b-4129-b893-70aeeb63997e", "operationName": "Microsoft.Resourcehealth/healthevent/Updated/action", "level": "Information", "resultType": "Updated", "category": "ResourceHealth", "properties": {"eventCategory":"ResourceHealth","eventProperties":{"title":"This virtual machine is starting as requested by an authorized user or process. It will be online shortly.","details":"VirtualMachineStartInitiatedByControlPlane","currentHealthStatus":"Unknown","previousHealthStatus":"Unknown","type":"Downtime","cause":"UserInitiated"}}}`
    

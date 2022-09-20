@@ -408,13 +408,13 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
 > **Note:** observe that the storage account is in GRS replication which saves the data synchronously three times at the primary physical location (LRS) and asynchronously three times in a secondary physical region. We will be converting this to LRS replication which stores data synchronously three times at one physical location to optimize the cost.
 
-4. Scroll down on the left navigation pane and select **Configuration** under settings.
+4. Scroll down on the left navigation pane and select **Redundancy** under Data management.
 
-    ![](media/storage04.png)
+    ![](media/Redundancy1.png)
 
-5. Select **Locally-redundant storage (LRS)** under **Replication** and click on **Save** to save the changes.
+5. Select **Locally-redundant storage (LRS)** under **Redundancy** and click on **Save** to save the changes.
 
-  ![](media/storage05.png)
+  ![](media/Redundancy2.png)
  
  
  

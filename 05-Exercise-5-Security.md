@@ -107,7 +107,11 @@ In this task, you will learn how to control access to the Azure resources that y
 
    ![](./media/export-activity.png)
    
-10. On the **Diagnostic Settings** page, make sure your subscription is selected and then click on **+ Add diagnostic setting**.
+10. Now go to **Diagnostic Settings** from the left pane. 
+
+    ![](./media/add-diag-upd.png)
+
+11. On the **Diagnostic Settings** page, make sure your subscription is selected and then click on **+ Add diagnostic setting**.
 
     ![](./media/add-diag.png)
     

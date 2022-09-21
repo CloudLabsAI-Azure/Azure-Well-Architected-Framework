@@ -121,7 +121,7 @@ In this task, you will learn how to control access to the Azure resources that y
     *  **Logs**: Make sure you have selected all the categories **(2)**
     *  **Destination details**: Check **Archive to a storage account (3)** 
     *  **Subscription:** Leave to default **(4)**
-    *  **Storage account:** Select **wafdevxxxxxx** storage account.
+    *  **Storage account:** Select the storage account that has **storage** as suffix, such as **wafdevxxxxstorage**
     *  Click on **Save (5)**.
 
     ![](./media/activity-save.png)

@@ -356,6 +356,8 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
    ![](./media/insights02.png)
 
+> **Note:** Please make sure the virtual machine you selected is in running state. If not please click on **Start** to start the virtual machine.
+
 3. Click on **Insights** under minitoring and select **Enable**.
 
    ![](./media/insights03.png)

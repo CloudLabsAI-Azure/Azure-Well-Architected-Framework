@@ -303,9 +303,9 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-35.png)
 
-6. Now select **Geo-replication** present under _Data management_ and click on **Prepare for failover**.
+6. Now select **Redundancy (1)** present under _Data management_ and click on **Prepare for failover (2)**.
 
-   ![](./media/reliability-33.png)
+   ![](./media/redundancy.png)
    
 7. Enter **YES** for _'Confirm Failover'_ and click on **Failover**. The Last Sync Time property here, indicates how far the secondary is behind from the primary. Last Sync Time provides an estimate of the extent of data loss that you will experience after the failover is completed.
 
@@ -315,9 +315,9 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-27.png)
 
-9. After the failover is performed, go to **Geo-replication** present under _Data management_. You will see that Central US is updated the as primary endpoint.
+9. After the failover is performed, go to **Redundancy** present under _Data management_. You will see that location is updated the as primary endpoint.
 
-   ![](./media/reliability-34.png)
+   ![](./media/locationredundancy.png)
 
 10. Once the failover is complete, clients can begin writing to the new primary endpoint.
 

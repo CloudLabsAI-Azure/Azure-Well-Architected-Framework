@@ -306,10 +306,9 @@ After you create and run a Consumption logic app workflow, you can check that wo
     * **Threshold value**: 1
     * **Unit**: Count
     * **Aggregation granularity (Period)**: 1 minute
-    * **Frequency of evaluation**: 1 Minute
-    * Click on **Done**.
-
-    ![](media/op-upd-22.png)
+    * **Frequency of evaluation**: 1 Minute.
+    
+    ![](media/alert%20rules.png)
    
 13. The **Create an alert rule (1)** page now shows the condition that you created and the cost for running that alert. Click on **Details (2)** tab.
 

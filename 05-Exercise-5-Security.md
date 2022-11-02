@@ -106,16 +106,12 @@ In this task, you will learn how to control access to the Azure resources that y
 9. Once the filter is applied and you are able to see all the operations from last month, then select **Export Activity Logs**.
 
    ![](./media/export-activity.png)
-   
-10. Now go to **Diagnostic Settings** from the left pane. 
 
-    ![](./media/add-diag-upd.png)
-
-11. On the **Diagnostic Settings** page, make sure your subscription is selected and then click on **+ Add diagnostic setting**.
+10. On the **Diagnostic Settings** page, make sure your subscription is selected and then click on **+ Add diagnostic setting**.
 
     ![](./media/add-diag.png)
     
-12. Fill the **Diagnostic Settings** page with the following details:
+11. Fill the **Diagnostic Settings** page with the following details:
 
     * **Diagnostic setting name**: `dev-log` **(1)**
     *  **Logs**: Make sure you have selected all the categories **(2)**
@@ -126,21 +122,21 @@ In this task, you will learn how to control access to the Azure resources that y
 
     ![](./media/activity-save.png)
    
-13. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
+12. Navigate back to the **wafdev** resource group and select the storage account **wafdevxxxx**.
 
     ![](./media/storage-select.png)
     
-14. From the left navigation pane, under the **Data storage** section, select **Containers**.
+13. From the left navigation pane, under the **Data storage** section, select **Containers**.
 
     ![](./media/container.png)
     
-15. You will be able to see a container with the name **insights-activity-logs**. Click on it.
+14. You will be able to see a container with the name **insights-activity-logs**. Click on it.
 
     ![](./media/container2.png)
     
     > **Note:** The container might take up to 2 minutes to get created. Click on the **Refresh** button once in a few seconds until you are able to see the container.
     
-16. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below screenshot.
+15. Go through the folder names **resourceId=** and observe that each event is stored in the **PT1H.json** file with the following format that uses a common top-level schema as shown in the below screenshot.
 
    `{ "time": "2020-06-12T13:07:46.766Z", "resourceId": "/SUBSCRIPTIONS/00000000-0000-0000-0000-000000000000/RESOURCEGROUPS/MY-RESOURCE-GROUP/PROVIDERS/MICROSOFT.COMPUTE/VIRTUALMACHINES/MV-VM-01", "correlationId": "0f0cb6b4-804b-4129-b893-70aeeb63997e", "operationName": "Microsoft.Resourcehealth/healthevent/Updated/action", "level": "Information", "resultType": "Updated", "category": "ResourceHealth", "properties": {"eventCategory":"ResourceHealth","eventProperties":{"title":"This virtual machine is starting as requested by an authorized user or process. It will be online shortly.","details":"VirtualMachineStartInitiatedByControlPlane","currentHealthStatus":"Unknown","previousHealthStatus":"Unknown","type":"Downtime","cause":"UserInitiated"}}}`
    
@@ -214,9 +210,10 @@ In this task, you will create your own encryption key to protect the data in you
    - **Subscription**: Select your subscription **(1)**
    - **Resource group**: wafdev **(2)**
    - **Key vault name**: waf-keyvault{unique id} **(3)**
-   - click on **Next: Access policy (4)**
+   - **Region**: East US **(4)** 
+   - click on **Next (5)**
   
-    ![](./media/ex5-task4-09.png)
+    ![](./media/keyvault.png)
   
 6. On the **Access policy** pane, check all the options under **Enable access to:** and click on **Review + create**.
 

@@ -88,12 +88,12 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 3. Provide the project and instance details as follows:
 
 * **Subscription:** Make sure your subscription is selected **by default (1)**.
-* **Resource group:** Select a resource group from the drop-down. Here we have selected **wafdev (2)**.
+* **Resource group:** Select a resource group from the drop-down. Here we have selected **wafprod (2)**.
 * **Name:** Give a name for the workspace **(3)**.
 * **Region:** Select a region near to you, for example, **East US (4)**.
 * Click on **Review + Create (5)**.
 
-   ![](./media/pe-14.png)
+   ![](./media/loganalytics.png)
 
 4. Review the details and click on **Create**.
 
@@ -136,14 +136,18 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will initiate the deployment of VM insights. Follow the same process for the other two VMs.
 
    ![](./media/pe-11.png)
+   
+14. On the **Monitoring configuration** window, check **subscription** and click on **configure**
 
-14. Return to the **Virtual Machines** tab from the menu on the left. Click on the **Refresh (1)** button and then observe the status of all three VMs. It should show up as **Enabling (2)** under _Monitor Coverage_.
+   ![](./media/monitoringconfiguration.png)
+
+15. Return to the **Virtual Machines** tab from the menu on the left. Click on the **Refresh (1)** button and then observe the status of all three VMs. It should show up as **Enabling (2)** under _Monitor Coverage_.
 
    ![](./media/pe-20.png)
 
    > **Note:** It will take up to 10 minutes for the data to reflect in Insights. To see the details, you can click on **Why?** and see the detailed message. Once done click on **Close (3)**.
 
-15. VM insights include a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open the **Virtual Machines** tab present in the left pane and click on **Performance**.
+16. VM insights include a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open the **Virtual Machines** tab present in the left pane and click on **Performance**.
 
    ![](./media/pe-21.png)
 

@@ -93,7 +93,7 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 * **Region:** Select a region near to you, for example, **East US (4)**.
 * Click on **Review + Create (5)**.
 
-   ![](./media/loganalytics.png)
+   ![](./media/loganalytics-upd.png)
 
 4. Review the details and click on **Create**.
 

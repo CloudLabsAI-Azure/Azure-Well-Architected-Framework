@@ -85,15 +85,15 @@ The image below shows _**Group by: Resource type, Granularity: Daily and Graph t
 
    ![](./media/costupd-17.png)
 
-8. On the Download page, select **Excel (1)**, check the **Include nested data (2)** checkbox to get data for all the resources falling under the respective resource groups. Finally, click on **Download (3)**.
+8. On the Download page, select **Resource group with resources (1)**, click on **Download (2)** button and select **Download as Excel (3)**.
 
    ![](./media/costupd-18.png)
 
-9. A CSV file will get downloaded.
+9. The file will get downloaded.
 
    ![](./media/costupd-28.png)
 
-10. Now to view the CSV file, browse to ``` https://www.office.com/launch/excel?ui=en-US&rs=US&auth=2 ```
+10. Now to view the file, browse to ``` https://www.office.com/launch/excel?ui=en-US&rs=US&auth=2 ```
 
 11. Sign in by providing the following:
 

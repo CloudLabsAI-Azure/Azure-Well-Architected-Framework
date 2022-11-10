@@ -121,12 +121,12 @@ In this task, you will learn how to enable replication for virtual machines, run
 2. Provide the following details for the recovery plan:
 
 * **Name:** Specify a name for the plan **(1)**.
-* **Source:** Choose a source location from the drop-down. The source location must have machines that are enabled for failover and recovery. Here we are using **West US (2)** as it's the same location where we have our virtual machine.
+* **Source:** Choose a source location from the drop-down. The source location must have machines that are enabled for failover and recovery. Here we are using **Central US (2)** as it's the same location where we have our virtual machine.
 * **Target:** Choose a target location from the drop-down **(3)**.
 * **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
 * Click on **Select items (5)**.
 
-   ![](./media/reliability-11.png)
+   ![](./media/reliability-38.png)
 
 3. In Select items, select the machine that you want to add to the plan and then click on **OK**.
 
@@ -136,7 +136,7 @@ In this task, you will learn how to enable replication for virtual machines, run
    
 4. At last, click on **Create**. Once the plan is created successfully, move to the next task.
 
-   ![](./media/reliability-13.png)
+   ![](./media/reliability-40.png)
 
 
 ### **c. Run a test failover to Azure**
@@ -303,7 +303,7 @@ In this task, you will learn how to initiate an account failover for your storag
 
    ![](./media/reliability-35.png)
 
-6. Now select **Redundancy (1)** present under _Data management_ and click on **Prepare for failover (2)**.
+6. Now select **Redundancy (1)** present under _Data management_ and click on **Prepare for failover (2)**
 
    ![](./media/redundancy.png)
    

@@ -751,6 +751,21 @@ There are a few things to keep in mind regarding automated reservation recommend
 * Single subscription scope— this means reservation discount is applied to matching resources in an entire Azure subscription.
 * Shared scope— lets you apply reservation discounts to matching resources used by multiple eligible subscriptions connected to the same billing scope, which can include more than one Azure subscriptions.
 
+
+**7. Savings Plan:**
+
+Your hourly usage data from the last 7, 30, and 60 days is used to determine the best savings plan purchases. Azure estimates the costs you would have incurred if you had a savings plan and compares them to the real pay-as-you-go charges you actually experienced over the time period. Every quantity you used throughout the time period is factored into the computation. It is advised to make a commitment at a level that will optimise your savings.
+
+For example, your consumption may fluctuate between 50 and 70 virtual machines at times. Azure determines your savings in this example for both the 50 and 70 VM amounts. The recommendation computation indicates that savings are maximised for a savings plan commitment large enough to cover 50 VMs because the 70 VM utilization is intermittent, and the suggestion is given for that commitment.
+
+Note the following points:
+
+- Recommendations for savings plans are generated using your personal on-demand usage rates.
+- Calculating recommendations does not use the instance size family; rather, it uses individual sizes.
+- On the same day that you purchase a commitment for a scope, the recommended commitment for that scope is decreased.
+- However, it may take up to 25 days to update the suggestion for the commitment amount across scopes. For instance, if you base your purchase on shared scope suggestions, it may take up to 25 days for the single subscription scope recommendations to go down.
+- Azure doesn't produce recommendations at this time for the management group scope.
+
 ### **Task 7: Move to PAAS**
 
 Infrastructure as a service (IaaS) and platform as a service (PaaS) are cloud service models.

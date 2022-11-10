@@ -152,7 +152,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
 2. Open the **wafprod** resource group and open the Automation account **DSC-xxxx**.
 
-   ![](./media/costopt-06.png)
+   ![](./media/costopt-64.png)
 
 3. In the left pane, scroll to _Process Automation_, select **Runbooks** and click on **+Create a runbook**.
 

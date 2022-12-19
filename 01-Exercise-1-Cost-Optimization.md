@@ -523,7 +523,7 @@ This way, the admins can be alerted when the workload is using the services at c
 
 12. Click on **Create new webhook**.
 
-   ![](./media/costopt-53.png)
+    ![](./media/costopt-53.png)
 
 
 13. Provide the following details:

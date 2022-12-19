@@ -113,7 +113,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 10. On the Overview page of the replicated virtual machine, you will have details such as _Health and status, Failover readiness, Errors_ and so on.
 
-   ![](./media/reliability-07.png)
+    ![](./media/reliability-07.png)
 
 ### **b. Create a Recovery plan**
 
@@ -129,7 +129,7 @@ In this task, you will learn how to enable replication for virtual machines, run
   * **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
   * Click on **Select items (5)**.
 
-   ![](./media/reliability-38.png)
+    ![](./media/reliability-38.png)
 
 3. In Select items, select the machine that you want to add to the plan and then click on **OK**.
 
@@ -158,7 +158,7 @@ In this task, you will learn how to enable replication for virtual machines, run
   * **Azure virtual network:** Select an Azure virtual network **(2)** from the drop-down, in which a test virtual machine will be created.
   * Click on **OK (3)**.
 
-   ![](./media/reliability-16.png)
+    ![](./media/reliability-16.png)
 
 4. Go to **Site Recovery Jobs** present under _Monitoring_. Here you can track the failover progress. Click on the failover to view the process.
 
@@ -171,7 +171,7 @@ In this task, you will learn how to enable replication for virtual machines, run
   * **Latest:** If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
   * **Start:** This step creates an Azure virtual machine using the data processed in the previous step.
 
-   ![](./media/reliability-18.png)
+    ![](./media/reliability-18.png)
 
 6. When everything is working as expected, click Cleanup test failover. This deletes the VMs that were created during test failover.
 
@@ -296,6 +296,7 @@ In this task, you will learn how to initiate an account failover for your storag
 
  > **Note:** The storage account should be configured with Geo-redundant storage, as Geo-replication is available for Geo-redundant (GRS) and Read access geo-redundant (RA-GRS) storage accounts.
  
+   
    ![](./media/reliability-31.png)
 
 4. Once the validation passes, click on **Create**.

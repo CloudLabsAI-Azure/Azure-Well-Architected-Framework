@@ -45,7 +45,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
     ![](./media/costopt-31.png)
 
- > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when the forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
+ > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when the forecasted spending is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
 
 5. You can play with the different filters provided here to analyze the cost, such as:
 
@@ -68,9 +68,9 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
  * **View Cost:** To have better visibility on cost, you can use different views given below: 
    1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop-down, you can select a group by keys such as Tag, Resource type, Provider, etc. 
    2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
-   3. **Graph type:** It asks for graphical representation, and what kind of representation you prefer. It could be Table, Column, Line, and much more.
+   3. **Graph type:** It asks for a graphical representation, and what kind of representation you prefer. It could be Table, Column, Line, and much more.
 
- The image below shows _**Group by: Resource type, Granularity: Daily and Graph type: Column(Stacked)**_
+ The image below shows _**Group by Resource type, Granularity: Daily and Graph type: Column(Stacked)**_
 
    ![](./media/costopt-35.png)
 
@@ -131,16 +131,16 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
     ![](./media/costupd-36.png)
 
- > ⭐ Tip: You can then use the exported data and combine it with your own custom data. Also, you can use the exported data in an external system like a dashboard or other financial system.
+ > ⭐ Tip: You can then use the exported data and combine it with your custom data. Also, you can use the exported data in an external system like a dashboard or another financial system.
 
 ### **Task 2: Shutdown**
 
-Use the Start/Stop VMs during off-hours feature of virtual machines to minimize waste. The feature is suitable as a **low-cost automation** option. There are many configuration options to schedule the start and stop times. 
+Use the Start/Stop VMs during the off-hours feature of virtual machines to minimize waste. The feature is suitable as a **low-cost automation** option. There are many configuration options to schedule the start and stop times. 
 
 Some ways to Start and Stop VMs are:
 * From the Azure portal, by going to each VM and start/stop it manually.
 * Using PowerShell/CLI
-* Enabling Autoshutdown for a VM
+* Enabling Auto shutdown for a VM
 * Using Azure Automation
 
 With respect to the workload we have, we will use Automation Accounts to perform the Start/Stop operation.
@@ -171,7 +171,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costopt-08.png)
    
-5. Once the runbook is created, you will be directed to the **Edit PowerShell Runbook** page. Click on **stop-prod-vms**, that is the name of the runbook and will take you to the Overview page.
+5. Once the runbook is created, you will be directed to the **Edit PowerShell Runbook** page. Click on **stop-prod-vms**, which is the name of the runbook and will take you to the Overview page.
 
    ![](./media/costupd-38.png)
    
@@ -203,7 +203,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
      ![](./media/costupd-04.png)
 
-12. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" /> and **[Your automation account Name]** with the name of the automation account you copied in step 2 of this task.
+12. Copy and paste the following commands into a text editor. Replace **[Your SubscriptionID]** with <inject key="subscription ID" /> and **[Your automation account Name]** with the name of the automation account you copied in step 2 of this task.
 
       ```
       $subscriptionID = "[Your SubscriptionID]"
@@ -211,7 +211,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
       $automationAccount = "[Your automation account Name]" 
       ```
  
-13. In the PowerShell console, copy and paste the commands from text editor, to declare the variables and hit Enter. 
+13. In the PowerShell console, copy and paste the commands from the text editor, to declare the variables and hit Enter. 
 
      ![](./media/costupd-06.png)
    
@@ -229,13 +229,13 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
      ![](./media/costupd-05.png)
  
-16. In the Azure portal, navigate to the automation account **DSC-xxxx**. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Click on the copy button to copy this **Object ID** and paste it in a text editor.
+16. In the Azure portal, navigate to the automation account **DSC-xxxx**. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Click on the copy button to copy this **Object ID** and paste it into a text editor.
 
     ![](./media/costupd-14.png)
 
-17. Now assign role to the managed identity you just created. It will allow the automation account to access the Azure resources.
+17. Now assign the role to the managed identity you just created. It will allow the automation account to access the Azure resources.
 
-18. Copy and paste the following command in a text editor and replace the **[ObjectID]** with the value you copied in Step 16, same task.
+18. Copy and paste the following command in a text editor and replace the **[ObjectID]** with the value you copied in Step 16, the same task.
 
       ```
       $ObjectIDvalue = "[ObjectID]"
@@ -252,7 +252,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costopt-09.png)
 
-21. Copy the script given below and paste into the runbook console and then click on **Publish**. Select **Yes** when asked to Publish Runbook - _'Do you want to proceed?'_. 
+21. Copy the script given below and paste it into the runbook console and then click on **Publish**. Select **Yes** when asked to Publish Runbook - _' Do you want to proceed?'_. 
 
     ```
     # Ensures you do not inherit an AzContext in your runbook
@@ -276,7 +276,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costupd-15.png)
     
-> **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of wafprod resource group.
+> **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of the wafprod resource group.
 
 22. Once the runbook is published, select **Link to schedule** on the Overview page.
 
@@ -308,7 +308,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costopt-20.png)
 
-27. Notice that VMs from the wafprod resource group are in **Running** state.
+27. Notice that VMs from the wafprod resource group are in a **Running** state.
 
     ![](./media/costopt-21.png)
 
@@ -316,7 +316,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costopt-22.png)
 
-29. By clicking on the Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows the status of both the VMs as **succeeded**.
+29. By clicking on the Start button, it will take you to the Jobs page. In the **Output** section, you can monitor the execution of the script. Keep on refreshing until it shows the status of both VMs as **succeeded**.
 
     ![](./media/costupd-11.png)
 
@@ -334,15 +334,15 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
 #### **Subtask 1: Virtual machine**
  
-You can lower the cost by managing the size of the VMs. VM insights monitors the performance and health of your virtual machines including their running processes and dependencies on other resources. It can help deliver predictable performance and availability of vital applications by identifying performance bottlenecks and network issues. 
+You can lower the cost by managing the size of the VMs. VM insights monitor the performance and health of your virtual machines including their running processes and dependencies on other resources. It can help deliver predictable performance and availability of vital applications by identifying performance bottlenecks and network issues. 
  
 VM Insights show the following utilization charts shown on the **Performance** page:
 
-* CPU Utilization % - shows the processor utilization of virtual machine. 
+* CPU Utilization % - shows the processor utilization of the virtual machine. 
 * Available Memory - shows the amount of available memory in the virtual machines. 
-* Logical Disk Space Used % - shows the disk space used % across all disk volumes in virtual machine.
-* Bytes Sent Rate - shows the highest average of bytes sent though virtual machine.
-* Bytes Receive Rate - shows the highest average of bytes recieved though virtual machine.
+* Logical Disk Space Used % - shows the disk space used % across all disk volumes in the virtual machine.
+* Bytes Sent Rate - shows the highest average of bytes sent through the virtual machine.
+* Bytes Receive Rate - shows the highest average of bytes received through the virtual machine.
  
 1. Search for virtual machines in the Azure portal and select **Virtual Machines**.
    
@@ -352,13 +352,13 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
    ![](./media/insights02.png)
 
-> **Note:** Please make sure you select the virtual machine with the name **wafproxxxdc** and it is in running state. If not please click on **Start** to start the virtual machine.
+> **Note:** Please make sure you select the virtual machine with the name **wafproxxxdc** and that it is in a running state. If not please click on **Start** to start the virtual machine.
 
 3. Click on **Insights** under minitoring and select **Enable**.
 
    ![](./media/insights03.png)
 
-4. On the **Monitoring configuration** page, leave all the value to default and click on **Configure**.
+4. On the **Monitoring configuration** page, leave all the values to default and click on **Configure**.
 
    ![](./media/insights04.png)
 
@@ -366,18 +366,18 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
    ![](./media/insights1.gif)
   
-  > **Note:** It can take between 5-10 minutes to configure the virtual machine and the monitoring data to appear.
+  > **Note:** It can take between 5-10 minutes to configure the virtual machine and for the monitoring data to appear.
 
  
 6. Select **Size** present under _Settings_ pane.
 
    ![](./media/costopt-03.png)
    
-7. From the list of available sizes, click on **B1s** size to select it and then click on **Resize** button.
+7. From the list of available sizes, click on **B1s** size to select it and then click on the **Resize** button.
 
    ![](./media/costopt-04.png)
 
- > **Note:** B-series burstable VMs are ideal for workloads that do not need the full performance of the CPU continuously, like web servers, small databases & development, and test environments. The B-Series provides these customers the ability to purchase a VM size with a _**price conscious baseline performance**_ that allows the VM instance to build up credits when the VM is utilizing less than its base performance. When the VM has accumulated credit, the VM can burst above the VM’s baseline using up to 100% of the CPU when your application requires higher CPU performance.
+ > **Note:** B-series burstable VMs are ideal for workloads that do not need the full performance of the CPU continuously, like web servers, small databases & development, and test environments. The B-Series provides these customers the ability to purchase a VM size with a _**price-conscious baseline performance**_ that allows the VM instance to build up credits when the VM is utilizing less than its base performance. When the VM has accumulated credit, the VM can burst above the VM’s baseline using up to 100% of the CPU when your application requires higher CPU performance.
 
 8. Go back to the **Overview** page and verify the VM size. 
 
@@ -420,13 +420,13 @@ VM Insights show the following utilization charts shown on the **Performance** p
  
  * VPN gateway is recommended for development/test cases or small-scale production workloads where throughput is less than 100 Mbps. Use ExpressRoute for enterprise and mission-critical workloads that access most Azure services. You can choose bandwidth from 50 Mbps to 10 Gbps.
 
-* Another consideration is security. Unlike VPN Gateway traffic, ExpressRoute connections don't go over the public internet. VPN Gateway traffic is secured by industry standard IPsec.
+* Another consideration is security. Unlike VPN Gateway traffic, ExpressRoute connections don't go over the public internet. VPN Gateway traffic is secured by industry-standard IPsec.
 
 * For both services, inbound transfers are free and outbound transfers are billed per the billing zone.
  
-* Azure front door and express route are expensive, whereas vpn gateway is cheaper.
+* Azure front door and express route are expensive, whereas the VPN gateway is cheaper.
  
-* By using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), you can calculate the cost of VPN gateway and observe how the cost varies by changing the type and size of outbound data transfer.
+* By using the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/), you can calculate the cost of a VPN gateway and observe how the cost varies by changing the type and size of outbound data transfer.
  
    ![](media/VPN01.png)
 
@@ -575,7 +575,7 @@ This way, the admins can be alerted when the workload is using the services at c
 
      ![](./media/costopt-42.png)
 
-22. After you create a budget, it's shown in cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
+22. After you create a budget, it's shown in the cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
 
     ![](./media/costopt-43.png)
 
@@ -672,7 +672,7 @@ This hybrid benefit is only available for use with:
   
   You can pay for a reservation in advance or on a monthly basis. The overall cost of up-front and monthly reservations is the same, and there are no additional costs if you pay monthly. Azure reservations, but not third-party items, can be paid monthly.
 
-**2. Why should you opt for Azure reservation?**
+**2. Why should you opt for an Azure reservation?**
 
   If you have constant resource usage that supports reservations, purchasing a reservation can help you save money. Pay-as-you-go prices apply when you frequently run instances of a service without making a reservation. When you buy a reservation, you immediately get the reservation discount. Pay-as-you-go charges are no longer applied to the resources. 
 
@@ -704,7 +704,7 @@ This hybrid benefit is only available for use with:
   
   The number of VMs that the reservation discount applies to inside the instance size flexibility group is determined by the VM size you choose when you acquire a reservation. It also relies on the size of the virtual machines (VMs) you're operating. The relative footprint for each VM size in that instance size flexibility group is compared in the ratio column. Calculate how the reservation discount applies to the VMs you have running using the ratio value.
 
-  For example, if you buy a reservation for a VM size that's listed in the DSv2 Series, like Standard_DS3_v2, the reservation discount can apply to the other sizes that are listed in that same instance size flexibility group such as, Standard_DS1_v2, Standard_DS2_v2, Standard_DS3_v2 and so on.
+  For example, if you buy a reservation for a VM size that's listed in the DSv2 Series, like Standard_DS3_v2, the reservation discount can apply to the other sizes that are listed in that same instance size flexibility group such as Standard_DS1_v2, Standard_DS2_v2, Standard_DS3_v2 and so on.
   
   But that reservation discount doesn't apply to VMs sizes that are listed in different instance size flexibility groups, like SKUs in DSv2 Series High Memory: Standard_DS11_v2, Standard_DS12_v2, and so on.
 
@@ -714,7 +714,7 @@ This hybrid benefit is only available for use with:
 You buy a reserved VM instance with the size Standard_DS4_v2 where the ratio or relative footprint compared to the other sizes in that series is 8.
 
 * Scenario 1: Run eight Standard_DS1_v2 sized VMs with a ratio of 1. Your reservation discount applies to all eight of those VMs.
-* Scenario 2: Run two Standard_DS2_v2 sized VMs with a ratio of 2 each. Also run a Standard_DS3_v2 sized VM with a ratio of 4. The total footprint is 2+2+4=8. So, your reservation discount applies to all three of those VMs.
+* Scenario 2: Run two Standard_DS2_v2 sized VMs with a ratio of 2 each. Also, run a Standard_DS3_v2 sized VM with a ratio of 4. The total footprint is 2+2+4=8. So, your reservation discount applies to all three of those VMs.
 * Scenario 3: Run one Standard_DS5_v2 with a ratio of 16. Your reservation discount applies to half that VM's compute cost.
 * Scenario 4: Run one Standard_DS5_v2 with a ratio of 16 and purchase an additional Standard_DS4_v2 reservation with a ratio of 8. Both reservations combine and apply the discount to the entire VM.
 
@@ -724,35 +724,35 @@ The following sections show what sizes are in the same size series group when yo
  
  All reservations except Azure Databricks are applied hourly. To ensure reservations help reduce costs, you should purchase them based on an analysis of consistent baseline usage.
  
- If you purchase more capacity than was previously used, your reservation may be underutilized. You should try to get the most out of reservations, because unused reservations cannot be saved for later use. Additionally, if your usage exceeds the reserved capacity, you will be charged the pay-per-use rate. 
+ If you purchase more capacity than was previously used, your reservation may be underutilized. You should try to get the most out of reservations because unused reservations cannot be saved for later use. Additionally, if your usage exceeds the reserved capacity, you will be charged the pay-per-use rate. 
  
 Azure provides automated reservation recommendations. These are calculated by analyzing your hourly usage data over the past 7, 30, and 60 days. Azure calculates the cost of the reservation and compares it to the actual pay-as-you-go cost incurred during the period. Then, Azure recommends the quantity that can maximize savings.
  
- For example, if workload uses 100 VMs regularly, but occasionally demand spikes to 150, Azure will calculate potential savings for a reservation of 100 VMs as well as 150. If the demand spikes are infrequent, the calculation may determine that you can save by purchasing 100 reserved VMs. However, if demand spikes are very common, it may recommend reserving more than 100 VMs to save costs. 
+ For example, if the workload uses 100 VMs regularly, but occasionally demands spikes to 150, Azure will calculate potential savings for a reservation of 100 VMs as well as 150. If the demand spikes are infrequent, the calculation may determine that you can save by purchasing 100 reserved VMs. However, if demand spikes are very common, it may recommend reserving more than 100 VMs to save costs. 
 
 There are a few things to keep in mind regarding automated reservation recommendations:
 
 * The reservation recommendation is calculated using the pay-as-you-go rates relevant to your use case.
-* Recommendations are based on individual VM sizes, and do not apply to the entire size family.
-* After you commit to a reservation, on the same day of the purchase, the recommended quantity for the scope is reduced. In other words, the reserved VMs are no longer considered as part of the resources eligible for reservation.
+* Recommendations are based on individual VM sizes and do not apply to the entire size family.
+* After you commit to a reservation, on the same day of the purchase, the recommended quantity for the scope is reduced. In other words, the reserved VMs are no longer considered part of the resources eligible for reservation.
 
  
 **6. Scope:**
  
- Note that only Enterprise Agreements, Pay-As-You-Go Subscriptions and Microsoft Customer Agreement Subscriptions support reservations.
+ Note that only Enterprise Agreements, Pay-As-You-Go Subscriptions, and Microsoft Customer Agreement Subscriptions support reservations.
  
  **Reservation Scope Options:**
  
 * Single resource group scope— this means the reservation discount is only applied to matching resources in a specific Azure resource group.
-* Single subscription scope— this means reservation discount is applied to matching resources in an entire Azure subscription.
-* Shared scope— lets you apply reservation discounts to matching resources used by multiple eligible subscriptions connected to the same billing scope, which can include more than one Azure subscriptions.
+* Single subscription scope— this means a reservation discount is applied to matching resources in an entire Azure subscription.
+* Shared scope— lets you apply reservation discounts to matching resources used by multiple eligible subscriptions connected to the same billing scope, which can include more than one Azure subscription.
 
 
 **7. Savings Plan:**
 
-Your hourly usage data from the last 7, 30, and 60 days is used to determine the best savings plan purchases. Azure estimates the costs you would have incurred if you had a savings plan and compares them to the real pay-as-you-go charges you actually experienced over the time period. Every quantity you used throughout the time period is factored into the computation. It is advised to make a commitment at a level that will optimise your savings.
+Your hourly usage data from the last 7, 30, and 60 days is used to determine the best savings plan purchases. Azure estimates the costs you would have incurred if you had a savings plan and compares them to the real pay-as-you-go charges you actually experienced over the time period. Every quantity you used throughout the time period is factored into the computation. It is advised to make a commitment at a level that will optimize your savings.
 
-For example, your consumption may fluctuate between 50 and 70 virtual machines at times. Azure determines your savings in this example for both the 50 and 70 VM amounts. The recommendation computation indicates that savings are maximised for a savings plan commitment large enough to cover 50 VMs because the 70 VM utilization is intermittent, and the suggestion is given for that commitment.
+For example, your consumption may fluctuate between 50 and 70 virtual machines at times. Azure determines your savings in this example for both the 50 and 70 VM amounts. The recommendation computation indicates that savings are maximized for a savings plan commitment large enough to cover 50 VMs because the 70 VM utilization is intermittent, and the suggestion is given for that commitment.
 
 Note the following points:
 
@@ -764,7 +764,7 @@ Note the following points:
 
 ### **Task 7: Move to PAAS**
 
-Infrastructure as a service (IaaS) and platform as a service (PaaS) are cloud service models.
+Infrastructure as a service (IaaS) and platform as a service (PaaS) is cloud service models.
 
 * IaaS provides users with remote access to computing resources such as servers, storage, and networks. This infrastructure is hosted and managed by the IaaS provider. Customers access hardware and resources over the internet.
 
@@ -774,7 +774,7 @@ Infrastructure as a service (IaaS) and platform as a service (PaaS) are cloud se
 
 * However, PaaS also covers tools, services, and systems that aid in the development of web applications. The platform allows developers to create apps without having to worry about backups, security, upgrades, or other administrative responsibilities. 
 
-* The infrastructure cost is incorporated in the service pricing model with PaaS. For example, you can provision a lower SKU virtual machine as a jumpbox. Storage and managing a separate server come at an added cost. On the virtual machine, you must additionally configure a public IP address, which is not suggested. All of these expenditures are taken into account by a managed service like Azure Bastion, which provides improved protection.
+* The infrastructure cost is incorporated in the service pricing model with PaaS. For example, you can provide a lower SKU virtual machine as a jump box. Storage and managing a separate server come at an added cost. On the virtual machine, you must additionally configure a public IP address, which is not suggested. All of these expenditures are taken into account by a managed service like Azure Bastion, which provides improved protection.
 
 * Use PaaS instead of IaaS wherever possible. IaaS is similar to owning a box of spare parts. You can construct anything, but you must put it together yourself. PaaS alternatives are simpler to set up and manage. Virtual machines (VMs) and virtual networks are not required. You also won't have to deal with routine maintenance such as installing patches and updates.
 
@@ -790,8 +790,7 @@ Here's an architecture of the workload on both IaaS and PaaS:
    ![](./media/costopt-36.png)
 
 
-Now, click on the **Next** from lower right corner to move on next page.
-
+Now, click on the **Next** from the lower right corner to move to the next page.
 
 
 

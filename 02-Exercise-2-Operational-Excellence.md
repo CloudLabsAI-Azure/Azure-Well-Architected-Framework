@@ -80,11 +80,11 @@ Add a tag to resources policy puts tags on resources that are newly created unde
    * Leave all the other values as default and click on **Review + Create (5)**.
 
 
-   ![](media/policy05.png)
+    ![](media/policy05.png)
 
 6. Finally, click on **Create**.
 
-   ![](media/policy06.png)
+    ![](media/policy06.png)
    
 7. In the Azure search box, enter **Resource groups** and select it.
    
@@ -167,13 +167,13 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
 3. Click on the **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **logicapp.json (3)** file and click on **Open (4)**.
 
-   ![](media/op-upd-15.png)
+    ![](media/op-upd-15.png)
 
 4. You can go through the whole ARM Template in the Edit template console. This template creates a Consumption logic app workflow that uses the built-in Recurrence trigger, which is set to run every hour, and a built-in HTTP action, which calls a URL that returns the status for Azure. Built-in operations run natively on the Azure Logic Apps platform. 
 
 5. After reviewing the template, click on **Save**.
 
-   ![](media/op-upd-16.png)
+    ![](media/op-upd-16.png)
 
 6. On the **Custom deployment** page, on the Basics tab, provide the following details for your logic app:
 
@@ -250,7 +250,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
    
 18. The following screenshot shows a sample email that's sent by the workflow.
 
-    ![](media/Ex2-t2-13.png)
+     ![](media/Ex2-t2-13.png)
 
 
 #### **B. Monitor the Workflow of the Logic App**
@@ -407,7 +407,7 @@ You can always choose the process that provides the best fit for your team.
 
 - Choose **Basic** when your team wants the simplest model that uses Issues, Tasks, and Epics to track work.
 
-  ![](media/basic-process-epics-issues-tasks-2.png)
+   ![](media/basic-process-epics-issues-tasks-2.png)
 
 #### Agile:
 

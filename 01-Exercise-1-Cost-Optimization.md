@@ -560,11 +560,11 @@ This way, the admins can be alerted when the workload is using the services at c
     
 19. After the action group is created, you will be directed to the Create budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Create budget (3)**.
 
-   ![](./media/costupd-27.png)
+    ![](./media/costupd-27.png)
 
 20. Select the Action group for both alert conditions from the drop-down.
 
-   ![](./media/costopt-63.png)
+    ![](./media/costopt-63.png)
 
 21. Provide Alert recipients emails as given below:
 
@@ -573,7 +573,7 @@ This way, the admins can be alerted when the workload is using the services at c
    * **Language:** You can select your language from the drop-down. Here we are leaving this on **Default (3)**.
    * Click on **Create (4)**.
 
-   ![](./media/costopt-42.png)
+     ![](./media/costopt-42.png)
 
 22. After you create a budget, it's shown in cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
 

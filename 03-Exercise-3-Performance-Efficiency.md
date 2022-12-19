@@ -7,7 +7,7 @@ Performance efficiency is the ability of your workload to scale to meet the dema
 In this exercise, we will go through the given architecture and learn more about:
 
 * Can you provide a solution that scales to meet the public demand? How would this solution change in a PaaS architecture?
-* How can you improve the performance visibility and alerting? Are all the tiers covered?
+* How can you improve performance visibility and alerting? Are all the tiers covered?
 * Is the architecture properly sized? Consider cost analysis to determine how much you can improve. 
 
 
@@ -35,7 +35,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
 5. Add the rule by providing the following details:
 
-   * **Metric Source:** Select **Current resource (srv) (1)** from the drop down
+   * **Metric Source:** Select **Current resource (srv) (1)** from the drop-down
    * **Time aggregation:** Select **Average (2)**
    * **Metric namespace:** Select **Virtual Machines Host (3)**
    * **Metric name:** Select **Percentage CPU (4)**
@@ -70,7 +70,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
    ![](./media/pe-07.png)
 
-8. To see the number and status of VM instances, select Instances from the menu on the left-hand side of the scale set window. The status indicates if the VM instance is Creating as the scale set automatically scales out, or is Deleting as the scale automatically scales in.
+8. To see the number and status of VM instances, select Instances from the menu on the left-hand side of the scale set window. The status indicates if the VM instance is Created as the scale set automatically scales out, or is Deleting as the scale automatically scales in.
 
 
 
@@ -118,7 +118,7 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-18.png)
 
-9. Return to the **Virtual Machines** tab from the menu in the left and observe the status of the VMs the _wafprod_ resource group. It should show up as **This workspace** under _Log Analytics Connection_.
+9. Return to the **Virtual Machines** tab from the menu on the left and observe the status of the VMs in the _wafprod_ resource group. It should show up as **This workspace** under _Log Analytics Connection_.
 
    ![](./media/pe-19.png)
 
@@ -132,7 +132,7 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
     ![](./media/pe-09.png)
 
-12. You will see your subscription and all the resource groups in it, listed here. Expand **wafprod** resource group and enable VM insights for all three VMs. Click on **Enable**.
+12. You will see your subscription and all the resource groups in it, listed here. Expand the **wafprod** resource group and enable VM insights for all three VMs. Click on **Enable**.
 
     ![](./media/pe-10.png)
 
@@ -179,13 +179,13 @@ Performance works hand in hand with the health monitoring capability to reveal p
 
 ### **Task 3: Performance Testing**
 
-Azure Load Testing Preview is a fully managed load-testing service that enables you to generate high-scale load. Regardless of where your applications are hosted, the service simulates traffic for them. It can be used by programmers, testers, and quality assurance (QA) engineers to enhance the speed, scalability, or capacity of applications.
+Azure Load Testing Preview is a fully managed load-testing service that enables you to generate a high-scale load. Regardless of where your applications are hosted, the service simulates traffic for them. It can be used by programmers, testers, and quality assurance (QA) engineers to enhance the speed, scalability, or capacity of applications.
 
-Azure Load Testing is currently in preview because of which we have limited options available to it at the moment.
+Azure Load Testing is currently in preview because of this we have limited options available to it at the moment.
 
 In this task, we will see how to load test a web application with Azure Load Testing Preview from the Azure portal without prior knowledge about load testing tools.
 
-1. Firstly, you will create an Azure Load Testing resource. In the Azure portal, click on **Show portal menu (1)** and select **+Create a resource (2)**.
+1. First, you will create an Azure Load Testing resource. In the Azure portal, click on **Show portal menu (1)** and select **+Create a resource (2)**.
 
    ![](./media/pe-25.png)
 
@@ -208,11 +208,11 @@ In this task, we will see how to load test a web application with Azure Load Tes
     
     ![](./media/pe-28.png)
     
-5. Post the validation passes, click on **Create**.
+5. Post the validation passes, and click on **Create**.
 
     ![](./media/pe-29.png)
 
-6. Click on **Go to resource** to view the resource upon successful deployment.
+6. Click on **Go to resource** to view the resource upon successful deployment.
 
     ![](./media/pe-30.png)
 
@@ -222,7 +222,7 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
     ![](./media/pe-31.png)
 
-9. On the Quick test page, provide following details:
+9. On the Quick test page, provide the following details:
 
     - **Test URL:** As an example, enter **``` https://azure.microsoft.com ``` (1)**
     - Rest of the details are optional. Default values are already updated for all the asks.
@@ -232,7 +232,7 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
 10. Once the load test begins, you will be directed to the test run dashboard. Azure Load Testing records both client-side and server-side metrics while the load test is underway. 
 
-11. In the dashboard, you will see the client-side metrics in real-time while the test is running. The data refreshes every five seconds by default.
+11. In the dashboard, you will see the client-side metrics in real time while the test is running. The data refreshes every five seconds by default.
 
     ![](./media/pe-32.png)
 
@@ -240,9 +240,9 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
 ### **Task 4: Application Insights**
 
-Azure application insights is a part of  Azure monitor service. It is one of the powerful tools which can help to diagnose, monitor and analyze your application. It can help in identifying anomalies and monitoring the performances of applications deployed anywhere irrespective of their technology.  Azure application insights can monitor the application deployed on Azure as well as it can monitor the application which is deployed on on-premises.
+Azure application insights is a part of  Azure monitor service. It is one of the most powerful tools which can help to diagnose, monitor, and analyze your application. It can help in identifying anomalies and monitoring the performances of applications deployed anywhere irrespective of their technology.  Azure application insights can monitor the application deployed on Azure as well as it can monitor the application which is deployed on-premises.
 
-For integrating the Azure Application Insights you need to install instrumentation package SDK (Standard development Kit) in your application. You can also integrate application insights just by enabling application insights agents if supported for your type of application.
+For integrating the Azure Application Insights you need to install the instrumentation package SDK (Standard Development Kit) in your application. You can also integrate application insights just by enabling application insights agents if support for your type of application.
 
 Application Insights monitors:
 
@@ -259,7 +259,7 @@ Application Insights monitors:
 
 Application Insights is an incredibly useful tool for anyone who has an application or website and wants to track and manage all the info that’s put out there – who’s viewing what, what’s the most popular, etc.
 
-Application Insights is an application performance management service for web applications that enables you to do all the monitoring of your website performance in Azure. It’s designed to ensure you’re getting optimal performance and the best in class user experience from your website. It also has a powerful analytic tool that helps you diagnose issues and gain an understanding of how people are using your web application.
+Application Insights is an application performance management service for web applications that enables you to do all the monitoring of your website performance in Azure. It’s designed to ensure you’re getting optimal performance and the best-in-class user experience from your website. It also has a powerful analytic tool that helps you diagnose issues and gain an understanding of how people are using your web application.
 
 ### **Task 5: SQL Insights**
 
@@ -276,9 +276,8 @@ With SQL Insights, Azure customers will benefit from capabilities such as:
 * Integrate with open-source monitoring solutions (Telegraf) 
 * Surface over two hundred new metrics
 
-Azure customers will not incur costs for using SQL Insights directly. They will get charged for its activity in the Log Analytics workspace (data ingested from agents and stored in the workspace) and any alerts and notifications configured on the log data. The service is currently in preview for SQL Databases from version 2012 and up, SQL Managed Instance, and SQL Server on Azure Virtual Machines.
+Azure customers will not incur costs for using SQL Insights directly. They will get charged for their activity in the Log Analytics workspace (data ingested from agents and stored in the workspace) and any alerts and notifications configured on the log data. The service is currently in preview for SQL Databases from version 2012 and up, SQL Managed Instance, and SQL Server on Azure Virtual Machines.
 
 
-Now, click on the **Next** from lower right corner to move on next page.
-
+Now, click on the **Next** from the lower right corner to move to the next page.
 

@@ -128,7 +128,7 @@ In this task, you will learn how to control access to the Azure resources that y
     
 13. From the left navigation pane, under the **Data storage** section, select **Containers**.
 
-    ![](./media/container.png)
+     ![](./media/container.png)
     
 14. You will be able to see a container with the name **insights-activity-logs**. Click on it.
 

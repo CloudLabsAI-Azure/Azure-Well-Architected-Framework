@@ -57,7 +57,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
       5. **Invoice details -**	What charges did I have on my last invoice?
 
 
-      ![](./media/costopt-33.png)
+        ![](./media/costopt-33.png)
    
     * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
       1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.

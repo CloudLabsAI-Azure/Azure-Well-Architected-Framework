@@ -209,7 +209,7 @@ In this task, you will create your own encryption key to protect the data in you
 
    - **Subscription**: Select your subscription **(1)**
    - **Resource group**: wafdev **(2)**
-   - **Key vault name**: waf-keyvault{unique id} **(3)**
+   - **Key vault name**: Enter waf-keyvault<inject key="DeploymentID" enableCopy="false"/> **(3)**
    - **Region**: East US **(4)** 
    - click on **Next (5)**
   

@@ -31,17 +31,17 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
    
 4. The initial cost analysis view includes the following areas:
 
- * **Currently selected view:** This represents the predefined cost analysis view configuration. Each view includes date range, granularity, group by, and filter settings. The default view shows the current billing period's total combined costs, but you can switch to one of the other built-in views.
+    * **Currently selected view:** This represents the predefined cost analysis view configuration. Each view includes date range, granularity, group by, and filter settings. The default view shows the current billing period's total combined costs, but you can switch to one of the other built-in views.
 
- * **Cost (1):** Shows the total usage and purchase costs for the current month, as they're accrued and will appear on your bill. Costs are estimated until the invoice is generated and do not factor in credits. Pay-as-you-go subscriptions only include usage costs.
+    * **Cost (1):** Shows the total usage and purchase costs for the current month, as they're accrued and will appear on your bill. Costs are estimated until the invoice is generated and do not factor in credits. Pay-as-you-go subscriptions only include usage costs.
 
- * **Forecast (2):** Shows the total forecasted costs for the time period you choose. The Forecast is based on usage for the selected time period and does not account for purchases. Changes in usage may take up to a week to be reflected.
+    * **Forecast (2):** Shows the total forecasted costs for the time period you choose. The Forecast is based on usage for the selected time period and does not account for purchases. Changes in usage may take up to a week to be reflected.
 
- * **Budget (if selected) (3):** Shows the planned spending limit for the selected scope, if available.
+    * **Budget (if selected) (3):** Shows the planned spending limit for the selected scope, if available.
 
- * **Accumulated granularity (4):** Shows the total aggregate daily costs from the beginning of the billing period. You can easily monitor your spending trend versus the budget after creating a budget for your billing account or subscription. Hover over a date to view the accumulated cost for that day.
+    * **Accumulated granularity (4):** Shows the total aggregate daily costs from the beginning of the billing period. You can easily monitor your spending trend versus the budget after creating a budget for your billing account or subscription. Hover over a date to view the accumulated cost for that day.
 
- * **Pivot (donut) charts (5):** These charts provide dynamic pivots, breaking down the total cost by a common set of standard properties. They show the largest to smallest costs for the current month.
+    * **Pivot (donut) charts (5):** These charts provide dynamic pivots, breaking down the total cost by a common set of standard properties. They show the largest to smallest costs for the current month.
 
     ![](./media/costopt-31.png)
 
@@ -49,31 +49,31 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 5. You can play with the different filters provided here to analyze the cost, such as:
 
- * **View:** Cost analysis has four built-in views; they are as follows:
-   1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
-   2. **Daily cost -** Have there been any increases in the cost per day for the last 30 days?
-   3. **Cost by service -**	How has my monthly usage varied over the past three invoices?
-   4. **Cost by resource -**	Which resources cost the most so far this month?
-   5. **Invoice details -**	What charges did I have on my last invoice?
+    * **View:** Cost analysis has four built-in views; they are as follows:
+      1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
+      2. **Daily cost -** Have there been any increases in the cost per day for the last 30 days?
+      3. **Cost by service -**	How has my monthly usage varied over the past three invoices?
+      4. **Cost by resource -**	Which resources cost the most so far this month?
+      5. **Invoice details -**	What charges did I have on my last invoice?
 
 
-    ![](./media/costopt-33.png)
+        ![](./media/costopt-33.png)
    
- * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
-    1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
-    2. Examples include the last seven days, the last month, the current year, or a custom date range.   
+    * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
+       1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
+       2. Examples include the last seven days, the last month, the current year, or a custom date range.   
 
 
-     ![](./media/costopt-34.png)
+        ![](./media/costopt-34.png)
 
- * **View Cost:** To have better visibility on cost, you can use different views given below: 
-    1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop-down, you can select a group by keys such as Tag, Resource type, Provider, etc. 
-    2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
-    3. **Graph type:** It asks for graphical representation, and what kind of representation you prefer. It could be Table, Column, Line, and much more.
+    * **View Cost:** To have better visibility on cost, you can use different views given below: 
+       1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop-down, you can select a group by keys such as Tag, Resource type, Provider, etc. 
+       2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
+       3. **Graph type:** It asks for graphical representation, and what kind of representation you prefer. It could be Table, Column, Line, and much more.
 
 The image below shows _**Group by: Resource type, Granularity: Daily and Graph type: Column(Stacked)**_
 
-     ![](./media/costopt-35.png)
+   ![](./media/costopt-35.png)
 
 6. You can export cost data to a CSV file to do a cost analysis.
 

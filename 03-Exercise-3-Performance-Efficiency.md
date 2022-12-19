@@ -35,35 +35,35 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 
 5. Add the rule by providing the following details:
 
-* **Metric Source:** Select **Current resource (srv) (1)** from the drop down
-* **Time aggregation:** Select **Average (2)**
-* **Metric namespace:** Select **Virtual Machines Host (3)**
-* **Metric name:** Select **Percentage CPU (4)**
-* **Operator:** Select **Greater than (5)**
-* **Metric threshold to trigger scale action:** Enter **70 (6)** %
-* **Duration (minutes):** Enter **10 (7)**
-* **Time graine statistic:** Select **Average (8)**
-* **Operation:** Select **Increase count by (9)**
-* **Cool down (minutes):** Enter **5 (10)**
-* **Instance count:** Enter **1 (11)**
-* At last, click on **Add (12)**
+   * **Metric Source:** Select **Current resource (srv) (1)** from the drop down
+   * **Time aggregation:** Select **Average (2)**
+   * **Metric namespace:** Select **Virtual Machines Host (3)**
+   * **Metric name:** Select **Percentage CPU (4)**
+   * **Operator:** Select **Greater than (5)**
+   * **Metric threshold to trigger scale action:** Enter **70 (6)** %
+   * **Duration (minutes):** Enter **10 (7)**
+   * **Time graine statistic:** Select **Average (8)**
+   * **Operation:** Select **Increase count by (9)**
+   * **Cool down (minutes):** Enter **5 (10)**
+   * **Instance count:** Enter **1 (11)**
+   * At last, click on **Add (12)**
 
-   ![](./media/pe-05.png)
+    ![](./media/pe-05.png)
 
 6. Click on **Add a rule** again. Leave all to default and modify the following details:
 
-* **Operator:** Select **Less than (1)**
-* **Metric threshold to trigger scale action:** Enter **30 (2)** %
-* **Operation:** Select **Decrease percentage by (3)**
-* Click on **Add (4)**
+   * **Operator:** Select **Less than (1)**
+   * **Metric threshold to trigger scale action:** Enter **30 (2)** %
+   * **Operation:** Select **Decrease percentage by (3)**
+   * Click on **Add (4)**
 
    ![](./media/pe-06.png)
 
 7. Set the following instance limits and select **Save**.
 
-* **Minimum:** 1
-* **Maximum:** 4
-* **Default:** 2
+   * **Minimum:** 1
+   * **Maximum:** 4
+   * **Default:** 2
 
    ![](./media/pe-07.png)
 
@@ -87,13 +87,13 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
 3. Provide the project and instance details as follows:
 
-* **Subscription:** Make sure your subscription is selected **by default (1)**.
-* **Resource group:** Select a resource group from the drop-down. Here we have selected **wafprod (2)**.
-* **Name:** Give a name for the workspace **(3)**.
-* **Region:** Select a region near to you, for example, **East US (4)**.
-* Click on **Review + Create (5)**.
+   * **Subscription:** Make sure your subscription is selected **by default (1)**.
+   * **Resource group:** Select a resource group from the drop-down. Here we have selected **wafprod (2)**.
+   * **Name:** Give a name for the workspace **(3)**.
+   * **Region:** Select a region near to you, for example, **East US (4)**.
+   * Click on **Review + Create (5)**.
 
-   ![](./media/loganalytics.png)
+   ![](./media/loganalytics-new.png)
 
 4. Review the details and click on **Create**.
 
@@ -155,11 +155,11 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
 16. In this section, you can play with filters such as **_Resource Group_** and **_Time Range_**. You will have graphical presentations for the following:
 
-* **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
-* **Available Memory -** shows the top five machines with the lowest average amount of available memory.
-* **Logical Disk Space Used % -** shows the top five machines with the highest average disk space used % across all disk volumes.
-* **Bytes Sent Rate -** shows the top five machines with the highest average of bytes sent.
-* **Bytes Receive Rate -** shows the top five machines with the highest average of bytes received.
+   * **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
+   * **Available Memory -** shows the top five machines with the lowest average amount of available memory.
+   * **Logical Disk Space Used % -** shows the top five machines with the highest average disk space used % across all disk volumes.
+   * **Bytes Sent Rate -** shows the top five machines with the highest average of bytes sent.
+   * **Bytes Receive Rate -** shows the top five machines with the highest average of bytes received.
 
    ![](./media/pe-24.png)
 
@@ -195,12 +195,12 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
 4. Provide the following information to configure the Load test:
 
- - **Subscription:** Make sure **your subscription (1)** is selected by default.
- - **Resource group:** Select **wafprod (2)** from the drop-down
- - **Name:** Give a name for the load test resource **(3)**.
- - **Location:** Leave to default **(4)**.
- - Click on **Review + create (5)**
- 
+    - **Subscription:** Make sure **your subscription (1)** is selected by default.
+    - **Resource group:** Select **wafprod (2)** from the drop-down
+    - **Name:** Give a name for the load test resource **(3)**.
+    - **Location:** Leave to default **(4)**.
+    - Click on **Review + create (5)**
+
     
     ![](./media/pe-28.png)
     
@@ -220,9 +220,9 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
 9. On the Quick test page, provide following details:
 
- - **Test URL:** As an example, enter **``` https://azure.microsoft.com ``` (1)**
- - Rest of the details are optional. Default values are already updated for all the asks.
- -  Click on **Run test (2)**. This will create and start the load test.
+    - **Test URL:** As an example, enter **``` https://azure.microsoft.com ``` (1)**
+    - Rest of the details are optional. Default values are already updated for all the asks.
+    -  Click on **Run test (2)**. This will create and start the load test.
 
     ![](./media/pe-33.png)
 

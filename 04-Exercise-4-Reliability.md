@@ -80,6 +80,9 @@ In this task, you will learn how to enable replication for virtual machines, run
 3. From the left pane, select **Disaster recovery (1)** present under _Operations_. Then select a **Target region (2)** from the drop-down and click on **Review + Start Replication (3)**.
 
    ![](./media/reliability-01.png)
+   
+  
+  > **Note:** Make sure that the VM is in running state before replicating. If not, please start the VM.
 
 4. Review the details and click on **Start replication**.
 
@@ -120,11 +123,11 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 2. Provide the following details for the recovery plan:
 
-* **Name:** Specify a name for the plan **(1)**.
-* **Source:** Choose a source location from the drop-down. The source location must have machines that are enabled for failover and recovery. Here we are using **Central US (2)** as it's the same location where we have our virtual machine.
-* **Target:** Choose a target location from the drop-down **(3)**.
-* **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
-* Click on **Select items (5)**.
+  * **Name:** Specify a name for the plan **(1)**.
+  * **Source:** Choose a source location from the drop-down. The source location must have machines that are enabled for failover and recovery. Here we are using **Central US (2)** as it's the same location where we have our virtual machine.
+  * **Target:** Choose a target location from the drop-down **(3)**.
+  * **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
+  * Click on **Select items (5)**.
 
    ![](./media/reliability-38.png)
 
@@ -151,9 +154,9 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 3. Provide the following details for the failover:
 
-* **Choose a Recovery Point:** Select **Latest processed (low RTO) (1)** from the drop-down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
-* **Azure virtual network:** Select an Azure virtual network **(2)** from the drop-down, in which a test virtual machine will be created.
-* Click on **OK (3)**.
+  * **Choose a Recovery Point:** Select **Latest processed (low RTO) (1)** from the drop-down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
+  * **Azure virtual network:** Select an Azure virtual network **(2)** from the drop-down, in which a test virtual machine will be created.
+  * Click on **OK (3)**.
 
    ![](./media/reliability-16.png)
 
@@ -163,10 +166,10 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 5. When a test failover is triggered, the following occurs:
 
-* **Prerequisites:** A prerequisites check runs to make sure that all conditions required for failover are met.
-* **Failover:** The failover processes and prepared the data, so that an Azure VM can be created from it.
-* **Latest:** If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
-* **Start:** This step creates an Azure virtual machine using the data processed in the previous step.
+  * **Prerequisites:** A prerequisites check runs to make sure that all conditions required for failover are met.
+  * **Failover:** The failover processes and prepared the data, so that an Azure VM can be created from it.
+  * **Latest:** If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
+  * **Start:** This step creates an Azure virtual machine using the data processed in the previous step.
 
    ![](./media/reliability-18.png)
 
@@ -283,13 +286,13 @@ In this task, you will learn how to initiate an account failover for your storag
 
 3. Provide following details to create the storage account:
 
- - **Subscription:** Make sure your sunbscription is selected **by default (1)**
- - **Resource group:** Select **wafdev (2)** from the drop down
- - **Storage account name:** Give a unique name for the storage account **(3)**
- - **Region:** Leave to default **(4)**
- - **Performance:** Select **Standard (5)**
- - **Redundancy:** Select **Geo-redundant storage(GRS) (6)** from the drop down
- - At last, click on **Review (7)**
+  - **Subscription:** Make sure your sunbscription is selected **by default (1)**
+  - **Resource group:** Select **wafdev (2)** from the drop down
+  - **Storage account name:** Give a unique name for the storage account **(3)**
+  - **Region:** Leave to default **(4)**
+  - **Performance:** Select **Standard (5)**
+  - **Redundancy:** Select **Geo-redundant storage(GRS) (6)** from the drop down
+  - At last, click on **Review (7)**
 
  > **Note:** The storage account should be configured with Geo-redundant storage, as Geo-replication is available for Geo-redundant (GRS) and Read access geo-redundant (RA-GRS) storage accounts.
  

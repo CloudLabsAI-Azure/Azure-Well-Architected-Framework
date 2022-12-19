@@ -43,7 +43,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
  * **Pivot (donut) charts (5):** These charts provide dynamic pivots, breaking down the total cost by a common set of standard properties. They show the largest to smallest costs for the current month.
 
-   ![](./media/costopt-31.png)
+    ![](./media/costopt-31.png)
 
  > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when the forecasted spend is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
 
@@ -57,14 +57,14 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
    5. **Invoice details -**	What charges did I have on my last invoice?
 
 
-   ![](./media/costopt-33.png)
+    ![](./media/costopt-33.png)
    
  * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
     1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
     2. Examples include the last seven days, the last month, the current year, or a custom date range.   
 
 
-   ![](./media/costopt-34.png)
+     ![](./media/costopt-34.png)
 
  * **View Cost:** To have better visibility on cost, you can use different views given below: 
     1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop-down, you can select a group by keys such as Tag, Resource type, Provider, etc. 
@@ -73,64 +73,64 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 The image below shows _**Group by: Resource type, Granularity: Daily and Graph type: Column(Stacked)**_
 
-   ![](./media/costopt-35.png)
+     ![](./media/costopt-35.png)
 
-5. You can export cost data to a CSV file to do a cost analysis.
+6. You can export cost data to a CSV file to do a cost analysis.
 
-6. In the **Cost Analysis (1)** section, click on **Cost by resource (2)** drop down and select **Resource groups(preview) (3)**.
+7. In the **Cost Analysis (1)** section, click on **Cost by resource (2)** drop down and select **Resource groups(preview) (3)**.
 
-   ![](./media/costupd-16.png)
+    ![](./media/costupd-16.png)
 
-7. Once the view changes to resource groups, click on **Download** to download the data. 
+8. Once the view changes to resource groups, click on **Download** to download the data. 
 
-   ![](./media/costupd-17.png)
+    ![](./media/costupd-17.png)
 
-8. On the Download page, select **Resource group with resources (1)**, click on **Download (2)** button and select **Download as Excel (3)**.
+9. On the Download page, select **Resource group with resources (1)**, click on **Download (2)** button and select **Download as Excel (3)**.
 
-   ![](./media/costupd-18.png)
+    ![](./media/costupd-18.png)
 
-9. The file will get downloaded.
+10. The file will get downloaded.
 
-   ![](./media/costupd-28.png)
+    ![](./media/costupd-28.png)
 
-10. Now to view the file, browse to ``` https://www.office.com/launch/excel?ui=en-US&rs=US&auth=2 ```
+11. Now to view the file, browse to ``` https://www.office.com/launch/excel?ui=en-US&rs=US&auth=2 ```
 
-11. Sign in by providing the following:
+12. Sign in by providing the following:
 
-   - Username: **<inject key="AzureAdUserEmail"></inject>**
-   - Password: **<inject key="AzureAdUserPassword"></inject>**
-   - If you are presented with the **Help us protect your account** dialog box, then select the **Skip for now** option.
-   - If you see the pop-up **Stay Signed in?**, click **Yes**
+      - Username: **<inject key="AzureAdUserEmail"></inject>**
+      - Password: **<inject key="AzureAdUserPassword"></inject>**
+      - If you are presented with the **Help us protect your account** dialog box, then select the **Skip for now** option.
+      - If you see the pop-up **Stay Signed in?**, click **Yes**
 
 12. You will be directed to the Excel homepage. Select **New blank workbook** here.
 
-   ![](./media/costupd-29.png)
+    ![](./media/costupd-29.png)
 
 13. Click on **File (1)** in the top left corner, click on **Open (2)** and select **View more files (3)**.
 
-   ![](./media/costupd-30.png)
+    ![](./media/costupd-30.png)
 
-   ![](./media/costupd-31.png)
+    ![](./media/costupd-31.png)
 
 14. You will be taken to OneDrive, where you will upload the excel file that we just downloaded, and then you will be able to view it. 
 
-   ![](./media/costupd-32.png)
+    ![](./media/costupd-32.png)
 
 15. Click on **Upload** and select **Files**.
 
-   ![](./media/costupd-33.png)
+    ![](./media/costupd-33.png)
 
 16. Select the cost data file you downloaded and click on **Open**.
 
-   ![](./media/costupd-34.png)
+    ![](./media/costupd-34.png)
    
 17. The data file gets uploaded as shown in the image below.
 
-   ![](./media/costupd-35.png)
+    ![](./media/costupd-35.png)
 
 18. Now click on the data file. It will load in a new tab, and here you can view the cost data.
 
-   ![](./media/costupd-36.png)
+    ![](./media/costupd-36.png)
 
  > ⭐ Tip: You can then use the exported data and combine it with your own custom data. Also, you can use the exported data in an external system like a dashboard or other financial system.
 
@@ -455,13 +455,13 @@ This way, the admins can be alerted when the workload is using the services at c
 
 4. Fill in the Budget Details as follows:
 
-* **Scope:** Make sure your subscription is selected **(1)**.
-* **Name:** Enter **waf-budget (2)** in the name block.
-* **Reset period:** The reset period determines the time window that's analyzed by the budget. Select **Quarterly (3)** from the drop-down.
-* **Creation date:** This is the date of creation of the budget and it will be selected by default **(4)**.
-* **Expiration date:** Add an expiry date for the budget **(5)**.
-* **Amount ($):** Enter the **Suggested budget (6)** given just below the Amount field.
-* Click on **Next (7)**.
+   * **Scope:** Make sure your subscription is selected **(1)**.
+   * **Name:** Enter **waf-budget (2)** in the name block.
+   * **Reset period:** The reset period determines the time window that's analyzed by the budget. Select **Quarterly (3)** from the drop-down.
+   * **Creation date:** This is the date of creation of the budget and it will be selected by default **(4)**.
+   * **Expiration date:** Add an expiry date for the budget **(5)**.
+   * **Amount ($):** Enter the **Suggested budget (6)** given just below the Amount field.
+   * Click on **Next (7)**.
 
    ![](./media/costupd-19.png)
 
@@ -483,14 +483,14 @@ This way, the admins can be alerted when the workload is using the services at c
 
 7. Add **Project details** and **Instance details** as given below:
 
-* **Subscription:** Subscription will be selected by default **(1)**.
-* **Resource group:** Select **wafprod** from the drop down **(2)**.
-* **Region:** Leave on **Global (3)**
-* **Action group name:** Give a name for the action group, such as **waf-actiongroup (4)**
-* **Display name:** Enter a display name for the action group **(5)**.
-* Click on **Next: Notifications (6)**
+   * **Subscription:** Subscription will be selected by default **(1)**.
+   * **Resource group:** Select **wafprod** from the drop down **(2)**.
+   * **Region:** Leave on **Global (3)**
+   * **Action group name:** Give a name for the action group, such as **waf-actiongroup (4)**
+   * **Display name:** Enter a display name for the action group **(5)**.
+   * Click on **Next: Notifications (6)**
 
-   ![](./media/costupd-21.png)
+    ![](./media/costupd-21.png)
 
 7. Provide the following information for the notifications to be sent when an alert is triggered.
 
@@ -516,11 +516,11 @@ This way, the admins can be alerted when the workload is using the services at c
 
 10. Open **wafprod (1)** resource group, select **DSC-xxxx (2)** automation account. In there, click on **Runbooks (3)** and select **stop-prod-vm (4)**, it's the runbook we created earlier.
 
-   ![](./media/costopt-51.png)
+    ![](./media/costopt-51.png)
 
 11. Select **Webhooks** from the left pane and click on **+ Add Webhook**.
 
-   ![](./media/costopt-52.png)
+    ![](./media/costopt-52.png)
 
 12. Click on **Create new webhook**.
 
@@ -529,31 +529,31 @@ This way, the admins can be alerted when the workload is using the services at c
 
 13. Provide the following details:
 
-* **Name:** Enter a unique name for the webhook such as **waf-webhook (1)**.
-* **Enabled:** Leave on default.
-* **Expires:** Add an expiry date and time **(2)**.
-* **URL:** Copy the URL **(3)**. **Make sure to copy the URL and paste it into a text editor with you. Once you click on OK, it won't be retrievable.**
-* Click on **OK (4)**.
+   * **Name:** Enter a unique name for the webhook such as **waf-webhook (1)**.
+   * **Enabled:** Leave on default.
+   * **Expires:** Add an expiry date and time **(2)**.
+   * **URL:** Copy the URL **(3)**. **Make sure to copy the URL and paste it into a text editor with you. Once you click on OK, it won't be retrievable.**
+   * Click on **OK (4)**.
 
-   ![](./media/costopt-54.png)
+     ![](./media/costopt-54.png)
    
 14. Click on **Create**.
 
-   ![](./media/costopt-55.png)   
+    ![](./media/costopt-55.png)   
 
 15. Once the webhook is created, go to the previous tab where we had the **Actions** tab in the Azure portal. 
 
 16. Add the details as given below:
 
-* **Action type:** Select **Webhook (1)** from the drop-down.
-* **URI:** Paste the URL here that we copied in Step 13 in this task **(2)**.
-* Click on **OK (3)**.
+   * **Action type:** Select **Webhook (1)** from the drop-down.
+   * **URI:** Paste the URL here that we copied in Step 13 in this task **(2)**.
+   * Click on **OK (3)**.
 
    ![](./media/costupd-25.png)
 
 17. Give a unique **Name (1)** for the action and click on **Review + Create (2)**.
 
-   ![](./media/costopt-57.png)
+    ![](./media/costopt-57.png)
 
 18. In the **Review + Create** tab, click on **Create**. 
 
@@ -569,25 +569,25 @@ This way, the admins can be alerted when the workload is using the services at c
 
 21. Provide Alert recipients emails as given below:
 
-* **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
-* **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders' list so that emails don't go to your junk email folder.
-* **Language:** You can select your language from the drop-down. Here we are leaving this on **Default (3)**.
-* Click on **Create (4)**.
+   * **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
+   * **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders' list so that emails don't go to your junk email folder.
+   * **Language:** You can select your language from the drop-down. Here we are leaving this on **Default (3)**.
+   * Click on **Create (4)**.
 
    ![](./media/costopt-42.png)
 
 22. After you create a budget, it's shown in cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
 
-   ![](./media/costopt-43.png)
+    ![](./media/costopt-43.png)
 
 
 23. you will have the option to test the action group. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor (2)**.
 
-   ![](./media/pe-08.png)
+    ![](./media/pe-08.png)
    
 24. From the left navigation pane, select **Alerts (1)** and click on **Action groups (2)**.
 
-   ![](./media/action_group2.png)
+    ![](./media/action_group2.png)
    
 25. On the **Action group** pane, select **waf-actiongroup (1)** and click on **Test action group(preview) (2)**.
 
@@ -595,19 +595,19 @@ This way, the admins can be alerted when the workload is using the services at c
 
 26. Now for **Select sample type**, select **Billing alert (1)** from the drop-down. Select the checkbox for both **Notification and Alert type (2)**. At last, click on **Test (3)**.
 
-   ![](./media/action_group4.png)
+    ![](./media/action_group4.png)
 
 27. Jump to another tab in the browser where you created the webhook. From the left pane, open **Jobs** and select the **Running** job.
 
-   ![](./media/costopt-59.png)
+    ![](./media/costopt-59.png)
 
 28. Under the **Output** tab, you can review the execution of the action alert we just tested. It will show up as succeeded.
 
-   ![](./media/costopt-58.png)
+    ![](./media/costopt-58.png)
 
 29. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)**.
 
-   ![](./media/action_group5.png)
+    ![](./media/action_group5.png)
 
 
 <br/>

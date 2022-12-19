@@ -82,7 +82,7 @@ In this task, you will learn how to enable replication for virtual machines, run
    ![](./media/reliability-01.png)
    
   
-  > **Note:** Make sure that the VM is in running state before replicating. If not, please start the VM.
+  > **Note:** Make sure that the VM is in running state before starting the replication. If not, please start the VM.
 
 4. Review the details and click on **Start replication**.
 

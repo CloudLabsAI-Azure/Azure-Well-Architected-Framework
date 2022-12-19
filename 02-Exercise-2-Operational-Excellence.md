@@ -227,7 +227,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
      ![](media/Ex2-t2-09.png)
    
-> **Note:** If you face any sign in issue, please refer to [this](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/Azure%20Well-Architected%20Framework.md#1-exercise-2---task-3---create-a-logic-app--step-no-14)
+> **Note:** If you face any sign in issue, please refer to [this](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/Azure%20Well-Architected%20Framework.md#1-exercise-2---task-3---create-a-logic-app--step-no-14)document.
    
 15. In the Send an email form, provide the following values:
 

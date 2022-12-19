@@ -154,6 +154,8 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-64.png)
 
+> **Note:** Copy the name of the Automation account with the name **DSC-xxxx** to the text editor. You will be using it in the further steps.
+
 3. In the left pane, scroll to _Process Automation_, select **Runbooks** and click on **+Create a runbook**.
 
    ![](./media/costopt-07.png)
@@ -162,13 +164,13 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
 4. Fill in the details as follows:
  
-  * **Name:** Enter **stop-prod-vms (1)** in the name block.
-  * **Runbook type:** Select **PowerShell (2)** from the dropdown.
-  * **Runtime version:** Select **5.1 (3)** from the dropdown.
-  * **Description:** Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
-  * Click on **Create (5)**.
+     * **Name:** Enter **stop-prod-vms (1)** in the name block.
+     * **Runbook type:** Select **PowerShell (2)** from the dropdown.
+     * **Runtime version:** Select **5.1 (3)** from the dropdown.
+     * **Description:** Give a description such as, **Stop the Virtual Machines present in WAF Prod resource group. (4)**
+     * Click on **Create (5)**.
 
-   ![](./media/costopt-08.png)
+    ![](./media/costopt-08.png)
    
 5. Once the runbook is created, you will be directed to the **Edit PowerShell Runbook** page. Click on **stop-prod-vms**, that is the name of the runbook and will take you to the Overview page.
 
@@ -196,56 +198,56 @@ With respect to the workload we have, we will use Automation Accounts to perform
       - **Storage account** : Click on **Create new** and then select **storage<inject key="DeploymentID" enableCopy="false"/> (2)**
       - **File Share** : Click on **Create new** and then enter **blob (3)** 
 
-   ![](./media/costupd-03.png)
+     ![](./media/costupd-03.png)
 
 11. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
-   ![](./media/costupd-04.png)
+     ![](./media/costupd-04.png)
 
-12. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" /> and **[Your automation account Name]** with the name of the automation account you are using .
+12. Copy and paste the following commands in a text editor. Replace **[Your SubscriptionID]** with <inject key="susbscription ID" /> and **[Your automation account Name]** with the name of the automation account you copied in step 2 of this task.
 
-```
-$subscriptionID = "[Your SubscriptionID]"
-$resourceGroup = "wafprod"
-$automationAccount = "[Your automation account Name]" 
-```
+      ```
+      $subscriptionID = "[Your SubscriptionID]"
+      $resourceGroup = "wafprod"
+      $automationAccount = "[Your automation account Name]" 
+      ```
  
 13. In the PowerShell console, copy and paste the commands from text editor, to declare the variables and hit Enter. 
 
-   ![](./media/costupd-06.png)
+     ![](./media/costupd-06.png)
    
 14. To enable the system-assigned managed identity, copy and paste the command given below and hit enter after each command.
 
-```
-$output = Set-AzAutomationAccount -ResourceGroupName $resourceGroup -Name $automationAccount -AssignSystemIdentity
+      ```
+      $output = Set-AzAutomationAccount -ResourceGroupName $resourceGroup -Name $automationAccount -AssignSystemIdentity
 
-$output
-```
+      $output
+      ```
 
-   ![](./media/costupd-07.png)
+     ![](./media/costupd-07.png)
 
 15. The output should look similar to the following:
 
-   ![](./media/costupd-05.png)
-
+     ![](./media/costupd-05.png)
+ 
 16. In the Azure portal, navigate to the automation account **DSC-xxxx**. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Click on the copy button to copy this **Object ID** and paste it in a text editor.
 
-   ![](./media/costupd-14.png)
+    ![](./media/costupd-14.png)
 
 17. Now assign role to the managed identity you just created. It will allow the automation account to access the Azure resources.
 
 18. Copy and paste the following command in a text editor and replace the **[ObjectID]** with the value you copied in Step 16, same task.
 
-```
-$ObjectIDvalue = "[ObjectID]"
-New-AzRoleAssignment -ObjectId "$ObjectIDvalue" -Scope "/subscriptions/$subscriptionID/resourceGroups/$resourceGroup" -RoleDefinitionName "Contributor"
-```
+      ```
+      $ObjectIDvalue = "[ObjectID]"
+      New-AzRoleAssignment -ObjectId "$ObjectIDvalue" -Scope "/subscriptions/$subscriptionID/resourceGroups/$resourceGroup" -RoleDefinitionName "Contributor"
+      ```
 
-   ![](./media/costupd-09.png)
+     ![](./media/costupd-09.png)
 
 19. From the left pane, scroll to _Process Automation_, select **Runbooks** and open **stop-prod-vms**.
 
-   ![](./media/costupd-10.png)
+    ![](./media/costupd-10.png)
 
 20. Click on **Edit** to add PowerShell code to the runbook. The code is to stop the virtual machines present in wafprod resource group.
 
@@ -351,7 +353,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
    ![](./media/insights02.png)
 
-> **Note:** Please make sure the virtual machine you selected is in running state. If not please click on **Start** to start the virtual machine.
+> **Note:** Please make sure you select the virtual machine with the name **wafproxxxdc** and it is in running state. If not please click on **Start** to start the virtual machine.
 
 3. Click on **Insights** under minitoring and select **Enable**.
 

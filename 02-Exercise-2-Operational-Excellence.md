@@ -10,17 +10,17 @@ It covers the operations and processes that keep an application running in produ
 
 ### Task 1: DevOps
 
-To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates. Complex issues may not always be able to be identified in a timely manner. However, with good automation, detection of these issues should occur quickly.
+To activate resources on demand, deploy solutions rapidly, minimize human error, and produce consistent and repeatable results, we should automate deployments and updates. Complex issues may not always be able to be identified in a timely manner. However, with good automation, the detection of these issues should occur quickly.
  
 Once a process is automated, training and maintenance can be greatly reduced or eliminated. This frees engineers to spend less time on manual processes and more time on automating business solutions.
 
-The different types of automation includes:
+The different types of automation include:
 
 #### 1. Infrastructure deployment:
 
 As businesses move to the cloud, they need to repeatedly deploy their solutions and know that their infrastructure is in a reliable state. To meet these challenges, you can automate deployments using a practice referred to as infrastructure as code. In code, you define the infrastructure that needs to be deployed.
 
--There are many deployment technologies you can use with Azure. Here are three examples that uses declarative approach:
+-There are many deployment technologies you can use with Azure. Here are three examples that use the declarative approach:
 
  * Azure Resource Manager (ARM) templates
  * Azure Bicep
@@ -51,9 +51,9 @@ The advantages of automating operational tasks include:
 
 ### Task 2: Deployment
 
-In this task, you will learn to deploy and implement Azure Policy using ARM Template. Here, you will be working with "Add a tag to resources" policy. You can add tags to your Azure resources as metadata items. They are key-value pairs that help you in finding resources based on conditions that matter to your organization. 
+In this task, you will learn to deploy and implement Azure Policy using the ARM Template. Here, you will be working with the "Add a tag to resources" policy. You can add tags to your Azure resources as metadata items. They are key-value pairs that help you in finding resources based on conditions that matter to your organization. 
 
-Add a tag to resources policy puts tags on resources that are newly created under your subscription/resource group. For existing resources, you can remediate those by triggering a remediation task. In addition, you will see how to run remediation tasks for existing resources in your workload.
+Adding a tag to the resources policy puts tags on resources that are newly created under your subscription/resource group. For existing resources, you can remediate those by triggering a remediation task. In addition, you will see how to run remediation tasks for existing resources in your workload.
 
 1. In the Azure search box, enter **Deploy a custom template** and select it.
 
@@ -63,7 +63,7 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
      ![](media/policy02.png)
      
-3. Click on **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **azpolicy-addtag.json (3)** file and click on **Open (4)**.
+3. Click on the **Load file (1)** option on the edit template page. From the **C:\LabFiles (2)** directory, select the **azpolicy-addtag.json (3)** file and click on **Open (4)**.
 
      ![](media/policy03.png)
 
@@ -93,11 +93,11 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
     ![](media/policy08.png)
 
-9. On the **Policy** pane, click on **Assignments** section and observe that the policy with name **Add a tag to resources** is assigned to the wafprod resource group.
+9. On the **Policy** pane, click on the **Assignments** section and observe that the policy with the name **Add a tag to resources** is assigned to the wafprod resource group.
 
     ![](media/policy09.png)
     
-10. Click on **Add a tag to resources** policy and observe the **tagName** and **tagValue** in the parameters section of the policy.
+10. Click on the **Add a tag to resources** policy and observe the **tagName** and **tagvalue** in the parameters section of the policy.
 
     ![](media/policy10.png)
     
@@ -109,7 +109,7 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
     ![](media/policy12.png)
 
-13. Leave all configurations to default and click on **Remediation** tab.
+13. Leave all configurations to default and click on the **Remediation** tab.
 
     ![](media/op-upd-18.png)
 
@@ -150,7 +150,7 @@ Add a tag to resources policy puts tags on resources that are newly created unde
 
 ### Task 3: Monitor 
 
-In this task, you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using logic app. The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
+In this task, you will be creating an automated workflow that integrates two services, an RSS feed for a website and an email account using a logic app. The RSS connector has a trigger that checks an RSS feed, based on a schedule. The Office 365 Outlook connector has an action that sends an email for each new item.
 
 After you create and run a Consumption logic app workflow, you can check that workflow's run status, trigger history, runs history, and performance. To get notifications about failures or other possible problems, set up alerts. In this task we will perform all the operations such as creating alerts, checking on the run status, and trigger history.
 
@@ -177,7 +177,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 6. On the **Custom deployment** page, on the Basics tab, provide the following details for your logic app:
 
    * **Subscription**: Make sure the subscription is selected by default **(1)**.
-   * **Resource Group**: Select **wafprod (2)** from the drop down 
+   * **Resource Group**: Select **wafprod (2)** from the drop-down 
    * **Logic App name**: Enter **waf-logic-app (3)**. You can give a name of your choice too.
    * Leave all the other values as default and click on **Review + Create (4)**.
     
@@ -205,7 +205,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
  
     ![](media/Ex2-t2-06.png)
    
-12. Provide the following information in the trigger details page:
+12. Provide the following information on the trigger details page:
 
     * **The RSS feed URL**: `https://feeds.a.dj.com/rss/RSSMarketsMain.xml` (1)
     * **Chosen property will be used to determine**: PublishDate (2)
@@ -223,7 +223,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
    * Password: **<inject key="AzureAdUserPassword"></inject>**
-   * If you are presented with **Help us protect your account** dialog box, then select **Skip** for now option.
+   * If you are presented with the **Help us protect your account** dialog box, then select the **Skip** for now option.
 
      ![](media/Ex2-t2-09.png)
    
@@ -237,7 +237,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
     ![](media/Ex2-t2-10.png)
 
-> **Note:** In case if dynamic content is not listed, click on **See more** to view the list.
+> **Note:** In case dynamic content is not listed, click on **See more** to view the list.
 
    ![](media/op-upd-21.png)
 
@@ -288,7 +288,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
    
    ![](media/Ex3-task1-07.png)
    
-9. Go back to your logic app menu, under **Monitoring**, select **Alerts**.
+9. Go back to your logic app menu, under **Monitoring**, and select **Alerts**.
 
    ![](media/Ex3-task1-08.png)
    
@@ -317,7 +317,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
     
 14. On the **details** page, provide the below details:
 
-    * **Subscription**: Select your default susbcription (1)
+    * **Subscription**: Select your default subscription (1)
     * **Resource Group**: waf-prod (2)
     * **Severity**: 3 - Informational (3)
     * **Alert rule name**: waf-alert (4)
@@ -337,7 +337,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
 Enabling automatic VM guest patching for your Azure VMs helps ease update management by safely and automatically patching virtual machines to maintain security compliance.
 
- - Patches categorised as Critical or Security are downloaded and installed on the VM automatically.
+ - Patches categorized as Critical or Security are downloaded and installed on the VM automatically.
  - Azure oversees patch orchestration, and availability-first principles are used to apply patches.
  - Patches are installed during off-peak times in the time zone of the VM.
  - Patching failures are tracked by monitoring virtual machine health, as defined by platform health signals.
@@ -363,7 +363,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
    az vm update --resource-group [resource group name] --name [virtual machine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
    ```
 
-5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxxdc** virtual machine name, respectively. The command will look similar to the below.
+5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxxdc** virtual machine name, respectively. The command will look similar to the one below.
 
    ```
    az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
@@ -375,13 +375,13 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
    ![](./media/op-upd-11.png)
 
-7. To verify whether automatic VM guest patching has completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
+7. To verify whether automatic VM guest patching has been completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
 
    ``` 
    az vm get-instance-view --resource-group [resource group name] --name [virtual machine name]
    ```
 
-8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the below.
+8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the one below.
 
    ```
    az vm get-instance-view --resource-group wafprod --name wafprok4syndc
@@ -389,7 +389,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
 > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
-9. Paste the command and hit enter. You will see the output once the command is executed succesfully.
+9. Paste the command and hit enter. You will see the output once the command is executed successfully.
 
    ![](./media/op-upd-12.png)
 
@@ -399,7 +399,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
 ### Task 5: Processes and Cadence (Read-only task)
 
-Anytime you create a project, you must choose a process or process template based on the process model selected for your organization or collection. The work tracking objects contained within the default processes and process templates are Basic, Agile, CMMI, and Scrum.
+Anytime you create a project, you must choose a process or process template based on the process model selected for your organization or collection. The work-tracking objects contained within the default processes and process templates are Basic, Agile, CMMI, and Scrum.
 
 Basic is the most lightweight and is in a selective Preview. Scrum is the next most lightweight. Agile supports many Agile method terms, and CMMI, which stands for Capability Maturity Model Integration, provides the most support for formal processes and change management.
 
@@ -422,7 +422,7 @@ You can always choose the process that provides the best fit for your team.
 
 #### Scrum:
 
-- Choose Scrum when your team practices Scrum. This process works great if you want to track product backlog items (PBIs) and bugs on the Kanban board, or break down PBIs and bugs into tasks on the taskboard.
+- Choose Scrum when your team practices Scrum. This process works great if you want to track product backlog items (PBIs) and bugs on the Kanban board or break down PBIs and bugs into tasks on the taskboard.
 
    ![](media/alm_pt_scrum_wit_artifacts.png)
 
@@ -436,8 +436,7 @@ You can always choose the process that provides the best fit for your team.
     ![](media/alm_pt_cmmi_wit_artifacts.png)
 
 
-Now, click on the **Next** button from lower right corner to move to the next page.
-
+Now, click on the **Next** button from the lower right corner to move to the next page.
 
 
 

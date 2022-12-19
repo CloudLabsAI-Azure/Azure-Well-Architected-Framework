@@ -79,7 +79,6 @@ Add a tag to resources policy puts tags on resources that are newly created unde
    * **Tag Value**:  Enter **production (4)**. You can give a name of your choice too.
    * Leave all the other values as default and click on **Review + Create (5)**.
 
-
     ![](media/policy05.png)
 
 6. Finally, click on **Create**.
@@ -142,11 +141,11 @@ Add a tag to resources policy puts tags on resources that are newly created unde
     
 19. At the prompt, enter the following PowerShell command to retrieve all the resources with the specified tags. Observe the tagname and tagvalue under each resource in the output section.
 
-   ```
-   Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
-   ```
+    ```
+    Get-AzResource -ResourceGroupName "wafprod" -TagName "environment" -TagValue "production"
+    ```
    
-   ![](media/policy18.png)
+     ![](media/policy18.png)
 
 
 ### Task 3: Monitor 
@@ -200,11 +199,11 @@ After you create and run a Consumption logic app workflow, you can check that wo
   
 10. Scroll down to the Templates section and select **Blank Logic App**.
 
-   ![](media/op-09.png)
+    ![](media/op-09.png)
 
 11. In the designer search box, select **All** and enter **rss**. From the Triggers list, select the RSS trigger, **When a feed item is published**.
  
-   ![](media/Ex2-t2-06.png)
+    ![](media/Ex2-t2-06.png)
    
 12. Provide the following information in the trigger details page:
 
@@ -214,11 +213,11 @@ After you create and run a Consumption logic app workflow, you can check that wo
     * **Frequency**: Minute (4)
     * click on **New step (5)**
 
-   ![](media/Ex2-t2-07.png)
+    ![](media/Ex2-t2-07.png)
    
 13. Enter `Send an email (V2)` in the filter box, then select the **Send an email (V2)** action for Office 365 Outlook.
 
-   ![](media/Ex2-t2-8.png)
+    ![](media/Ex2-t2-8.png)
    
 14. Select **Sign in** and sign in to your Office 365 Outlook account. Use the login credentials given below:
 
@@ -226,7 +225,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
    * Password: **<inject key="AzureAdUserPassword"></inject>**
    * If you are presented with **Help us protect your account** dialog box, then select **Skip** for now option.
 
-   ![](media/Ex2-t2-09.png)
+     ![](media/Ex2-t2-09.png)
    
 15. In the Send an email form, provide the following values:
 
@@ -358,15 +357,16 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
 4. Copy the following command into a text editor to enable automatic VM guest patching for your Azure virtual machines. Here we will work with the **wafproxxxxdc** virtual machine from the **wafprod** resource group.
 
- ```
- az vm update --resource-group [resource group name] --name [virtual machine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
- ```
+   ```
+   az vm update --resource-group [resource group name] --name [virtual machine name] --set osProfile.windowsConfiguration.enableAutomaticUpdates=true osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
+   ```
 
 5. Replace **[resource group name]** and **[virtual machine name]** with **wafprod** and **wafproxxxxdc** virtual machine name, respectively. The command will look similar to the below.
 
- ```
- az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
- ```
+   ```
+   az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
+   ```
+
 > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
 6. Paste the command and hit enter. You will see the output once the command is executed successfully.
@@ -375,15 +375,15 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
 7. To verify whether automatic VM guest patching has completed and the patching extension is installed on the VM, you can review the VM’s instance view. Copy the below command in the text editor.
 
-  ``` 
-  az vm get-instance-view --resource-group [resource group name] --name [virtual machine name]
-  ```
+   ``` 
+   az vm get-instance-view --resource-group [resource group name] --name [virtual machine name]
+   ```
 
 8. Replace **[virtual machine name]** with your virtual machine's name. The command will look similar to the below.
 
-  ```
-  az vm get-instance-view --resource-group wafprod --name wafprok4syndc
-  ```
+   ```
+   az vm get-instance-view --resource-group wafprod --name wafprok4syndc
+   ```
 
 > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
@@ -393,7 +393,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
 
 10. Scroll down to view patch settings in windows configuration. It shows that automatic updates are enabled now.
 
-   ![](./media/op-upd-13.png)
+    ![](./media/op-upd-13.png)
 
 ### Task 5: Processes and Cadence (Read-only task)
 

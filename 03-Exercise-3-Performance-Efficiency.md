@@ -36,30 +36,29 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
 5. Add the rule by providing the following details:
 
    * **Metric Source:** Select **Current resource (srv) (1)** from the drop-down
-   * **Time aggregation:** Select **Average (2)**
-   * **Metric namespace:** Select **Virtual Machines Host (3)**
-   * **Metric name:** Select **Percentage CPU (4)**
-   * **Operator:** Select **Greater than (5)**
-   * **Metric threshold to trigger scale action:** Enter **70 (6)** %
-   * **Duration (minutes):** Enter **10 (7)**
-   * **Time graine statistic:** Select **Average (8)**
-   * **Operation:** Select **Increase count by (9)**
-   * **Cool down (minutes):** Enter **5 (10)**
-   * **Instance count:** Enter **1 (11)**
-   * At last, click on **Add (12)**
+   * **Metric namespace:** Select **Virtual Machines Host (2)**
+   * **Metric name:** Select **Percentage CPU (3)**
+   * **Operator:** Select **Greater than (4)**
+   * **Metric threshold to trigger scale action:** Enter **70 (5)** %
+   * **Duration (minutes):** Enter **10 (6)**
+   * **Time graine statistic:** Select **Average (7)**
+   * **Operation:** Select **Increase count by (8)**
+   * **Cool down (minutes):** Enter **5 (9)**
+   * **Instance count:** Enter **1 (10)**
+   * At last, click on **Add (11)**
 
 
-    ![](./media/pe-05.png)
+    ![](/media/Ex3-task1-step5.png)
 
 6. Click on **Add a rule** again. Leave all to default and modify the following details:
 
    * **Operator:** Select **Less than (1)**
    * **Metric threshold to trigger scale action:** Enter **30 (2)** %
-   * **Operation:** Select **Decrease percentage by (3)**
+   * **Operation:** Select **Decrease percent by (3)**
    * Click on **Add (4)**
 
 
-    ![](./media/pe-06.png)
+    ![](/media/Ex3-task1-step6.png)
 
 7. Set the following instance limits and select **Save**.
 
@@ -84,9 +83,9 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-12.png)
 
-2. Click on **Create log analytics workspace**.
+2. Click on **+ Create**.
 
-   ![](./media/pe-13.png)
+   ![](./media/Ex3-task2-step2.png)
 
 3. Provide the project and instance details as follows:
 
@@ -112,7 +111,7 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
 7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group. 
 
-> **Note:** Before performing the next step, **make sure that all the VMs are in running state**, in the respective resource group.
+   > **Note:** Before performing the next step, **make sure that all the VMs are in running state**, in the respective resource group.
 
 8. Click on **wafproxxxxx** virtual machine to open it and click on **Connect**. Follow the same process for other VMs from the _wafprod_ resource group.
 
@@ -148,24 +147,24 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
     ![](./media/pe-20.png)
 
-   > **Note:** It will take up to 10 minutes for the data to reflect in Insights. To see the details, you can click on **Why?** and see the detailed message. Once done click on **Close (3)**.
+      > **Note:** It will take up to 10 minutes for the data to reflect in Insights. To see the details, you can click on **Why?** and see the detailed message. Once done click on **Close (3)**.
 
 16. VM insights include a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open the **Virtual Machines** tab present in the left pane and click on **Performance**.
 
     ![](./media/pe-21.png)
 
-> **Note:** Insights may take up to 30 minutes to reflect in the dashboard. You can continue the lab and come back to view the insights.
+      > **Note:** Insights may take up to 30 minutes to reflect in the dashboard. You can continue the lab and come back to view the insights.
 
 16. In this section, you can play with filters such as **_Resource Group_** and **_Time Range_**. You will have graphical presentations for the following:
 
-   * **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
-   * **Available Memory -** shows the top five machines with the lowest average amount of available memory.
-   * **Logical Disk Space Used % -** shows the top five machines with the highest average disk space used % across all disk volumes.
-   * **Bytes Sent Rate -** shows the top five machines with the highest average of bytes sent.
-   * **Bytes Receive Rate -** shows the top five machines with the highest average of bytes received.
+      * **CPU Utilization % -** shows the top five machines with the highest average processor utilization.
+      * **Available Memory -** shows the top five machines with the lowest average amount of available memory.
+      * **Logical Disk Space Used % -** shows the top five machines with the highest average disk space used % across all disk volumes.
+      * **Bytes Sent Rate -** shows the top five machines with the highest average of bytes sent.
+      * **Bytes Receive Rate -** shows the top five machines with the highest average of bytes received.
 
    
-   ![](./media/pe-24.png)
+      ![](./media/pe-24.png)
 
 17. Hover your cursor over the **CPU Utilization %** graph and you will be able to see CPU utilization for all three VMs that we enabled monitoring.
 

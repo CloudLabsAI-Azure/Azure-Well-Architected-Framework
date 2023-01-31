@@ -74,7 +74,7 @@ Adding a tag to the resources policy puts tags on resources that are newly creat
 5. On the Custom deployment page, on the Basics tab,  provide the following details.
 
    * **Subscription**: Subscription will be selected by default.
-   * **Resource Group**: Select **waf-prod (2)** from the drop down.
+   * **Resource Group**: Select **wafprod (2)** from the drop down.
    * **Tag Name**:  Enter **environment (3)**. You can give a name of your choice too.
    * **Tag Value**:  Enter **production (4)**. You can give a name of your choice too.
    * Leave all the other values as default and click on **Review + Create (5)**.
@@ -89,7 +89,7 @@ Adding a tag to the resources policy puts tags on resources that are newly creat
    
     ![](media/policy07.png)
 
-8. From the left navigation pane, select **policies** under settings.
+8. Select **wafprod** resource groups from the left navigation pane, select **policies** under settings.
 
     ![](media/policy08.png)
 
@@ -111,13 +111,13 @@ Adding a tag to the resources policy puts tags on resources that are newly creat
 
 13. Leave all configurations to default and click on the **Remediation** tab.
 
-    ![](media/op-upd-18.png)
+    ![](media/Ex2-Task2-step13.png)
 
 14. Check the button with **Create a remediation task (1)** option under **Remediation**. Select **Review + Save (2)**, followed by **Save (3)**.
 
-    ![](media/op-upd-20.png)
+    ![](media/Ex2-Task2-step14a.png)
     
-    ![](media/op-upd-19.png)
+    ![](media/Ex2-Task2-stepa14b.png)
 
 15. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
 
@@ -239,15 +239,15 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
 > **Note:** In case dynamic content is not listed, click on **See more** to view the list.
 
-   ![](media/op-upd-21.png)
+    ![](media/op-upd-21.png)
 
 16. On the designer toolbar, select **Save** to save your logic app.
 
     ![](media/Ex2-t2-11.png)
     
-17. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
+17. Select **Run Trigger** and click on **Run** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
 
-     ![](media/Ex2-t2-12.png)
+     ![](media/Ex2-Task3-step17.png)
    
 18. The following screenshot shows a sample email that's sent by the workflow.
 
@@ -302,23 +302,23 @@ After you create and run a Consumption logic app workflow, you can check that wo
     
 12. On the **Configure signal logic** pane, under **Alert logic**, set up your condition with the following details:
 
-    * **Operator**: Greater than or equal to
     * **Aggregation type**: Count
-    * **Threshold value**: 1
+    * **Operator**: Greater than or equal to
     * **Unit**: Count
-    * **Aggregation granularity (Period)**: 1 minute
-    * **Frequency of evaluation**: 1 Minute.
+    * **Threshold value**: 1 
+    * **Check every**: 1 minute
+    * **Lookback period**: 1 Minute.
     
-    ![](media/alert%20rules.png)
+    ![](media/Ex2-Task3b-step12.png)
    
 13. The **Create an alert rule (1)** page now shows the condition that you created and the cost for running that alert. Click on **Details (2)** tab.
 
-    ![](media/op-upd-23.png)
+    ![](media/Ex2-Task3b-step13.png)
     
 14. On the **details** page, provide the below details:
 
     * **Subscription**: Select your default subscription (1)
-    * **Resource Group**: waf-prod (2)
+    * **Resource Group**: wafprod (2)
     * **Severity**: 3 - Informational (3)
     * **Alert rule name**: waf-alert (4)
     * Click on **Review + create** (5)

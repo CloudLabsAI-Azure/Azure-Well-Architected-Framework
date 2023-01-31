@@ -45,34 +45,34 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
     ![](./media/costopt-31.png)
 
- > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when the forecasted spending is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
+   > **Forecast:** Cost forecasts display a projection of your projected costs for the given time period based on your recent spending. You can see when the forecasted spending is going to exceed the budget threshold if you put up a budget in Cost analysis. For up to a year, the prediction model can anticipate future costs.
 
 5. You can play with the different filters provided here to analyze the cost, such as:
 
- * **View:** Cost analysis has four built-in views; they are as follows:
-   1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
-   2. **Daily cost -** Have there been any increases in the cost per day for the last 30 days?
-   3. **Cost by service -**	How has my monthly usage varied over the past three invoices?
-   4. **Cost by resource -**	Which resources cost the most so far this month?
-   5. **Invoice details -**	What charges did I have on my last invoice?
+   * **View:** Cost analysis has four built-in views; they are as follows:
+      1. **Accumulated cost -** How much have I spent so far this month? Will I stay within my budget?
+      2. **Daily cost -** Have there been any increases in the cost per day for the last 30 days?
+      3. **Cost by service -**	How has my monthly usage varied over the past three invoices?
+      4. **Cost by resource -**	Which resources cost the most so far this month?
+      5. **Invoice details -**	What charges did I have on my last invoice?
 
-   ![](./media/costopt-33.png)
+      ![](./media/costopt-33.png)
  
  
- * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
-   1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
-   2. Examples include the last seven days, the last month, the current year, or a custom date range.   
+   * **Date Range:** Here you can select custom dates as well as time periods for a better and deeper analysis.
+      1. By default, the current month's data is displayed in cost analysis. Switch to common date ranges fast by using the date selector.
+      2. Examples include the last seven days, the last month, the current year, or a custom date range.   
 
-     ![](./media/costopt-34.png)
+       ![](./media/costopt-34.png)
 
- * **View Cost:** To have better visibility on cost, you can use different views given below: 
-   1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop-down, you can select a group by keys such as Tag, Resource type, Provider, etc. 
-   2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
-   3. **Graph type:** It asks for a graphical representation, and what kind of representation you prefer. It could be Table, Column, Line, and much more.
+   * **View Cost:** To have better visibility on cost, you can use different views given below: 
+      1. **Group by:** _Group by_ uses common properties to break down costs and identify top contributors. From the drop-down, you can select a group by keys such as Tag, Resource type, Provider, etc. 
+      2. **Granularity:** This view is optimized to show how you're trending against a budget for the selected time range.
+      3. **Graph type:** It asks for a graphical representation, and what kind of representation you prefer. It could be Table, Column, Line, and much more.
 
  The image below shows _**Group by Resource type, Granularity: Daily and Graph type: Column(Stacked)**_
 
-   ![](./media/costopt-35.png)
+  ![](./media/costopt-35.png)
 
 6. You can export cost data to a CSV file to do a cost analysis.
 
@@ -82,11 +82,11 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 8. Once the view changes to resource groups, click on **Download** to download the data. 
 
-    ![](./media/EX1-Task1-step8.png)
+    ![](/media/EX1-Task1-step8.png)
 
 9. On the Download page, select **Excel** and click on **Download** button.
 
-    ![](./media/EX1-Task1-step9.png)
+    ![](/media/EX1-Task1-step9.png)
 
 10. The file will get downloaded.
 
@@ -129,7 +129,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 19. Now click on the **Data** sheet. It will load in a new tab, and here you can view the cost data.
 
-    ![](./media/EX1-Task1-step19.png)
+    ![](/media/EX1-Task1-step19.png)
 
  > ⭐ Tip: You can then use the exported data and combine it with your custom data. Also, you can use the exported data in an external system like a dashboard or another financial system.
 
@@ -153,13 +153,13 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
    ![](./media/costopt-64.png)
 
-> **Note:** Copy the name of the Automation account with the name **DSC-xxxx** to the text editor. You will be using it in the further steps.
+   > **Note:** Copy the name of the Automation account with the name **DSC-xxxx** to the text editor. You will be using it in the further steps.
 
 3. In the left pane, scroll to _Process Automation_, select **Runbooks** and click on **+ Create a runbook**.
 
    ![](./media/costopt-07.png)
 
- > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
+   > **Good to know:** Microsoft Azure Automation service provides a framework to create and schedule workflows to simplify the repetitive and mundane tasks that Cloud administrators perform with Azure. The workflows are commonly known as **Runbooks**.
 
 4. Fill in the details as follows:
  
@@ -276,7 +276,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costupd-15.png)
     
-> **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of the wafprod resource group.
+   > **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of the wafprod resource group.
 
 22. Once the runbook is published, select **Link to schedule** on the Overview page.
 
@@ -320,13 +320,13 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costupd-11.png)
 
- > **Note:** Click on **Refresh** to latest outputs.
+      > **Note:** Click on **Refresh** to latest outputs.
 
 30. Go back to **Virtual Machines** and observe the status of both the machines present in wafprod resource group. It will show up as **Stopped(deallocated)**.
 
     ![](./media/costopt-24.png)
 
- > **Note:** Click on **Refresh** if the VMs don't reflect the latest status.
+      > **Note:** Click on **Refresh** if the VMs don't reflect the latest status.
 
 
 ### **Task 3: Resize the Azure resources**
@@ -352,7 +352,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
    ![](./media/insights02.png)
 
-> **Note:** Please make sure you select the virtual machine with the name **wafproxxxdc** and that it is in a running state. If not please click on **Start** to start the virtual machine.
+   > **Note:** Please make sure you select the virtual machine with the name **wafproxxxdc** and that it is in a running state. If not please click on **Start** to start the virtual machine.
 
 3. Click on **Insights** under minitoring and select **Enable**.
 
@@ -360,32 +360,32 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
 4. On the **Monitoring configuration** page, leave all the values to default and click on **Configure**.
 
-   ![](./media/EX1-Task3-ST1-step4a.png)
+   ![](/media/EX1-Task3-ST1-step4a.png)
 
 5. On the **Insights** page observe the performance under **Monitoring** section.
 
    ![](./media/insights1.gif)
   
-  > **Note:** It can take between 5-10 minutes to configure the virtual machine and for the monitoring data to appear.
+     > **Note:** It can take between 5-10 minutes to configure the virtual machine and for the monitoring data to appear.
  
 6. Select **Size** present under _Settings_ pane.
 
-   ![](./media/EX1-Task3-ST1-step6.png)
+   ![](/media/EX1-Task3-ST1-step6.png)
    
 7. From the list of available sizes, click on **B1s** size to select it and then click on the **Resize** button.
 
    ![](./media/costopt-04.png)
 
- > **Note:** B-series burstable VMs are ideal for workloads that do not need the full performance of the CPU continuously, like web servers, small databases & development, and test environments. The B-Series provides these customers the ability to purchase a VM size with a _**price-conscious baseline performance**_ that allows the VM instance to build up credits when the VM is utilizing less than its base performance. When the VM has accumulated credit, the VM can burst above the VM’s baseline using up to 100% of the CPU when your application requires higher CPU performance.
+    > **Note:** B-series burstable VMs are ideal for workloads that do not need the full performance of the CPU continuously, like web servers, small databases & development, and test environments. The B-Series provides these customers the ability to purchase a VM size with a _**price-conscious baseline performance**_ that allows the VM instance to build up credits when the VM is utilizing less than its base performance. When the VM has accumulated credit, the VM can burst above the VM’s baseline using up to 100% of the CPU when your application requires higher CPU performance.
 
 8. Go back to the **Overview** page and verify the VM size. 
 
    ![](./media/costopt-05.png)
 
- > ⭐ Good to know: <br>
- > For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings!
+    > ⭐ Good to know: <br>
+   > For a D2s_v3 which has 2 vCPUs and 8 GiB of memory the hourly rate is $0.227 per hour (monthly $163.83) and for B1s with 1 vCPU and 1 GiB memory the rate is $0.031 per hour (monthly $21.85). This results in savings!
  
-> You can follow the same process to resize all the virtual machines in your workload, to optimize the cost.
+   > You can follow the same process to resize all the virtual machines in your workload, to optimize the cost.
 
 
  #### **Subtask 2: Storage Account** 
@@ -403,7 +403,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
     ![](media/storage03.png)
 
-> **Note:** observe that the storage account is in GRS replication which saves the data synchronously three times at the primary physical location (LRS) and asynchronously three times in a secondary physical region. We will be converting this to LRS replication which stores data synchronously three times at one physical location to optimize the cost.
+   > **Note:** observe that the storage account is in GRS replication which saves the data synchronously three times at the primary physical location (LRS) and asynchronously three times in a secondary physical region. We will be converting this to LRS replication which stores data synchronously three times at one physical location to optimize the cost.
 
 4. Scroll down on the left navigation pane and select **Redundancy** under Data management.
 
@@ -527,11 +527,11 @@ This way, the admins can be alerted when the workload is using the services at c
 
 14. Provide the following details:
 
-   * **Name:** Enter a unique name for the webhook such as **waf-webhook (1)**.
-   * **Enabled:** Leave on default.
-   * **Expires:** Add an expiry date and time **(2)**.
-   * **URL:** Copy the URL **(3)**. **Make sure to copy the URL and paste it into a text editor with you. Once you click on OK, it won't be retrievable.**
-   * Click on **OK (4)**.
+      * **Name:** Enter a unique name for the webhook such as **waf-webhook (1)**.
+      * **Enabled:** Leave on default.
+      * **Expires:** Add an expiry date and time **(2)**.
+      * **URL:** Copy the URL **(3)**. **Make sure to copy the URL and paste it into a text editor with you. Once you click on OK, it won't be retrievable.**
+      * Click on **OK (4)**.
 
      ![](./media/costopt-54.png)
    
@@ -543,9 +543,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
 17. Add the details as given below:
 
-   * **Action type:** Select **Webhook (1)** from the drop-down.
-   * **URI:** Paste the URL here that we copied in Step 13 in this task **(2)**.
-   * Click on **OK (3)**.
+      * **Action type:** Select **Webhook (1)** from the drop-down.
+      * **URI:** Paste the URL here that we copied in Step 13 in this task **(2)**.
+      * Click on **OK (3)**.
 
       ![](./media/costupd-25.png)
 
@@ -567,10 +567,10 @@ This way, the admins can be alerted when the workload is using the services at c
 
 22. Provide Alert recipients emails as given below:
 
-   * **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
-   * **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders' list so that emails don't go to your junk email folder.
-   * **Language:** You can select your language from the drop-down. Here we are leaving this on **Default (3)**.
-   * Click on **Create (4)**.
+      * **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
+      * **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders' list so that emails don't go to your junk email folder.
+      * **Language:** You can select your language from the drop-down. Here we are leaving this on **Default (3)**.
+      * Click on **Create (4)**.
 
      ![](./media/costopt-42.png)
 
@@ -589,7 +589,7 @@ This way, the admins can be alerted when the workload is using the services at c
    
 26. On the **Action group** pane, select **waf-actiongroup (1)** and click on **Test (2)**.
 
-    ![](./media/EX1-Task4-step26.png)
+    ![](/media/EX1-Task4-step26.png)
 
 27. Now for **Select sample type**, select **Billing alert (1)** from the drop-down. Select the checkbox for both **Notification and Alert type (2)**. At last, click on **Test (3)**.
 

@@ -82,11 +82,11 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
 8. Once the view changes to resource groups, click on **Download** to download the data. 
 
-    ![](./media/costupd-17.png)
+    ![](./media/EX1-Task1-step8.png)
 
-9. On the Download page, select **Resource group with resources (1)**, click on **Download (2)** button and select **Download as Excel (3)**.
+9. On the Download page, select **Excel** and click on **Download** button.
 
-    ![](./media/costupd-18.png)
+    ![](./media/EX1-Task1-step9.png)
 
 10. The file will get downloaded.
 
@@ -101,35 +101,35 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
       - If you are presented with the **Help us protect your account** dialog box, then select the **Skip for now** option.
       - If you see the pop-up **Stay Signed in?**, click **Yes**
 
-12. You will be directed to the Excel homepage. Select **New blank workbook** here.
+13. You will be directed to the Excel homepage. Select **New blank workbook** here.
 
     ![](./media/costupd-29.png)
 
-13. Click on **File (1)** in the top left corner, click on **Open (2)** and select **View more files (3)**.
+14. Click on **File (1)** in the top left corner, click on **Open (2)** and select **View more files (3)**.
 
     ![](./media/costupd-30.png)
 
     ![](./media/costupd-31.png)
 
-14. You will be taken to OneDrive, where you will upload the excel file that we just downloaded, and then you will be able to view it. 
+15. You will be taken to OneDrive, where you will upload the excel file that we just downloaded, and then you will be able to view it. 
 
     ![](./media/costupd-32.png)
 
-15. Click on **Upload** and select **Files**.
+16. Click on **Upload** and select **Files**.
 
     ![](./media/costupd-33.png)
 
-16. Select the cost data file you downloaded and click on **Open**.
+17. Select the cost data file you downloaded and click on **Open**.
 
     ![](./media/costupd-34.png)
    
-17. The data file gets uploaded as shown in the image below.
+18. The data file gets uploaded as shown in the image below.
 
     ![](./media/costupd-35.png)
 
-18. Now click on the data file. It will load in a new tab, and here you can view the cost data.
+19. Now click on the **Data** sheet. It will load in a new tab, and here you can view the cost data.
 
-    ![](./media/costupd-36.png)
+    ![](./media/EX1-Task1-step19.png)
 
  > ⭐ Tip: You can then use the exported data and combine it with your custom data. Also, you can use the exported data in an external system like a dashboard or another financial system.
 
@@ -155,7 +155,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
 > **Note:** Copy the name of the Automation account with the name **DSC-xxxx** to the text editor. You will be using it in the further steps.
 
-3. In the left pane, scroll to _Process Automation_, select **Runbooks** and click on **+Create a runbook**.
+3. In the left pane, scroll to _Process Automation_, select **Runbooks** and click on **+ Create a runbook**.
 
    ![](./media/costopt-07.png)
 
@@ -229,7 +229,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
      ![](./media/costupd-05.png)
  
-16. In the Azure portal, navigate to the automation account **DSC-xxxx**. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Click on the copy button to copy this **Object ID** and paste it into a text editor.
+16. In the Azure portal, navigate to the automation account, and select the **DSC-xxxx** which is under wafprod resource group. From the left pane select **Identity** given under _Account Settings_. The system-assigned identity you just created is represented here by an object ID. Click on the copy button to copy this **Object ID** and paste it into a text editor.
 
     ![](./media/costupd-14.png)
 
@@ -360,18 +360,17 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
 4. On the **Monitoring configuration** page, leave all the values to default and click on **Configure**.
 
-   ![](./media/insights04.png)
+   ![](./media/EX1-Task3-ST1-step4a.png)
 
-5. On the **Insights** page observe the performance under **performance** section.
+5. On the **Insights** page observe the performance under **Monitoring** section.
 
    ![](./media/insights1.gif)
   
   > **Note:** It can take between 5-10 minutes to configure the virtual machine and for the monitoring data to appear.
-
  
 6. Select **Size** present under _Settings_ pane.
 
-   ![](./media/costopt-03.png)
+   ![](./media/EX1-Task3-ST1-step6.png)
    
 7. From the list of available sizes, click on **B1s** size to select it and then click on the **Resize** button.
 
@@ -412,7 +411,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
 5. Select **Locally-redundant storage (LRS)** under **Redundancy** and click on **Save** to save the changes.
 
-  ![](media/Redundancy2.png)
+   ![](media/Redundancy2.png)
  
  
  
@@ -466,13 +465,13 @@ This way, the admins can be alerted when the workload is using the services at c
 
 5. Add two **Alert conditions** as given below:
 
-* **(1)** Type: Select **Actual** from the drop-down.
-* % of budget: Add the desired percentage here. (Actual costs budget alerts are generated for the actual cost you've accrued in relation to the budget thresholds configured. As an example, in the screenshot below, an email alert gets generated when 90% of the budget is reached.)
+   * **(1)** Type: Select **Actual** from the drop-down.
+   * % of budget: Add the desired percentage here. (Actual costs budget alerts are generated for the actual cost you've accrued in relation to the budget thresholds configured. As an example, in the screenshot below, an email alert gets generated when 90% of the budget is reached.)
 
-* **(2)** Type: Select **Forecasted** from the drop-down.
-* % of budget: Add the desired percentage here. (Forecasted alerts provide advanced notification that your spending trends are likely to exceed your budget. As an example, in the screenshot below, an email alert gets generated when the 100% forecasted budget threshold is met.)
+   * **(2)** Type: Select **Forecasted** from the drop-down.
+   * % of budget: Add the desired percentage here. (Forecasted alerts provide advanced notification that your spending trends are likely to exceed your budget. As an example, in the screenshot below, an email alert gets generated when the 100% forecasted budget threshold is met.)
 
-* Once done, click on **Manage action group (3)**. and then select **+ Create**.
+   * Once done, click on **Manage action group (3)**. and then select **+ Create**.
 
    ![](./media/costopt-47.png)
 
@@ -491,42 +490,42 @@ This way, the admins can be alerted when the workload is using the services at c
 
     ![](./media/costupd-21.png)
 
-7. Provide the following information for the notifications to be sent when an alert is triggered.
+8. Provide the following information for the notifications to be sent when an alert is triggered.
 
-* **Notification type:** Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
+   * **Notification type:** Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
 
-  a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
+   a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
   
-  b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
+   b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
 
-* **Add or edit an Email/SMS/Push/Voice action:** Based on the selected notification type, select **Email** and enter your email address **(2)**.
-* **Enable Common alert schema:** Leave to **No**. You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
+   * **Add or edit an Email/SMS/Push/Voice action:** Based on the selected notification type, select **Email** and enter your email address **(2)**.
+   * **Enable Common alert schema:** Leave to **No**. You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
 
-* Click on **OK (4)**.
-* **Name:** Enter a unique name for the notification **(5)**.
+   * Click on **OK (4)**.
+   * **Name:** Enter a unique name for the notification **(5)**.
 
    ![](./media/costupd-23.png)
 
-8. Now click on **Next: Actions**.
+9. Now click on **Next: Actions**.
 
    ![](./media/costopt-50.png)
 
-9. In this step, to add an action we will need a webhook. Open a new tab in your browser and navigate to **```portal.azure.com```** and go to **Resource groups**.
+10. In this step, to add an action we will need a webhook. Open a new tab in your browser and navigate to **```portal.azure.com```** and go to **Resource groups**.
 
-10. Open **wafprod (1)** resource group, select **DSC-xxxx (2)** automation account. In there, click on **Runbooks (3)** and select **stop-prod-vm (4)**, it's the runbook we created earlier.
+11. Open **wafprod (1)** resource group, select **DSC-xxxx (2)** automation account. In there, click on **Runbooks (3)** and select **stop-prod-vm (4)**, it's the runbook we created earlier.
 
     ![](./media/costopt-51.png)
 
-11. Select **Webhooks** from the left pane and click on **+ Add Webhook**.
+12. Select **Webhooks** from the left pane and click on **+ Add Webhook**.
 
     ![](./media/costopt-52.png)
 
-12. Click on **Create new webhook**.
+13. Click on **Create new webhook**.
 
     ![](./media/costopt-53.png)
 
 
-13. Provide the following details:
+14. Provide the following details:
 
    * **Name:** Enter a unique name for the webhook such as **waf-webhook (1)**.
    * **Enabled:** Leave on default.
@@ -536,37 +535,37 @@ This way, the admins can be alerted when the workload is using the services at c
 
      ![](./media/costopt-54.png)
    
-14. Click on **Create**.
+15. Click on **Create**.
 
     ![](./media/costopt-55.png)   
 
-15. Once the webhook is created, go to the previous tab where we had the **Actions** tab in the Azure portal. 
+16. Once the webhook is created, go to the previous tab where we had the **Actions** tab in the Azure portal. 
 
-16. Add the details as given below:
+17. Add the details as given below:
 
    * **Action type:** Select **Webhook (1)** from the drop-down.
    * **URI:** Paste the URL here that we copied in Step 13 in this task **(2)**.
    * Click on **OK (3)**.
 
-   ![](./media/costupd-25.png)
+      ![](./media/costupd-25.png)
 
-17. Give a unique **Name (1)** for the action and click on **Review + Create (2)**.
+18. Give a unique **Name (1)** for the action and click on **Review + Create (2)**.
 
     ![](./media/costopt-57.png)
 
-18. In the **Review + Create** tab, click on **Create**. 
+19. In the **Review + Create** tab, click on **Create**. 
 
     ![](./media/costupd-26.png)
     
-19. After the action group is created, you will be directed to the Create budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Create budget (3)**.
+20. After the action group is created, you will be directed to the Create budget page. Click on **Refresh (1)** till you get the **waf-actiongroup (2)** action group listed, then click on **Create budget (3)**.
 
     ![](./media/costupd-27.png)
 
-20. Select the Action group for both alert conditions from the drop-down.
+21. Select the Action group for both alert conditions from the drop-down.
 
     ![](./media/costopt-63.png)
 
-21. Provide Alert recipients emails as given below:
+22. Provide Alert recipients emails as given below:
 
    * **Alert recipients (email):** Enter your username **<inject key="AzureAdUserEmail"></inject>** **(1)**
    * **Alert recipients (email):** Add **azure-noreply@microsoft.com** **(2)** to your approved senders' list so that emails don't go to your junk email folder.
@@ -575,36 +574,36 @@ This way, the admins can be alerted when the workload is using the services at c
 
      ![](./media/costopt-42.png)
 
-22. After you create a budget, it's shown in the cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
+23. After you create a budget, it's shown in the cost analysis. One of the first steps in analyzing your costs and spending is to compare your budget to your spending patterns.
 
     ![](./media/costopt-43.png)
 
 
-23. you will have the option to test the action group. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor (2)**.
+24. you will have the option to test the action group. In the Azure portal, click on the **Show portal menu (1)** button given in the top-left corner and then open **Monitor (2)**.
 
     ![](./media/pe-08.png)
    
-24. From the left navigation pane, select **Alerts (1)** and click on **Action groups (2)**.
+25. From the left navigation pane, select **Alerts (1)** and click on **Action groups (2)**.
 
     ![](./media/action_group2.png)
    
-25. On the **Action group** pane, select **waf-actiongroup (1)** and click on **Test action group(preview) (2)**.
+26. On the **Action group** pane, select **waf-actiongroup (1)** and click on **Test (2)**.
 
-    ![](./media/action_group3.png)
+    ![](./media/EX1-Task4-step26.png)
 
-26. Now for **Select sample type**, select **Billing alert (1)** from the drop-down. Select the checkbox for both **Notification and Alert type (2)**. At last, click on **Test (3)**.
+27. Now for **Select sample type**, select **Billing alert (1)** from the drop-down. Select the checkbox for both **Notification and Alert type (2)**. At last, click on **Test (3)**.
 
     ![](./media/action_group4.png)
 
-27. Jump to another tab in the browser where you created the webhook. From the left pane, open **Jobs** and select the **Running** job.
+28. Jump to another tab in the browser where you created the webhook. From the left pane, open **Jobs** and select the **Running** job.
 
     ![](./media/costopt-59.png)
 
-28. Under the **Output** tab, you can review the execution of the action alert we just tested. It will show up as succeeded.
+29. Under the **Output** tab, you can review the execution of the action alert we just tested. It will show up as succeeded.
 
     ![](./media/costopt-58.png)
 
-29. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)**.
+30. Once testing is done, it will show as Success for both Notification and Alert type **(1)**. Click on **Done (2)**.
 
     ![](./media/action_group5.png)
 

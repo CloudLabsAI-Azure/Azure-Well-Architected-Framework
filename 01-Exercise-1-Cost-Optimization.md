@@ -72,7 +72,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
  The image below shows _**Group by Resource type, Granularity: Daily and Graph type: Column(Stacked)**_
 
-  ![](./media/costopt-35.png)
+   ![](./media/costopt-35.png)
 
 6. You can export cost data to a CSV file to do a cost analysis.
 
@@ -131,7 +131,7 @@ With advanced analytics, Cost Management reveals corporate cost and use patterns
 
     ![](/media/EX1-Task1-step19.png)
 
- > ⭐ Tip: You can then use the exported data and combine it with your custom data. Also, you can use the exported data in an external system like a dashboard or another financial system.
+      > ⭐ Tip: You can then use the exported data and combine it with your custom data. Also, you can use the exported data in an external system like a dashboard or another financial system.
 
 ### **Task 2: Shutdown**
 
@@ -276,7 +276,7 @@ With respect to the workload we have, we will use Automation Accounts to perform
 
     ![](./media/costupd-15.png)
     
-   > **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of the wafprod resource group.
+      > **Note:** You can try it on other resource groups too by updating the resource group name. Here we took example of the wafprod resource group.
 
 22. Once the runbook is published, select **Link to schedule** on the Overview page.
 
@@ -366,7 +366,7 @@ VM Insights show the following utilization charts shown on the **Performance** p
 
    ![](./media/insights1.gif)
   
-     > **Note:** It can take between 5-10 minutes to configure the virtual machine and for the monitoring data to appear.
+      > **Note:** It can take between 5-10 minutes to configure the virtual machine and for the monitoring data to appear.
  
 6. Select **Size** present under _Settings_ pane.
 
@@ -494,9 +494,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
    * **Notification type:** Here we are selecting **Email/SMS message/Push/Voice (1)**. The available options are given below:
 
-   a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
+      a. Email Azure Resource Manager Role: Send an email to users who are assigned to certain subscription-level Azure Resource Manager roles.
   
-   b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
+      b. Email/SMS message/Push/Voice: Send various notification types to specific recipients.
 
    * **Add or edit an Email/SMS/Push/Voice action:** Based on the selected notification type, select **Email** and enter your email address **(2)**.
    * **Enable Common alert schema:** Leave to **No**. You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor **(3)**. 
@@ -591,9 +591,9 @@ This way, the admins can be alerted when the workload is using the services at c
 
     ![](/media/EX1-Task4-step26.png)
 
-27. Now for **Select sample type**, select **Billing alert (1)** from the drop-down. Select the checkbox for both **Notification and Alert type (2)**. At last, click on **Test (3)**.
+27. Now for **Select sample type**, select **Cost budget alert (1)** from the drop-down. Select the checkbox for both **Notification and Alert type (2)**. At last, click on **Test (3)**.
 
-    ![](./media/action_group4.png)
+    ![](/media/EX1-Task4-step27.png)
 
 28. Jump to another tab in the browser where you created the webhook. From the left pane, open **Jobs** and select the **Running** job.
 

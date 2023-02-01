@@ -29,37 +29,52 @@ User directories and other authentication functions are complex to develop and c
 
 3. Download the **Microsoft Authenticator** app on your Mobile from App Store. After installing the app, select **Next**.
 
-   ![](media/mfa-01.png)
+   ![](media/EX5-task1-step3.png)
    
 4. In the Microsoft Authenticator app, set up your account by adding a work or school account. After adding an account select **Next**.
 
-   ![](media/mfa-02.png)
+   ![](media/EX5-task1-step4.png)
    
 5. To connect the Microsoft Authenticator app with your account, **Scan the QR code (1)** and select **Next (2)**.
 
-   ![](media/mfa-03-new.png)
+   ![](media/EX5-task1-step5.png)
    
 6. A Notification to Approve will pop-up on your mobile. Approve that and select **Next**.
 
-   ![](media/mfa-04.png)
+   ![](media/EX5-task1-step6.png)
    
-7. Enter the details required to set up MFA.
+7. Once Success! Great job! You have successfully set up your security info. Choose **Done** to continue signing in.
 
-   - Country Code: Select the country code of your mobile number **(1)**
-   - Mobile Number: Enter the number which you want to use for the MFA **(2)**
-   - Method: Select the preferred method of authentication **(3)**
-   - Click on **Next (4)**.
+   ![](media/EX5-task1-step7.png)
 
-   ![](media/mfa-05-updated.png)
+8. Click on **Security info** tab from left side menu. In Security info page click on **+ Add sign-in method**.
 
-8. Authenticate the login according to the authentication method you have chosen in the previous step to complete the verification.
+   ![](media/EX5-task1-step8.png)
 
-   ![](media/mfa-06.png)
+9. For Add a method pop-up, from the drop-down select **phone**, and click on **Add**.
+
+   ![](media/EX5-task1-step9.png)
+
+10. Enter the details required to set up MFA.
+
+    - **Country Code**: Select the country code of your mobile number **(1)**
+    - **Mobile Number**: Enter the number which you want to use for the MFA **(2)**
+    - **Method**: Select the preferred method of authentication **(3)**
+    - Click on **Next (4)**.
+
+    ![](media/EX5-task1-step101.png)
+
+11. Authenticate the login according to the authentication method you have chosen in the previous step to complete the verification.
+
+    ![](media/EX5-task1-step11.png)
   
-9. Now after a few seconds the status will change to **Verification Success**, click on **Done** to finish the MFA registration.
+12. Now after a few seconds the status will change to **registered successfully**, click on **Done** to finish the MFA registration.
 
-   ![](media/mfa-07.png)
-   
+    ![](media/EX5-task1-step12.png)
+
+13. You can verify the regirested **Phone** and **Microsoft Authenticator** on the Security info page
+
+    ![](media/EX5-task1-step13.png)
 
 ## Task 2: Infra protection
 
@@ -217,7 +232,7 @@ In this task, you will create your own encryption key to protect the data in you
   
 6. On the **Access policy** pane, check all the options under **Enable access to:** and click on **Review + create**.
 
-   ![](./media/ex5-task4-04.png)
+   ![](/media/EX5-task4-step6.png)
   
 7. Once the deployment is successfully finished, you will be redirected to **Select a key** page, and click on the **create a new key** option next to the key.
 
@@ -261,17 +276,17 @@ In this task, you will create your own encryption key to protect the data in you
     
 15. Click on **...** on the **Basics** tab of **assign policy** page and select your subscription as the scope.
 
-    ![](./media/ex5-task4-14.png)
+    ![](/media/EX5-task4-step15.png)
     
     ![](./media/ex5-task4-15.png)
     
 16. Click on **Next**, select your choice of location in the **Allowed locations** bar and click on **Review + create**.  
 
-    ![](./media/ex5-task4-16.png)
+    ![](/media/EX5-task4-step16.png)
  
- 17. At last, click on **create** to assign the policy to the subscription.
+17. At last, click on **create** to assign the policy to the subscription.
     
-   ![](./media/createex05.png)
+    ![](/media/EX5-task4-step17q.png)
    
 ## Task 5: Security operations
 
@@ -292,8 +307,8 @@ In this task, we are going to perform integrated security monitoring for your wo
 
     ![](./media/ex5-task5-04.png)
    
- > ⭐ Good to know: <br>
- > The higher the score, the lower the identified risk level.
+  > ⭐ Good to know: <br>
+  > The higher the score, the lower the identified risk level.
 
 4. The bottom section lists the subscriptions and their current secure scores. To view the recommendations behind the score, click on **View recommendations**.
 
@@ -311,11 +326,11 @@ In this task, we are going to perform integrated security monitoring for your wo
    
 7. On the top section, notice the following:
 
-   - Title of the recommendation: **Management ports of virtual machines should be protected with just-in-time network access control**
-   - Top menu controls: **View policy definition** and **Open query**
-   - Severity indicator: **High**
-   - Freshness interval: **24 Hours** 
-   - Tactics and techniques: **Initial Access**
+    - Title of the recommendation: **Management ports of virtual machines should be protected with just-in-time network access control**
+    - Top menu controls: **View policy definition** and **Open query**
+    - Severity indicator: **High**
+    - Freshness interval: **24 Hours** 
+    - Tactics and techniques: **Initial Access**
 
      ![](./media/ex5-task5-07.png)
    
@@ -327,7 +342,7 @@ In this task, we are going to perform integrated security monitoring for your wo
   
 10. This will open a new window **Just-in-time VM access configuration**, review the implications for this remediation, and click on **Save**.
 
-   ![](./media/ex5-task5-09.png)
+    ![](./media/ex5-task5-09.png)
    
 11. Wait for a notification: ✅ **Just-in-time VM access enabled** - which successfully blocks all inbound traffic at the network level to the virtual machine **wafdevxxx**. 
     

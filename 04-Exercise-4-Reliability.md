@@ -81,8 +81,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-01.png)
    
-  
-  > **Note:** Make sure that the VM is in running state before starting the replication. If not, please start the VM.
+   > **Note:** Make sure that the VM is in running state before starting the replication. If not, please start the VM.
 
 4. Review the details and click on **Start replication**.
 
@@ -98,14 +97,13 @@ In this task, you will learn how to enable replication for virtual machines, run
 
    ![](./media/reliability-06.png)   
 
- > **Note:** Use **Refresh** button in case the recovery service vault is not reflecting.
+   > **Note:** Use **Refresh** button in case the recovery service vault is not reflecting.
 
 8. From the left pane, select **Site Recovery jobs** present under _Monitoring_. You will see all the jobs here with their status.
 
    ![](./media/reliability-03.png)
 
-> **Note:** It will take upto 15 minutes for all jobs to succeed.
-
+   > **Note:** It will take upto 15 minutes for all jobs to succeed.
 
 9. Now from the left pane, select **Replicated items** present under _Protected items_. You will have the VM here that you just replicated, select that virtual machine **wafproxxxxxx**.
 
@@ -123,11 +121,11 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 2. Provide the following details for the recovery plan:
 
-  * **Name:** Specify a name for the plan **(1)**.
-  * **Source:** Choose a source location from the drop-down. The source location must have machines that are enabled for failover and recovery. Here we are using **Central US (2)** as it's the same location where we have our virtual machine.
-  * **Target:** Choose a target location from the drop-down **(3)**.
-  * **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
-  * Click on **Select items (5)**.
+   * **Name:** failover-recovery-plan **(1)**.
+   * **Source:** Choose a source location from the drop-down. The source location must have machines that are enabled for failover and recovery. Here we are using **Central US (2)** as it's the same location where we have our virtual machine.
+   * **Target:** Choose a target location from the drop-down **(3)**.
+   * **Allow items with deployment model:** Select **Resource Manager (4)** from the drop down.
+   * Click on **Select items (5)**.
 
     ![](./media/reliability-38.png)
 
@@ -154,9 +152,9 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 3. Provide the following details for the failover:
 
-  * **Choose a Recovery Point:** Select **Latest processed (low RTO) (1)** from the drop-down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
-  * **Azure virtual network:** Select an Azure virtual network **(2)** from the drop-down, in which a test virtual machine will be created.
-  * Click on **OK (3)**.
+   * **Choose a Recovery Point:** Select **Latest processed (low RTO) (1)** from the drop-down. This option fails over all VMs in the plan to the latest recovery point processed by Site Recovery. This option provides a low RTO (Recovery Time Objective), because no time is spent processing unprocessed data.
+   * **Azure virtual network:** Select an Azure virtual network **(2)** from the drop-down, in which a test virtual machine will be created.
+   * Click on **OK (3)**.
 
     ![](./media/reliability-16.png)
 
@@ -166,10 +164,10 @@ In this task, you will learn how to enable replication for virtual machines, run
 
 5. When a test failover is triggered, the following occurs:
 
-  * **Prerequisites:** A prerequisites check runs to make sure that all conditions required for failover are met.
-  * **Failover:** The failover processes and prepared the data, so that an Azure VM can be created from it.
-  * **Latest:** If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
-  * **Start:** This step creates an Azure virtual machine using the data processed in the previous step.
+   * **Prerequisites:** A prerequisites check runs to make sure that all conditions required for failover are met.
+   * **Failover:** The failover processes and prepared the data, so that an Azure VM can be created from it.
+   * **Latest:** If you have chosen the latest recovery point, a recovery point is created from the data that's been sent to the service.
+   * **Start:** This step creates an Azure virtual machine using the data processed in the previous step.
 
     ![](./media/reliability-18.png)
 
@@ -230,43 +228,48 @@ In this task, you will set up **Service Health alerts** to notify you via your p
 
    ![](./media/ex4-task4-07.png)
    
-6. On the create an alert rule page, go to **Actions** and click on **select action group**.
+6. On the create an alert rule page, leave Condition page as default, click on **Actions** and click on **+ Select action group**.
 
-   ![](./media/ex4-task4-03.png)
+   ![](/media/Ex4-task3-step6.png)
    
 7. You will be prompted to **select action group** page, in this page make sure your subscription is selected and select the action group with the name **waf-actiongroup** which you created in exercise 1, task 4. Click on **Select**.
 
    ![](./media/ex4-task4-04.png)
 
-8. Under **Alert rule details**, Provide the following details:
+8. Click on **Details (1)**, under **Alert rule details**, Provide the following details:
 
-   * **Alert rule name**: waf-alert
-   * **Resource Group**: waf-prod
-   * Check **Enable alert rule upon creation**
-
-   ![](./media/ex4-task4-05.png)
+   * **Resource Group**: waf-prod **(2)**
+   * **Alert rule name**: waf-alert **(3)**
+   * Extend **Advanced options** check **Enable alert rule upon creation (4)**
+   * Click on **Review + Create (5)**
+ 
+   ![](/media/Ex4-task3-step8.png)
    
-9. Once the alert rule is created, go to the **Health alerts** page and observe all the details of the alert.
+9. On **Review + create** page click on **Create**.
 
-   ![](./media/ex4-task4-06.png)
+   ![](/media/Ex4-task3-step9.png)
+   
+10. Once the alert rule is created, go to the **Health alerts** page and observe all the details of the alert.
 
-10. In the Azure portal, search for Advisor and select **Advisor** from the suggestions.
+    ![](./media/ex4-task4-06.png)
+
+11. In the Azure portal, search for Advisor and select **Advisor** from the suggestions.
 
     ![](./media/costopt-25.png)
 
-11. Click on **All recommendations** from the left navigation pane under **Recommendations**.
+12. Click on **All recommendations** from the left navigation pane under **Recommendations**.
 
     ![](./media/ex4-task4-11.png)
     
-12. On the **All recommendations** page, click on the recommendation **Enable Cross Region Restore for your recovery Service Vault**.
+13. On the **All recommendations** page, click on the recommendation **Enable Cross Region Restore for your recovery Service Vault**.
 
     ![](./media/ex4-task4-10.png)
     
-13. Click on **Enable CRR** on the **Enable Cross Region Restore for your recovery Service Vault** page to enable cross region restore.
+14. Click on **Enable CRR** on the **Enable Cross Region Restore for your recovery Service Vault** page to enable cross region restore.
 
-    ![](./media/ex4-task4-12.png)
+    ![](/media/Ex4-task3-step14.png)
     
-14. On the **Backup configuration** page, select **Enable** on the Cross Region Restore option and click on **Save**.
+15. On the **Backup configuration** page, select **Enable** on the Cross Region Restore option and click on **Save**.
 
     ![](./media/ex4-task4-13.png)
 
@@ -286,15 +289,15 @@ In this task, you will learn how to initiate an account failover for your storag
 
 3. Provide following details to create the storage account:
 
-  - **Subscription:** Make sure your sunbscription is selected **by default (1)**
-  - **Resource group:** Select **wafdev (2)** from the drop down
-  - **Storage account name:** Give a unique name for the storage account **(3)**
-  - **Region:** Leave to default **(4)**
-  - **Performance:** Select **Standard (5)**
-  - **Redundancy:** Select **Geo-redundant storage(GRS) (6)** from the drop down
-  - At last, click on **Review (7)**
+   - **Subscription:** Make sure your sunbscription is selected **by default (1)**
+   - **Resource group:** Select **wafdev (2)** from the drop down
+   - **Storage account name:** Give a unique name for the storage account **(3)**
+   - **Region:** Leave to default **(4)**
+   - **Performance:** Select **Standard (5)**
+   - **Redundancy:** Select **Geo-redundant storage(GRS) (6)** from the drop down
+   - At last, click on **Review (7)**
 
- > **Note:** The storage account should be configured with Geo-redundant storage, as Geo-replication is available for Geo-redundant (GRS) and Read access geo-redundant (RA-GRS) storage accounts.
+   > **Note:** The storage account should be configured with Geo-redundant storage, as Geo-replication is available for Geo-redundant (GRS) and Read access geo-redundant (RA-GRS) storage accounts.
  
    
    ![](./media/reliability-31.png)

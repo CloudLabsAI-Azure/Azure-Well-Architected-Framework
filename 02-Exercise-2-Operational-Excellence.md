@@ -74,7 +74,7 @@ Adding a tag to the resources policy puts tags on resources that are newly creat
 5. On the Custom deployment page, on the Basics tab,  provide the following details.
 
    * **Subscription**: Subscription will be selected by default.
-   * **Resource Group**: Select **waf-prod (2)** from the drop down.
+   * **Resource Group**: Select **wafprod (2)** from the drop down.
    * **Tag Name**:  Enter **environment (3)**. You can give a name of your choice too.
    * **Tag Value**:  Enter **production (4)**. You can give a name of your choice too.
    * Leave all the other values as default and click on **Review + Create (5)**.
@@ -89,7 +89,7 @@ Adding a tag to the resources policy puts tags on resources that are newly creat
    
     ![](media/policy07.png)
 
-8. From the left navigation pane, select **policies** under settings.
+8. Select **wafprod** resource groups from the left navigation pane, select **policies** under settings.
 
     ![](media/policy08.png)
 
@@ -111,20 +111,19 @@ Adding a tag to the resources policy puts tags on resources that are newly creat
 
 13. Leave all configurations to default and click on the **Remediation** tab.
 
-    ![](media/op-upd-18.png)
+    ![](media/Ex2-Task2-step13.png)
 
 14. Check the button with **Create a remediation task (1)** option under **Remediation**. Select **Review + Save (2)**, followed by **Save (3)**.
 
-    ![](media/op-upd-20.png)
+    ![](media/Ex2-Task2-step14a.png)
     
-    ![](media/op-upd-19.png)
+    ![](media/Ex2-Task2-stepa14b.png)
 
 15. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
 
-      ![](media/policy14.png)
+    ![](media/policy14.png)
 
-
-> **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
+    > **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
     
 16. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
 
@@ -195,7 +194,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    ![](media/op-08.png)
  
-  > **Note:** Click on **OK** when asked for **Discard changes**.
+   > **Note:** Click on **OK** when asked for **Discard changes**.
   
 10. Scroll down to the Templates section and select **Blank Logic App**.
 
@@ -221,13 +220,13 @@ After you create and run a Consumption logic app workflow, you can check that wo
    
 14. Select **Sign in** and sign in to your Office 365 Outlook account. Use the login credentials given below:
 
-   * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
-   * Password: **<inject key="AzureAdUserPassword"></inject>**
-   * If you are presented with the **Help us protect your account** dialog box, then select the **Skip** for now option.
+    * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
+    * Password: **<inject key="AzureAdUserPassword"></inject>**
+    * If you are presented with the **Help us protect your account** dialog box, then select the **Skip** for now option.
 
-     ![](media/Ex2-t2-09.png)
+    ![](media/Ex2-t2-09.png)
    
-> **Note:** If you face any sign in issue, please refer to [this](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/Azure%20Well-Architected%20Framework.md#1-exercise-2---task-3---create-a-logic-app--step-no-14).
+   > **Note:** If you face any sign in issue, please refer to [this](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/Azure%20Well-Architected%20Framework.md#1-exercise-2---task-3---create-a-logic-app--step-no-14).
    
 15. In the Send an email form, provide the following values:
 
@@ -235,19 +234,19 @@ After you create and run a Consumption logic app workflow, you can check that wo
     * **Subject**: Enter **New RSS item:** and from the Add dynamic content list, under When a feed item is published, select **Feed title**.
     * **Body**: Enter **Date published:** and from the Add dynamic content list, under When a feed item is published, select **Feed published on**.
 
-    ![](media/Ex2-t2-10.png)
-
-> **Note:** In case dynamic content is not listed, click on **See more** to view the list.
+     ![](media/Ex2-t2-10.png)
+ 
+   > **Note:** In case dynamic content is not listed, click on **See more** to view the list.
 
    ![](media/op-upd-21.png)
-
+    
 16. On the designer toolbar, select **Save** to save your logic app.
 
     ![](media/Ex2-t2-11.png)
     
-17. Select **Run Trigger** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
+17. Select **Run Trigger** and click on **Run** to execute the Logic App. If the RSS feed has new items, your workflow sends an email for each new item. Otherwise, your workflow waits until the next interval to check the RSS feed again.
 
-     ![](media/Ex2-t2-12.png)
+     ![](media/Ex2-Task3-step17.png)
    
 18. The following screenshot shows a sample email that's sent by the workflow.
 
@@ -302,23 +301,23 @@ After you create and run a Consumption logic app workflow, you can check that wo
     
 12. On the **Configure signal logic** pane, under **Alert logic**, set up your condition with the following details:
 
-    * **Operator**: Greater than or equal to
     * **Aggregation type**: Count
-    * **Threshold value**: 1
+    * **Operator**: Greater than or equal to
     * **Unit**: Count
-    * **Aggregation granularity (Period)**: 1 minute
-    * **Frequency of evaluation**: 1 Minute.
+    * **Threshold value**: 1 
+    * **Check every**: 1 minute
+    * **Lookback period**: 1 Minute.
     
-    ![](media/alert%20rules.png)
+    ![](media/Ex2-Task3b-step12.png)
    
 13. The **Create an alert rule (1)** page now shows the condition that you created and the cost for running that alert. Click on **Details (2)** tab.
 
-    ![](media/op-upd-23.png)
+    ![](media/Ex2-Task3b-step13.png)
     
 14. On the **details** page, provide the below details:
 
     * **Subscription**: Select your default subscription (1)
-    * **Resource Group**: waf-prod (2)
+    * **Resource Group**: wafprod (2)
     * **Severity**: 3 - Informational (3)
     * **Alert rule name**: waf-alert (4)
     * Click on **Review + create** (5)
@@ -369,7 +368,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
    az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
    ```
 
-> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+   > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
 6. Paste the command and hit enter. You will see the output once the command is executed successfully.
 
@@ -387,7 +386,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
    az vm get-instance-view --resource-group wafprod --name wafprok4syndc
    ```
 
-> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+   > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
 9. Paste the command and hit enter. You will see the output once the command is executed successfully.
 

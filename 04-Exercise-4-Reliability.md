@@ -247,11 +247,11 @@ In this task, you will set up **Service Health alerts** to notify you via your p
    
 9. On **Review + create** page click on **Create**.
 
-  ![](/media/Ex4-task3-step9.png)
+   ![](/media/Ex4-task3-step9.png)
    
 10. Once the alert rule is created, go to the **Health alerts** page and observe all the details of the alert.
 
-   ![](./media/ex4-task4-06.png)
+    ![](./media/ex4-task4-06.png)
 
 11. In the Azure portal, search for Advisor and select **Advisor** from the suggestions.
 

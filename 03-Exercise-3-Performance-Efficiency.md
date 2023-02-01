@@ -47,7 +47,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
    * **Instance count:** Enter **1 (10)**
    * At last, click on **Add (11)**
 
-    ![](https://github.com/shashankms9/Azure-Well-Architected-Framework/blob/4ab5d933faff00e42a91d3d91a99697dd8e90187/media/Ex3-task1-step5.png)
+    ![](https://github.com/CloudLabsAI-Azure/Azure-Well-Architected-Framework/blob/111257ab094cdd96e9fc91a632f375f27d9681b4/media/Ex3-task1-step5.png)
 
 6. Click on **Add a rule** again. Leave all to default and modify the following details:
 
@@ -56,7 +56,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
    * **Operation:** Select **Decrease percent by (3)**
    * Click on **Add (4)**
 
-    ![](https://github.com/shashankms9/Azure-Well-Architected-Framework/blob/4ab5d933faff00e42a91d3d91a99697dd8e90187/media/Ex3-task1-step6.png)
+    ![](https://github.com/CloudLabsAI-Azure/Azure-Well-Architected-Framework/blob/111257ab094cdd96e9fc91a632f375f27d9681b4/media/Ex3-task1-step6.png)
 
 7. Set the following instance limits and select **Save**.
 

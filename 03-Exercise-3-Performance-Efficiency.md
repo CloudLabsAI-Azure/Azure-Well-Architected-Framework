@@ -47,8 +47,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
    * **Instance count:** Enter **1 (10)**
    * At last, click on **Add (11)**
 
-
-    ![](/media/Ex3-task1-step5.png)
+    ![](https://github.com/shashankms9/Azure-Well-Architected-Framework/blob/4ab5d933faff00e42a91d3d91a99697dd8e90187/media/Ex3-task1-step5.png)
 
 6. Click on **Add a rule** again. Leave all to default and modify the following details:
 
@@ -57,8 +56,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
    * **Operation:** Select **Decrease percent by (3)**
    * Click on **Add (4)**
 
-
-    ![](/media/Ex3-task1-step6.png)
+    ![](https://github.com/shashankms9/Azure-Well-Architected-Framework/blob/4ab5d933faff00e42a91d3d91a99697dd8e90187/media/Ex3-task1-step6.png)
 
 7. Set the following instance limits and select **Save**.
 
@@ -66,8 +64,7 @@ Vertical scaling and horizontal scaling are the two basic ways an application ca
    * **Maximum:** 4
    * **Default:** 2
 
-
-   ![](./media/pe-07.png)
+      ![](./media/pe-07.png)
 
 8. To see the number and status of VM instances, select Instances from the menu on the left-hand side of the scale set window. The status indicates if the VM instance is Created as the scale set automatically scales out, or is Deleting as the scale automatically scales in.
 

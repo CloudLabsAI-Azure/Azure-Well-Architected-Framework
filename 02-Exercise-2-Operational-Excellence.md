@@ -121,10 +121,9 @@ Adding a tag to the resources policy puts tags on resources that are newly creat
 
 15. Go back to **Policy** pane and click on **remediation**. Observe that the remediation task is **In progress** state under Remediation tasks. 
 
-      ![](media/policy14.png)
+    ![](media/policy14.png)
 
-
-> **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
+    > **Note:** Wait until the **Remediation State** is successful. It can take upto 10 minutes for it to get completed.
     
 16. In the Azure portal `https://portal.azure.com`, select the Azure Cloud Shell icon from the top menu.
 
@@ -195,7 +194,7 @@ After you create and run a Consumption logic app workflow, you can check that wo
 
    ![](media/op-08.png)
  
-  > **Note:** Click on **OK** when asked for **Discard changes**.
+   > **Note:** Click on **OK** when asked for **Discard changes**.
   
 10. Scroll down to the Templates section and select **Blank Logic App**.
 
@@ -221,13 +220,13 @@ After you create and run a Consumption logic app workflow, you can check that wo
    
 14. Select **Sign in** and sign in to your Office 365 Outlook account. Use the login credentials given below:
 
-   * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
-   * Password: **<inject key="AzureAdUserPassword"></inject>**
-   * If you are presented with the **Help us protect your account** dialog box, then select the **Skip** for now option.
+    * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
+    * Password: **<inject key="AzureAdUserPassword"></inject>**
+    * If you are presented with the **Help us protect your account** dialog box, then select the **Skip** for now option.
 
-     ![](media/Ex2-t2-09.png)
+    ![](media/Ex2-t2-09.png)
    
-> **Note:** If you face any sign in issue, please refer to [this](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/Azure%20Well-Architected%20Framework.md#1-exercise-2---task-3---create-a-logic-app--step-no-14).
+   > **Note:** If you face any sign in issue, please refer to [this](https://github.com/CloudLabsAI-Azure/Know-Before-You-Go/blob/main/AIW-KBYG/Azure%20Well-Architected%20Framework.md#1-exercise-2---task-3---create-a-logic-app--step-no-14).
    
 15. In the Send an email form, provide the following values:
 
@@ -235,12 +234,12 @@ After you create and run a Consumption logic app workflow, you can check that wo
     * **Subject**: Enter **New RSS item:** and from the Add dynamic content list, under When a feed item is published, select **Feed title**.
     * **Body**: Enter **Date published:** and from the Add dynamic content list, under When a feed item is published, select **Feed published on**.
 
-    ![](media/Ex2-t2-10.png)
+     ![](media/Ex2-t2-10.png)
+ 
+   > **Note:** In case dynamic content is not listed, click on **See more** to view the list.
 
-> **Note:** In case dynamic content is not listed, click on **See more** to view the list.
-
-    ![](media/op-upd-21.png)
-
+   ![](media/op-upd-21.png)
+    
 16. On the designer toolbar, select **Save** to save your logic app.
 
     ![](media/Ex2-t2-11.png)
@@ -369,7 +368,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
    az vm update --resource-group wafprod --name wafprok4syndc --set osProfile.windowsConfiguration.enableAutomaticUpdates=true   osProfile.windowsConfiguration.patchSettings.patchMode=AutomaticByPlatform
    ```
 
-> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+   > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
 6. Paste the command and hit enter. You will see the output once the command is executed successfully.
 
@@ -387,7 +386,7 @@ In this task, you will learn how to enable Azure Automatic VM guest OS patching.
    az vm get-instance-view --resource-group wafprod --name wafprok4syndc
    ```
 
-> **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
+   > **Note:** Virtual Machine name will be different for you, as the one in the above command is just for example.
 
 9. Paste the command and hit enter. You will see the output once the command is executed successfully.
 

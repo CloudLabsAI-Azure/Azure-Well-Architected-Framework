@@ -143,15 +143,15 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
     ![](./media/monitoringconfiguration.png)
 
-15. Return to the **Virtual Machines** tab from the menu on the left. Click on the **Refresh (1)** button and then observe the status of all three VMs. It should show up as **Enabling (2)** under _Monitor Coverage_.
+15. Return to the **Virtual Machines** tab from the menu on the left. Click on the **Refresh (1)** button and then observe the status of VM. It should show up as **Enabling (2)** under _Monitor Coverage_.
 
-    ![](./media/pe-20.png)
+    ![](./media/img-4.png)
 
       > **Note:** It will take up to 10 minutes for the data to reflect in Insights. To see the details, you can click on **Why?** and see the detailed message. Once done click on **Close (3)**.
 
 16. VM insights include a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open the **Virtual Machines** tab present in the left pane and click on **Performance**.
 
-    ![](./media/pe-21.png)
+    ![](./media/img-5.png)
 
       > **Note:** Insights may take up to 30 minutes to reflect in the dashboard. You can continue the lab and come back to view the insights.
 

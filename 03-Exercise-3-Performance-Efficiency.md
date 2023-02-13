@@ -188,13 +188,13 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
    ![](./media/pe-25.png)
 
-2. Search for Azure Load Testing in the search box and select **Azure Load Testing (Preview)** from the suggestions.
+2. Search for Azure Load Testing in the search box and select **Azure Load Testing** from the suggestions.
  
-   ![](./media/pe-26.png)
+   ![](./media/img-6.png)
 
 3. Select **Create** on the Azure Load Testing pane.
  
-    ![](./media/pe-27.png)
+    ![](./media/img-7.png)
 
 4. Provide the following information to configure the Load test:
 
@@ -205,11 +205,11 @@ In this task, we will see how to load test a web application with Azure Load Tes
     - Click on **Review + create (5)**
 
     
-    ![](./media/pe-28.png)
+    ![](./media/img-8.png)
     
 5. Post the validation passes, and click on **Create**.
 
-    ![](./media/pe-29.png)
+    ![](./media/img-9.png)
 
 6. Click on **Go to resource** to view the resource upon successful deployment.
 
@@ -219,7 +219,7 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
 8. On the **Overview** page, select **Quick test** given under _Load test your application and infrastructure_.
 
-    ![](./media/pe-31.png)
+    ![](./media/img-10.png)
 
 9. On the Quick test page, provide the following details:
 

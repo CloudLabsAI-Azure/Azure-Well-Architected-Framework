@@ -105,9 +105,9 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-16.png)
 
-6. From the left pane, select **Virtual machines (1)** present under _Workspace Data Sources_. Here you can see all the virtual machines and their status with respect to connectivity with the workspace.
+6. From the left pane, select **Virtual machines (deprecated)** present under _Classic_. Here you can see all the virtual machines and their status with respect to connectivity with the workspace.
 
-   ![](./media/pe-17.png)
+   ![](./media/img-1.png)
 
 7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group. 
 
@@ -117,9 +117,9 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-18.png)
 
-9. Return to the **Virtual Machines** tab from the menu on the left and observe the status of the VMs in the _wafprod_ resource group. It should show up as **This workspace** under _Log Analytics Connection_.
+9. Return to the **Virtual Machines (deprecated)** tab from the menu on the left and observe the status of the VMs in the _wafprod_ resource group. It should show up as **This workspace** under _Log Analytics Connection_.
 
-   ![](./media/pe-19.png)
+   ![](./media/img-2.png)
 
    > **Note:** In case the status is not updated, click on the **Refresh** button to get the latest status.
 
@@ -131,9 +131,9 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
     ![](./media/pe-09.png)
 
-12. You will see your subscription and all the resource groups in it, listed here. Expand the **wafprod** resource group and enable VM insights for all three VMs. Click on **Enable**.
+12. You will see your subscription and all the resource groups in it, listed here. Expand the **wafprod** resource group and enable VM insights for available the VMs. Click on **Enable**.
 
-    ![](./media/pe-10.png)
+    ![](./media/img-3.png)
 
 13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will initiate the deployment of VM insights. Follow the same process for the other two VMs.
 
@@ -143,15 +143,15 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
     ![](./media/monitoringconfiguration.png)
 
-15. Return to the **Virtual Machines** tab from the menu on the left. Click on the **Refresh (1)** button and then observe the status of all three VMs. It should show up as **Enabling (2)** under _Monitor Coverage_.
+15. Return to the **Virtual Machines** tab from the menu on the left. Click on the **Refresh (1)** button and then observe the status of VM. It should show up as **Enabling (2)** under _Monitor Coverage_.
 
-    ![](./media/pe-20.png)
+    ![](./media/img-4.png)
 
       > **Note:** It will take up to 10 minutes for the data to reflect in Insights. To see the details, you can click on **Why?** and see the detailed message. Once done click on **Close (3)**.
 
 16. VM insights include a set of performance charts that target several key performance indicators (KPIs) to help you determine how well a virtual machine is performing. To view that, open the **Virtual Machines** tab present in the left pane and click on **Performance**.
 
-    ![](./media/pe-21.png)
+    ![](./media/img-5.png)
 
       > **Note:** Insights may take up to 30 minutes to reflect in the dashboard. You can continue the lab and come back to view the insights.
 
@@ -188,13 +188,13 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
    ![](./media/pe-25.png)
 
-2. Search for Azure Load Testing in the search box and select **Azure Load Testing (Preview)** from the suggestions.
+2. Search for Azure Load Testing in the search box and select **Azure Load Testing** from the suggestions.
  
-   ![](./media/pe-26.png)
+   ![](./media/img-6.png)
 
 3. Select **Create** on the Azure Load Testing pane.
  
-    ![](./media/pe-27.png)
+    ![](./media/img-7.png)
 
 4. Provide the following information to configure the Load test:
 
@@ -205,11 +205,11 @@ In this task, we will see how to load test a web application with Azure Load Tes
     - Click on **Review + create (5)**
 
     
-    ![](./media/pe-28.png)
+    ![](./media/img-8.png)
     
 5. Post the validation passes, and click on **Create**.
 
-    ![](./media/pe-29.png)
+    ![](./media/img-9.png)
 
 6. Click on **Go to resource** to view the resource upon successful deployment.
 
@@ -219,7 +219,7 @@ In this task, we will see how to load test a web application with Azure Load Tes
 
 8. On the **Overview** page, select **Quick test** given under _Load test your application and infrastructure_.
 
-    ![](./media/pe-31.png)
+    ![](./media/img-10.png)
 
 9. On the Quick test page, provide the following details:
 

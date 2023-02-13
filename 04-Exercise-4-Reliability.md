@@ -145,7 +145,7 @@ In this task, you will learn how to enable replication for virtual machines, run
 1. In the recovery services vault, select **Recovery Plans (Site Recovery)** and click on **failover-recovery-plan**. This is the Recovery plan that you just created.
 
    ![](./media/reliability-14.png)
-
+ 
 2. Now select **Test Failover**.
 
    ![](./media/reliability-15.png)

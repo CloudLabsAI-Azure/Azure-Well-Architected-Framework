@@ -117,9 +117,9 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-18.png)
 
-9. Return to the **Virtual Machines** tab from the menu on the left and observe the status of the VMs in the _wafprod_ resource group. It should show up as **This workspace** under _Log Analytics Connection_.
+9. Return to the **Virtual Machines (deprecated)** tab from the menu on the left and observe the status of the VMs in the _wafprod_ resource group. It should show up as **This workspace** under _Log Analytics Connection_.
 
-   ![](./media/pe-19.png)
+   ![](./media/img-2.png)
 
    > **Note:** In case the status is not updated, click on the **Refresh** button to get the latest status.
 

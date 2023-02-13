@@ -105,9 +105,9 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
    ![](./media/pe-16.png)
 
-6. From the left pane, select **Virtual machines (1)** present under _Workspace Data Sources_. Here you can see all the virtual machines and their status with respect to connectivity with the workspace.
+6. From the left pane, select **Virtual machines (deprecated)** present under _Classic_. Here you can see all the virtual machines and their status with respect to connectivity with the workspace.
 
-   ![](./media/pe-17.png)
+   ![](./media/img-1.png)
 
 7. Now we will connect the VMs with the log analytics workspace. Here, we will be working with the VMs that belong to the **wafprod** resource group. 
 

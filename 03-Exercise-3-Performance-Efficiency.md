@@ -131,9 +131,9 @@ The fact that VM Insights keeps its data in Azure Monitor Logs enables it to pro
 
     ![](./media/pe-09.png)
 
-12. You will see your subscription and all the resource groups in it, listed here. Expand the **wafprod** resource group and enable VM insights for all three VMs. Click on **Enable**.
+12. You will see your subscription and all the resource groups in it, listed here. Expand the **wafprod** resource group and enable VM insights for available the VMs. Click on **Enable**.
 
-    ![](./media/pe-10.png)
+    ![](./media/img-3.png)
 
 13. On the **Get more visibility into the health and performance of your virtual machines** window, click on **Enable**. This will initiate the deployment of VM insights. Follow the same process for the other two VMs.
 
